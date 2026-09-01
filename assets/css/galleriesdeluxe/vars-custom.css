@@ -1,0 +1,94 @@
+/* This is deliberately empty. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+/* =====================================
+   GALLERY DELUXE ORIGINAL VARIABLES
+===================================== */
+
+:root {
+
+  /* Colors */
+
+  --white: #fff;
+  --black: #000;
+
+  --color-primary: #3a98b9;
+  --color-secondary: #fff1dc;
+
+  --color-text: #000;
+  --color-text-footer: #000;
+
+  --color-background: #fff;
+  --color-background-footer: #fff1dc;
+
+
+  /* Fonts */
+
+  --font-family-serif:
+    Charter,
+    "Bitstream Charter",
+    "Sitka Text",
+    Cambria,
+    serif;
+
+  --font-family-sans-serif:
+    Seravek,
+    "Gill Sans Nova",
+    Ubuntu,
+    Calibri,
+    "DejaVu Sans",
+    source-sans-pro,
+    sans-serif;
+
+  --font-family-base: var(--font-family-sans-serif);
+
+  --font-size-base: 16px;
+}
+
+
+/* =====================================
+   TBILISI VISITS VARIABLES
+===================================== */
+
+:root {
+
+  /* Colors */
+
+  --tv-black: #151515;
+  --tv-white: #ffffff;
+  --tv-cream: #f5f1e9;
+  --tv-muted: #77736c;
+  --tv-border: #ded9d0;
+  --tv-accent: #b65d3c;
+
+
+  /* Fonts */
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+
+  /* Spacing */
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+  --space-xxl: 128px;
+}
+
+
+@media (max-width: 768px) {
+
+  :root {
+
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    --space-xl: 72px;
+    --space-xxl: 96px;
+  }
+
+}
