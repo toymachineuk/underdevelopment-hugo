@@ -1,0 +1,349 @@
+/* =========================================
+   TBILISI VISITS — PAGE HEADER
+========================================= */
+
+.tv-header {
+  width: 100%;
+  min-height: 88px;
+  padding: 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  background: #fff;
+  border-bottom: 1px solid #ded9d0;
+}
+
+
+/* -----------------------------------------
+   LOGO
+----------------------------------------- */
+
+.tv-brand a {
+  color: #151515;
+  text-decoration: none;
+
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.tv-brand a:hover {
+  color: #b65d3c;
+}
+
+.tv-brand span {
+  font-weight: 500;
+}
+
+
+/* -----------------------------------------
+   NAVIGATION
+----------------------------------------- */
+
+.tv-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.tv-nav a {
+  position: relative;
+
+  padding: 34px 0;
+
+  color: #151515;
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transition: color 0.2s ease;
+}
+
+.tv-nav a:hover,
+.tv-nav a.active {
+  color: #b65d3c;
+}
+
+.tv-nav a.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+
+  height: 2px;
+
+  background: #b65d3c;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.tv-hero {
+  width: calc(100% - 32px);
+  margin: 16px;
+
+  display: grid;
+  grid-template-columns: 46% 54%;
+
+  min-height: 680px;
+
+  overflow: hidden;
+
+  background: #f5f1e9;
+}
+
+
+/* -----------------------------------------
+   HERO IMAGE
+----------------------------------------- */
+
+.tv-hero-image {
+  min-height: 680px;
+  overflow: hidden;
+}
+
+.tv-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.tv-hero-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* -----------------------------------------
+   HERO CONTENT
+----------------------------------------- */
+
+.tv-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+.tv-eyebrow {
+  margin-bottom: 26px;
+
+  color: #b65d3c;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.tv-line {
+  width: 58px;
+  height: 2px;
+
+  margin-bottom: 38px;
+
+  background: #b65d3c;
+}
+
+.tv-hero-content h1 {
+  margin: 0 0 28px;
+
+  color: #151515;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(64px, 7vw, 110px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -4px;
+}
+
+.tv-hero-content p {
+  max-width: 520px;
+
+  margin: 0 0 40px;
+
+  color: #5f5b55;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* -----------------------------------------
+   BUTTONS
+----------------------------------------- */
+
+.tv-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+.tv-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+
+  padding: 0 28px;
+
+  box-sizing: border-box;
+
+  border-radius: 3px;
+
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tv-button-primary {
+  color: #fff;
+  background: #b65d3c;
+  border: 1px solid #b65d3c;
+}
+
+.tv-button-primary:hover {
+  color: #fff;
+  background: #151515;
+  border-color: #151515;
+}
+
+.tv-button-secondary {
+  color: #151515;
+  background: transparent;
+  border: 1px solid #151515;
+}
+
+.tv-button-secondary:hover {
+  color: #fff;
+  background: #151515;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .tv-header {
+    padding: 0 28px;
+  }
+
+  .tv-nav {
+    gap: 22px;
+  }
+
+  .tv-hero-content {
+    padding: 55px;
+  }
+
+  .tv-hero-content h1 {
+    font-size: 72px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .tv-header {
+    min-height: auto;
+    padding: 24px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  .tv-nav {
+    width: 100%;
+
+    display: flex;
+    gap: 18px;
+
+    flex-wrap: wrap;
+  }
+
+  .tv-nav a {
+    padding: 0;
+  }
+
+  .tv-nav a.active::after {
+    bottom: -7px;
+  }
+
+
+  .tv-hero {
+    width: calc(100% - 20px);
+    margin: 10px;
+
+    display: block;
+
+    min-height: auto;
+  }
+
+  .tv-hero-image,
+  .tv-hero-image img {
+    min-height: 420px;
+    height: 420px;
+  }
+
+  .tv-hero-content {
+    padding: 60px 28px;
+  }
+
+  .tv-hero-content h1 {
+    font-size: 64px;
+    letter-spacing: -2px;
+  }
+
+  .tv-hero-content p {
+    font-size: 17px;
+  }
+
+  .tv-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tv-button {
+    width: 100%;
+  }
+}

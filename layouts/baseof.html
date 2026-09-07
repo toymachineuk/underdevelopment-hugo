@@ -65,7 +65,11 @@
 
   </head>
   <body>
-    {{ partial "galleriesdeluxe/header.html" . }}
+   {{ if .IsPage }}
+  {{ partial "page-header.html" . }}
+{{ else }}
+  {{ partial "galleriesdeluxe/header.html" . }}
+{{ end }}
     <main>
       {{ block "main" . }}{{ end }}
     </main>
