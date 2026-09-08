@@ -1,0 +1,619 @@
+/* =========================================================
+   SEE & DO
+   ========================================================= */
+
+.tv-see-do {
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+  padding: 110px 0 120px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.tv-see-do-header {
+  max-width: 1050px;
+  margin-bottom: 34px;
+}
+
+.tv-see-do-header h2 {
+  margin: 0 0 24px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.5rem, 5vw, 5.5rem);
+  font-weight: 400;
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+
+.tv-see-do-header p {
+  max-width: 1050px;
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: var(--tv-black);
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.tv-see-do-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin: 32px 0 36px;
+}
+
+
+.tv-filter {
+    --category-accent: var(--tv-black);
+
+  position: relative;
+
+  height: 38px;
+  padding: 0 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  color: var(--tv-black);
+
+  border: 1px solid var(--tv-black);
+  border-radius: 20px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tv-filter:hover,
+.tv-filter.active {
+  background: var(--tv-black);
+  color: #fff;
+}
+
+
+/* =========================================================
+   COUNT
+   ========================================================= */
+
+.tv-see-do-count {
+  margin-bottom: 42px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+}
+
+.tv-see-do-count strong {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CAROUSEL WRAPPER
+   ========================================================= */
+
+.tv-see-do-carousel {
+  position: relative;
+  width: 100%;
+}
+
+
+/* =========================================================
+   CAROUSEL TRACK
+   ========================================================= */
+
+.tv-see-do-grid {
+  display: grid;
+
+  /*
+     Horizontal carousel.
+  */
+  grid-auto-flow: column;
+
+  /*
+     Three cards + a small glimpse
+     of the next card.
+  */
+  grid-auto-columns: 31%;
+
+  gap: 48px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding: 0 8% 20px 0;
+}
+
+.tv-see-do-grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.tv-see-card {
+  min-width: 0;
+
+  scroll-snap-align: start;
+}
+
+.tv-see-card.is-hidden {
+  display: none;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.tv-see-image {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1.55 / 1;
+
+  overflow: hidden;
+
+  background: #eee;
+}
+
+.tv-see-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+
+.tv-see-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   CARD ARROW
+   ========================================================= */
+
+.tv-see-arrow {
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: var(--tv-black);
+
+  font-size: 28px;
+  line-height: 1;
+
+  opacity: 0;
+
+  transform: translateX(8px);
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+.tv-see-image:hover .tv-see-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.tv-see-card-content {
+  padding-top: 12px;
+}
+
+.tv-see-card h3 {
+  margin: 0 0 6px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -.015em;
+}
+
+.tv-see-card h3 a {
+  color: var(--tv-black);
+  text-decoration: none;
+}
+
+.tv-see-card h3 a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.tv-see-location {
+  margin-bottom: 12px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.tv-see-location span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  border: 1px solid #999;
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CAROUSEL NAVIGATION
+   ========================================================= */
+
+.tv-see-prev,
+.tv-see-next {
+  position: absolute;
+  z-index: 20;
+
+  top: 38%;
+
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #fff;
+  color: var(--tv-black);
+
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease;
+}
+
+.tv-see-prev {
+  left: 18px;
+}
+
+.tv-see-next {
+  right: 18px;
+}
+
+.tv-see-prev:hover,
+.tv-see-next:hover {
+  transform: scale(1.08);
+}
+
+.tv-see-prev:disabled,
+.tv-see-next:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .tv-see-do {
+    padding: 80px 0;
+  }
+
+  .tv-see-do-grid {
+    grid-auto-columns: 47%;
+    gap: 28px;
+    padding-right: 6%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .tv-see-do {
+    width: min(100% - 32px, 1440px);
+    padding: 70px 0 80px;
+  }
+
+
+  /* HEADER */
+
+  .tv-see-do-header h2 {
+    font-size: 3.5rem;
+  }
+
+  .tv-see-do-header p {
+    font-size: 17px;
+  }
+
+
+  /* FILTERS */
+
+  .tv-see-do-filters {
+    gap: 7px;
+    margin-top: 26px;
+
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+  }
+
+  .tv-filter {
+    flex: 0 0 auto;
+
+    font-size: 14px;
+    padding: 8px 13px;
+  }
+
+
+  /* COUNT */
+
+  .tv-see-do-count {
+    margin-bottom: 28px;
+  }
+
+
+  /* ONE CARD + PART OF NEXT CARD */
+
+  .tv-see-do-grid {
+    grid-auto-columns: 85%;
+    gap: 16px;
+
+    padding-right: 15%;
+  }
+
+
+  /* CARD */
+
+  .tv-see-card h3 {
+    font-size: 22px;
+  }
+
+
+  /* CARD ARROW */
+
+  .tv-see-arrow {
+    width: 48px;
+    height: 48px;
+
+    opacity: 1;
+    transform: none;
+
+    font-size: 23px;
+  }
+
+
+  /* CAROUSEL ARROWS */
+
+  .tv-see-prev,
+  .tv-see-next {
+    width: 48px;
+    height: 48px;
+
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================
+   CATEGORY ACCENTS
+   ========================================= */
+
+/* -----------------------------------------
+   CATEGORY LABEL UNDER CARD INFO
+   ----------------------------------------- */
+
+.tv-see-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  color: var(--category-accent);
+}
+
+.tv-see-category::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+
+  background: var(--category-accent);
+}
+
+
+
+
+
+/* Large colour block on the left */
+
+.tv-filter::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 7px;
+
+  background: var(--category-accent);
+}
+
+
+/* Filter category colours */
+
+.tv-filter-parks {
+  --category-accent: #5F8061;
+}
+
+.tv-filter-history {
+  --category-accent: #9A7357;
+}
+
+.tv-filter-landmarks {
+  --category-accent: #65758B;
+}
+
+.tv-filter-daytrips {
+  --category-accent: #B66A4C;
+}
+
+
+/* All button */
+
+.tv-filter-all {
+  --category-accent: var(--tv-black);
+
+  background: var(--tv-black);
+  color: #fff;
+}
+
+.tv-filter-all::before {
+  display: none;
+}
+
+
+/* Active category filter */
+
+.tv-filter.active {
+  background: var(--category-accent);
+  border-color: var(--category-accent);
+  color: #fff;
+}
+
+
+/* Keep the active All button black */
+
+.tv-filter-all.active {
+  background: var(--tv-black);
+  border-color: var(--tv-black);
+}
+
+
+/* -----------------------------------------
+   CARD CATEGORY COLOURS
+   ----------------------------------------- */
+
+.tv-see-card {
+  --category-accent: var(--tv-black);
+}
+
+.tv-see-card[data-category="tbilisi"] {
+  --category-accent: #5F8061;
+}
+
+.tv-see-card[data-category="history"] {
+  --category-accent: #9A7357;
+}
+
+.tv-see-card[data-category="landmarks"] {
+  --category-accent: #65758B;
+}
+
+.tv-see-card[data-category="daytrips"] {
+  --category-accent: #B66A4C;
+}
+
+
+/* -----------------------------------------
+   CARD CONTENT
+   ----------------------------------------- */
+
+/* NO coloured line under the image */
+
+.tv-see-card-content {
+  padding-top: 12px;
+}
+
+
+/* -----------------------------------------
+   REMOVE OLD ACCENTS
+   ----------------------------------------- */
+
+.tv-see-arrow {
+  display: none;
+}
+
+.tv-see-location span {
+  border-color: inherit;
+  color: inherit;
+}

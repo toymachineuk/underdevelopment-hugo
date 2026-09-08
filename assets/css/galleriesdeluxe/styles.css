@@ -4,6 +4,7 @@
 @import "hugo:vars";
 @import "markdown.css";
 @import "page-header.css";
+@import "sections.css";
 
 html,
 body {
