@@ -740,17 +740,31 @@ select {
 
 .section-header {
   display: flex;
-  align-items: flex-end;
+ flex-direction: column;
   justify-content: space-between;
-
-  gap: 50px;
+  height: 350px;
+  gap: 0;
 }
 
-.section-header > div {
-  flex: 1;
+
+.section-header.right {
+  display: flex;
+
+ 
+  text-align: right;
+    flex-direction: column;
 }
 
-.section-header > p {
+.section-header.right .text-md {
+  margin-left: auto;
+  max-width: 500px;
+}
+
+.section-header.right > div {
+   flex: 0 1 600px;
+}
+
+.section-header.right > p {
   flex: 0 1 400px;
   margin: 0;
 
@@ -798,7 +812,7 @@ select {
 .badge {
   position: absolute;
   top: 18px;
-  left: 18px;
+  right: 18px;
 
   padding: 8px 12px;
 

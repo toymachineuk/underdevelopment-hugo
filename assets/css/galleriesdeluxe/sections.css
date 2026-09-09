@@ -3,52 +3,25 @@
    ========================================================= */
 
 .tv-see-do {
-  width: min(100% - 48px, 1440px);
-  margin: 0 auto;
-  background: pink;
-
-  padding-inline: 5vw;
+   width: 100%;
+  margin: 0;
+  background: #fff;
+  padding: 80px 5vw;
 }
 
 
 .chillout {
-  width: min(100% - 48px, 1440px);
-  margin: 0 auto;
-  background: blue;
-
-  padding-inline: 5vw;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.tv-see-do-header {
-  max-width: 1050px;
-  margin-bottom: 34px;
-}
-
-.tv-see-do-header h2 {
-  margin: 0 0 24px;
-
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(3.5rem, 5vw, 5.5rem);
-  font-weight: 400;
-  line-height: .95;
-  letter-spacing: -.04em;
-}
-
-.tv-see-do-header p {
-  max-width: 1050px;
+  width: 100%;
   margin: 0;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
-
-  color: var(--tv-black);
+  background: #fff;
+  padding: 80px 5vw;
 }
+
+
+
+
+
+
 
 
 /* =========================================================
@@ -71,20 +44,18 @@
   align-items: center;
   gap: 7px;
 
-  height: 30px;
+   height: 32px;
   padding: 0 12px;
+  border-radius: 4px;
 
   background: #fff;
   color: var(--tv-black);
-
   border: 1px solid var(--tv-black);
-  border-radius: 20px;
-
+ 
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1;
-
   white-space: nowrap;
 }
 .tv-filter:hover,
@@ -125,19 +96,14 @@
    ========================================================= */
 
 .tv-see-do-grid {
+  background: pink;
+  width: 100%;
+  margin: 0;
+  padding: 40px 0 60px;
+
   display: grid;
-
-  /*
-     Horizontal carousel.
-  */
   grid-auto-flow: column;
-
-  /*
-     Three cards + a small glimpse
-     of the next card.
-  */
   grid-auto-columns: 31%;
-
   gap: 48px;
 
   overflow-x: auto;
@@ -147,8 +113,6 @@
   scroll-behavior: smooth;
 
   scrollbar-width: none;
-
-  padding: 0 8% 20px 0;
 }
 
 .tv-see-do-grid::-webkit-scrollbar {
@@ -497,12 +461,42 @@
    MOBILE
    ========================================================= */
 
+
+/* Mobile */
 @media (max-width: 650px) {
 
   .tv-see-do {
-    width: min(100% - 32px, 1440px);
-    padding: 70px 0 80px;
+    padding-left: 0;
+    padding-right: 0;
   }
+
+  .tv-see-do .section-header,
+  .tv-see-do .tv-see-do-filters,
+  .tv-see-do .tv-see-do-count {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .tv-see-do-grid {
+    width: 100%;
+    margin: 0;
+    padding: 30px 5vw 30px;
+
+    grid-auto-columns: 82%;
+    gap: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+
+ 
 
 
   /* HEADER */
@@ -632,6 +626,13 @@
   --category-accent: #B66A4C;
 }
 
+.tv-see-category.badge {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 8px 10px;
+}
+
 
 /* All button */
 
@@ -711,4 +712,17 @@
 .tv-see-location span {
   border-color: inherit;
   color: inherit;
+}
+
+/* =========================================
+   CHILL OUT SPACING
+   ========================================= */
+
+.chillout .tv-see-do-filters {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.chillout .tv-see-do-count {
+  margin-bottom: 24px;
 }
