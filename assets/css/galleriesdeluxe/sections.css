@@ -5,7 +5,8 @@
 .tv-see-do {
   width: min(100% - 48px, 1440px);
   margin: 0 auto;
-  padding: 110px 0 120px;
+  
+  padding-inline: 5vw;
 }
 
 
@@ -247,20 +248,26 @@
 /* Category */
 
 .tv-see-category {
+  --category-accent: var(--tv-black);
+
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
 
-  margin-bottom: 8px;
+  margin-top: 10px;
 
   font-family: "DM Sans", sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: .08em;
   text-transform: uppercase;
 
-  color: var(--category-accent);
+  color: var(--tv-black);
+
+  margin-bottom: 8px;
+
+
 }
 
 .tv-see-category::before {
@@ -271,6 +278,24 @@
   flex: 0 0 6px;
 
   background: var(--category-accent);
+}
+
+
+/* Category colours */
+.tv-see-category.tv-filter-parks {
+  --category-accent: #5F8061;
+}
+
+.tv-see-category.tv-filter-history {
+  --category-accent: #9A7357;
+}
+
+.tv-see-category.tv-filter-landmarks {
+  --category-accent: #65758B;
+}
+
+.tv-see-category.tv-filter-daytrips {
+  --category-accent: #B66A4C;
 }
 
 
@@ -559,31 +584,8 @@
    CATEGORY LABEL UNDER CARD INFO
    ----------------------------------------- */
 
-.tv-see-category {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: .08em;
-  text-transform: uppercase;
 
-  color: var(--category-accent);
-}
-
-.tv-see-category::before {
-  content: "";
-
-  width: 7px;
-  height: 7px;
-  flex: 0 0 7px;
-
-  background: var(--category-accent);
-}
 
 
 
