@@ -5,7 +5,17 @@
 .tv-see-do {
   width: min(100% - 48px, 1440px);
   margin: 0 auto;
-  
+  background: pink;
+
+  padding-inline: 5vw;
+}
+
+
+.chillout {
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+  background: blue;
+
   padding-inline: 5vw;
 }
 
