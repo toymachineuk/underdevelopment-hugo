@@ -1,3 +1,449 @@
+/* =====================================
+   THINGS TO DO
+===================================== */
+
+.destinations {
+  padding-inline: 5vw;
+  background: var(--white);
+}
+
+
+/* =====================================
+   SECTION HEADERS
+===================================== */
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.section-header .text-label {
+  color: var(--muted);
+}
+
+
+/* =====================================
+   RIGHT-ALIGNED HEADER — CHILL OUT
+===================================== */
+
+.section-header.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+
+
+.chillout .section-header {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.chillout .tv-see-do-filters {
+  justify-content: flex-end;
+}
+
+
+.chillout .tv-see-do-count {
+  text-align: right;
+}
+
+
+.section-header.right .text-md {
+  margin-left: auto;
+  max-width: 500px;
+}
+
+
+
+
+/* =====================================
+   CARDS
+===================================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.card-image {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.04);
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 12px;
+  background: var(--white);
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.card-content {
+  padding: 28px;
+}
+
+.card-content .text-label {
+  margin-bottom: 8px;
+}
+
+.card-content h3 {
+  margin: 0 0 var(--space-sm);
+}
+
+.card-content p {
+  margin: 0;
+  color: var(--muted);
+}
+
+
+/* =====================================
+   FEATURE-SECTION
+===================================== */
+
+/* =====================================
+   FEATURE-SECTION
+===================================== */
+
+.feature {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  min-height: 650px;
+  background: var(--black);
+  color: var(--white);
+}
+
+.feature-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.feature-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 10%;
+}
+
+.feature-content .text-label {
+  color: rgba(255, 255, 255, .7);
+}
+
+.feature-content h2 {
+  max-width: 700px;
+}
+
+.feature-content p {
+  color: #aaa;
+}
+
+.feature-content .button {
+  align-self: flex-start;
+}
+
+
+/* =====================================
+   FEATURE — MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .feature {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .feature-image {
+    padding: 25px 20px 0;
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .feature-content {
+    padding: 55px 20px 70px;
+  }
+
+}
+
+
+/* =====================================
+   PLACES
+===================================== */
+
+.places {
+  padding-inline: 5vw;
+}
+
+.places-heading {
+  max-width: 1000px;
+}
+
+.place-list {
+  border-top: 1px solid var(--border);
+}
+
+.place {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 40px;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding .2s ease;
+}
+
+.place:hover {
+  padding-left: 15px;
+}
+
+.place > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.place strong {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.place small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.place b {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: right;
+}
+
+
+/* =====================================
+   NEWSLETTER / CTA
+===================================== */
+
+.newsletter {
+  padding-inline: 5vw;
+  text-align: center;
+  background: #ded6c8;
+}
+
+.newsletter .text-label {
+  color: var(--muted);
+}
+
+.newsletter h2 {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.newsletter p {
+  margin-inline: auto;
+  color: var(--muted);
+}
+
+.newsletter .button {
+  margin-top: 0;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 900px) {
+
+  .nav {
+    padding: 22px 5vw;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    color: var(--white);
+  }
+
+  .hero {
+    min-height: 700px;
+    padding: 130px 5vw 120px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .photo-grid {
+    min-height: 500px;
+  }
+
+
+  /* ================================
+     SECTION HEADERS
+  ================================ */
+
+  .section-header,
+  .section-header.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+    gap: var(--space-md);
+  }
+
+  .section-header > p,
+  .section-header.right > p {
+    margin-top: var(--space-md);
+    margin-left: 0;
+    max-width: 500px;
+  }
+
+
+  /* ================================
+     CARDS
+  ================================ */
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ================================
+     FEATURE
+  ================================ */
+
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 400px;
+  }
+
+  .feature-content {
+    padding: var(--space-xxl) 8vw;
+  }
+
+
+  /* ================================
+     PLACES
+  ================================ */
+
+  .place {
+    grid-template-columns: 45px 1fr 30px;
+  }
+
+  .place small {
+    display: none;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .nav {
+    padding: 22px;
+  }
+
+  .hero {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+  }
+
+  .intro,
+  .destinations,
+  .places,
+  .newsletter {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .intro > .title-lg,
+  .section-header .title-lg,
+  .places .title-lg,
+  .newsletter .title-lg {
+    letter-spacing: -.045em;
+  }
+
+  .photo-grid {
+    min-height: 380px;
+  }
+
+  .card-image {
+    height: 300px;
+  }
+
+  .feature-image {
+    min-height: 320px;
+  }
+
+  .feature-content {
+    padding: 72px 22px;
+  }
+
+  .newsletter {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+}
+
+
+
+
 /* =========================================================
    SEE & DO
    ========================================================= */
