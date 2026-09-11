@@ -92,3 +92,13 @@
   }
 
 }
+
+/* =====================================
+   TV GREEN CAROUSEL
+===================================== */
+
+:root {
+  --tv-green: #dce8dc;
+  --tv-green-dark: #5f8061;
+  --tv-green-border: #b8cbb9;
+}
