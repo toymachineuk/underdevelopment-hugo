@@ -1,24 +1,7 @@
 {{ define "main" }}
 
 
-<header class="nav">
-    <a href="/" class="logo">
-        Tbilisi Visits
-    </a>
 
-    <nav class="nav-links">
-        <a href="#things">Things to do</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#places">Places to visit</a>
-        <a href="#about">About Tbilisi</a>
-    </nav>
-
-    <button class="menu" type="button" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-</header>
 
 
 <!-- =====================================
@@ -128,6 +111,9 @@
 
         </div>
      
+
+
+  
 
     </div>
 
@@ -422,7 +408,47 @@ viewBox="150 40 750 440"
   </div>
 
 
+<!-- =====================================
+     FEATURE
+===================================== -->
+<section class="feature feature--carousel">
 
+  <div class="feature-image">
+
+    <p class="text-lg mb-lg">
+      Tbilisi is a city of contrasts — ancient and modern,
+      relaxed and energetic, traditional and experimental.
+      Take your time and discover it at your own pace.
+    </p>
+
+    <img
+      src="/img/maps/tbilisi.png"
+      alt="Georgia travel"
+    >
+
+  </div>
+
+
+  <div class="feature-content">
+
+    <span class="text-label">
+      The Tbilisi experience
+    </span>
+
+    <h2 class="title-md mb-lg">
+      Come for the city.<br>
+      Stay for the feeling.
+    </h2>
+
+    <div class="photo-grid">
+
+      {{ partial "carousel-editorial.html" . }}
+
+    </div>
+
+  </div>
+
+</section>
 
 
 

@@ -7,6 +7,8 @@
 @import "sections.css";
 @import "maps.css";
 @import "carousel-narrow.css";
+@import "carousel-editorial.css";
+@import "navbar.css";
 
 html,
 body {
@@ -80,8 +82,7 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+
 
   ul {
     display: flex;
@@ -479,78 +480,6 @@ select {
   gap: var(--space-xl);
 }
 
-
-/* =====================================
-   NAVIGATION
-===================================== */
-
-.nav {
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 28px 5vw;
-
-  color: var(--black);
-}
-
-.logo {
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 800;
-  letter-spacing: -.04em;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.nav-links a {
-  transition: opacity .2s ease;
-}
-
-.nav-links a:hover {
-  opacity: .6;
-}
-
-
-/* =====================================
-   MENU BUTTON
-===================================== */
-
-.menu {
-  display: none;
-
-  width: 42px;
-  height: 42px;
-
-  padding: 10px;
-
-  border: 0;
-  background: transparent;
-
-  cursor: pointer;
-}
-
-.menu span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin: 5px 0;
-
-  background: currentColor;
-}
 
 
 /* =====================================

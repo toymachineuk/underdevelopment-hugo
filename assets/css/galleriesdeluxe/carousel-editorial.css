@@ -1,0 +1,499 @@
+/* =====================================
+   TRAVEL CAROUSEL
+===================================== */
+
+.travel-carousel {
+  width: 100%;
+  max-height: 590px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.travel-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.travel-carousel:active {
+  cursor: grabbing;
+}
+
+
+/* =====================================
+   GROUPS
+===================================== */
+
+.travel-group--one,
+.travel-group--two,
+.travel-group--three {
+  position: relative;
+
+  flex: 0 0 575px;
+  width: 700px;
+  height: 590px;
+
+  scroll-snap-align: center;
+}
+
+
+/* =====================================
+   CARDS
+===================================== */
+.travel-card {
+  position: absolute;
+  overflow: hidden;
+}
+
+.travel-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =====================================
+   IMAGE ONE
+===================================== */
+
+.travel-card--one {
+  width: 290px;
+  height: 410px;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+}
+
+
+/* =====================================
+   IMAGE TWO
+===================================== */
+
+.travel-card--two {
+  width: 245px;
+  height: 345px;
+
+  top: 60px;
+  left: 320px;
+
+  z-index: 2;
+}
+
+
+/* =====================================
+   IMAGE THREE
+===================================== */
+
+.travel-card--three {
+   width: 212px;
+  aspect-ratio: 1 / 1;
+
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 3;
+}
+
+/* =====================================
+   LABEL
+===================================== */
+
+.travel-card span {
+  position: absolute;
+
+  left: 20px;
+  bottom: 18px;
+
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+  .travel-carousel {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .travel-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .travel-group--one,
+  .travel-group--two,
+  .travel-group--three {
+    position: relative;
+    flex: 0 0 300px;
+    width: 300px;
+    height: 300px;
+    scroll-snap-align: start;
+    overflow: visible;
+  }
+
+  /* IMAGE ONE */
+
+  .travel-card--one {
+    position: absolute;
+    width: 170px;
+    height: 245px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+
+
+  /* IMAGE TWO */
+
+  .travel-card--two {
+    position: absolute;
+    width: 135px;
+    height: 190px;
+    top: 40px;
+     top: 40px;
+    left: calc(170px + 20px);
+    z-index: 2;
+  }
+
+
+
+  /* IMAGE THREE — SQUARE */
+
+  .travel-card--three {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    aspect-ratio: 1 / 1;
+
+    left: 50%;
+    bottom: 10px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+  }
+
+  .travel-card span {
+    left: 15px;
+    bottom: 14px;
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+/* =====================================
+   FEATURE CAROUSEL
+===================================== */
+
+.feature-content {
+  overflow: visible;
+}
+
+.feature-content .travel-carousel {
+  width: calc(100% + 40px);
+  max-width: none;
+
+  margin-left: 0;
+  margin-top: 60px;
+
+  max-height: 590px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   FEATURE WITH CAROUSEL
+===================================== */
+
+.feature--carousel {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+padding-bottom: var(--space-lg);
+  width: 100%;
+}
+
+
+/* =====================================
+   CAROUSEL CONTENT
+===================================== */
+
+.feature--carousel .feature-content {
+  min-width: 0;
+  overflow: visible;
+}
+
+
+/* =====================================
+   CAROUSEL WRAPPER
+===================================== */
+
+.feature--carousel .photo-grid {
+  width: 100%;
+  margin-top: 60px;
+  overflow: visible;
+}
+
+
+/* =====================================
+   TRAVEL CAROUSEL
+===================================== */
+
+.feature--carousel .travel-carousel {
+  width: 100%;
+  max-height: 590px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .feature--carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .feature--carousel .photo-grid {
+    margin-top: 40px;
+  }
+
+}
+
+
+
+
+/* =====================================
+   FEATURE — EDITORIAL CAROUSEL
+===================================== */
+
+.feature--carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+
+  background: black;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   LEFT COLUMN
+===================================== */
+
+.feature--carousel .feature-image {
+   display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 80px 5vw 60px;
+
+  overflow: hidden;
+}
+
+
+/* TEXT ABOVE MAP
+===================================== */
+
+.feature--carousel .feature-image p {
+  max-width: 520px;
+
+  margin: 0 0 50px;
+
+  color: var(--muted);
+}
+
+
+/* MAP
+===================================== */
+
+.feature--carousel .feature-image img {
+   display: block;
+
+  width: 100%;
+  max-width: 620px;
+
+  height: auto;
+
+  margin: 0;
+
+  object-fit: contain;
+}
+
+
+/* =====================================
+   RIGHT COLUMN
+===================================== */
+
+.feature--carousel .feature-content {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 80px 5vw 0;
+
+  overflow: visible;
+}
+
+
+/* =====================================
+   HEADING
+===================================== */
+
+.feature--carousel .feature-content .text-label {
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+.feature--carousel .feature-content h2 {
+  max-width: 550px;
+
+  margin-bottom: 50px;
+}
+
+
+/* =====================================
+   CAROUSEL
+===================================== */
+
+.feature--carousel .photo-grid {
+  width: calc(100% + 5vw);
+
+  margin: 0;
+
+  overflow: visible;
+}
+
+.feature--carousel .travel-carousel {
+  width: 100%;
+
+  max-height: 590px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feature--carousel .travel-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .feature--carousel {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* LEFT */
+
+  .feature--carousel .feature-image {
+    padding: 50px 5vw 30px;
+  }
+
+  .feature--carousel .feature-image p {
+    margin-bottom: 30px;
+  }
+
+  .feature--carousel .feature-image img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+
+  /* RIGHT */
+
+  .feature--carousel .feature-content {
+    padding: 50px 5vw 0;
+  }
+
+  .feature--carousel .feature-content h2 {
+    margin-bottom: 35px;
+  }
+
+
+  /* CAROUSEL */
+
+  .feature--carousel .photo-grid {
+    width: calc(100% + 5vw);
+  }
+
+}

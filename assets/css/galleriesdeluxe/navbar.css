@@ -1,0 +1,357 @@
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.nav {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 3.2vw;
+
+  position: relative;
+  z-index: 100;
+
+  background: #fff;
+  color: #111827;
+
+  border-radius: 0 0 7px 7px;
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #111827;
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: .9;
+  font-weight: 600;
+  letter-spacing: -.03em;
+}
+
+.logo span {
+  font-weight: 600;
+}
+
+.logo strong {
+  font-weight: 800;
+}
+
+
+/* =====================================
+   MAIN NAVIGATION LINKS
+===================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: clamp(28px, 2.5vw, 42px);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links a {
+  color: #111827;
+  text-decoration: none;
+
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -.025em;
+
+  white-space: nowrap;
+
+  transition: opacity .2s ease;
+}
+
+.nav-links a:hover {
+  opacity: .65;
+}
+
+
+/* =====================================
+   RIGHT NAVIGATION ACTIONS
+===================================== */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  flex: 0 0 auto;
+}
+
+
+/* =====================================
+   NAVIGATION BUTTONS
+===================================== */
+
+.nav-button {
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 11px;
+
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+
+  background: #fff;
+  color: #111827;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.nav-button:hover {
+  background: #f5f5f5;
+  border-color: #bdbdbd;
+}
+
+
+/* =====================================
+   NAVIGATION ICONS
+===================================== */
+
+.chevron {
+  font-size: 16px;
+  line-height: 1;
+
+  transform: translateY(-1px);
+}
+
+.globe {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-language {
+  width: 59px;
+  padding: 0 8px;
+}
+
+
+/* =====================================
+   MOBILE MENU BUTTON
+===================================== */
+
+.menu {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 8px;
+  margin-left: auto;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.menu span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  margin: 4px auto;
+
+  background: #111827;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 900px) {
+
+  .nav {
+    height: 64px;
+
+    padding: 0 5vw;
+
+    border-radius: 0 0 6px 6px;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+  .nav {
+    padding: 0 20px;
+  }
+
+}
+
+
+
+/* =====================================
+   BEYOND TBILISI DROPDOWN
+===================================== */
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+
+  width: max-content;
+  min-width: 0;
+
+  padding: 8px;
+
+  background: #fff;
+
+  border: 1px solid #dedede;
+  border-radius: 8px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility .2s ease;
+}
+
+
+.nav-dropdown__menu a {
+  display: block;
+
+  padding: 10px 12px;
+
+  color: #111827;
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  border-radius: 5px;
+
+  transition:
+    background .2s ease,
+    opacity .2s ease;
+}
+
+
+.nav-dropdown__menu a:hover {
+  background: #f5f5f5;
+}
+
+
+/* =====================================
+   SHOW DROPDOWN
+===================================== */
+
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* =====================================
+   DROPDOWN LINKS
+===================================== */
+
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__menu a {
+  display: block;
+
+  padding: 10px 12px;
+
+  color: #111827;
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  border-radius: 5px;
+
+  transition:
+    background .2s ease,
+    opacity .2s ease;
+}
+
+.nav-dropdown__menu a:hover {
+  background: #f5f5f5;
+  padding-left: 17px;
+}
+
+
+
+
+
+/* =====================================
+   PAGE NAME
+===================================== */
+
+.nav-dropdown__menu strong {
+  font-size: 15px;
+  line-height: 1.1;
+
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
