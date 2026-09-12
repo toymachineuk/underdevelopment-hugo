@@ -148,7 +148,7 @@
 
   overflow: hidden;
 
-  background: var(--tv-white);
+
 }
 
 
@@ -464,14 +464,7 @@
    IMAGE
 ===================================== */
 
-.tv-carousel-image {
-  width: 240px;
-  height: 180px;
 
-  overflow: hidden;
-
-  background: var(--tv-white);
-}
 
 
 .tv-carousel-image img {
@@ -561,25 +554,26 @@
 
 
   .tv-carousel-card {
-    flex: 0 0 240px;
-    width: 240px;
+    flex: 0 0 140px;
+    width: 140px;
   }
 
 
   .tv-carousel-card a {
-    width: 240px;
+    width: 140px;
   }
 
 
   .tv-carousel-image {
-    width: 240px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
 
 
   .tv-carousel-image img {
-    width: 240px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
   }
 
 
