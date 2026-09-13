@@ -1,5 +1,8 @@
+
 /* This is deliberately empty. */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+
 
 /* =====================================
    GALLERY DELUXE ORIGINAL VARIABLES
@@ -32,12 +35,7 @@
     serif;
 
   --font-family-sans-serif:
-    Seravek,
-    "Gill Sans Nova",
-    Ubuntu,
-    Calibri,
-    "DejaVu Sans",
-    source-sans-pro,
+    "DM Sans",
     sans-serif;
 
   --font-family-base: var(--font-family-sans-serif);
@@ -52,23 +50,82 @@
 
 :root {
 
-  /* Colors */
+  /* ---------------------------------
+     COLORS
+  --------------------------------- */
 
   --tv-black: #151515;
   --tv-white: #ffffff;
-  --tv-cream: #f5f1e9;
-  --tv-muted: #77736c;
-  --tv-border: #ded9d0;
-  --tv-accent: #b65d3c;
+  --tv-pink: #f4e3df;
+  --tv-blue: #d6e2f9;
+  --tv-vanilla: #f6f0e2;
+  --tv-pearl: #e6e6e8;
+
+  --tv-green: #e2ece9;
+  --tv-green-dark: #5f8061;
+  --tv-green-border: #b8cbb9;
 
 
-  /* Fonts */
+  /* ---------------------------------
+     TYPOGRAPHY
+  --------------------------------- */
 
   --font-sans: "DM Sans", sans-serif;
-  --font-serif: "Playfair Display", serif;
 
 
-  /* Spacing */
+  /* Base */
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 21px;
+
+
+  /* Headings */
+
+  --heading-sm: 24px;
+  --heading-md: 32px;
+  --heading-lg: 48px;
+  --heading-xl: 64px;
+  --heading-xxl: 88px;
+
+
+  /* Font weights */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+  --weight-black: 900;
+
+
+  /* ---------------------------------
+     LINE HEIGHT
+  --------------------------------- */
+
+  --line-tight: 0.95;
+  --line-heading: 1.02;
+  --line-subheading: 1.15;
+  --line-body: 1.55;
+  --line-relaxed: 1.7;
+
+
+  /* ---------------------------------
+     LETTER SPACING
+  --------------------------------- */
+
+  --tracking-tight: -0.04em;
+  --tracking-heading: -0.035em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.06em;
+
+
+  /* ---------------------------------
+     SPACING
+  --------------------------------- */
 
   --space-xs: 8px;
   --space-sm: 16px;
@@ -83,6 +140,37 @@
 
   :root {
 
+    /* Typography */
+
+    --text-xs: 11px;
+    --text-sm: 13px;
+    --text-base: 16px;
+    --text-md: 17px;
+    --text-lg: 19px;
+
+    --heading-sm: 22px;
+    --heading-md: 28px;
+    --heading-lg: 38px;
+    --heading-xl: 48px;
+    --heading-xxl: 60px;
+
+
+    /* Line height */
+
+    --line-tight: 0.95;
+    --line-heading: 1.02;
+    --line-subheading: 1.2;
+    --line-body: 1.55;
+
+
+    /* Letter spacing */
+
+    --tracking-tight: -0.035em;
+    --tracking-heading: -0.025em;
+
+
+    /* Spacing */
+
     --space-xs: 6px;
     --space-sm: 12px;
     --space-md: 24px;
@@ -93,12 +181,404 @@
 
 }
 
+```css
 /* =====================================
-   TV GREEN CAROUSEL
+   TYPOGRAPHY
 ===================================== */
 
-:root {
-  --tv-green: #dce8dc;
-  --tv-green-dark: #5f8061;
-  --tv-green-border: #b8cbb9;
+.title-xl {
+
+  font-family: var(--font-sans);
+
+  font-size: clamp(56px, 8vw, 120px);
+
+  line-height: .92;
+
+  letter-spacing: -.045em;
+
+  font-weight: 900;
+
+  margin: 0;
+
+}
+
+
+.title-lg {
+
+  font-family: var(--font-sans);
+
+  font-size: clamp(48px, 6.5vw, 88px);
+
+  line-height: .94;
+
+  letter-spacing: -.04em;
+
+  font-weight: 900;
+
+  margin: 0;
+
+}
+
+
+.title-md {
+
+  font-family: var(--font-sans);
+
+  font-size: clamp(40px, 5vw, 68px);
+
+  line-height: .96;
+
+  letter-spacing: -.035em;
+
+  font-weight: 800;
+
+  margin: 0;
+
+}
+
+
+.title-sm {
+
+  font-family: var(--font-sans);
+
+  font-size: clamp(32px, 3.4vw, 48px);
+
+  line-height: 1;
+
+  letter-spacing: -.025em;
+
+  font-weight: 800;
+
+  margin: 0;
+
+}
+
+
+.title-xs {
+
+  font-family: var(--font-sans);
+
+  font-size: clamp(24px, 2.2vw, 32px);
+
+  line-height: 1.08;
+
+  letter-spacing: -.02em;
+
+  font-weight: 700;
+
+  margin: 0;
+
+}
+
+
+.title-xxs {
+
+  font-family: var(--font-sans);
+
+  font-size: clamp(20px, 1.5vw, 24px);
+
+  line-height: 1.15;
+
+  letter-spacing: -.015em;
+
+  font-weight: 700;
+
+  margin: 0;
+
+}
+
+
+/* =====================================
+   BODY TEXT
+===================================== */
+
+.text-lg {
+
+  font-family: var(--font-sans);
+
+  font-size: 18px;
+
+  line-height: 1.55;
+
+  letter-spacing: -.005em;
+
+  font-weight: 400;
+
+  max-width: 44ch;
+
+}
+
+
+.text-md {
+
+  font-family: var(--font-sans);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+  max-width: 46ch;
+
+}
+
+
+.text-sm {
+
+  font-family: var(--font-sans);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+  max-width: 48ch;
+
+}
+
+
+.text-xs {
+
+  font-family: var(--font-sans);
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+}
+
+
+.text-label {
+
+  display: block;
+
+  margin-bottom: var(--space-sm);
+
+  font-size: 12px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+
+}
+
+
+/* =====================================
+   SPACING
+===================================== */
+
+.section-xxs {
+
+  padding-block: var(--space-md);
+
+}
+
+
+.section-xs {
+
+  padding-block: calc(var(--space-md) + var(--space-sm));
+
+}
+
+
+.section-sm {
+
+  padding-block: var(--space-lg);
+
+}
+
+
+.section-md {
+
+  padding-block: calc(var(--space-lg) + var(--space-md));
+
+}
+
+
+.section-lg {
+
+  padding-block: var(--space-xxl);
+
+}
+
+
+.section-xl {
+
+  padding-block: calc(var(--space-xxl) + var(--space-lg));
+
+}
+
+
+/* =====================================
+   MARGIN
+===================================== */
+
+.mt-xs {
+
+  margin-top: var(--space-xs);
+
+}
+
+
+.mt-sm {
+
+  margin-top: var(--space-sm);
+
+}
+
+
+.mt-md {
+
+  margin-top: var(--space-md);
+
+}
+
+
+.mt-lg {
+
+  margin-top: var(--space-lg);
+
+}
+
+
+.mt-xl {
+
+  margin-top: var(--space-xl);
+
+}
+
+
+.mb-xs {
+
+  margin-bottom: var(--space-xs);
+
+}
+
+
+.mb-sm {
+
+  margin-bottom: var(--space-sm);
+
+}
+
+
+.mb-md {
+
+  margin-bottom: var(--space-md);
+
+}
+
+
+.mb-lg {
+
+  margin-bottom: var(--space-lg);
+
+}
+
+
+.mb-xl {
+
+  margin-bottom: var(--space-xl);
+
+}
+
+
+/* =====================================
+   PADDING
+===================================== */
+
+.p-sm {
+
+  padding: var(--space-sm);
+
+}
+
+
+.p-md {
+
+  padding: var(--space-md);
+
+}
+
+
+.p-lg {
+
+  padding: var(--space-lg);
+
+}
+
+
+.px-md {
+
+  padding-inline: var(--space-md);
+
+}
+
+
+.px-lg {
+
+  padding-inline: var(--space-lg);
+
+}
+
+
+.py-md {
+
+  padding-block: var(--space-md);
+
+}
+
+
+.py-lg {
+
+  padding-block: var(--space-lg);
+
+}
+
+
+/* =====================================
+   GAP
+===================================== */
+
+.gap-sm {
+
+  gap: var(--space-sm);
+
+}
+
+
+.gap-md {
+
+  gap: var(--space-md);
+
+}
+
+
+.gap-lg {
+
+  gap: var(--space-lg);
+
+}
+
+
+.gap-xl {
+
+  gap: var(--space-xl);
+
 }
