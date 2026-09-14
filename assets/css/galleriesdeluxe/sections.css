@@ -530,6 +530,7 @@
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.01em;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .tv-see-do-count strong {
@@ -588,7 +589,7 @@ margin: 0 5vw 0px;
       rgba(255, 255, 255, .16) 0 200px,
       transparent 201px),
     var(--tv-pink);
-      padding: 30px 0 60px;
+     
 }
 
 .tv-see-do-grid {
@@ -604,7 +605,7 @@ margin: 0 5vw 0px;
 }
 
 
-.tv-food-grid {
+.tv-square-grid {
   background:
     radial-gradient(circle at 85% 15%,
       rgba(255, 255, 255, .28) 0 140px,
@@ -615,6 +616,16 @@ margin: 0 5vw 0px;
     var(--tv-vanilla);
  
 }
+
+.tv-square-grid h3 {
+    margin: 12px 0 10px;
+  font-size: 16px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  min-height: 34px;
+}
+
 
 /* =========================================================
    CARD
@@ -949,6 +960,7 @@ margin: 0 5vw 0px;
   
     grid-auto-columns: 76%;
     gap: 20px;
+    padding: var(--space-md);
   }
 
   .tv-see-image {
@@ -1108,10 +1120,26 @@ margin: 0 5vw 0px;
 }
 
 .tv-see-category.badge {
-  position: absolute;
-  top: 10px;
+
+
+
+   position: absolute;
+  top: 12px;
   right: 0;
-  padding: 8px 10px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+border-radius: 2px;
+  padding: 6px 8px;
+
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .06em;
+
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 
@@ -1204,9 +1232,7 @@ margin: 0 5vw 0px;
   margin-bottom: 24px;
 }
 
-.chillout .tv-see-do-count {
-  margin-bottom: 24px;
-}
+
 
 
 
@@ -1233,7 +1259,7 @@ padding: var(--space-md) 5vw 0;
 
 
 
-.tv-food-grid::-webkit-scrollbar {
+.tv-square-grid::-webkit-scrollbar {
   display: none;
 }
 
@@ -1280,17 +1306,29 @@ padding: var(--space-md) 5vw 0;
 }
 
 
+
+
+
 /* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
 
-  .tv-food-grid {
+  .tv-square-grid {
     grid-auto-columns: 25%;
     gap: 24px;
   
   }
+
+   .tv-square-grid .tv-grid {
+    grid-auto-columns: 48%;
+    gap: 10px;
+
+  }
+
+
+
 
 }
 
@@ -1307,7 +1345,7 @@ padding: var(--space-md) 5vw 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 
   height: auto;
   min-height: 0;
@@ -1421,7 +1459,7 @@ padding: var(--space-md) 5vw 0;
     order: 1;
 
     width: 100%;
-    height: 140px;
+    height: 150px;
 
     flex: none;
 

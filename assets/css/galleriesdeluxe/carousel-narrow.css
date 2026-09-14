@@ -235,28 +235,12 @@ border: 1px solid #d8d8d8;
   }
 
 
-  .tv-carousel-header {
-
-    display: block;
-
-    margin: 0;
-
-    padding: 0 24px 40px;
-
-  }
+ 
 
 
 
 
-  .tv-carousel-intro {
 
-    margin-top: 20px;
-
-    max-width: 360px;
-
-    font-size: 16px;
-
-  }
 
 
   .tv-carousel {
@@ -508,20 +492,13 @@ border: 1px solid #d8d8d8;
     display: block;
 
     margin: 0;
-    padding: 0 24px 40px;
+  padding: var(--space-sm) 5vw var(--space-sm);
   }
 
 
 
 
 
-  .tv-carousel-intro {
-    max-width: 360px;
-
-    margin-top: 20px;
-
-    font-size: 16px;
-  }
 
 
   .tv-carousel {
