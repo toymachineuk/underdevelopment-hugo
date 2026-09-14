@@ -41,83 +41,7 @@
      FEATURE
 ===================================== -->
 
-<section class="feature" id="experiences">
 
-    <div class="feature-image">
-
-        <img
-            src="/img/maps/tbilisi.png"
-            alt="Georgia travel"
-        >
-
-    </div>
-
-
-    <div class="feature-content section-md">
-
-        <span class="text-label">
-            The Tbilisi experience
-        </span>
-
-        <h2 class="title-md mb-lg">
-            Come for the city.<br>
-            Stay for the feeling.
-        </h2>
-
-        <p class="text-lg mb-lg">
-            Tbilisi is a city of contrasts — ancient and modern,
-            relaxed and energetic, traditional and experimental.
-            Take your time and discover it at your own pace.
-        </p>
-
-
-        
-        <div class="photo-grid">
-
-            <div class="photo photo-1">
-
-                <img
-                    src="https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=900&q=85"
-                    alt="Tbilisi old town"
-                >
-
-                <span>Old Tbilisi</span>
-
-            </div>
-
-
-            <div class="photo photo-2">
-
-                <img
-                    src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=85"
-                    alt="Tbilisi architecture"
-                >
-
-                <span>Architecture</span>
-
-            </div>
-
-
-            <div class="photo photo-3">
-
-                <img
-                    src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=900&q=85"
-                    alt="Tbilisi city"
-                >
-
-                <span>City Life</span>
-
-            </div>
-
-        </div>
-     
-
-
-  
-
-    </div>
-
-</section>
 
 {{ partial "chillout.html" . }}
 
@@ -125,6 +49,50 @@
 
 
 {{ partial "food.html" . }}
+
+
+
+<!-- =====================================
+     FEATURE
+===================================== -->
+<section class="feature feature--carousel">
+
+  <div class="feature-image">
+
+    <p class="text-lg mb-lg">
+      Tbilisi is a city of contrasts — ancient and modern,
+      relaxed and energetic, traditional and experimental.
+      Take your time and discover it at your own pace.
+    </p>
+
+    <img
+      src="/img/maps/tbilisi.png"
+      alt="Georgia travel"
+    >
+
+  </div>
+
+
+  <div class="feature-content">
+
+    <span class="text-label">
+      The Tbilisi experience
+    </span>
+
+    <h2 class="title-md mb-lg">
+      Come for the city.<br>
+      Stay for the feeling.
+    </h2>
+
+    <div class="photo-grid">
+
+      {{ partial "carousel-editorial.html" . }}
+
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- =====================================
@@ -408,49 +376,84 @@ viewBox="150 40 750 440"
   </div>
 
 
-<!-- =====================================
-     FEATURE
-===================================== -->
-<section class="feature feature--carousel">
-
-  <div class="feature-image">
-
-    <p class="text-lg mb-lg">
-      Tbilisi is a city of contrasts — ancient and modern,
-      relaxed and energetic, traditional and experimental.
-      Take your time and discover it at your own pace.
-    </p>
-
-    <img
-      src="/img/maps/tbilisi.png"
-      alt="Georgia travel"
-    >
-
-  </div>
 
 
-  <div class="feature-content">
+<section class="feature" id="experiences">
 
-    <span class="text-label">
-      The Tbilisi experience
-    </span>
+    <div class="feature-image">
 
-    <h2 class="title-md mb-lg">
-      Come for the city.<br>
-      Stay for the feeling.
-    </h2>
-
-    <div class="photo-grid">
-
-      {{ partial "carousel-editorial.html" . }}
+        <img
+            src="/img/maps/tbilisi.png"
+            alt="Georgia travel"
+        >
 
     </div>
 
-  </div>
+
+    <div class="feature-content section-md">
+
+        <span class="text-label">
+            The Tbilisi experience
+        </span>
+
+        <h2 class="title-md mb-lg">
+            Come for the city.<br>
+            Stay for the feeling.
+        </h2>
+
+        <p class="text-lg mb-lg">
+            Tbilisi is a city of contrasts — ancient and modern,
+            relaxed and energetic, traditional and experimental.
+            Take your time and discover it at your own pace.
+        </p>
+
+
+        
+        <div class="photo-grid">
+
+            <div class="photo photo-1">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=900&q=85"
+                    alt="Tbilisi old town"
+                >
+
+                <span>Old Tbilisi</span>
+
+            </div>
+
+
+            <div class="photo photo-2">
+
+                <img
+                    src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=85"
+                    alt="Tbilisi architecture"
+                >
+
+                <span>Architecture</span>
+
+            </div>
+
+
+            <div class="photo photo-3">
+
+                <img
+                    src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=900&q=85"
+                    alt="Tbilisi city"
+                >
+
+                <span>City Life</span>
+
+            </div>
+
+        </div>
+     
+
+
+  
+
+    </div>
 
 </section>
-
-
-
 
 {{ end }}

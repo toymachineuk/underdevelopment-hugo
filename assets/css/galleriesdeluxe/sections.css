@@ -48,6 +48,12 @@
   justify-content: flex-end;
 }
 
+@media (max-width: 650px) {
+  .chillout .tv-see-do-filters {
+    justify-content: flex-start;
+  }
+}
+
 
 .chillout .tv-see-do-count {
   text-align: right;
@@ -331,7 +337,7 @@
   .section-header.right {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     text-align: left;
     height: auto;
     gap: var(--space-xs);
@@ -514,10 +520,16 @@
    ========================================================= */
 
 .tv-see-do-count {
-  margin-bottom: 42px;
+  width: 100%;
+  margin: 0;
+  padding: var(--space-sm) 5vw var(--space-sm);
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
+  background: #fff;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .tv-see-do-count strong {
@@ -554,6 +566,7 @@ margin: 0 5vw 0px;
   scrollbar-width: none;
   position: relative;
   z-index: 1;
+  padding: var(--space-md) 0 0;
 
 }
 
@@ -587,7 +600,7 @@ margin: 0 5vw 0px;
       rgba(0, 0, 0, .025) 0 180px,
       transparent 181px),
     var(--tv-pearl);
-      padding: 30px 0 60px;
+  
 }
 
 
@@ -600,7 +613,7 @@ margin: 0 5vw 0px;
       rgba(255, 255, 255, .16) 0 200px,
       transparent 201px),
     var(--tv-vanilla);
-    padding: 30px 0 60px;
+ 
 }
 
 /* =========================================================
@@ -790,7 +803,6 @@ margin: 0 5vw 0px;
 .tv-see-info {
   padding: 11px 13px;
 
-  border: 1px solid #d8d8d8;
 
   font-family: "DM Sans", sans-serif;
   font-size: 13px;
@@ -934,7 +946,7 @@ margin: 0 5vw 0px;
    ========================================================= */
 @media (max-width: 768px) {
   .tv-grid {
-    padding: 30px 5vw 45px;
+  
     grid-auto-columns: 76%;
     gap: 20px;
   }
@@ -995,6 +1007,11 @@ margin: 0 5vw 0px;
     overflow-x: auto;
 
     padding-bottom: 5px;
+        scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .tv-see-do-filters::-webkit-scrollbar {
+    display: none;
   }
 
   .tv-filter {
@@ -1005,11 +1022,7 @@ margin: 0 5vw 0px;
   }
 
 
-  /* COUNT */
-
-  .tv-see-do-count {
-    margin-bottom: 28px;
-  }
+ 
 
 
  
@@ -1213,7 +1226,7 @@ margin: 0 5vw 0px;
   width: 100%;
   margin: 0;
   background: #fff;
-  padding: 80px 5vw 0;
+padding: var(--space-md) 5vw 0;
 
   
 }
@@ -1276,7 +1289,7 @@ margin: 0 5vw 0px;
   .tv-food-grid {
     grid-auto-columns: 25%;
     gap: 24px;
-    padding-right: 6%;
+  
   }
 
 }

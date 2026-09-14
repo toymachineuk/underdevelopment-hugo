@@ -357,6 +357,20 @@
 
 }
 
+.text-xxs {
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+}
+
 
 .text-label {
 
