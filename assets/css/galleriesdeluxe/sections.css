@@ -1,3 +1,12 @@
+.tv-filter-section {  
+width: 100%;
+  margin: 0;
+  background: #fff;
+  padding: 80px 5vw 0;
+}
+
+
+
 /* =====================================
    THINGS TO DO
 ===================================== */
@@ -55,7 +64,7 @@
 }
 
 
-.chillout .tv-see-do-count {
+.chillout .tv-filter-count {
   text-align: right;
 }
 
@@ -112,19 +121,19 @@
   letter-spacing: .1em;
 }
 
-.card-content {
+.tv-square-card-content {
   padding: 28px;
 }
 
-.card-content .text-label {
+.tv-square-card-content .text-label {
   margin-bottom: 8px;
 }
 
-.card-content h3 {
+.tv-square-card-content h3 {
   margin: 0 0 var(--space-sm);
 }
 
-.card-content p {
+.tv-square-card-content p {
   margin: 0;
   color: var(--muted);
 }
@@ -477,7 +486,9 @@
    FILTERS
    ========================================================= */
 
-.tv-see-do-filters {
+
+
+.tv-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
@@ -519,7 +530,7 @@
    COUNT
    ========================================================= */
 
-.tv-see-do-count {
+.tv-filter-count {
   width: 100%;
   margin: 0;
   padding: var(--space-sm) 5vw var(--space-sm);
@@ -533,7 +544,7 @@
   border-bottom: 1px solid #d8d8d8;
 }
 
-.tv-see-do-count strong {
+.tv-filter-count strong {
   font-weight: 700;
 }
 
@@ -553,21 +564,24 @@
    ========================================================= */
 
 .tv-grid {
- width: calc(100% - 10vw);
-margin: 0 5vw 0px;
-  padding: 0px 5vw 0px;
+  width: 100%;
+  margin: 0;
+  padding: var(--space-md) 5vw var(--space-xl);
+
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 25%;
-  gap: 32px;
+  gap: var(--space-md);
+
   overflow-x: auto;
   overflow-y: hidden;
+
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
+
   position: relative;
   z-index: 1;
-  padding: var(--space-md) 0 0;
 
 }
 
@@ -755,6 +769,31 @@ margin: 0 5vw 0px;
   flex: 0 0 6px;
 
   background: var(--category-accent);
+}
+
+.tv-badge {
+
+  
+
+  width: 6px;
+  height: 6px;
+  
+
+  position: absolute;
+  top: 12px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .06em;
+
+
+  background: pink;
 }
 
 
@@ -968,24 +1007,7 @@ margin: 0 5vw 0px;
   }
 }
 
-/* Mobile */
-@media (max-width: 650px) {
 
-  .tv-see-do {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .tv-see-do .section-header,
-  .tv-see-do .tv-see-do-filters,
-  .tv-see-do .tv-see-do-count {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-
-
-
-}
 
 
 
@@ -1011,9 +1033,10 @@ margin: 0 5vw 0px;
 
   /* FILTERS */
 
-  .tv-see-do-filters {
+  .tv-filters {
     gap: 7px;
     margin-top: 26px;
+    justify-content: flex-start;
 
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -1116,6 +1139,10 @@ margin: 0 5vw 0px;
 }
 
 .tv-filter-daytrips {
+  --category-accent: #B66A4C;
+}
+
+.tv-filter-georgian {
   --category-accent: #B66A4C;
 }
 
@@ -1227,7 +1254,7 @@ border-radius: 2px;
    CHILL OUT SPACING
    ========================================= */
 
-.chillout .tv-see-do-filters {
+.tv-filters {
   margin-top: 20px;
   margin-bottom: 24px;
 }
@@ -1268,7 +1295,7 @@ padding: var(--space-md) 5vw 0;
    FOOD CARD
    ========================================================= */
 
-.tv-food-card {
+.tv-square-card {
   min-width: 0;
   scroll-snap-align: start;
 }
@@ -1278,7 +1305,7 @@ padding: var(--space-md) 5vw 0;
    FOOD IMAGE — SQUARE
    ========================================================= */
 
-.tv-food-image {
+.tv-square-image {
   position: relative;
   display: block;
 
@@ -1289,7 +1316,7 @@ padding: var(--space-md) 5vw 0;
   background: #eee;
 }
 
-.tv-food-image img {
+.tv-square-image img {
   display: block;
 
   width: 100%;
@@ -1301,7 +1328,7 @@ padding: var(--space-md) 5vw 0;
     transform .5s cubic-bezier(.2, .7, .2, 1);
 }
 
-.tv-food-image:hover img {
+.tv-square-image:hover img {
   transform: scale(1.035);
 }
 

@@ -109,17 +109,15 @@
 ===================================== */
 
 .travel-card span {
-  position: absolute;
-
+   position: absolute;
   left: 20px;
-  bottom: 18px;
-
+  top: 20px;
   color: var(--white);
-
   font-size: 13px;
   font-weight: 700;
-
-  text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+    z-index: 10;
 }
 
 
@@ -199,7 +197,7 @@
 
     transform: translateX(-50%);
 
-    z-index: 5;
+    z-index: 1;
   }
 
   .travel-card span {
@@ -359,6 +357,7 @@ padding-bottom: var(--space-lg);
   padding: 80px 5vw 60px;
 
   overflow: hidden;
+  transform: translateX(540px) rotate(-90deg) scale(2.03);
 }
 
 
@@ -467,6 +466,8 @@ padding-bottom: var(--space-lg);
 
   .feature--carousel .feature-image {
     padding: 50px 5vw 30px;
+      transform: translateX(-20px) rotate(-90deg) scale(1.5);
+         order: 2;
   }
 
   .feature--carousel .feature-image p {
@@ -483,6 +484,7 @@ padding-bottom: var(--space-lg);
 
   .feature--carousel .feature-content {
     padding: 50px 5vw 0;
+       order: 1;
   }
 
   .feature--carousel .feature-content h2 {
@@ -493,7 +495,10 @@ padding-bottom: var(--space-lg);
   /* CAROUSEL */
 
   .feature--carousel .photo-grid {
-    width: calc(100% + 5vw);
+   
+      width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: 0;
   }
 
 }
