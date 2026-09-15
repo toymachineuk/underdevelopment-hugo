@@ -37,19 +37,42 @@
     {{ end }}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
 
+        <!-- Anime.js 2.0.2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
     {{/* Load JavaScript */}}
-    {{ $js := resources.Get "js/galleriesdeluxe/index.js" }}
-    {{ $params := dict }}
-    {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
-    {{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
-    {{ $js = $js | js.Build $opts }}
-    {{ if hugo.IsProduction }}
-      {{ $js = $js | fingerprint }}
-    {{ end }}
-    <script
-      src="{{ $js.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
-      defer></script>
+{{ $js := resources.Get "js/galleriesdeluxe/index.js" }}
+{{ $params := dict }}
+{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+{{ $js = $js | js.Build $opts }}
+
+{{ if hugo.IsProduction }}
+  {{ $js = $js | fingerprint }}
+{{ end }}
+
+<script
+  src="{{ $js.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
+  defer></script>
+
+
+{{/* Moving Letters */}}
+{{ $movingLetters := resources.Get "js/movingletters.js" }}
+
+{{ if hugo.IsProduction }}
+  {{ $movingLetters = $movingLetters | fingerprint }}
+{{ end }}
+
+<script
+  src="{{ $movingLetters.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $movingLetters.Data.Integrity }}"{{ end }}
+  defer></script>
+      
+
+
+
+  
 
     {{ block "head-custom" . }}{{ end }}
 

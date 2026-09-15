@@ -645,22 +645,24 @@ width: 100%;
    CARD
    ========================================================= */
 
-.tv-see-card {
+.tv-rectangle-card {
   min-width: 0;
 
   scroll-snap-align: start;
 }
 
-.tv-see-card.is-hidden {
+.tv-rectangle-card.is-hidden {
   display: none;
 }
 
-
+.tv-rectangle-card-content {
+  padding: 11px 13px;
+}
 /* =========================================================
    IMAGE
    ========================================================= */
 
-.tv-see-image {
+.tv-rectangle-image {
   position: relative;
   display: block;
   width: 100%;
@@ -670,7 +672,7 @@ width: 100%;
   background: #eee;
 }
 
-.tv-see-image img {
+.tv-rectangle-image img {
   display: block;
 
   width: 100%;
@@ -682,7 +684,7 @@ width: 100%;
     transform .5s cubic-bezier(.2, .7, .2, 1);
 }
 
-.tv-see-image:hover img {
+.tv-rectangle-image:hover img {
   transform: scale(1.035);
 }
 
@@ -721,19 +723,12 @@ width: 100%;
     transform .25s ease;
 }
 
-.tv-see-image:hover .tv-see-arrow {
+.tv-rectangle-image:hover .tv-see-arrow {
   opacity: 1;
   transform: translateX(0);
 }
 
 
-/* =========================================================
-   CARD TEXT
-   ========================================================= */
-
-.tv-see-card-content {
-  padding-top: 14px;
-}
 
 
 /* Category */
@@ -761,7 +756,7 @@ width: 100%;
 
 }
 
-.tv-see-category::before {
+.tv-category::before {
   content: "";
 
   width: 6px;
@@ -798,26 +793,26 @@ width: 100%;
 
 
 /* Category colours */
-.tv-see-category.tv-filter-parks {
+.tv-category.tv-filter-parks {
   --category-accent: #5F8061;
 }
 
-.tv-see-category.tv-filter-history {
+.tv-category.tv-filter-history {
   --category-accent: #9A7357;
 }
 
-.tv-see-category.tv-filter-landmarks {
+.tv-category.tv-filter-landmarks {
   --category-accent: #65758B;
 }
 
-.tv-see-category.tv-filter-daytrips {
+.tv-category.tv-filter-daytrips {
   --category-accent: #B66A4C;
 }
 
 
 /* Title */
 
-.tv-see-card h3 {
+.tv-rectangle-card h3 {
   margin: 0 0 4px;
 
   font-family: "DM Sans", sans-serif;
@@ -827,7 +822,7 @@ width: 100%;
   letter-spacing: -.01em;
 }
 
-.tv-see-card h3 a {
+.tv-rectangle-card h3 a {
   color: var(--tv-black);
   text-decoration: none;
 }
@@ -851,9 +846,7 @@ width: 100%;
    ========================================= */
 
 .tv-see-info {
-  padding: 11px 13px;
-
-
+ 
   font-family: "DM Sans", sans-serif;
   font-size: 13px;
   line-height: 1.3;
@@ -977,18 +970,7 @@ width: 100%;
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
 
-@media (max-width: 1000px) {
-
-  .tv-see-do {
-    padding: 80px 0 0;
-  }
-
-
-}
 
 
 /* =========================================================
@@ -1002,7 +984,7 @@ width: 100%;
     padding: var(--space-md);
   }
 
-  .tv-see-image {
+  .tv-rectangle-image {
     aspect-ratio: 1.55 / 1;
   }
 }
@@ -1063,11 +1045,6 @@ width: 100%;
  
 
 
-  /* CARD */
-
-  .tv-see-card h3 {
-    font-size: 17px;
-  }
 
 
   /* CARD ARROW */
@@ -1134,11 +1111,11 @@ width: 100%;
   --category-accent: #9A7357;
 }
 
-.tv-filter-landmarks {
+.tv-filter-religion {
   --category-accent: #65758B;
 }
 
-.tv-filter-daytrips {
+.tv-filter-architecture {
   --category-accent: #B66A4C;
 }
 
@@ -1146,7 +1123,7 @@ width: 100%;
   --category-accent: #B66A4C;
 }
 
-.tv-see-category.badge {
+.tv-category.badge {
 
 
 
@@ -1205,23 +1182,23 @@ border-radius: 2px;
    CARD CATEGORY COLOURS
    ----------------------------------------- */
 
-.tv-see-card {
+.tv-rectangle-card {
   --category-accent: var(--tv-black);
 }
 
-.tv-see-card[data-category="tbilisi"] {
+.tv-rectangle-card[data-category="tbilisi"] {
   --category-accent: #5F8061;
 }
 
-.tv-see-card[data-category="history"] {
+.tv-rectangle-card[data-category="history"] {
   --category-accent: #9A7357;
 }
 
-.tv-see-card[data-category="landmarks"] {
+.tv-rectangle-card[data-category="landmarks"] {
   --category-accent: #65758B;
 }
 
-.tv-see-card[data-category="daytrips"] {
+.tv-rectangle-card[data-category="daytrips"] {
   --category-accent: #B66A4C;
 }
 
