@@ -3,11 +3,15 @@
 ===================================== */
 
 .tv-moving-letter {
-  width: 100%;
-  display: flex;
+width: 100%;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 5vw;
+  pointer-events: none;
+  background: #98bec8;
 }
 
 .tv-moving-letter .ml8 {
@@ -98,3 +102,60 @@
   margin: 0;
 }
 
+
+
+.tv-moving-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tv-moving-text .text-md {
+  max-width: 520px;
+  margin: 0;
+}
+
+.tv-moving-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+
+
+
+@media (max-width: 650px) {
+
+  .tv-moving-letter {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    padding: var(--space-lg) 5vw;
+    min-height: 220px;
+  }
+
+  .tv-moving-text {
+    width: 100%;
+  }
+
+  .tv-moving-text .text-md {
+    max-width: 100%;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .tv-moving-animation {
+    width: 100%;
+    min-height: 180px;
+  }
+
+  
+
+  .tv-moving-animation .ml8 {
+      font-size: 2.8em;
+    width: 3em;
+    height: 3em;
+  }
+
+}
