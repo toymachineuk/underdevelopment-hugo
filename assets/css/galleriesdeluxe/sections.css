@@ -647,7 +647,7 @@ width: 100%;
 
 .tv-rectangle-card {
   min-width: 0;
-
+position:relative;
   scroll-snap-align: start;
 }
 
@@ -815,9 +815,9 @@ width: 100%;
 .tv-rectangle-card h3 {
   margin: 0 0 4px;
 
-  font-family: "DM Sans", sans-serif;
+
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.25;
   letter-spacing: -.01em;
 }
