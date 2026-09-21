@@ -810,11 +810,14 @@ position:relative;
 }
 
 
-/* Title */
+
+
+/* =========================================
+   RECTANGLE CARD — TITLE
+========================================= */
 
 .tv-rectangle-card h3 {
-  margin: 0 0 4px;
-
+  margin: 0 0 8px;
 
   font-size: 17px;
   font-weight: 700;
@@ -828,26 +831,13 @@ position:relative;
 }
 
 
-/* Location */
-
-.tv-see-location {
-  margin-bottom: 12px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 13px;
-  line-height: 1.3;
-
-  color: #777;
-}
-
-
 /* =========================================
    PRACTICAL INFORMATION
-   ========================================= */
+========================================= */
 
 .tv-see-info {
- 
-  font-family: "DM Sans", sans-serif;
+  margin-top: 2px;
+
   font-size: 13px;
   line-height: 1.3;
 }
@@ -855,17 +845,93 @@ position:relative;
 .tv-info-row {
   display: flex;
   align-items: center;
-  gap: 9px;
-
+  gap: 7px;
   min-height: 25px;
 }
 
-.tv-info-row+.tv-info-row {
-  margin-top: 5px;
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.tv-info-row--location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tv-info-row--location > img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  display: block;
+}
+
+.tv-info-row--location > a {
+  color: var(--tv-black);
+  text-decoration: none;
+}
+
+.tv-info-row--location > a:hover {
+  border-bottom: 1px solid var(--tv-black);
 }
 
 
-/* Small icon */
+/* =========================================
+   METRO
+========================================= */
+
+.tv-info-row--metro {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 2px;
+
+  color: #777;
+}
+
+.tv-info-row--metro > img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  display: block;
+}
+
+.tv-info-row--metro span {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   TYPE / CLASSIFICATION
+========================================= */
+
+
+.tv-info-type {
+  margin-top: 7px;
+  min-height: auto;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .05em;
+
+
+  color: #555;
+}
+
+.tv-info-entry {
+  margin-top: 8px;
+}
+
+
+
+/* =========================================
+   ENTRY / PRICE
+========================================= */
+
 
 .tv-info-icon {
   width: 22px;
@@ -881,34 +947,23 @@ position:relative;
 
   font-size: 11px;
   line-height: 1;
-
   color: #666;
 }
 
-
-/* Links */
-
-.tv-info-row a {
-  color: var(--tv-black);
-  text-decoration: none;
-
-  border-bottom: 1px solid #aaa;
-}
-
-
-/* Highlighted information */
-
 .tv-info-accent {
   display: inline-block;
-
   padding: 4px 6px;
 
-  background: color-mix(in srgb,
-      var(--category-accent) 18%,
-      white);
+  background: color-mix(
+    in srgb,
+    var(--category-accent) 18%,
+    white
+  );
 
   color: var(--tv-black);
 }
+
+
 
 
 /* =========================================================
