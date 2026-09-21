@@ -835,7 +835,7 @@ position:relative;
    PRACTICAL INFORMATION
 ========================================= */
 
-.tv-see-info {
+.tv-info {
   margin-top: 2px;
 
   font-size: 13px;
@@ -1332,6 +1332,14 @@ padding: var(--space-md) 5vw 0;
   scroll-snap-align: start;
 }
 
+
+.tv-square-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
 
 /* =========================================================
    FOOD IMAGE — SQUARE
