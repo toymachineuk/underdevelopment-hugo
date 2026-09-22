@@ -186,15 +186,27 @@ width: 100%;
 }
 
 .tv-square-card-content {
-  padding: 28px 0;
+  padding: 16px 0 0;
 }
 
 .tv-square-card-content .text-label {
   margin-bottom: 8px;
 }
 
-.tv-square-card-content h3 {
-  margin: 0 0 var(--space-sm);
+
+
+
+
+
+
+
+
+
+
+/* Instagram / site */
+
+.tv-square-card-content .tv-info-row--site {
+  margin-top: 2px;
 }
 
 .tv-square-card-content p {
@@ -600,7 +612,7 @@ width: 100%;
   margin: 0;
   padding: var(--space-sm) 5vw var(--space-sm);
 
-  background: #fff;
+  
 
   font-family: var(--font-sans);
   font-size: 14px;
@@ -892,19 +904,46 @@ position:relative;
 
 .tv-info {
   margin-top: 2px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   font-size: 13px;
   line-height: 1.3;
+    font-weight: 500;
 }
 
 .tv-info-row {
   display: flex;
   align-items: center;
-  gap: 7px;
+ 
   min-height: 25px;
+    display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  color: var(--tv-black);
 }
 
 
+
+.tv-info-row img {
+ width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin-top: 1px;
+  opacity: .7;
+
+
+}
+
+.tv-info-row a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tv-square-card-content .tv-info-row a:hover {
+  text-decoration: underline;
+}
 /* =========================================
    SITE
 ========================================= */
@@ -914,21 +953,12 @@ position:relative;
   gap: 7px;
 }
 
-.tv-info-row--site > img {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  display: block;
-}
+
 /* =========================================
    LOCATION
 ========================================= */
 
-.tv-info-row--location {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
+
 
 .tv-info-row--location > img {
   width: 16px;
@@ -937,14 +967,7 @@ position:relative;
   display: block;
 }
 
-.tv-info-row--location > a {
-  color: var(--tv-black);
-  text-decoration: none;
-}
 
-.tv-info-row--location > a:hover {
-  border-bottom: 1px solid var(--tv-black);
-}
 
 
 /* =========================================
@@ -957,8 +980,7 @@ position:relative;
   gap: 7px;
 
   margin-top: 2px;
-
-  color: #777;
+  color: rgba(21, 21, 21, .65);
 }
 
 .tv-info-row--metro > img {
@@ -968,10 +990,7 @@ position:relative;
   display: block;
 }
 
-.tv-info-row--metro span {
-  font-size: 12px;
-  line-height: 1.2;
-}
+
 
 
 /* =========================================
@@ -979,17 +998,14 @@ position:relative;
 ========================================= */
 
 
-.tv-info-type {
-  margin-top: 7px;
-  min-height: auto;
+.tv-info-desription {
+  margin-top: 12px;
+  padding: 10px 0 11px;
 
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: .05em;
+  border-top: 1px solid #c9c9c9;
 
 
-  color: #555;
+  color: #666;
 }
 
 .tv-info-entry {
@@ -1380,7 +1396,7 @@ border-radius: 2px;
 .tv-food {
   width: 100%;
   margin: 0;
-  background: #fff;
+background: var(--tv-vanilla);
 padding: var(--space-md) 5vw 0;
 
   
