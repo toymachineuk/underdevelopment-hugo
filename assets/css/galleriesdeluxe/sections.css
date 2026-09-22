@@ -39,6 +39,56 @@ width: 100%;
    RIGHT-ALIGNED HEADER — CHILL OUT
 ===================================== */
 
+.tv-chillout-intro {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8vw;
+}
+
+.tv-chillout-shape-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.tv-chillout-shape {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius:
+    48% 52% 43% 57%
+    / 54% 42% 58% 46%;
+}
+
+.tv-chillout-shape img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.tv-shape-caption {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: white;
+}
+
 .section-header.right {
   display: flex;
   flex-direction: column;
@@ -53,12 +103,12 @@ width: 100%;
   text-align: right;
 }
 
-.chillout .tv-see-do-filters {
+.tv-chillout .tv-see-do-filters {
   justify-content: flex-end;
 }
 
 @media (max-width: 650px) {
-  .chillout .tv-see-do-filters {
+  .tv-chillout .tv-see-do-filters {
     justify-content: flex-start;
   }
 }
@@ -122,7 +172,7 @@ width: 100%;
 }
 
 .tv-square-card-content {
-  padding: 28px;
+  padding: 28px 0;
 }
 
 .tv-square-card-content .text-label {
@@ -468,11 +518,12 @@ width: 100%;
 }
 
 
-.chillout {
+.tv-chillout {
   width: 100%;
   margin: 0;
-  background: #fff;
+  color: #fff;
   padding: 80px 5vw 0;
+  background: black;
 }
 
 
@@ -594,17 +645,7 @@ width: 100%;
 }
 
 
-.tv-chillout-grid {
-  background:
-    radial-gradient(circle at 85% 15%,
-      rgba(255, 255, 255, .28) 0 140px,
-      transparent 141px),
-    radial-gradient(circle at 10% 85%,
-      rgba(255, 255, 255, .16) 0 200px,
-      transparent 201px),
-    var(--tv-pink);
-     
-}
+
 
 .tv-see-do-grid {
   background:
@@ -850,6 +891,21 @@ position:relative;
 }
 
 
+/* =========================================
+   SITE
+========================================= */
+.tv-info-row--site {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tv-info-row--site > img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  display: block;
+}
 /* =========================================
    LOCATION
 ========================================= */
