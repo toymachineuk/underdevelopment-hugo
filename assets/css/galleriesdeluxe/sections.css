@@ -40,12 +40,14 @@ width: 100%;
 ===================================== */
 
 .tv-chillout-intro {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  align-items: end;
+  flex-direction: row-reverse;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 8vw;
+  padding: 0 0 0 5vw;
 }
 
 .tv-chillout-shape-wrap {
@@ -96,7 +98,19 @@ width: 100%;
   text-align: right;
 }
 
+@media (max-width: 650px) {
 
+  .tv-chillout-intro {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 32px;
+  }
+
+  .tv-chillout-shape-wrap {
+    align-self: flex-start;
+  }
+
+}
 
 .chillout .section-header {
   align-items: flex-end;
