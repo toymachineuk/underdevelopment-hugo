@@ -547,9 +547,9 @@ width: 100%;
 .tv-chillout {
   width: 100%;
   margin: 0;
-  color: #fff;
+ 
   padding: 80px 5vw 0;
-  background: black;
+
 }
 
 
@@ -683,6 +683,15 @@ width: 100%;
       transparent 181px),
     var(--tv-pearl);
   
+}
+
+.tv-food-grid {
+  background: var(--tv-vanilla);
+}
+
+.tv-chillout-grid {
+  background: black;
+ 
 }
 
 
@@ -1396,7 +1405,7 @@ border-radius: 2px;
 .tv-food {
   width: 100%;
   margin: 0;
-background: var(--tv-vanilla);
+
 padding: var(--space-md) 5vw 0;
 
   
