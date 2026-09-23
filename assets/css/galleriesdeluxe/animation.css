@@ -1,9 +1,10 @@
+
 /* =====================================
    MOVING LETTERS #8
 ===================================== */
 
 .tv-moving-letter {
-width: 100%;
+  width: 100%;
   min-height: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,120 +12,170 @@ width: 100%;
   gap: var(--space-xl);
   padding: var(--space-xl) 5vw;
   pointer-events: none;
-  background: #98bec8;
+  background-color: #98bec8;
+  overflow: hidden;
+
+  background-size: 60% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
-.tv-moving-letter .ml8 {
-  position: relative;
 
-  font-weight: 900;
-  font-size: 4.5em;
-  color: #fff;
-  width: 3em;
-  height: 3em;
-}
-
-.tv-moving-letter .ml8 .letters-container {
-   position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  height: 1em;
-  text-align: center;
-}
-
-.tv-moving-letter .ml8 .letters {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  line-height: 0.7em;
-  right: -0.12em;
-  top: -0.2em;
-}
 
 .tv-moving-letter .ml8 .bang {
-  font-size: 1.4em;
-  top: auto;
-  left: -0.06em;
-}
-
-.tv-moving-letter .ml8 .circle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-}
-
-.tv-moving-letter .ml8 .circle-white {
-  width: 3em;
-  height: 3em;
-  border: 2px dashed white;
-  border-radius: 2em;
-}
-
-.tv-moving-letter .ml8 .circle-dark {
-  width: 2.2em;
-  height: 2.2em;
-  background-color: #4f7b86;
-  border-radius: 3em;
-  z-index: 1;
-}
-
-.tv-moving-letter .ml8 .circle-dark-dashed {
-  border-radius: 2.4em;
-  background-color: transparent;
-  border: 2px dashed #4f7b86;
-  width: 2.3em;
-  height: 2.3em;
-}
-
-.tv-moving-letter {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tv-moving-letter .ml8 {
-  position: relative;
-
-  font-weight: 900;
-  font-size: 4.5em;
-  color: #fff;
-  width: 3em;
-  height: 3em;
-  margin: 0;
+  opacity: 0;
+  transform: rotate(15deg);
 }
 
 
+/* =====================================
+   LEFT COLUMN
+===================================== */
 
 .tv-moving-text {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  min-width: 0;
 }
 
 .tv-moving-text .text-md {
-  max-width: 520px;
+  max-width: 460px;
   margin: 0;
 }
+
+
+/* =====================================
+   RIGHT COLUMN
+===================================== */
 
 .tv-moving-animation {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 320px;
 }
 
 
+/* =====================================
+   MOVING LETTERS #8
+===================================== */
+
+.tv-moving-letter .ml8 {
+  position: relative;
+
+  font-weight: 900;
+  font-size: 4.5em;
+  color: #fff;
+
+  width: 3em;
+  height: 3em;
+
+  margin: 0;
+}
 
 
+.tv-moving-letter .ml8 .letters-container {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  top: 0;
+  bottom: 0;
+
+  height: 1em;
+
+  text-align: center;
+}
+
+
+.tv-moving-letter .ml8 .letters {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-block;
+
+  line-height: 0.7em;
+
+  right: -0.12em;
+  top: -0.2em;
+}
+
+
+.tv-moving-letter .ml8 .bang {
+  font-size: 1.4em;
+
+  top: auto;
+  left: -0.06em;
+}
+
+
+/* =====================================
+   CIRCLES
+===================================== */
+
+.tv-moving-letter .ml8 .circle {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  top: 0;
+  bottom: 0;
+}
+
+
+/* SMALLER OUTER CIRCLE */
+
+.tv-moving-letter .ml8 .circle-white {
+  width: 2.35em;
+  height: 2.35em;
+
+  border: 2px dashed white;
+  border-radius: 50%;
+}
+
+
+/* DARK CIRCLE */
+
+.tv-moving-letter .ml8 .circle-dark {
+  width: 2.2em;
+  height: 2.2em;
+
+  background-color: #4f7b86;
+
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+
+/* DARK DASHED CIRCLE */
+
+.tv-moving-letter .ml8 .circle-dark-dashed {
+  width: 2.3em;
+  height: 2.3em;
+
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: 2px dashed #4f7b86;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
 @media (max-width: 650px) {
 
   .tv-moving-letter {
@@ -132,6 +183,11 @@ width: 100%;
     gap: var(--space-sm);
     padding: var(--space-lg) 5vw;
     min-height: 220px;
+
+     background-size: 120% auto;
+    background-position: center 540%;
+   
+    background-repeat: no-repeat;
   }
 
   .tv-moving-text {
@@ -150,12 +206,9 @@ width: 100%;
     min-height: 180px;
   }
 
-  
-
   .tv-moving-animation .ml8 {
-      font-size: 2.8em;
+    font-size: 2.8em;
     width: 3em;
     height: 3em;
   }
-
 }
