@@ -21,6 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
       this.classList.add("active");
 
+
+      /* Show only selected button */
+
+      buttons.forEach(function (btn) {
+
+        if (region === "all" || btn === button) {
+          btn.style.display = "";
+        } else {
+          btn.style.display = "none";
+        }
+
+      });
+
+
+      /* Filter cards */
+
       cards.forEach(function (card) {
 
         if (

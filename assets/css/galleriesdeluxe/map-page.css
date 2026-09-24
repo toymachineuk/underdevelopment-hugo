@@ -46,3 +46,39 @@
   font-size: 18px;
   line-height: 1.45;
 }
+
+
+/* =====================================
+   GEORGIA REGION FILTER COLORS
+===================================== */
+
+.tv-region-filter[data-region="all"] {
+  --region-color: #151515;
+}
+
+.tv-region-filter[data-region="shida-kartli"] {
+  --region-color: #b65d3c;
+}
+
+.tv-region-filter[data-region="kakheti"] {
+  --region-color: #d3b86c;
+}
+
+
+
+
+/* Button */
+
+.tv-region-filter {
+  color: var(--region-color);
+  border-color: var(--region-color);
+}
+
+
+/* Active */
+
+.tv-region-filter.active {
+  background: var(--region-color);
+  color: #fff;
+  border-color: var(--region-color);
+}
