@@ -1,22 +1,81 @@
 
+<header class="nav">
 
-<header class="tv-header">
+            <button class="menu" type="button" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-  <div class="tv-brand">
-    <a href="{{ "/" | relURL }}">TBILISI <span>VISITS</span></a>
-  </div>
+    <a href="/" class="logo">
+        <span>visit</span>
+        <strong>tbilisi</strong>
+    </a>
 
-  <nav class="tv-nav">
-    <a href="{{ "/" | relURL }}" class="active">HOME</a>
-    <a href="#">DESTINATIONS</a>
-    <a href="#">GALLERIES</a>
-    <a href="#">GUIDES</a>
-    <a href="#">ABOUT</a>
-    <a href="#">CONTACT</a>
-  </nav>
+    <nav class="nav-links" aria-label="Main navigation">
+        <a href="#things">Things to do</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#places">Places to visit</a>
+        <a href="#about">About Tbilisi</a>
+    </nav>
+
+    <div class="nav-actions">
+
+
+
+        <div class="nav-dropdown">
+
+            <button class="nav-button" type="button" aria-expanded="false">
+                Beyond Tbilisi
+
+                <span class="chevron">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="16"
+                         height="16"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M6 9l6 6l6 -6"></path>
+                    </svg>
+                </span>
+            </button>
+
+            <div class="nav-dropdown__menu">
+
+                <a href="/ge-map/">
+                    <strong>Map</strong>
+                </a>
+
+                <a href="/batumi/">
+                    <strong>Batumi</strong>
+                </a>
+
+                <a href="/kakheti/">
+                    <strong>Kakheti</strong>
+                </a>
+
+                <a href="/kazbegi/">
+                    <strong>Kazbegi</strong>
+                </a>
+
+                <a href="/kutaisi/">
+                    <strong>Kutaisi</strong>
+                </a>
+
+                <a href="/cities/borjomi/">
+                    <strong>Borjomi</strong>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </header>
-
 <section class="tv-hero">
 
   <div class="tv-hero-image">

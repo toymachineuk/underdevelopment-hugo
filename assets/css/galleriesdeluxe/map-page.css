@@ -1,0 +1,48 @@
+/* =========================================
+   GEORGIA MAP INTRO
+========================================= */
+
+.tv-map-intro {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 90px 0 70px;
+
+  display: grid;
+  grid-template-columns: 22% 78%;
+  align-items: start;
+}
+
+/* Label */
+
+.tv-map-intro-label {
+  padding-top: 12px;
+}
+
+.tv-map-intro-label .text-label {
+  display: inline-block;
+}
+
+/* Main content */
+
+.tv-map-intro-content {
+  max-width: 900px;
+}
+
+.tv-map-intro h1 {
+  margin: 0 0 24px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(64px, 8vw, 128px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.055em;
+}
+
+.tv-map-intro p {
+  max-width: 560px;
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.45;
+}

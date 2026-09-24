@@ -186,7 +186,7 @@ width: 100%;
 }
 
 .tv-square-card-content {
-  padding: 16px 0 0;
+padding: 11px 13px;
 }
 
 .tv-square-card-content .text-label {
@@ -842,30 +842,6 @@ position:relative;
   background: var(--category-accent);
 }
 
-.tv-badge {
-
-  
-
-  width: 6px;
-  height: 6px;
-  
-
-  position: absolute;
-  top: 12px;
-  right: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  border-radius: 2px;
-  padding: 6px 8px;
-  font-size: 9px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: .06em;
-
-
-  background: pink;
-}
 
 
 /* Category colours */
@@ -933,6 +909,11 @@ position:relative;
   color: var(--tv-black);
 }
 
+
+.tv-chillout .tv-info-row {
+
+  color: white;
+}
 
 
 .tv-info-row img {
@@ -1425,6 +1406,7 @@ padding: var(--space-md) 5vw 0;
 .tv-square-card {
   min-width: 0;
   scroll-snap-align: start;
+   position: relative;
 }
 
 

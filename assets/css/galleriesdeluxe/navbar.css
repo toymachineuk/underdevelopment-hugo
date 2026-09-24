@@ -141,10 +141,17 @@
 ===================================== */
 
 .chevron {
-  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   line-height: 1;
 
-  transform: translateY(-1px);
+  transform: translateY(0);
+}
+
+.chevron svg {
+  display: block;
 }
 
 .globe {
@@ -190,72 +197,38 @@
 
 
 /* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 900px) {
-
-  .nav {
-    height: 64px;
-
-  
-
-    border-radius: 0 0 6px 6px;
-  }
-
-  .nav-links,
-  .nav-actions {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  .logo {
-    font-size: 15px;
-  }
-
-}
-
-
-/* =====================================
-   SMALL MOBILE
-===================================== */
-
-@media (max-width: 480px) {
-
-  .nav {
-    padding: 0 10px;
-  }
-
-}
-
-
-
-/* =====================================
    BEYOND TBILISI DROPDOWN
+===================================== */
+
+.nav-dropdown {
+  position: relative;
+}
+
+
+/* =====================================
+   DROPDOWN PANEL
 ===================================== */
 
 .nav-dropdown__menu {
   position: absolute;
+
   top: calc(100% + 8px);
   right: 0;
 
-  width: max-content;
-  min-width: 0;
+  width: 175px;
 
-  padding: 8px;
+  padding: 6px;
 
   background: #fff;
 
-  border: 1px solid #dedede;
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
 
-  box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .12);
 
   opacity: 0;
   visibility: hidden;
+
   transform: translateY(-6px);
 
   transition:
@@ -265,10 +238,14 @@
 }
 
 
+/* =====================================
+   DROPDOWN LINKS
+===================================== */
+
 .nav-dropdown__menu a {
   display: block;
 
-  padding: 10px 12px;
+  padding: 9px 10px;
 
   color: #111827;
   text-decoration: none;
@@ -276,19 +253,41 @@
   font-size: 15px;
   line-height: 1.1;
   font-weight: 600;
+  letter-spacing: -.02em;
+
+  text-align: left;
 
   white-space: nowrap;
 
   border-radius: 5px;
 
-  transition:
-    background .2s ease,
-    opacity .2s ease;
+  transition: background .15s ease;
 }
 
 
+/* =====================================
+   DROPDOWN LINK TEXT
+===================================== */
+
+.nav-dropdown__menu strong {
+  display: block;
+
+  font-size: 15px;
+  line-height: 1.1;
+
+  font-weight: 600;
+  letter-spacing: -.02em;
+
+  text-align: left;
+}
+
+
+/* =====================================
+   DROPDOWN HOVER
+===================================== */
+
 .nav-dropdown__menu a:hover {
-  background: #f5f5f5;
+  background: #f3f3f3;
 }
 
 
@@ -296,69 +295,13 @@
    SHOW DROPDOWN
 ===================================== */
 
-
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu {
   opacity: 1;
   visibility: visible;
+
   transform: translateY(0);
 }
-
-
-/* =====================================
-   DROPDOWN LINKS
-===================================== */
-
-
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown__menu a {
-  display: block;
-
-  padding: 10px 12px;
-
-  color: #111827;
-  text-decoration: none;
-
-  font-size: 15px;
-  line-height: 1.1;
-  font-weight: 600;
-
-  white-space: nowrap;
-
-  border-radius: 5px;
-
-  transition:
-    background .2s ease,
-    opacity .2s ease;
-}
-
-.nav-dropdown__menu a:hover {
-  background: #f5f5f5;
-  padding-left: 17px;
-}
-
-
-
-
-
-/* =====================================
-   PAGE NAME
-===================================== */
-
-.nav-dropdown__menu strong {
-  font-size: 15px;
-  line-height: 1.1;
-
-  font-weight: 600;
-  letter-spacing: -.02em;
-}
-
-
-
-
 
 
 /* =====================================
@@ -367,6 +310,11 @@
 
 @media (max-width: 900px) {
 
+  .nav {
+    height: 64px;
+
+    border-radius: 0 0 6px 6px;
+  }
 
 
   /* -------------------------------------
@@ -375,6 +323,7 @@
 
   .logo {
     flex: 0 0 auto;
+
     font-size: 15px;
   }
 
@@ -390,12 +339,12 @@
 
   /* -------------------------------------
      RIGHT SIDE
-     hamburger + Beyond Tbilisi
   ------------------------------------- */
 
   .nav-actions {
     display: flex;
     align-items: center;
+
     gap: 8px;
 
     margin-left: auto;
@@ -434,7 +383,7 @@
 
 
   /* -------------------------------------
-     BEYOND TBILISI BUTTON
+     DROPDOWN BUTTON
   ------------------------------------- */
 
   .nav-button {
@@ -455,6 +404,8 @@
   .nav-dropdown__menu {
     right: 0;
     top: calc(100% + 8px);
+
+    min-width: 220px;
   }
 
 }
@@ -466,7 +417,9 @@
 
 @media (max-width: 480px) {
 
-
+  .nav {
+    padding: 0 10px;
+  }
 
   .nav-actions {
     gap: 4px;
@@ -474,7 +427,12 @@
 
   .nav-button {
     padding: 0 8px;
+
     font-size: 13px;
+  }
+
+  .nav-dropdown__menu {
+    min-width: 210px;
   }
 
 }

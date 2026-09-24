@@ -69,7 +69,17 @@
   {{ if hugo.IsProduction }}integrity="{{ $movingLetters.Data.Integrity }}"{{ end }}
   defer></script>
       
+{{/* Georgia region filters */}}
+{{ $georgiaRegions := resources.Get "js/georgia-regions.js" }}
 
+{{ if hugo.IsProduction }}
+  {{ $georgiaRegions = $georgiaRegions | fingerprint }}
+{{ end }}
+
+<script
+  src="{{ $georgiaRegions.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $georgiaRegions.Data.Integrity }}"{{ end }}
+  defer></script>
 
 
   
@@ -88,10 +98,18 @@
 
   </head>
   <body>
-   {{ if .IsPage }}
-  {{ partial "page-header.html" . }}
+ {{ if .IsPage }}
+
+  {{ if eq .Layout "map-page" }}
+    {{ partial "narrow-header.html" . }}
+  {{ else }}
+    {{ partial "page-header.html" . }}
+  {{ end }}
+
 {{ else }}
+
   {{ partial "header.html" . }}
+
 {{ end }}
     <main>
       {{ block "main" . }}{{ end }}

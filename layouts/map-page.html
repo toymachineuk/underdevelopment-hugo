@@ -1,0 +1,73 @@
+
+{{ define "main" }}
+
+
+<section class="tv-map-intro">
+
+  <span class="text-label">GEORGIA</span>
+
+  <h1>Beyond Tbilisi</h1>
+
+  <p class="text-md">
+    Explore Georgia region by region, from mountain landscapes
+    and wine country to the Black Sea coast.
+  </p>
+
+</section>
+
+<section class="tv-georgia-map">
+
+  {{ partial "maps/georgia-map.html" . }}
+
+</section>
+
+{{ partial "carousel-regions.html" . }}
+
+<!-- =========================================
+     DESTINATIONS
+========================================== -->
+
+<section class="tv-georgia-destinations">
+
+  <div class="section-header">
+    <span class="text-label">WHERE TO GO</span>
+
+    <h2 class="title-lg">
+      Places worth<br>the journey.
+    </h2>
+
+    <p class="text-md">
+      Explore Georgia by region, landscape and experience.
+    </p>
+  </div>
+
+  <div class="tv-grid">
+    
+    <!-- destination cards here -->
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     EXPERIENCES
+========================================== -->
+
+<section class="tv-georgia-experiences">
+
+  <div class="section-header right">
+    <span class="text-label">THE GEORGIAN EXPERIENCE</span>
+
+    <h2 class="title-lg">
+      Mountains, wine,<br>sea and history.
+    </h2>
+  </div>
+
+  <!-- experience carousel / cards -->
+
+</section>
+
+
+{{ end }}
+
