@@ -87,11 +87,11 @@
    REGION FILTERS
    ========================================= */
 
-.tv-filters {
+.tv-filters.tv-region-filters {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1px;
-  background: var(--tv-black);
+  background: transparent;
 }
 
 /* HIDE ALL FILTERS BY DEFAULT */
@@ -121,12 +121,12 @@
 /* ACTIVE FILTER */
 .tv-region-filter.active {
   background: var(--tv-black);
-  color: #fff;
+  color: black;
 }
 
 .tv-region-name {
   display: block;
-
+ width: 100%;
   font-family: "DM Sans", sans-serif;
   font-size: 28px;
   font-weight: 500;
@@ -147,4 +147,84 @@
 
 .tv-region-filter-initial {
   background: red;
+}
+
+
+
+
+
+.georgia-map .tv-map-region path {
+  cursor: pointer;
+  transition: opacity .25s ease, filter .25s ease;
+}
+
+/* Normal regions */
+.georgia-map .tv-map-region:not(.active) path {
+  opacity: .65;
+}
+
+/* Selected region */
+.georgia-map .tv-map-region.active path {
+  opacity: 1 !important;
+  filter: brightness(1.25) !important;
+}
+
+/* Keep selected region highlighted on hover */
+.georgia-map .tv-map-region.active:hover path {
+  opacity: 1 !important;
+  filter: brightness(1.25) !important;
+}
+
+
+
+
+
+
+.tv-region-filter.active {
+  background: var(--region-color);
+}
+
+
+.tv-region-filter[data-region="adjara"] {
+  --region-color: #a4dfdf;
+}
+
+.tv-region-filter[data-region="guria"] {
+  --region-color: #cdf5c2;
+}
+
+.tv-region-filter[data-region="imereti"] {
+  --region-color: #b5dbf1;
+}
+
+.tv-region-filter[data-region="kakheti"] {
+  --region-color: #fff39c;
+}
+
+.tv-region-filter[data-region="kvemo-kartli"] {
+  --region-color: #ffcc8a;
+}
+
+.tv-region-filter[data-region="mtskheta-mtianeti"] {
+  --region-color: #f4dfff;
+}
+
+.tv-region-filter[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #dae6f9;
+}
+
+.tv-region-filter[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #d3f1e0;
+}
+
+.tv-region-filter[data-region="samtskhe-javakheti"] {
+  --region-color: #ffcbb3;
+}
+
+.tv-region-filter[data-region="shida-kartli"] {
+  --region-color: #ffe7a9;
+}
+
+.tv-region-filter[data-region="tbilisi"] {
+  --region-color: #f1b3d2;
 }
