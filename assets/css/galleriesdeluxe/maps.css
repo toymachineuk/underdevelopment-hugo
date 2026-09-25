@@ -210,3 +210,16 @@
     r: 2;
   }
 }
+
+.georgia-map #labels {
+  pointer-events: none;
+}
+
+.georgia-map .tv-map-region {
+  cursor: pointer;
+}
+
+.georgia-map .tv-map-region path {
+  cursor: pointer;
+  transition: opacity .2s ease, fill .2s ease;
+}
