@@ -48,6 +48,13 @@
 }
 
 
+.tv-georgia-destinations {
+  width: 100%;
+  margin: 0;
+ 
+  padding: 0px 5vw;
+}
+
 /* =====================================
    GEORGIA REGION FILTER COLORS
 ===================================== */
@@ -70,10 +77,120 @@
 /* Button */
 
 .tv-region-filter {
-  color: var(--region-color);
-  border-color: var(--region-color);
+ 
+  grid-template-columns: 1.2fr 1.3fr 1fr 1.2fr;
+  gap: 1px;
+
+  width: 100%;
+  padding: 0;
+
+  background: var(--tv-black);
+
+  border: 0;
+  text-align: left;
 }
 
+
+
+
+/* =========================================
+   REGION NAME
+   ========================================= */
+
+.tv-region-name {
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tv-region-name > span {
+  display: block;
+
+  font-size: 42px;
+  line-height: .9;
+  font-weight: 800;
+  letter-spacing: -.055em;
+}
+
+
+/* small information at bottom */
+
+.tv-region-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin-top: 30px;
+
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.tv-region-description {
+  margin: 0;
+
+  min-height: 150px;
+
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+
+  display: flex;
+ 
+}
+
+
+/* =========================================
+   META
+   ========================================= */
+
+.tv-region-meta {
+  min-height: 150px;
+}
+
+.tv-region-meta strong {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 800;
+
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.tv-region-meta ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.tv-region-meta li {
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(21, 21, 21, .18);
+
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.tv-region-meta li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
 
 /* Active */
 
@@ -99,12 +216,12 @@
   display: none !important;
 
   border: 0;
-  background: var(--tv-cream);
+
   padding: 28px;
   text-align: left;
   cursor: pointer;
   min-height: 160px;
-
+  cursor: default;
   flex-direction: column;
   justify-content: space-between;
 
@@ -115,7 +232,7 @@
 
 /* SHOW ONLY THE SELECTED REGION */
 .tv-region-filter.is-visible {
-  display: flex !important;
+  display: grid !important;
 }
 
 /* ACTIVE FILTER */
@@ -228,3 +345,43 @@
 .tv-region-filter[data-region="tbilisi"] {
   --region-color: #f1b3d2;
 }
+
+
+
+.tv-filter-regions {
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  padding: 0px 5vw 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
