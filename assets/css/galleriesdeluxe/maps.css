@@ -3,16 +3,22 @@
 ========================================= */
 
 .georgia-map {
-  width: 100%;
-  max-width: 1000px;
+   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+@media (min-width: 1400px) {
+  .georgia-map {
+    max-width: 1300px;
+  }
 }
 
 .georgia-map svg {
  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0 auto;
   transform: translateX(-10%);
 }

@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (initialText) {
     initialText.textContent = "Hello";
-    initialText.style.display = "flex";
+    initialText.style.display = "none";
   }
 
   /* Show all destinations initially */

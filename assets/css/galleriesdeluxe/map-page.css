@@ -105,6 +105,38 @@
   padding: 0 5vw;
 }
 
+.tv-region-filter-initial {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 0;
+
+  padding: 4rem 4vw;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      #ffe7a9 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 15%,
+      #c9e0e4 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 75% 90%,
+      #b8cfa8 0%,
+      transparent 50%
+    ),
+    #f5f1e9;
+
+  color: #151515;
+border-radius: 32px 32px 0 0;
+  overflow: hidden;
+}
+
+
 
 /* =========================================
    GEORGIA REGION FILTER COLORS
@@ -176,17 +208,17 @@
   width: 100%;
   min-width: 0;
 
-  padding: 28px;
+
 
   gap: 1px;
 
   box-sizing: border-box;
-
+padding: 4rem 4vw;
   border: 0;
 
   background: var(--region-color);
   color: var(--tv-black);
-
+border-radius: 32px 32px 0 0;
   text-align: left;
 
   cursor: default;
@@ -461,6 +493,23 @@
     padding-top: 0;
     border-top: 0;
   }
+
+
+  .tv-rectangle-card[data-region="adjara"] {
+  background: #c9e0e4;
+}
+
+.tv-rectangle-card[data-region="racha-lechkhumi"] {
+  background: #b8cfa8;
+}
+
+.tv-rectangle-card[data-region="kakheti"] {
+  background: #fffbe0;
+}
+
+.tv-rectangle-card[data-region="imereti"] {
+  background: #f2c6b4;
+}
 
 
 

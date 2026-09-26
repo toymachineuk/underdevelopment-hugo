@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   );
   /* Show Hello */ if (initialText) {
-    initialText.style.display = "flex";
+    initialText.style.display = "grid";
   }
   /* Show all destination cards */ cards.forEach(function (card) {
     card.style.display = "";
