@@ -54,6 +54,47 @@
 }
 
 
+@media (max-width: 700px) {
+
+  .tv-map-intro {
+    width: 100%;
+    margin: 0;
+    padding: 48px 20px 42px;
+
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .tv-map-intro .text-label {
+    display: block;
+    margin-bottom: 14px;
+
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: .12em;
+  }
+
+  .tv-map-intro h1 {
+    margin: 0 0 18px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(48px, 14vw, 72px);
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+
+  .tv-map-intro p {
+    max-width: 330px;
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -.015em;
+  }
+
+}
+
 /* =========================================
    GEORGIA DESTINATIONS
 ========================================= */
