@@ -13,7 +13,10 @@
   align-items: start;
 }
 
-/* Label */
+
+/* =========================================
+   LABEL
+========================================= */
 
 .tv-map-intro-label {
   padding-top: 12px;
@@ -23,7 +26,10 @@
   display: inline-block;
 }
 
-/* Main content */
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
 
 .tv-map-intro-content {
   max-width: 900px;
@@ -48,259 +54,24 @@
 }
 
 
+/* =========================================
+   GEORGIA DESTINATIONS
+========================================= */
+
 .tv-georgia-destinations {
   width: 100%;
   margin: 0;
- 
-  padding: 0px 5vw;
+  padding: 0 5vw;
 }
 
-/* =====================================
+
+/* =========================================
    GEORGIA REGION FILTER COLORS
-===================================== */
+========================================= */
 
 .tv-region-filter[data-region="all"] {
   --region-color: #151515;
 }
-
-.tv-region-filter[data-region="shida-kartli"] {
-  --region-color: #b65d3c;
-}
-
-.tv-region-filter[data-region="kakheti"] {
-  --region-color: #d3b86c;
-}
-
-
-
-
-/* Button */
-
-.tv-region-filter {
- 
-  grid-template-columns: 1.2fr 1.3fr 1fr 1.2fr;
-  gap: 1px;
-
-  width: 100%;
-  padding: 0;
-
-  background: var(--tv-black);
-
-  border: 0;
-  text-align: left;
-}
-
-
-
-
-/* =========================================
-   REGION NAME
-   ========================================= */
-
-.tv-region-name {
-  min-height: 150px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.tv-region-name > span {
-  display: block;
-
-  font-size: 42px;
-  line-height: .9;
-  font-weight: 800;
-  letter-spacing: -.055em;
-}
-
-
-/* small information at bottom */
-
-.tv-region-details {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-
-  margin-top: 30px;
-
-  font-size: 10px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-
-/* =========================================
-   DESCRIPTION
-   ========================================= */
-
-.tv-region-description {
-  margin: 0;
-
-  min-height: 150px;
-
-  font-size: 18px;
-  line-height: 1.25;
-  letter-spacing: -.025em;
-
-  display: flex;
- 
-}
-
-
-/* =========================================
-   META
-   ========================================= */
-
-.tv-region-meta {
-  min-height: 150px;
-}
-
-.tv-region-meta strong {
-  display: block;
-
-  margin-bottom: 28px;
-
-  font-size: 10px;
-  line-height: 1;
-  font-weight: 800;
-
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.tv-region-meta ul {
-  list-style: none;
-
-  margin: 0;
-  padding: 0;
-}
-
-.tv-region-meta li {
-  padding: 10px 0;
-
-  border-top: 1px solid rgba(21, 21, 21, .18);
-
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.tv-region-meta li:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-/* Active */
-
-.tv-region-filter.active {
-  background: var(--region-color);
-
-  border-color: var(--region-color);
-}
-
-/* =========================================
-   REGION FILTERS
-   ========================================= */
-
-.tv-filters.tv-region-filters {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1px;
-  background: transparent;
-}
-
-/* HIDE ALL FILTERS BY DEFAULT */
-.tv-region-filter {
-  display: none !important;
-
-  border: 0;
-
-  padding: 28px;
-  text-align: left;
-  cursor: pointer;
-  min-height: 160px;
-  cursor: default;
-  flex-direction: column;
-  justify-content: space-between;
-
-  transition:
-    background .25s ease,
-    color .25s ease;
-}
-
-/* SHOW ONLY THE SELECTED REGION */
-.tv-region-filter.is-visible {
-  display: grid !important;
-}
-
-/* ACTIVE FILTER */
-.tv-region-filter.active {
-  background: var(--tv-black);
-  color: black;
-}
-
-.tv-region-name {
-  display: block;
- width: 100%;
-  font-family: "DM Sans", sans-serif;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -.03em;
-}
-
-.tv-region-filter p {
-  margin: 30px 0 0;
-  max-width: 280px;
-
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-
-
-
-.tv-region-filter-initial {
-  background: red;
-}
-
-
-
-
-
-.georgia-map .tv-map-region path {
-  cursor: pointer;
-  transition: opacity .25s ease, filter .25s ease;
-}
-
-/* Normal regions */
-.georgia-map .tv-map-region:not(.active) path {
-  opacity: .65;
-}
-
-/* Selected region */
-.georgia-map .tv-map-region.active path {
-  opacity: 1 !important;
-  filter: brightness(1.25) !important;
-}
-
-/* Keep selected region highlighted on hover */
-.georgia-map .tv-map-region.active:hover path {
-  opacity: 1 !important;
-  filter: brightness(1.25) !important;
-}
-
-
-
-
-
-
-.tv-region-filter.active {
-  background: var(--region-color);
-}
-
 
 .tv-region-filter[data-region="adjara"] {
   --region-color: #a4dfdf;
@@ -347,18 +118,308 @@
 }
 
 
+/* =========================================
+   REGION FILTER
+========================================= */
 
-.tv-filter-regions {
+.tv-region-filter {
+  /*
+    Hidden until selected.
+    Desktop layout is a 4-column grid.
+  */
+
+  display: none !important;
+
+  grid-template-columns: 1.2fr 1.3fr 1fr 1.2fr;
+
   width: 100%;
+  min-width: 0;
+
+  padding: 28px;
+
+  gap: 1px;
+
+  box-sizing: border-box;
+
+  border: 0;
+
+  background: var(--region-color);
+  color: var(--tv-black);
+
+  text-align: left;
+
+  cursor: default;
+
+  transition:
+    background .25s ease,
+    color .25s ease;
+}
+
+
+/* =========================================
+   SHOW SELECTED REGION
+========================================= */
+
+.tv-region-filter.is-visible {
+  display: grid !important;
+}
+
+
+/* =========================================
+   REGION NAME
+========================================= */
+
+.tv-region-name {
+  min-width: 0;
+  min-height: 150px;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.tv-region-name > span {
+  display: block;
+
+  font-size: 42px;
+  line-height: .9;
+
+  font-weight: 800;
+
+  letter-spacing: -.055em;
+}
+
+
+/* =========================================
+   REGION DETAILS
+========================================= */
+
+.tv-region-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-top: 30px;
+
+  font-size: 10px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   REGION DESCRIPTION
+========================================= */
+
+.tv-region-description {
+  min-width: 0;
+  min-height: 150px;
+
   margin: 0;
-  background: #fff;
-  padding: 0px 5vw 0;
+
+  box-sizing: border-box;
+
+  font-size: 18px;
+
+  line-height: 1.25;
+
+  letter-spacing: -.025em;
+
+  display: block;
+}
+
+
+/* =========================================
+   REGION META
+========================================= */
+
+.tv-region-meta {
+  min-width: 0;
+  min-height: 150px;
+
+  box-sizing: border-box;
 }
 
 
 
 
 
+/* META LIST */
+
+.tv-region-meta ul {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* META ITEMS */
+
+.tv-region-meta li {
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(21, 21, 21, .18);
+
+  font-size: 13px;
+
+  line-height: 1.35;
+}
+
+
+/* FIRST ITEM */
+
+.tv-region-meta li:first-child {
+  border-top: 0;
+
+  padding-top: 0;
+}
+
+
+/* =========================================
+   REGION FILTERS WRAPPER
+========================================= */
+
+.tv-filters.tv-region-filters {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 1px;
+
+  width: 100%;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   GEORGIA MAP
+========================================= */
+
+.georgia-map .tv-map-region path {
+  cursor: pointer;
+
+  transition:
+    opacity .25s ease,
+    filter .25s ease;
+}
+
+
+/* NORMAL REGIONS */
+
+.georgia-map .tv-map-region:not(.active) path {
+  opacity: .65;
+}
+
+
+/* SELECTED REGION */
+
+.georgia-map .tv-map-region.active path {
+  opacity: 1 !important;
+
+  filter: brightness(1.25) !important;
+}
+
+
+/* KEEP SELECTED REGION HIGHLIGHTED ON HOVER */
+
+.georgia-map .tv-map-region.active:hover path {
+  opacity: 1 !important;
+
+  filter: brightness(1.25) !important;
+}
+
+
+/* =========================================
+   REGION FILTER AREA
+========================================= */
+
+.tv-filter-regions {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0 5vw;
+
+  background: #fff;
+
+  box-sizing: border-box;
+}
+
+
+
+ 
+
+  /* -----------------------------------------
+     DESCRIPTION
+  ----------------------------------------- */
+
+  .tv-region-filter.is-visible > .tv-region-description {
+    display: block !important;
+
+    min-height: 220px;
+
+    font-size: 18px;
+    line-height: 1.3;
+
+    letter-spacing: -.025em;
+  }
+
+
+  /* -----------------------------------------
+     META PANELS
+  ----------------------------------------- */
+
+  .tv-region-filter.is-visible > .tv-region-meta {
+    min-height: 220px;
+  }
+
+  .tv-region-meta strong {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 10px;
+    line-height: 1;
+
+    font-weight: 800;
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+  }
+
+  .tv-region-meta ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .tv-region-meta li {
+    padding: 10px 0;
+
+    border-top: 1px solid rgba(21, 21, 21, .18);
+
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .tv-region-meta li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
 
 
 
@@ -385,3 +446,165 @@
 
 
 
+
+/* =========================================
+   MOBILE REGION FILTERS
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* -----------------------------------------
+     HORIZONTAL SCROLL CONTAINER
+  ----------------------------------------- */
+
+  .tv-region-filter.is-visible {
+    display: flex !important;
+
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    gap: 1px;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    box-sizing: border-box;
+
+    align-items: stretch;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    /* Makes the scroll feel intentional */
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+  }
+
+  .tv-region-filter.is-visible::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     EACH PANEL
+  ----------------------------------------- */
+
+
+
+  .tv-region-filter.is-visible > .tv-region-name {
+    flex: 0 0 32vw !important;
+    width: 32vw !important;
+    min-width: 32vw !important;
+    max-width: 32vw !important;
+  }
+
+ 
+
+  .tv-region-filter.is-visible > .tv-region-meta {
+    flex: 0 0 32vw !important;
+    width: 32vw !important;
+    min-width: 32vw !important;
+    max-width: 32vw !important;
+  }
+
+  .tv-region-filter.is-visible > * {
+    height: 179px;
+    min-height: 179px;
+    margin: 0 !important;
+    padding: 16px !important;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+  }
+
+
+
+
+  .tv-region-filter.is-visible > .tv-region-description {
+    display: block !important;
+
+    flex: 0 0 45vw !important;
+
+    width: 45vw !important;
+    min-width: 45vw !important;
+    max-width: 45vw !important;
+
+    height: 150px;
+    min-height: 150px;
+
+    margin: 0 !important;
+    padding: 16px !important;
+
+    box-sizing: border-box;
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+
+  color: rgba(21, 21, 21, .62);
+
+    scroll-snap-align: start;
+  }
+
+ .tv-region-name > span {
+       font-size: 18px;
+    line-height: .95;
+    letter-spacing: -.045em;
+    font-weight: 800;
+  }
+
+  .tv-region-meta li {
+    padding: 6px 0;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .tv-region-meta li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .tv-region-meta strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+    line-height: 1;
+
+    font-weight: 800;
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+  }
+
+    .tv-region-details {
+    margin-top: 12px;
+    gap: 4px;
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+    .tv-filter-regions {
+    width: 100%;
+    padding: 0;
+  }
+
+  }
+
+
+  /* -----------------------------------------
+     REGION NAME
+  ----------------------------------------- */
+
+  .tv-region-filter.is-visible > .tv-region-name {
+    display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  }
+
+ 
