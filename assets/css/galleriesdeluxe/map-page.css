@@ -194,10 +194,18 @@
   border: 0;
 
   color: var(--tv-black);
-  border-radius: 32px 32px 0 0;
+
   text-align: left;
   cursor: default;
 }
+
+@media (max-width: 700px) {
+  .tv-region-filter {
+   
+    padding: 0;
+  }
+}
+
 
 /* =========================================
    SHOW SELECTED REGION
@@ -207,7 +215,11 @@
   display: grid !important;
 }
 
-
+@media (max-width: 700px) {
+  .tv-region-filter.is-visible {
+   grid-template-columns: 1fr 1fr 1fr auto;
+  }
+}
 /* =========================================
    REGION NAME
 ========================================= */
@@ -237,13 +249,28 @@
 .tv-region-filter::before {
   content: "";
   position: absolute;
-  top: 24px;
-  left: 5px;
-  width: 55px;
-  height: 55px;
+  top: 22px;
+  left: 4px;
+  width: 58px;
+  height: 58px;
   background: var(--region-color);
   border-radius: 50%;
   pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 700px) {
+  .tv-region-filter::before {
+  top: 5px;
+    left: -12px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.tv-region-filter > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================
@@ -480,44 +507,7 @@
 
 @media (max-width: 700px) {
 
-  /* -----------------------------------------
-     HORIZONTAL SCROLL CONTAINER
-  ----------------------------------------- */
-
-  .tv-region-filter.is-visible {
-    display: flex !important;
-
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    gap: 0;
-
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-
-    box-sizing: border-box;
-
-    align-items: stretch;
-
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-
-    /* Makes the scroll feel intentional */
-    scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
-  }
-
-  .tv-region-filter.is-visible::-webkit-scrollbar {
-    display: none;
-  }
-
+  
 
   /* -----------------------------------------
      EACH PANEL
@@ -542,8 +532,8 @@
   }
 
   .tv-region-filter.is-visible > * {
-    height: 179px;
-    min-height: 179px;
+    height: 149px;
+    min-height: 149px;
     margin: 0 !important;
     padding: 16px !important;
     box-sizing: border-box;
@@ -552,29 +542,6 @@
 
 
 
-
-  .tv-region-filter.is-visible > .tv-region-description {
-    display: block !important;
-
-    flex: 0 0 45vw !important;
-
-    width: 45vw !important;
-    min-width: 45vw !important;
-    max-width: 45vw !important;
-
-    height: 150px;
-    min-height: 150px;
-
-    margin: 0 !important;
-    padding: 16px !important;
-
-    box-sizing: border-box;
-  
-
-  color: rgba(21, 21, 21, .62);
-
-    scroll-snap-align: start;
-  }
 
  .tv-region-name > span {
        font-size: 18px;
