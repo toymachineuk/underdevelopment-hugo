@@ -161,8 +161,14 @@
 
 
     <!-- Mtskheta-Mtianeti -->
-    <text class="region-name" x="688.4" y="262">
-      Mtskheta-Mtianeti
+    <text class="region-name region-mtskheta" x="688.4" y="262"  text-anchor="middle">
+      <tspan x="690" dy="0">
+    Mtskheta-
+  </tspan>
+
+  <tspan x="690" dy="13">
+    Mtianeti
+  </tspan>
     </text>
     <circle class="city-dot" cx="688.4" cy="277" r="3"/>
     <text class="city-name" x="688.4" y="292">
@@ -195,7 +201,7 @@
       Adjara
     </text>
     <circle class="city-dot" cx="328.4" cy="386" r="3"/>
-    <text class="city-name major-city" x="328.4" y="403">
+    <text class="city-name" x="328.4" y="403">
       Batumi
     </text>
 
@@ -205,7 +211,7 @@
       Kvemo Kartli
     </text>
     <circle class="city-dot" cx="656.2" cy="420" r="3"/>
-    <text class="city-name major-city" x="656.2" y="437">
+    <text class="city-name" x="656.2" y="437">
       Rustavi
     </text>
 
@@ -225,7 +231,7 @@
       Tbilisi
     </text>
     <circle class="city-dot" cx="699.7" cy="378" r="3"/>
-    <text class="city-name major-city" x="699.7" y="395">
+    <text class="city-name" x="699.7" y="395">
       Tbilisi
     </text>
 
@@ -235,7 +241,7 @@
       Imereti
     </text>
     <circle class="city-dot" cx="447.9" cy="307" r="3"/>
-    <text class="city-name major-city" x="447.9" y="324">
+    <text class="city-name " x="447.9" y="324">
       Kutaisi
     </text>
 

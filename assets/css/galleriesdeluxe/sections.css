@@ -746,6 +746,7 @@ position:relative;
   aspect-ratio: 1.65 / 1;
   overflow: hidden;
   background: #eee;
+  border-radius: 14px;
 }
 
 .tv-rectangle-image img {
@@ -1111,7 +1112,7 @@ position:relative;
   .tv-grid {
   
     grid-auto-columns: 76%;
-    gap: 20px;
+    gap: 12px;
     padding: var(--space-md);
   }
 
