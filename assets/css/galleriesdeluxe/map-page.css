@@ -238,7 +238,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
 
   box-sizing: border-box;
 }
@@ -540,9 +540,7 @@
    RECTANGLE CARDS
 ========================================= */
 
-.tv-rectangle-card[data-region="adjara"] {
-  background: #c9e0e4;
-}
+
 
 .tv-rectangle-card[data-region="racha-lechkhumi"] {
   background: #b8cfa8;

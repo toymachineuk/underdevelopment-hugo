@@ -1529,10 +1529,10 @@ padding: var(--space-md) 5vw 0;
 ===================================== */
 
 .section-header-image {
-  width: 710px;
+  width: 310px;
   height: auto;
 
-  flex: 0 0 710px;
+  flex: 0 0 310px;
 
   margin-right: 40px;
   margin-left: 0;

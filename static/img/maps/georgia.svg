@@ -33,10 +33,10 @@
 
 
     <!-- Racha-Lechkhumi-Kvemo Svaneti -->
-    <a href="/regions/racha-lechkhumi-kvemo-svaneti/" aria-label="Racha-Lechkhumi-Kvemo Svaneti">
+    <a href="/regions/racha-lechkhumi-kvemo-svaneti/" aria-label="Racha-Lechkhumi">
       <path
         id="GERL"
-        name="Racha-Lechkhumi-Kvemo Svaneti"
+        name="Racha-Lechkhumi"
         d="M401.6 218.2l-10.3-20.6 3.6-7.7-6.1-6.3-15.2-8.6-7.5-6.5 3.4-6.4 4.3-2.4 5-0.4 1.7-0.4 1.4-1.1 1.4-3.4 1.7-3.1 3.4 0.1 3.4 1.6 19.2 4.7 7.9 0.3 3.7-1.7 1.7-1.4 1.7-0.8 14.7 6.6 9.9-1.3 8.4 3.2 3.8 0.7 2.4-3.9 0.4-5.7 3-2.9 4.6-6.5 4.4-1.8 2.6 1.5 26 7.3 12.7 3.6 5.1 1.3 9.3 4.6 2.3 2 5.6 6.7 2.5 1.6 12.6 3.1 3.6 1.8 2.5 1.3 1.5 5.4-3.1 4.4-4.8 3.4-3.8 3.8-0.4 5.4 3.9 4.8 6.1 1.6 6.6 0.6 5.4 1.4 3.1 2.4-0.8 9.3-7.2 5.2-2.9 5.3-2.6 1.3-18.9 1.5-11 8.9-2.9-1.1-0.2 0-8.5-3.2-13.8 1.2-14.4-1.6-12.9 6.7-4.7 4.9-5.7 2.3-9.7 0.9-6.5-3.6-2.9-0.6-3.4-2.7-1.7-5.8-6.9-6.4-7.5-4.8-3.3 0.1-3 3.1-3.6-0.3-3.4-1.5-14.5 4.9-0.1-3.9-1.1-3.5 0-4.6-1.2-4.3z"
       />
     </a>
@@ -128,123 +128,135 @@
        LABELS
        ================================ -->
 
-  <g id="labels">
+<g id="labels">
 
-    <!-- Samegrelo-Zemo Svaneti -->
-    <text class="region-name" x="346.8" y="207">
-      Samegrelo-Zemo Svaneti
-    </text>
-    <circle class="city-dot" cx="346.8" cy="222" r="3"/>
-    <text class="city-name" x="346.8" y="237">
-      Poti
-    </text>
+  <!-- =========================================
+       SAMEGRELO-ZEMO SVANETI
+  ========================================== -->
+  <text class="region-name" x="350" y="218" text-anchor="middle">
+    <tspan x="350" dy="0">Samegrelo-Zemo</tspan>
+    <tspan x="350" dy="13">Svaneti</tspan>
+  </text>
 
-
-    <!-- Racha-Lechkhumi-Kvemo Svaneti -->
-    <text class="region-name" x="487.3" y="188">
-      Racha-Lechkhumi-Kvemo Svaneti
-    </text>
-    <circle class="city-dot" cx="487.3" cy="203" r="3"/>
-    <text class="city-name" x="487.3" y="218">
-      Ambrolauri
-    </text>
+  <circle class="city-dot" cx="350" cy="250" r="3"/>
+  <text class="city-name" x="350" y="265">Poti</text>
 
 
-    <!-- Shida Kartli -->
-    <text class="region-name" x="582.8" y="294">
-      Shida Kartli
-    </text>
-    <circle class="city-dot" cx="582.8" cy="309" r="3"/>
-    <text class="city-name" x="582.8" y="324">
-      Gori
-    </text>
+  <!-- =========================================
+       RACHA-LECHKHUMI-KVEMO SVANETI
+  ========================================== -->
+<text class="region-name"
+      x="487.3"
+      y="188"
+      textLength="150"
+      lengthAdjust="spacingAndGlyphs">
+  Racha-Lechkhumi
+</text>
+
+  <circle class="city-dot" cx="485" cy="212" r="3"/>
+  <text class="city-name" x="485" y="227">Ambrolauri</text>
 
 
-    <!-- Mtskheta-Mtianeti -->
-    <text class="region-name region-mtskheta" x="688.4" y="262"  text-anchor="middle">
-      <tspan x="690" dy="0">
-    Mtskheta-
-  </tspan>
+  <!-- =========================================
+       SHIDA KARTLI
+  ========================================== -->
+  <text class="region-name" x="585" y="280" text-anchor="middle">
+    Shida Kartli
+  </text>
 
-  <tspan x="690" dy="13">
-    Mtianeti
-  </tspan>
-    </text>
-    <circle class="city-dot" cx="688.4" cy="277" r="3"/>
-    <text class="city-name" x="688.4" y="292">
-      Mtskheta
-    </text>
+  <circle class="city-dot" cx="585" cy="296" r="3"/>
+  <text class="city-name" x="585" y="311">Gori</text>
 
 
-    <!-- Kakheti -->
-    <text class="region-name" x="820.5" y="359">
-      Kakheti
-    </text>
-    <circle class="city-dot" cx="820.5" cy="374" r="3"/>
-    <text class="city-name" x="820.5" y="389">
-      Telavi
-    </text>
+  <!-- =========================================
+       MTSKHETA-MTIANETI
+  ========================================== -->
+  <text class="region-name" x="690" y="250" text-anchor="middle">
+    <tspan x="690" dy="0">Mtskheta-</tspan>
+    <tspan x="690" dy="13">Mtianeti</tspan>
+  </text>
+
+  <circle class="city-dot" cx="690" cy="282" r="3"/>
+  <text class="city-name" x="690" y="297">Mtskheta</text>
 
 
-    <!-- Samtskhe-Javakheti -->
-    <text class="region-name" x="499.2" y="386">
-      Samtskhe-Javakheti
-    </text>
-    <circle class="city-dot" cx="499.2" cy="401" r="3"/>
-    <text class="city-name" x="499.2" y="416">
-      Akhaltsikhe
-    </text>
+  <!-- =========================================
+       KAKHETI
+  ========================================== -->
+  <text class="region-name" x="820" y="350" text-anchor="middle">
+    Kakheti
+  </text>
+
+  <circle class="city-dot" cx="820" cy="366" r="3"/>
+  <text class="city-name" x="820" y="381">Telavi</text>
 
 
-    <!-- Adjara -->
-    <text class="region-name" x="328.4" y="371">
-      Adjara
-    </text>
-    <circle class="city-dot" cx="328.4" cy="386" r="3"/>
-    <text class="city-name" x="328.4" y="403">
-      Batumi
-    </text>
+  <!-- =========================================
+       SAMTSKHE-JAVAKHETI
+  ========================================== -->
+  <text class="region-name" x="505" y="375" text-anchor="middle">
+    <tspan x="505" dy="0">Samtskhe-</tspan>
+    <tspan x="505" dy="13">Javakheti</tspan>
+  </text>
+
+  <circle class="city-dot" cx="505" cy="407" r="3"/>
+  <text class="city-name" x="505" y="422">Akhaltsikhe</text>
 
 
-    <!-- Kvemo Kartli -->
-    <text class="region-name" x="656.2" y="405">
-      Kvemo Kartli
-    </text>
-    <circle class="city-dot" cx="656.2" cy="420" r="3"/>
-    <text class="city-name" x="656.2" y="437">
-      Rustavi
-    </text>
+  <!-- =========================================
+       ADJARA
+  ========================================== -->
+  <text class="region-name" x="330" y="365" text-anchor="middle">
+    Adjara
+  </text>
+
+  <circle class="city-dot" cx="330" cy="381" r="3"/>
+  <text class="city-name" x="330" y="396">Batumi</text>
 
 
-    <!-- Guria -->
-    <text class="region-name" x="330.6" y="313">
-      Guria
-    </text>
-    <circle class="city-dot" cx="330.6" cy="328" r="3"/>
-    <text class="city-name" x="330.6" y="343">
-      Ozurgeti
-    </text>
+  <!-- =========================================
+       KVEMO KARTLI
+  ========================================== -->
+  <text class="region-name" x="655" y="405" text-anchor="middle">
+    Kvemo Kartli
+  </text>
+
+  <circle class="city-dot" cx="655" cy="421" r="3"/>
+  <text class="city-name" x="655" y="436">Rustavi</text>
 
 
-    <!-- Tbilisi -->
-    <text class="region-name" x="699.7" y="363">
-      Tbilisi
-    </text>
-    <circle class="city-dot" cx="699.7" cy="378" r="3"/>
-    <text class="city-name" x="699.7" y="395">
-      Tbilisi
-    </text>
+  <!-- =========================================
+       GURIA
+  ========================================== -->
+  <text class="region-name" x="330" y="305" text-anchor="middle">
+    Guria
+  </text>
+
+  <circle class="city-dot" cx="330" cy="321" r="3"/>
+  <text class="city-name" x="330" y="336">Ozurgeti</text>
 
 
-    <!-- Imereti -->
-    <text class="region-name" x="447.9" y="292">
-      Imereti
-    </text>
-    <circle class="city-dot" cx="447.9" cy="307" r="3"/>
-    <text class="city-name " x="447.9" y="324">
-      Kutaisi
-    </text>
+  <!-- =========================================
+       TBILISI
+  ========================================== -->
+  <text class="region-name" x="700" y="350" text-anchor="middle">
+    Tbilisi
+  </text>
 
-  </g>
+  <circle class="city-dot" cx="700" cy="366" r="3"/>
+  <text class="city-name" x="700" y="381">Tbilisi</text>
+
+
+  <!-- =========================================
+       IMERETI
+  ========================================== -->
+  <text class="region-name" x="450" y="285" text-anchor="middle">
+    Imereti
+  </text>
+
+  <circle class="city-dot" cx="450" cy="301" r="3"/>
+  <text class="city-name" x="450" y="316">Kutaisi</text>
+
+</g>
 
 </svg>
