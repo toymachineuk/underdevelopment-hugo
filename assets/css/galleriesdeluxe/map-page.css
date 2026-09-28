@@ -1,3 +1,4 @@
+```css
 /* =========================================
    GEORGIA MAP INTRO
 ========================================= */
@@ -23,7 +24,9 @@
 }
 
 .tv-map-intro-label .text-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
 }
 
 
@@ -36,7 +39,7 @@
 }
 
 .tv-map-intro h1 {
-   margin: 0;
+  margin: 0;
 
   font-size: clamp(72px, 8.5vw, 145px);
   line-height: .88;
@@ -47,17 +50,11 @@
 }
 
 .tv-map-intro p {
-   width: min(100%, 390px);
+  width: min(100%, 390px);
   margin: 38px 0 0;
 
   font-size: 21px;
   line-height: 1.5;
-}
-
-.tv-map-intro-label .text-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
 }
 
 .tv-georgia-flag {
@@ -66,6 +63,10 @@
   display: block;
 }
 
+
+/* =========================================
+   MAP INTRO — MOBILE
+========================================= */
 
 @media (max-width: 700px) {
 
@@ -108,6 +109,7 @@
 
 }
 
+
 /* =========================================
    GEORGIA DESTINATIONS
 ========================================= */
@@ -126,17 +128,16 @@
 
   padding: 4rem 4vw;
 
-
   color: #151515;
   border-radius: 32px 32px 0 0;
   overflow: hidden;
 }
 
 
-
 /* =========================================
    GEORGIA REGION FILTER COLORS
 ========================================= */
+
 .tv-region-filter[data-region="adjara"] {
   --region-color: #b8d5d3;
 }
@@ -152,8 +153,6 @@
 .tv-region-filter[data-region="kakheti"] {
   --region-color: #e7d99c;
 }
-
-
 
 .tv-region-filter[data-region="mtskheta-mtianeti"] {
   --region-color: #d5cddd;
@@ -178,32 +177,33 @@
 .tv-region-filter[data-region="tbilisi"] {
   --region-color: #d9b8c7;
 }
+
+
 /* =========================================
    REGION FILTER
 ========================================= */
 
 .tv-region-filter {
+  position: relative;
+
   display: none !important;
 
-  grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
+  grid-template-columns: 1.6fr 1fr 2.13fr 1.87fr;
+  gap: 20px;
+
   width: 100%;
   min-width: 0;
-  gap: 0;
+
   box-sizing: border-box;
-  padding: 4rem 4vw;
+
+  padding: 3.5rem 4vw;
+
   border: 0;
 
   color: var(--tv-black);
 
   text-align: left;
   cursor: default;
-}
-
-@media (max-width: 700px) {
-  .tv-region-filter {
-   
-    padding: 0;
-  }
 }
 
 
@@ -215,11 +215,19 @@
   display: grid !important;
 }
 
-@media (max-width: 700px) {
-  .tv-region-filter.is-visible {
-   grid-template-columns: 1fr 1fr 1fr auto;
-  }
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.tv-region-filter > * {
+  position: relative;
+  z-index: 1;
+
+  min-width: 0;
 }
+
+
 /* =========================================
    REGION NAME
 ========================================= */
@@ -229,7 +237,6 @@
   min-height: 150px;
 
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
 
@@ -238,40 +245,38 @@
 
 .tv-region-name > span {
   display: block;
-  font-size: 42px;
+
+  font-size: clamp(36px, 3vw, 48px);
   line-height: .95;
+
   font-weight: 700;
-  letter-spacing: -.035em;
+  letter-spacing: -.04em;
 }
 
 
+/* =========================================
+   COLOUR CIRCLE
+========================================= */
 
 .tv-region-filter::before {
   content: "";
+
   position: absolute;
+
   top: 22px;
   left: 4px;
+
   width: 58px;
   height: 58px;
+
   background: var(--region-color);
+
   border-radius: 50%;
+
   pointer-events: none;
   z-index: 0;
 }
 
-@media (max-width: 700px) {
-  .tv-region-filter::before {
-  top: 5px;
-    left: -12px;
-    width: 45px;
-    height: 45px;
-  }
-}
-
-.tv-region-filter > * {
-  position: relative;
-  z-index: 1;
-}
 
 /* =========================================
    REGION DETAILS
@@ -279,10 +284,8 @@
 
 .tv-region-details {
   display: flex;
-
   flex-direction: column;
-
-  gap: 6px;
+  gap: 5px;
 
   margin-top: 30px;
 
@@ -290,7 +293,6 @@
   line-height: 1.2;
 
   font-weight: 700;
-
   letter-spacing: .08em;
 
   text-transform: uppercase;
@@ -298,25 +300,7 @@
 
 
 /* =========================================
-   REGION DESCRIPTION
-========================================= */
-
-.tv-region-description {
- min-width: 0;
-  min-height: 150px;
-  margin: 0;
-  box-sizing: border-box;
-
-  font-size: 17px;
-  line-height: 1.45;
-  letter-spacing: -0.015em;
-
-  display: block;
-}
-
-
-/* =========================================
-   REGION META
+   META
 ========================================= */
 
 .tv-region-meta {
@@ -326,33 +310,124 @@
   box-sizing: border-box;
 }
 
+.tv-region-meta h3 {
+  display: block;
+
+  margin: 0 0 20px;
+
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+
+  .tv-region-meta h3 {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+}
+
+/* =========================================
+   PLACE NAMES
+========================================= */
+
+.tv-place-list strong {
+  display: block;
+
+  margin-bottom: 0;
+
+  font-size: 13px;
+  line-height: 1.2;
+
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
 
 
-
-
-/* META LIST */
+/* =========================================
+   META LIST
+========================================= */
 
 .tv-region-meta ul {
   list-style: none;
 
   margin: 0;
-
   padding: 0;
 }
 
 
-/* META ITEMS */
+/* =========================================
+   META ITEMS
+========================================= */
 
 .tv-region-meta li {
- padding: 11px 0;
-  border-top: 0;
+  padding: 0;
+  margin-bottom: 13px;
 
   font-size: 15px;
   line-height: 1.35;
-  letter-spacing: -0.01em;
+
+  letter-spacing: -.01em;
 }
 
 
+/* =========================================
+   GETTING THERE — ROUTE
+========================================= */
+
+/*
+   No special h3 margin here.
+   "Getting there" now uses the same
+   heading spacing as "Towns & Villages".
+*/
+
+.tv-route {
+  margin: 0 0 14px;
+}
+
+
+/* =========================================
+   GETTING THERE — 2 COLUMNS
+========================================= */
+
+.tv-region-meta .two-columns {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 22px;
+  row-gap: 13px;
+
+  margin: 0;
+}
+
+.tv-region-meta .two-columns li {
+  margin: 0;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.tv-region-description {
+  min-width: 0;
+  min-height: 150px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  max-width: 330px;
+
+  font-size: 17px;
+  line-height: 1.45;
+
+  letter-spacing: -.015em;
+}
 
 
 /* =========================================
@@ -366,10 +441,15 @@
 
   gap: 1px;
 
-    width: 100%;
+  width: 100%;
+
   position: relative;
+
   background: transparent;
 }
+
+
+
 
 
 /* =========================================
@@ -385,14 +465,18 @@
 }
 
 
-/* NORMAL REGIONS */
+/* =========================================
+   NORMAL REGIONS
+========================================= */
 
 .georgia-map .tv-map-region:not(.active) path {
   opacity: .65;
 }
 
 
-/* SELECTED REGION */
+/* =========================================
+   SELECTED REGION
+========================================= */
 
 .georgia-map .tv-map-region.active path {
   opacity: 1 !important;
@@ -401,7 +485,9 @@
 }
 
 
-/* KEEP SELECTED REGION HIGHLIGHTED ON HOVER */
+/* =========================================
+   KEEP SELECTED REGION HIGHLIGHTED ON HOVER
+========================================= */
 
 .georgia-map .tv-map-region.active:hover path {
   opacity: 1 !important;
@@ -427,24 +513,18 @@
 }
 
 
+/* =========================================
+   META PANELS
+========================================= */
 
- 
+.tv-region-filter.is-visible > .tv-region-meta {
+  min-height: 220px;
+}
 
-
-
-
-  /* -----------------------------------------
-     META PANELS
-  ----------------------------------------- */
-
-  .tv-region-filter.is-visible > .tv-region-meta {
-    min-height: 220px;
-  }
-
-  .tv-region-meta strong {
+.tv-region-meta strong {
   display: block;
 
-  margin-bottom: 20px;
+  margin-bottom: 0;
 
   font-size: 17px;
   line-height: 1.2;
@@ -453,17 +533,14 @@
   letter-spacing: -0.02em;
 
   text-transform: none;
-  }
-
-  .tv-region-meta ul {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-  }
+}
 
 
-  .tv-rectangle-card[data-region="adjara"] {
+/* =========================================
+   RECTANGLE CARDS
+========================================= */
+
+.tv-rectangle-card[data-region="adjara"] {
   background: #c9e0e4;
 }
 
@@ -472,64 +549,62 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================
    MOBILE REGION FILTERS
 ========================================= */
 
 @media (max-width: 700px) {
 
-  
+  .tv-region-filter {
+  grid-template-columns: 110px 220px 220px 220px;
+    gap: 20px;
+    padding: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+    .tv-region-meta ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 0;
+  }
+
+  .tv-region-meta li {
+    margin-bottom: 13px;
+  }
+
+  .tv-region-filter.is-visible {
+    display: grid !important;
+  }
+
+  .tv-region-name,
+  .tv-region-meta,
+  .tv-region-description {
+    min-height: auto;
+  }
+
+  .tv-region-name {
+    min-height: 130px;
+  }
+
 
   /* -----------------------------------------
      EACH PANEL
   ----------------------------------------- */
-
-
 
   .tv-region-filter.is-visible > .tv-region-name {
     flex: 0 0 32vw !important;
     width: 32vw !important;
     min-width: 32vw !important;
     max-width: 32vw !important;
+
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
- 
 
-  .tv-region-filter.is-visible > .tv-region-meta {
-    flex: 0 0 32vw !important;
-    width: 32vw !important;
-    min-width: 32vw !important;
-    max-width: 32vw !important;
-  }
 
   .tv-region-filter.is-visible > * {
     height: 149px;
@@ -541,17 +616,29 @@
   }
 
 
+  /* -----------------------------------------
+     MOBILE REGION NAME
+  ----------------------------------------- */
 
-
- .tv-region-name > span {
-       font-size: 18px;
+  .tv-region-name > span {
+    font-size: 18px;
     line-height: .95;
     letter-spacing: -.045em;
     font-weight: 800;
   }
 
+
+  /* -----------------------------------------
+     MOBILE META
+  ----------------------------------------- */
+
+  .tv-region-meta .two-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .tv-region-meta li {
-    padding: 6px 0;
+    padding: 0;
+
     font-size: 11px;
     line-height: 1.25;
   }
@@ -560,6 +647,7 @@
     padding-top: 0;
     border-top: 0;
   }
+
   .tv-region-meta strong {
     display: block;
 
@@ -574,34 +662,64 @@
     text-transform: uppercase;
   }
 
-    .tv-region-details {
-    margin-top: 12px;
-    gap: 4px;
-    font-size: 8px;
-    line-height: 1.2;
-  }
 
-    .tv-filter-regions {
-    width: 100%;
-    padding: 0;
-  }
+  /* -----------------------------------------
+     MOBILE ROUTE
+  ----------------------------------------- */
 
+  .tv-route {
+    margin-bottom: 8px;
   }
 
 
   /* -----------------------------------------
-     REGION NAME
+     MOBILE REGION DETAILS
   ----------------------------------------- */
 
-  .tv-region-filter.is-visible > .tv-region-name {
-    display: flex !important;
-  flex-direction: column;
-  justify-content: flex-start;
+  .tv-region-details {
+    margin-top: 12px;
+    gap: 4px;
+
+    font-size: 8px;
+    line-height: 1.2;
   }
 
 
+  /* -----------------------------------------
+     MOBILE DESCRIPTION
+  ----------------------------------------- */
 
-  /* =========================================
+  .tv-region-description {
+    max-width: none;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE COLOUR CIRCLE
+  ----------------------------------------- */
+
+  .tv-region-filter::before {
+    top: 5px;
+    left: -12px;
+
+    width: 45px;
+    height: 45px;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE REGION FILTER AREA
+  ----------------------------------------- */
+
+  .tv-filter-regions {
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+
+/* =========================================
    FORCE REGION CARDS TO STAY TRANSPARENT
 ========================================= */
 
@@ -611,4 +729,4 @@
   background: transparent !important;
   background-color: transparent !important;
 }
- 
+```
