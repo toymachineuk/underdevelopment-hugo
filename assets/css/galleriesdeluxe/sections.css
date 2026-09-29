@@ -632,7 +632,7 @@ padding: 11px 13px;
   margin: 0;
   padding: var(--space-sm) 5vw var(--space-sm);
 
-  
+  text-align: right;
 
   font-family: var(--font-sans);
   font-size: 14px;

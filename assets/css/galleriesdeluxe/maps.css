@@ -7,6 +7,7 @@
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  position:relative;
 }
 
 @media (min-width: 1400px) {
@@ -132,14 +133,17 @@
 ========================================= */
 
 .georgia-map-credit {
-  display: block;
-  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
 
   font-family: "DM Sans", sans-serif;
   font-size: 11px;
   line-height: 1.4;
-
   color: #777;
+  writing-mode: vertical-rl;
+  z-index: 10;
 }
 
 

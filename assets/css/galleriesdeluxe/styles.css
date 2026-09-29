@@ -78,6 +78,9 @@ main {
   max-width: 140ch;
   & > * {
     width: 100%;
+   
+  
+  padding: 0 5vw;
   }
 }
 

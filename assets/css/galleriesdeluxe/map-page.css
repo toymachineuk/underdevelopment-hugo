@@ -1,4 +1,13 @@
-```css
+
+
+.tv-georgia-destinations .tv-filter-count {
+
+
+  padding: var(--space-sm) 5vw var(--space-xs);
+
+  border-bottom: 0;
+
+}
 /* =========================================
    GEORGIA MAP INTRO
 ========================================= */
@@ -180,6 +189,51 @@
 
 
 /* =========================================
+   SCROLL CARD REGION COLORS
+========================================= */
+
+.tv-scroll-card[data-region="adjara"] {
+  --region-color: #b8d5d3;
+}
+
+.tv-scroll-card[data-region="guria"] {
+  --region-color: #c8ddc1;
+}
+
+.tv-scroll-card[data-region="imereti"] {
+  --region-color: #c4d8e3;
+}
+
+.tv-scroll-card[data-region="kakheti"] {
+  --region-color: #e7d99c;
+}
+
+.tv-scroll-card[data-region="mtskheta-mtianeti"] {
+  --region-color: #d5cddd;
+}
+
+.tv-scroll-card[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #cbd6e3;
+}
+
+.tv-scroll-card[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #c6dcd2;
+}
+
+.tv-scroll-card[data-region="samtskhe-javakheti"] {
+  --region-color: #dfc0b3;
+}
+
+.tv-scroll-card[data-region="shida-kartli"] {
+  --region-color: #e5d19e;
+}
+
+.tv-scroll-card[data-region="tbilisi"] {
+  --region-color: #d9b8c7;
+}
+
+
+/* =========================================
    REGION FILTER
 ========================================= */
 
@@ -188,19 +242,16 @@
 
   display: none !important;
 
-  grid-template-columns: 1.6fr 1fr 2.13fr 1.87fr;
-  gap: 20px;
-
   width: 100%;
   min-width: 0;
 
   box-sizing: border-box;
 
-  padding: 3.5rem 4vw;
+
 
   border: 0;
 
-  color: var(--tv-black);
+
 
   text-align: left;
   cursor: default;
@@ -232,16 +283,7 @@
    REGION NAME
 ========================================= */
 
-.tv-region-name {
-  min-width: 0;
-  min-height: 150px;
 
-  display: flex;
-  flex-direction: column;
-  
-
-  box-sizing: border-box;
-}
 
 .tv-region-name > span {
   display: block;
