@@ -591,3 +591,61 @@
   gap: var(--space-xl);
 
 }
+
+
+:root {
+
+  /* Tbilisi Districts */
+
+  --district-mtatsminda: #F2A36B;
+  --district-vake: #B7A4C7;
+  --district-saburtalo: #8FA9BF;
+  --district-krtsanisi: #C2CBAA;
+  --district-isani: #CDBCA5;
+  --district-samgori: #D99A96;
+  --district-chughureti: #E8BF7A;
+  --district-didube: #E7A4A0;
+  --district-nadzaladevi: #A4AE87;
+  --district-gldani: #91B8B4;
+
+}
+
+.district-gldani {
+  --district-color: var(--district-gldani);
+}
+
+.district-vake {
+  --district-color: var(--district-vake);
+}
+
+.district-saburtalo {
+  --district-color: var(--district-saburtalo);
+}
+
+.district-krtsanisi {
+  --district-color: var(--district-krtsanisi);
+}
+
+.district-isani {
+  --district-color: var(--district-isani);
+}
+
+.district-samgori {
+  --district-color: var(--district-samgori);
+}
+
+.district-chughureti {
+  --district-color: var(--district-chughureti);
+}
+
+.district-didube {
+  --district-color: var(--district-didube);
+}
+
+.district-nadzaladevi {
+  --district-color: var(--district-nadzaladevi);
+}
+
+.district-gldani {
+  --district-color: var(--district-gldani);
+}

@@ -11,6 +11,8 @@
 @import "navbar.css";
 @import "animation.css";
 @import "map-page.css";
+@import "horizontal-scroll.css";
+
 
 html,
 body {

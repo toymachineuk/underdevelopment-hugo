@@ -1,0 +1,78 @@
+/* =========================================
+   HORIZONTAL SCROLL
+========================================= */
+
+.tv-horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: thin;
+
+  padding-bottom: 16px;
+}
+
+.tv-horizontal-track {
+  display: flex;
+  gap: 16px;
+
+  width: max-content;
+}
+
+
+/* =========================================
+   SCROLL CARD
+========================================= */
+
+.tv-scroll-card {
+  width: 240px;
+  flex: 0 0 240px;
+
+  box-sizing: border-box;
+
+  padding: 16px;
+
+  border: 1px solid #e3e0da;
+  border-radius: 12px;
+
+  background: #f6f5f2;
+}
+
+.tv-scroll-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+
+/* =========================================
+   CARD ITEMS
+========================================= */
+
+.tv-scroll-card-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-scroll-card-items a {
+  display: flex;
+  align-items: center;
+
+  min-height: 40px;
+
+  padding: 6px 8px;
+
+  color: #252525;
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.tv-scroll-card-items a:hover {
+  background: #eae7e1;
+}

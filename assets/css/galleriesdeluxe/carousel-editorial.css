@@ -111,7 +111,7 @@
 
 .travel-card span {
    position: absolute;
-  left: 20px;
+  right: 0;
   top: 20px;
   color: var(--white);
   font-size: 13px;
@@ -119,6 +119,9 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
     z-index: 10;
+    background: var(--district-color);
+    padding: 8px 6px;
+    border-radius: 2px;
 }
 
 
@@ -332,9 +335,10 @@ padding-bottom: var(--space-lg);
 
   width: 100%;
 
-  background: black;
+  background: white;
 
   overflow: hidden;
+  color: black;
 }
 
 
