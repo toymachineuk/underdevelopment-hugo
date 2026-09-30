@@ -592,23 +592,21 @@ padding: 11px 13px;
   margin: 32px 0 36px;
 }
 
-
 .tv-filter {
-
-
   display: inline-flex;
   align-items: center;
-  gap: 7px;
 
   height: 32px;
   padding: 0 12px;
-  border-radius: 4px;
 
+  border-radius: 4px;
   background: #fff;
   color: var(--tv-black);
   border: 1px solid var(--tv-black);
- position: relative;
+
+  position: relative;
   overflow: hidden;
+
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -616,11 +614,64 @@ padding: 11px 13px;
   white-space: nowrap;
 }
 
+.tv-filter::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 30px;
+  background: var(--category-accent);
+}
+
+.tv-filter-icon-wrap {
+  width: 30px;
+  height: 32px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.tv-filter-icon {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  fill: #252525;
+  stroke: none;
+
+  z-index: 2;
+}
+.tv-filter-label {
+  margin-left: 15px;
+}
+
+
 .tv-filter:hover,
 .tv-filter.active {
   background: var(--tv-black);
   color: #fff;
 }
+.tv-filter:hover .tv-filter-icon,
+.tv-filter.active .tv-filter-icon {
+   fill: #fff;
+  stroke: #fff;
+}
+
+
+
+
+
 
 
 /* =========================================================
@@ -1231,20 +1282,6 @@ position:relative;
 
 
 
-/* Large colour block on the left */
-
-.tv-filter::before {
-    content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 15px;
-  background: var(--category-accent);
-  
-}
-
-
-
-
 /* Filter category colours */
 
 .tv-filter-parks {
@@ -1283,14 +1320,38 @@ position:relative;
 border-radius: 2px;
   padding: 6px 8px;
 
+
+
+
+    position: relative;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--category-accent);
+  border-radius: 4px;
+
 }
 
-.tv-filter-icon {
+
+.tv-category.badge .tv-filter-icon {
+  position: static;
+
   width: 18px;
   height: 18px;
-  flex: 0 0 18px;
-  fill: currentColor;
+
+  transform: none;
+
+  fill: none;
+  stroke: #252525;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
+
 
 /* All button */
 
