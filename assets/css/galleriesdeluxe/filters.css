@@ -99,12 +99,20 @@
 }
 
 .tv-filter-georgian {
-  --category-accent: #B66A4C;
+  --category-accent: #f4e3df;
+  padding-left: 20px;
+}
+
+.tv-filter-contemporary {
+  --category-accent: #f4e3df;
   padding-left: 20px;
 }
 
 
-
+.tv-filter-coffee {
+  --category-accent: #f6f0e2;
+  padding-left: 20px;
+}
 
 /* Category colours */
 .tv-category.tv-filter-parks {
