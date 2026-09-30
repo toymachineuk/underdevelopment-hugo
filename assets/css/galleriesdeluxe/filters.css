@@ -1,4 +1,4 @@
-.district-vertical-badge {
+.vertical-badge {
   position: absolute;
   right: 0;
   top: 40px;
@@ -19,7 +19,7 @@
 }
 
 /* CATEGORY ICON BOX */
-.district-vertical-badge .tv-category {
+.vertical-badge .tv-category {
   position: static !important;
 
   width: 30px;
@@ -40,11 +40,11 @@
 }
 
 /* CATEGORY SVG */
-.district-vertical-badge .tv-badge-icon {
+.vertical-badge .tv-badge-icon {
   width: 18px;
   height: 18px;
 
-  fill: none;
+  
   stroke: #252525;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -52,7 +52,7 @@
 }
 
 /* DISTRICT NAME ONLY */
-.district-vertical-badge > span {
+.vertical-badge > span {
   display: block;
 
   writing-mode: vertical-rl;
@@ -170,6 +170,70 @@
   background: var(--tv-black);
   border-color: var(--tv-black);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MOBILE — VERTICAL CARD BADGE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .vertical-badge {
+    top: 24px;
+    right: 0;
+
+    padding: 0 0 5px 0;
+
+    border-radius: 2px;
+
+    z-index: 20;
+  }
+
+  /* CATEGORY ICON BOX */
+
+  .vertical-badge .tv-category {
+  width: 23px;
+    height: 23px;
+    margin: 0 0 5px 0;
+    padding: 0 !important;
+    border-radius: 2px;
+  }
+
+  /* CATEGORY SVG */
+
+  .vertical-badge .tv-badge-icon {
+    width: 15px;
+    height: 15px;
+
+    stroke-width: 1.7;
+  }
+
+  /* DISTRICT NAME */
+
+  .vertical-badge > span {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+}
+
+
+
+
+
+
+
 
 
 /* -----------------------------------------

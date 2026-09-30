@@ -173,36 +173,6 @@ width: 100%;
   transform: scale(1.04);
 }
 
-.badge {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  padding: 8px 12px;
-  background: var(--white);
-  font-size: 9px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-
-
-.district-vertical-badge {
-
-  right: 0;
-  top: 40px;
-  color: black;
-  font-size: 13px;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  z-index: 10;
-  background: var(--district-color);
-  padding: 8px 6px;
-  border-radius: 2px;
-  position: absolute;
-}
-
-
 
 .tv-square-card-content {
 padding: 11px 13px;
@@ -437,14 +407,20 @@ padding: 11px 13px;
      SECTION HEADERS
   ================================ */
 
-  .section-header,
-  .section-header.right {
+ .section-header {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     text-align: left;
     height: auto;
     gap: var(--space-xs);
+  }
+
+ 
+  .section-header.right {
+ 
+    align-items: flex-end;
+  
   }
 
 
@@ -907,25 +883,6 @@ position:relative;
 
 
 
-/* Category colours */
-.tv-category.tv-filter-parks {
-  --category-accent: #5F8061;
-}
-
-.tv-category.tv-filter-history {
-  --category-accent: #9A7357;
-}
-
-.tv-category.tv-filter-landmarks {
-  --category-accent: #65758B;
-}
-
-.tv-category.tv-filter-daytrips {
-  --category-accent: #B66A4C;
-}
-
-
-
 
 /* =========================================
    RECTANGLE CARD — TITLE
@@ -1266,147 +1223,6 @@ position:relative;
 
 }
 
-
-/* =========================================
-   CATEGORY ACCENTS
-   ========================================= */
-
-/* -----------------------------------------
-   CATEGORY LABEL UNDER CARD INFO
-   ----------------------------------------- */
-
-
-
-
-
-
-
-
-/* Filter category colours */
-
-.tv-filter-parks {
-  --category-accent: #5F8061;
-  padding-left: 20px;
-}
-
-.tv-filter-history {
-  --category-accent: #9A7357;
-  padding-left: 20px;
-}
-
-.tv-filter-religion {
-  --category-accent: #65758B;
-  padding-left: 20px;
-}
-
-.tv-filter-architecture {
-  --category-accent: #B66A4C;
-  padding-left: 20px;
-}
-
-.tv-filter-georgian {
-  --category-accent: #B66A4C;
-  padding-left: 20px;
-}
-
-.tv-category.badge {
-
- background: var(--category-accent);
-
-   position: absolute;
-  top: 12px;
-  right: 0;
-
-border-radius: 2px;
-  padding: 6px 8px;
-
-
-
-
-    position: relative;
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--category-accent);
-  border-radius: 4px;
-
-}
-
-
-.tv-category.badge .tv-filter-icon {
-  position: static;
-
-  width: 18px;
-  height: 18px;
-
-  transform: none;
-
-  fill: none;
-  stroke: #252525;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-
-/* All button */
-
-.tv-filter-all {
-  --category-accent: var(--tv-black);
-
-  background: var(--tv-black);
-  color: #fff;
-}
-
-.tv-filter-all::before {
-  display: none;
-}
-
-
-/* Active category filter */
-
-.tv-filter.active {
-  background: var(--category-accent);
-  border-color: var(--category-accent);
-  color: #fff;
-}
-
-
-/* Keep the active All button black */
-
-.tv-filter-all.active {
-  background: var(--tv-black);
-  border-color: var(--tv-black);
-}
-
-
-/* -----------------------------------------
-   CARD CATEGORY COLOURS
-   ----------------------------------------- */
-
-.tv-rectangle-card {
-  --category-accent: var(--tv-black);
-}
-
-.tv-rectangle-card[data-category="tbilisi"] {
-  --category-accent: #5F8061;
-}
-
-.tv-rectangle-card[data-category="history"] {
-  --category-accent: #9A7357;
-}
-
-.tv-rectangle-card[data-category="landmarks"] {
-  --category-accent: #65758B;
-}
-
-.tv-rectangle-card[data-category="daytrips"] {
-  --category-accent: #B66A4C;
-}
 
 
 /* -----------------------------------------

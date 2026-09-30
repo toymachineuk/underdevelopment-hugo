@@ -110,107 +110,36 @@
 ===================================== */
 
 .travel-card span {
-   position: absolute;
+  position: absolute;
+
   right: 0;
   top: 20px;
+
+  width: 23px;
+  height: 85px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--white);
   font-size: 13px;
   font-weight: 700;
+  line-height: 1;
+
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-    z-index: 10;
-    background: var(--district-color);
-    padding: 8px 6px;
-    border-radius: 2px;
+
+  z-index: 10;
+
+  background: var(--district-color);
+  border-radius: 2px;
 }
 
 
-/* =====================================
-   MOBILE
-===================================== */
 
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 768px) {
-  .travel-carousel {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .travel-carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .travel-group--one,
-  .travel-group--two,
-  .travel-group--three {
-    position: relative;
-    flex: 0 0 315px;
-    width: 315px;
-    height: 300px;
-    scroll-snap-align: start;
-    overflow: visible;
-  }
-
-  /* IMAGE ONE */
-
-  .travel-card--one {
-    position: absolute;
-    width: 170px;
-    height: 245px;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
-
-
-  /* IMAGE TWO */
-
-  .travel-card--two {
-    position: absolute;
-    width: 135px;
-    height: 190px;
-    top: 40px;
-     top: 40px;
-    left: calc(170px + 20px);
-    z-index: 2;
-  }
-
-
-
-  /* IMAGE THREE — SQUARE */
-
-  .travel-card--three {
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    aspect-ratio: 1 / 1;
-
-    left: 50%;
-    bottom: 10px;
-
-    transform: translateX(-50%);
-
-    z-index: 1;
-  }
-
-  .travel-card span {
-    left: 15px;
-    bottom: 14px;
-    font-size: 12px;
-  }
-
-}
 
 
 
@@ -464,7 +393,7 @@ padding-bottom: var(--space-lg);
   /* LEFT */
 
   .feature--carousel .feature-image {
-    padding: 50px 5vw 30px;
+    padding: 25px 5vw 0px;
       
          order: 1;
   }
@@ -500,6 +429,98 @@ padding-bottom: var(--space-lg);
     margin-left: -24px;
     margin-right: 0;
     min-height: 0;
+  }
+
+}
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+  .feature--carousel .travel-carousel {
+    width: calc(100% + 40px);
+  }
+
+    .feature--carousel .photo-grid {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: 0;
+    min-height: 0;
+  }
+
+  .travel-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .travel-group--one,
+  .travel-group--two,
+  .travel-group--three {
+    position: relative;
+    flex: 0 0 315px;
+    width: 315px;
+    height: 300px;
+    scroll-snap-align: start;
+    overflow: visible;
+  }
+
+  .travel-carousel::before {
+    content: "";
+    flex: 0 0 20px;
+  }
+  /* IMAGE ONE */
+
+  .travel-card--one {
+    position: absolute;
+    width: 170px;
+    height: 245px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+
+
+  /* IMAGE TWO */
+
+  .travel-card--two {
+    position: absolute;
+    width: 135px;
+    height: 190px;
+    top: 40px;
+     top: 40px;
+    left: calc(170px + 20px);
+    z-index: 2;
+  }
+
+
+
+  /* IMAGE THREE — SQUARE */
+
+  .travel-card--three {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    aspect-ratio: 1 / 1;
+
+    left: 50%;
+    bottom: 10px;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+  }
+
+  .travel-card span {
+   left: 0;
+    bottom: 15px;
+    width: 23px;
+    height: 75px;
+    font-size: 11px;
+    top: auto;
   }
 
 }
