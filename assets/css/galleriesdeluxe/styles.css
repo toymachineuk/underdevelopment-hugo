@@ -281,7 +281,7 @@ select {
       rgba(0, 0, 0, .68),
       rgba(0, 0, 0, .22)
     ),
-    url("https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=2200&q=90")
+    url("https://wearebou.com/cdn-cgi/image/onerror=redirect,width=1920,height=1003,format=avif/https://cdn.sanity.io/images/cy870nyb/production/79a222745ec7d321ad326d842b0fc967d11d81ac-3520x1838.jpg?w=3520&h=1838&fit=max")
     center / cover no-repeat;
 }
 

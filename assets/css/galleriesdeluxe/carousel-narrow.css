@@ -219,16 +219,7 @@ padding-top: 8vw;
 }
 
 
-.tv-carousel-image img {
-border: 1px solid #d8d8d8;
-  width: 100%;
 
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-}
 
 
 /* =====================================
@@ -312,19 +303,7 @@ border: 1px solid #d8d8d8;
 
 @media (max-width: 650px) {
 
-  .tv-carousel-section {
-
-    padding: var(--space-md) 0 var(--space-md);
-
-  }
-
-
  
-
-
-
-
-
 
 
   .tv-carousel {
@@ -529,14 +508,7 @@ border: 1px solid #d8d8d8;
 
 
 
-.tv-carousel-image img {
-  display: block;
 
-  width: 200px;
-  height: 200px;
-
-  object-fit: cover;
-}
 
 
 /* =====================================
@@ -695,11 +667,7 @@ border: 1px solid #d8d8d8;
    SUPER NARROW STRIP
 ===================================== */
 
-.tv-carousel-section.tv-super-narrow {
-  background: var(--tv-vanilla);
-  padding-top: var(--space-md);
-  padding-bottom: var(--space-md);
-}
+
 
 
 /* =====================================
@@ -771,7 +739,7 @@ border: 1px solid #d8d8d8;
 
   object-fit: cover;
 
-  border: 1px solid #d8d8d8;
+  
   padding: 2px;
 
   box-sizing: border-box;
@@ -1060,6 +1028,11 @@ border: 1px solid #d8d8d8;
 }
 
 
+.food-strip {
+   background: radial-gradient( circle at 90% 10%, rgba(255, 255, 255, .7) 0 120px, transparent 121px), radial-gradient( circle at 5% 90%, rgba(0, 0, 0, .025) 0 180px, transparent 181px), var(--tv-vanilla);
+
+}
+
 /* =====================================
    HEADER
 ===================================== */
@@ -1290,8 +1263,8 @@ border: 1px solid #d8d8d8;
   /* CAROUSEL */
 
   .wide-cards-strip .tv-carousel {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 13px;
+    padding-right: 13px;
 
     gap: 4px;
 
@@ -1302,9 +1275,9 @@ border: 1px solid #d8d8d8;
   /* CARD */
 
   .wide-cards-strip .tv-carousel-card {
-    flex: 0 0 320px;
+    flex: 0 0 280px;
 
-    width: 320px;
+    width: 280px;
     height: 130px;
   }
 

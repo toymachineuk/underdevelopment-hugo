@@ -1,9 +1,4 @@
-.tv-filter-section {  
-width: 100%;
-  margin: 0;
-  background: #fff;
-  padding: 80px 5vw 0;
-}
+
 
 
 
@@ -50,30 +45,9 @@ width: 100%;
   padding: 0 0 0 5vw;
 }
 
-.tv-chillout-shape-wrap {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-shrink: 0;
-}
 
-.tv-chillout-shape {
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius:
-    48% 52% 43% 57%
-    / 54% 42% 58% 46%;
-}
 
-.tv-chillout-shape img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}
+
 
 
 
@@ -106,9 +80,7 @@ width: 100%;
     gap: 32px;
   }
 
-  .tv-chillout-shape-wrap {
-    align-self: flex-start;
-  }
+
 
 }
 
@@ -539,13 +511,7 @@ padding: 11px 13px;
 }
 
 
-.tv-chillout {
-  width: 100%;
-  margin: 0;
- 
-  padding: 80px 5vw 0;
 
-}
 
 
 
@@ -737,7 +703,7 @@ padding: 11px 13px;
 }
 
 .tv-chillout-grid {
-  background: black;
+  background: var(--tv-pink);
  
 }
 
@@ -930,10 +896,7 @@ position:relative;
 }
 
 
-.tv-chillout .tv-info-row {
 
-  color: white;
-}
 
 
 .tv-info-row img {
@@ -1316,7 +1279,7 @@ padding: var(--space-md) 5vw 0;
 .tv-square-image {
   position: relative;
   display: block;
-
+border-radius: 14px;
   width: 100%;
   aspect-ratio: 1 / 1;
 
@@ -1414,30 +1377,6 @@ padding: var(--space-md) 5vw 0;
 }
 
 
-/* =====================================
-   IMAGE — LEFT
-===================================== */
-
-.section-header-image {
-  width: 310px;
-  height: auto;
-
-  flex: 0 0 310px;
-
-  margin-right: 40px;
-  margin-left: 0;
-
-  overflow: hidden;
-}
-
-.section-header-image img {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
 
 
 /* =====================================
@@ -1446,9 +1385,7 @@ padding: var(--space-md) 5vw 0;
 
 @media (max-width: 650px) {
 
-  .section-header--image {
-    align-items: flex-start;
-  }
+
 
   .section-header-content {
     max-width: none;
@@ -1458,15 +1395,6 @@ padding: var(--space-md) 5vw 0;
     max-width: none;
   }
 
-  .section-header-image {
-    width: 75px;
-    height: 75px;
-
-    flex-basis: 75px;
-
-    margin-right: 20px;
-    margin-left: 0;
-  }
 }
 
 
