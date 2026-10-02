@@ -19,12 +19,25 @@
 }
 
 .tv-destination-heading h2 {
+  margin: 0;
+
   font-family: var(--font-sans);
   font-size: clamp(52px, 8vw, 120px);
   line-height: .88;
   letter-spacing: var(--tracking-tight);
   font-weight: var(--weight-black);
-  margin: 0;
+}
+
+
+/* =========================================
+   CAROUSEL STAGE
+   This is the positioning reference
+   for the buttons.
+========================================= */
+
+.tv-destination-stage {
+  position: relative;
+  width: 100%;
 }
 
 
@@ -95,9 +108,8 @@
   z-index: 1;
 
   transition:
-    transform .55s cubic-bezier(.2,.7,.2,1),
+    transform .55s cubic-bezier(.2, .7, .2, 1),
     opacity .55s ease;
-
 }
 
 
@@ -106,13 +118,11 @@
 ========================================= */
 
 .tv-destination-card.is-active {
-
   opacity: 1;
 
   transform: scale(1.08);
 
   z-index: 20;
-
 }
 
 
@@ -121,7 +131,6 @@
 ========================================= */
 
 .tv-destination-card img {
-
   display: block;
 
   width: 100%;
@@ -134,14 +143,11 @@
   transform: scale(1.02);
 
   transition:
-    transform .8s cubic-bezier(.2,.7,.2,1);
-
+    transform .8s cubic-bezier(.2, .7, .2, 1);
 }
 
 .tv-destination-card.is-active img {
-
   transform: scale(1.06);
-
 }
 
 
@@ -150,7 +156,6 @@
 ========================================= */
 
 .tv-destination-overlay {
-
   position: absolute;
 
   inset: 0;
@@ -164,7 +169,6 @@
       rgba(0, 0, 0, .12) 55%,
       rgba(0, 0, 0, .78) 100%
     );
-
 }
 
 
@@ -173,7 +177,6 @@
 ========================================= */
 
 .tv-destination-content {
-
   position: absolute;
 
   left: var(--space-md);
@@ -189,7 +192,6 @@
   gap: var(--space-sm);
 
   color: var(--tv-white);
-
 }
 
 
@@ -198,7 +200,6 @@
 ========================================= */
 
 .tv-destination-number {
-
   align-self: start;
 
   padding-top: 4px;
@@ -214,7 +215,6 @@
   letter-spacing: var(--tracking-wide);
 
   opacity: .7;
-
 }
 
 
@@ -223,7 +223,6 @@
 ========================================= */
 
 .tv-destination-content h3 {
-
   margin: 0;
 
   font-family: var(--font-sans);
@@ -235,7 +234,6 @@
   font-weight: var(--weight-heavy);
 
   letter-spacing: var(--tracking-tight);
-
 }
 
 
@@ -244,7 +242,6 @@
 ========================================= */
 
 .tv-destination-content p {
-
   margin: var(--space-xs) 0 0;
 
   font-family: var(--font-sans);
@@ -258,33 +255,71 @@
   letter-spacing: var(--tracking-normal);
 
   opacity: .8;
-
 }
 
 
 /* =========================================
-   CARD ARROW
+   DESKTOP CAROUSEL CONTROLS
+   Positioned directly over the images.
 ========================================= */
 
-.tv-destination-arrow {
+.tv-destination-controls {
+  position: absolute;
+
+  /*
+    The track has var(--space-sm) top padding.
+    Cards are 500px high.
+    Therefore the image centre is:
+
+    top padding + half card height
+  */
+
+  top: calc(
+    var(--space-sm) + 250px
+  );
+
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 var(--space-sm);
+
+  pointer-events: none;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================
+   CONTROL BUTTON
+========================================= */
+
+.tv-destination-control {
+  pointer-events: auto;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
 
   padding: 0;
 
-  border: 1px solid rgba(255, 255, 255, .7);
+  border: 1px solid var(--tv-black);
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, .08);
+  background: var(--tv-white);
 
-  color: var(--tv-white);
+  color: var(--tv-black);
 
   font-family: var(--font-sans);
 
@@ -294,24 +329,25 @@
 
   cursor: pointer;
 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
   transition:
     background .25s ease,
     color .25s ease,
-    transform .25s ease;
-
+    opacity .25s ease;
 }
 
-.tv-destination-arrow:hover {
 
-  background: var(--tv-white);
+.tv-destination-control:hover {
+  background: var(--tv-black);
+  color: var(--tv-white);
+}
 
-  color: var(--tv-black);
 
-  transform: rotate(45deg);
+.tv-destination-control:disabled {
+  opacity: .25;
 
+  cursor: default;
+
+  pointer-events: none;
 }
 
 
@@ -325,46 +361,56 @@
     width: 92%;
   }
 
+
   .tv-destination-heading {
     margin-bottom: var(--space-md);
   }
+
 
   .tv-destination-heading h2 {
     font-size: clamp(48px, 10vw, 80px);
   }
 
-  .tv-destination-track {
 
+  .tv-destination-track {
     gap: 0;
 
     padding-left: 8vw;
     padding-right: 8vw;
-
   }
 
-  .tv-destination-card {
 
+  .tv-destination-card {
     flex-basis: 330px;
 
     width: 330px;
     height: 470px;
 
     margin-right: -45px;
-
   }
 
-  .tv-destination-content {
 
+  /*
+    Tablet card = 470px high.
+    Center = 235px.
+  */
+
+  .tv-destination-controls {
+    top: calc(
+      var(--space-sm) + 235px
+    );
+  }
+
+
+  .tv-destination-content {
     left: var(--space-sm);
     right: var(--space-sm);
     bottom: var(--space-sm);
-
   }
 
+
   .tv-destination-content h3 {
-
     font-size: var(--heading-md);
-
   }
 
 }
@@ -380,16 +426,18 @@
     width: 92%;
   }
 
+
   .tv-destination-heading {
     margin-bottom: var(--space-md);
   }
+
 
   .tv-destination-heading h2 {
     font-size: var(--heading-xl);
   }
 
-  .tv-destination-track {
 
+  .tv-destination-track {
     gap: 0;
 
     padding-top: var(--space-xs);
@@ -398,11 +446,10 @@
     padding-right: 5vw;
 
     padding-bottom: var(--space-md);
-
   }
 
-  .tv-destination-card {
 
+  .tv-destination-card {
     flex: 0 0 78vw;
 
     width: 78vw;
@@ -414,46 +461,42 @@
     margin-right: -35px;
 
     border-radius: 20px;
-
   }
+
 
   .tv-destination-card.is-active {
-
     transform: scale(1.04);
-
   }
 
-  .tv-destination-content {
 
+  .tv-destination-content {
     left: var(--space-sm);
     right: var(--space-sm);
     bottom: var(--space-sm);
 
     gap: var(--space-xs);
-
   }
+
 
   .tv-destination-content h3 {
-
     font-size: var(--heading-lg);
-
   }
 
-  .tv-destination-content p {
 
+  .tv-destination-content p {
     font-size: var(--text-xs);
 
     margin-top: var(--space-xs);
-
   }
 
-  .tv-destination-arrow {
 
-    width: 44px;
-    height: 44px;
+  /*
+    Hide desktop navigation on mobile.
+    Mobile uses swipe/drag.
+  */
 
-    font-size: var(--text-md);
-
+  .tv-destination-controls {
+    display: none;
   }
 
 }
@@ -466,11 +509,8 @@
 @media (prefers-reduced-motion: reduce) {
 
   .tv-destination-card,
-  .tv-destination-card img,
-  .tv-destination-arrow {
-
+  .tv-destination-card img {
     transition: none;
-
   }
 
 }

@@ -3,12 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tv-destination-carousel').forEach((carousel) => {
 
     const track = carousel.querySelector('.tv-destination-track');
+
     const cards = Array.from(
       carousel.querySelectorAll('.tv-destination-card')
     );
 
-    const nextButton = carousel.querySelector('.tv-destination-next');
-    const prevButton = carousel.querySelector('.tv-destination-prev');
+    const nextButton = carousel.querySelector(
+      '.tv-destination-next'
+    );
+
+    const prevButton = carousel.querySelector(
+      '.tv-destination-prev'
+    );
 
     if (!track || !cards.length) return;
 
@@ -49,9 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.remove('is-active');
       });
 
+
       if (closestCard) {
         closestCard.classList.add('is-active');
       }
+
+
+      /* --------------------------------
+         UPDATE NAVIGATION BUTTONS
+      -------------------------------- */
+
+      const activeIndex =
+        closestCard
+          ? cards.indexOf(closestCard)
+          : 0;
+
+      if (prevButton) {
+        prevButton.disabled =
+          activeIndex <= 0;
+      }
+
+      if (nextButton) {
+        nextButton.disabled =
+          activeIndex >= cards.length - 1;
+      }
+
     }
 
 
@@ -71,18 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const card = cards[index];
 
-      const trackRect = track.getBoundingClientRect();
-      const cardRect = card.getBoundingClientRect();
+      if (!card) return;
+
+
+      const trackRect =
+        track.getBoundingClientRect();
+
+      const cardRect =
+        card.getBoundingClientRect();
+
 
       const offset =
         cardRect.left -
         trackRect.left -
         (trackRect.width - cardRect.width) / 2;
 
+
       track.scrollBy({
         left: offset,
         behavior: 'smooth'
       });
+
     }
 
 
@@ -93,13 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function getActiveIndex() {
 
       const activeCard =
-        carousel.querySelector('.tv-destination-card.is-active');
+        carousel.querySelector(
+          '.tv-destination-card.is-active'
+        );
 
       if (!activeCard) {
         return 0;
       }
 
       return cards.indexOf(activeCard);
+
     }
 
 
@@ -143,18 +183,32 @@ document.addEventListener('DOMContentLoaded', () => {
        UPDATE WHILE SCROLLING
     -------------------------------- */
 
-    let scrollTimeout;
+    let scrollFrame = null;
+    let scrollTimeout = null;
+
 
     track.addEventListener('scroll', () => {
 
-      window.requestAnimationFrame(() => {
-        updateActiveCard();
-      });
+      if (!scrollFrame) {
+
+        scrollFrame =
+          window.requestAnimationFrame(() => {
+
+            updateActiveCard();
+
+            scrollFrame = null;
+
+          });
+
+      }
+
 
       clearTimeout(scrollTimeout);
 
       scrollTimeout = setTimeout(() => {
+
         updateActiveCard();
+
       }, 100);
 
     });
@@ -209,8 +263,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    track.addEventListener('mouseup', stopDragging);
-    track.addEventListener('mouseleave', stopDragging);
+    track.addEventListener(
+      'mouseup',
+      stopDragging
+    );
+
+    track.addEventListener(
+      'mouseleave',
+      stopDragging
+    );
+
+
+    /* --------------------------------
+       TOUCH / POINTER SAFETY
+    -------------------------------- */
+
+    track.addEventListener('dragstart', (event) => {
+      event.preventDefault();
+    });
 
 
     /* --------------------------------
