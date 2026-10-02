@@ -188,8 +188,8 @@ padding: 11px 13px;
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   min-height: 650px;
-  background: var(--black);
-  color: var(--white);
+
+  color: var(--black);
 }
 
 .feature-image {

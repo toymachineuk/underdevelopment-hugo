@@ -1,0 +1,476 @@
+/* =========================================
+   DESTINATION CAROUSEL
+========================================= */
+
+.tv-destination-carousel {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.tv-destination-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.tv-destination-heading h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(52px, 8vw, 120px);
+  line-height: .88;
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--weight-black);
+  margin: 0;
+}
+
+
+/* =========================================
+   CAROUSEL TRACK
+========================================= */
+
+.tv-destination-track {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  padding: var(--space-sm) 12vw var(--space-lg);
+
+  box-sizing: border-box;
+
+  scrollbar-width: none;
+
+  scroll-snap-type: x mandatory;
+
+  cursor: grab;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.tv-destination-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-destination-track.is-dragging {
+  cursor: grabbing;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.tv-destination-card {
+  position: relative;
+
+  flex: 0 0 360px;
+
+  width: 360px;
+  height: 500px;
+
+  margin-right: -55px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: var(--tv-pearl);
+
+  scroll-snap-align: center;
+
+  opacity: .55;
+
+  transform: scale(.88);
+
+  transform-origin: center center;
+
+  z-index: 1;
+
+  transition:
+    transform .55s cubic-bezier(.2,.7,.2,1),
+    opacity .55s ease;
+
+}
+
+
+/* =========================================
+   ACTIVE CARD
+========================================= */
+
+.tv-destination-card.is-active {
+
+  opacity: 1;
+
+  transform: scale(1.08);
+
+  z-index: 20;
+
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.tv-destination-card img {
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  pointer-events: none;
+
+  transform: scale(1.02);
+
+  transition:
+    transform .8s cubic-bezier(.2,.7,.2,1);
+
+}
+
+.tv-destination-card.is-active img {
+
+  transform: scale(1.06);
+
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.tv-destination-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, .12) 55%,
+      rgba(0, 0, 0, .78) 100%
+    );
+
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.tv-destination-content {
+
+  position: absolute;
+
+  left: var(--space-md);
+  right: var(--space-md);
+  bottom: var(--space-md);
+
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+
+  align-items: end;
+
+  gap: var(--space-sm);
+
+  color: var(--tv-white);
+
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.tv-destination-number {
+
+  align-self: start;
+
+  padding-top: 4px;
+
+  font-family: var(--font-sans);
+
+  font-size: var(--text-xs);
+
+  line-height: 1;
+
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: var(--tracking-wide);
+
+  opacity: .7;
+
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.tv-destination-content h3 {
+
+  margin: 0;
+
+  font-family: var(--font-sans);
+
+  font-size: var(--heading-lg);
+
+  line-height: var(--line-tight);
+
+  font-weight: var(--weight-heavy);
+
+  letter-spacing: var(--tracking-tight);
+
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.tv-destination-content p {
+
+  margin: var(--space-xs) 0 0;
+
+  font-family: var(--font-sans);
+
+  font-size: var(--text-sm);
+
+  line-height: var(--line-subheading);
+
+  font-weight: var(--weight-regular);
+
+  letter-spacing: var(--tracking-normal);
+
+  opacity: .8;
+
+}
+
+
+/* =========================================
+   CARD ARROW
+========================================= */
+
+.tv-destination-arrow {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, .7);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, .08);
+
+  color: var(--tv-white);
+
+  font-family: var(--font-sans);
+
+  font-size: var(--text-md);
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+
+}
+
+.tv-destination-arrow:hover {
+
+  background: var(--tv-white);
+
+  color: var(--tv-black);
+
+  transform: rotate(45deg);
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .tv-destination-carousel {
+    width: 92%;
+  }
+
+  .tv-destination-heading {
+    margin-bottom: var(--space-md);
+  }
+
+  .tv-destination-heading h2 {
+    font-size: clamp(48px, 10vw, 80px);
+  }
+
+  .tv-destination-track {
+
+    gap: 0;
+
+    padding-left: 8vw;
+    padding-right: 8vw;
+
+  }
+
+  .tv-destination-card {
+
+    flex-basis: 330px;
+
+    width: 330px;
+    height: 470px;
+
+    margin-right: -45px;
+
+  }
+
+  .tv-destination-content {
+
+    left: var(--space-sm);
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+
+  }
+
+  .tv-destination-content h3 {
+
+    font-size: var(--heading-md);
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .tv-destination-carousel {
+    width: 92%;
+  }
+
+  .tv-destination-heading {
+    margin-bottom: var(--space-md);
+  }
+
+  .tv-destination-heading h2 {
+    font-size: var(--heading-xl);
+  }
+
+  .tv-destination-track {
+
+    gap: 0;
+
+    padding-top: var(--space-xs);
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    padding-bottom: var(--space-md);
+
+  }
+
+  .tv-destination-card {
+
+    flex: 0 0 78vw;
+
+    width: 78vw;
+
+    height: 108vw;
+
+    max-height: 500px;
+
+    margin-right: -35px;
+
+    border-radius: 20px;
+
+  }
+
+  .tv-destination-card.is-active {
+
+    transform: scale(1.04);
+
+  }
+
+  .tv-destination-content {
+
+    left: var(--space-sm);
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+
+    gap: var(--space-xs);
+
+  }
+
+  .tv-destination-content h3 {
+
+    font-size: var(--heading-lg);
+
+  }
+
+  .tv-destination-content p {
+
+    font-size: var(--text-xs);
+
+    margin-top: var(--space-xs);
+
+  }
+
+  .tv-destination-arrow {
+
+    width: 44px;
+    height: 44px;
+
+    font-size: var(--text-md);
+
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tv-destination-card,
+  .tv-destination-card img,
+  .tv-destination-arrow {
+
+    transition: none;
+
+  }
+
+}

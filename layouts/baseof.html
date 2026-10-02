@@ -81,6 +81,19 @@
   {{ if hugo.IsProduction }}integrity="{{ $georgiaRegions.Data.Integrity }}"{{ end }}
   defer></script>
 
+{{/* Gallery carousels */}}
+
+{{ $galleryCarousels := resources.Get "js/gallery-carousels.js" }}
+
+{{ if hugo.IsProduction }}
+  {{ $galleryCarousels = $galleryCarousels | fingerprint }}
+{{ end }}
+
+<script
+  src="{{ $galleryCarousels.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $galleryCarousels.Data.Integrity }}"{{ end }}
+  defer></script>
+
 
   
 

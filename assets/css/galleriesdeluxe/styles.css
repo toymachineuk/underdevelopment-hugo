@@ -7,12 +7,13 @@
 @import "sections.css";
 @import "maps.css";
 @import "carousel-narrow.css";
-@import "carousel-editorial.css";
 @import "navbar.css";
 @import "animation.css";
 @import "map-page.css";
 @import "horizontal-scroll.css";
 @import "filters.css";
+@import "gallery-carousels.css";
+
 
 
 html,
