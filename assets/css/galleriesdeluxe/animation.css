@@ -1,63 +1,85 @@
-
 /* =====================================
-   MOVING LETTERS #8
+   MOVING LETTERS / EDITORIAL STATEMENT
 ===================================== */
 
 .tv-moving-letter {
-  width: 100%;
-  min-height: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: var(--space-xl);
-  padding: var(--space-xl) 5vw;
-  pointer-events: none;
-  background-color: #98bec8;
+   position: relative;
   overflow: hidden;
 
-  background-size: 60% auto;
-  background-position: center bottom;
+  display: grid;
+  grid-template-columns: 1fr 1.75fr;
+  align-items: center;
+
+  min-height: 380px;
+  padding: 55px 5vw;
+
+  background-color: var(--tv-cream);
+  background-position: 80% center;
+  background-size: 1200px auto;
   background-repeat: no-repeat;
 }
 
 
+/* =====================================
+   TITLE
+===================================== */
 
-.tv-moving-letter .ml8 .bang {
-  opacity: 0;
-  transform: rotate(15deg);
+.tv-moving-letter .title-md {
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: .86;
+  letter-spacing: -.055em;
+  font-weight: 900;
+
+  max-width: 680px;
 }
 
 
 /* =====================================
-   LEFT COLUMN
+   TEXT / COPY
 ===================================== */
 
 .tv-moving-text {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  min-width: 0;
+  display: contents;
 }
 
-.tv-moving-text .text-md {
-  max-width: 460px;
+.tv-moving-copy {
+  position: relative;
+  z-index: 2;
+
+  max-width: 440px;
+}
+
+.tv-moving-copy .tv-language-intro {
+  margin: 0 0 18px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tv-moving-copy p:not(.tv-language-intro) {
   margin: 0;
+
+  font-size: 14px;
+  line-height: 1.45;
+  max-width: 410px;
 }
 
 
 /* =====================================
-   RIGHT COLUMN
+   ANIMATION / HI
 ===================================== */
 
 .tv-moving-animation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
 
-  width: 100%;
-  min-width: 0;
-  min-height: 320px;
+  right: 5vw;
+  bottom: 35px;
+
+  z-index: 3;
 }
 
 
@@ -68,33 +90,29 @@
 .tv-moving-letter .ml8 {
   position: relative;
 
-  font-weight: 900;
-  font-size: 4.5em;
-  color: #fff;
-
   width: 3em;
   height: 3em;
 
   margin: 0;
-}
 
+  font-size: 4em;
+  font-weight: 900;
+  color: #fff;
+}
 
 .tv-moving-letter .ml8 .letters-container {
   position: absolute;
 
   left: 0;
   right: 0;
-
-  margin: auto;
-
   top: 0;
   bottom: 0;
 
   height: 1em;
+  margin: auto;
 
   text-align: center;
 }
-
 
 .tv-moving-letter .ml8 .letters {
   position: relative;
@@ -103,18 +121,16 @@
 
   display: inline-block;
 
-  line-height: 0.7em;
+  line-height: .7em;
 
-  right: -0.12em;
-  top: -0.2em;
+  right: -.12em;
+  top: -.2em;
 }
-
 
 .tv-moving-letter .ml8 .bang {
   font-size: 1.4em;
-
   top: auto;
-  left: -0.06em;
+  left: -.06em;
 }
 
 
@@ -127,21 +143,20 @@
 
   left: 0;
   right: 0;
-
-  margin: auto;
-
   top: 0;
   bottom: 0;
+
+  margin: auto;
 }
 
 
-/* SMALLER OUTER CIRCLE */
+/* OUTER DASHED */
 
 .tv-moving-letter .ml8 .circle-white {
   width: 2.35em;
   height: 2.35em;
 
-  border: 2px dashed white;
+  border: 2px dashed #4f7b86;
   border-radius: 50%;
 }
 
@@ -160,7 +175,7 @@
 }
 
 
-/* DARK DASHED CIRCLE */
+/* INNER DASHED */
 
 .tv-moving-letter .ml8 .circle-dark-dashed {
   width: 2.3em;
@@ -168,47 +183,6 @@
 
   border-radius: 50%;
 
-  background-color: transparent;
+  background: transparent;
   border: 2px dashed #4f7b86;
-}
-
-
-/* =====================================
-   MOBILE
-===================================== */
-@media (max-width: 650px) {
-
-  .tv-moving-letter {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-sm);
-    padding: var(--space-lg) 5vw;
-    min-height: 220px;
-
-     background-size: 120% auto;
-    background-position: center 540%;
-   
-    background-repeat: no-repeat;
-  }
-
-  .tv-moving-text {
-    width: 100%;
-  }
-
-  .tv-moving-text .text-md {
-    max-width: 100%;
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.35;
-  }
-
-  .tv-moving-animation {
-    width: 100%;
-    min-height: 180px;
-  }
-
-  .tv-moving-animation .ml8 {
-    font-size: 2.8em;
-    width: 3em;
-    height: 3em;
-  }
 }
