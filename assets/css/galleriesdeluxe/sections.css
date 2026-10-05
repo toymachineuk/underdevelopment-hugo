@@ -355,10 +355,7 @@ padding: 11px 13px;
     display: none;
   }
 
-  .menu {
-    display: block;
-    color: var(--white);
-  }
+
 
   .hero {
     min-height: 700px;

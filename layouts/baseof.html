@@ -95,6 +95,21 @@
   defer></script>
 
 
+
+
+  {{ $mobileMenu := resources.Get "js/mobile-menu.js" }}
+
+{{ if hugo.IsProduction }}
+  {{ $mobileMenu = $mobileMenu | fingerprint }}
+{{ end }}
+
+<script
+  src="{{ $mobileMenu.RelPermalink }}"
+  {{ if hugo.IsProduction }}
+    integrity="{{ $mobileMenu.Data.Integrity }}"
+  {{ end }}
+  defer>
+</script>
   
 
     {{ block "head-custom" . }}{{ end }}

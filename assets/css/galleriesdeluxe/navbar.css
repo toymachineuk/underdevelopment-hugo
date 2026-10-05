@@ -18,6 +18,8 @@
   color: #111827;
 
   border-radius: 0 0 7px 7px;
+
+  box-sizing: border-box;
 }
 
 
@@ -29,28 +31,24 @@
   flex: 0 0 auto;
 
   display: flex;
-  flex-direction: column;
+  align-items: center;
+
+  width: 155px;
 
   color: #111827;
   text-decoration: none;
-
-  font-size: 15px;
-  line-height: .9;
-  font-weight: 600;
-  letter-spacing: -.03em;
 }
 
-.logo span {
-  font-weight: 600;
-}
+.logo img {
+  display: block;
 
-.logo strong {
-  font-weight: 800;
+  width: 100%;
+  height: auto;
 }
 
 
 /* =====================================
-   MAIN NAVIGATION LINKS
+   MAIN NAVIGATION
 ===================================== */
 
 .nav-links {
@@ -97,7 +95,7 @@
 
 
 /* =====================================
-   NAVIGATION BUTTONS
+   NAVIGATION BUTTON
 ===================================== */
 
 .nav-button {
@@ -146,8 +144,6 @@
   justify-content: center;
 
   line-height: 1;
-
-  transform: translateY(0);
 }
 
 .chevron svg {
@@ -170,30 +166,27 @@
 ===================================== */
 
 .menu {
-  display: none;
-
-  width: 40px;
-  height: 40px;
-
-  padding: 8px;
-  margin-left: auto;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
   border: 0;
   background: transparent;
-
   cursor: pointer;
 }
 
 .menu span {
   display: block;
-
-  width: 22px;
+  width: 20px;
   height: 2px;
-
-  margin: 4px auto;
-
+  margin: 0;
   background: #111827;
+  transition: transform .2s ease, opacity .2s ease;
 }
+
+
 
 
 /* =====================================
@@ -264,11 +257,6 @@
   transition: background .15s ease;
 }
 
-
-/* =====================================
-   DROPDOWN LINK TEXT
-===================================== */
-
 .nav-dropdown__menu strong {
   display: block;
 
@@ -281,18 +269,13 @@
   text-align: left;
 }
 
-
-/* =====================================
-   DROPDOWN HOVER
-===================================== */
-
 .nav-dropdown__menu a:hover {
   background: #f3f3f3;
 }
 
 
 /* =====================================
-   SHOW DROPDOWN
+   SHOW BEYOND TBILISI DROPDOWN
 ===================================== */
 
 .nav-dropdown:hover .nav-dropdown__menu,
@@ -304,135 +287,278 @@
 }
 
 
-/* =====================================
+/* =========================================
+   MOBILE MENU
+   HIDDEN BY DEFAULT
+========================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* =========================================
    MOBILE
-===================================== */
+========================================= */
 
 @media (max-width: 900px) {
 
+  /* ---------------------------------------
+     HEADER
+  --------------------------------------- */
+
   .nav {
-    height: 64px;
-
-    border-radius: 0 0 6px 6px;
+     height: 64px;
+    padding: 0 10px;
   }
 
 
-  /* -------------------------------------
-     LOGO — LEFT
-  ------------------------------------- */
-
-  .logo {
-    flex: 0 0 auto;
-
-    font-size: 15px;
-  }
-
-
-  /* -------------------------------------
-     DESKTOP LINKS — HIDDEN
-  ------------------------------------- */
+  /* ---------------------------------------
+     HIDE DESKTOP NAVIGATION
+  --------------------------------------- */
 
   .nav-links {
     display: none;
   }
 
 
-  /* -------------------------------------
-     RIGHT SIDE
-  ------------------------------------- */
-
-  .nav-actions {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-left: auto;
-  }
 
 
-  /* -------------------------------------
-     HAMBURGER
-  ------------------------------------- */
 
-  .menu {
-    display: block;
+  /* ---------------------------------------
+     HAMBURGER → X
+  --------------------------------------- */
+.menu.is-open span:nth-child(1) {
+  transform: translateY(3.5px) rotate(45deg);
+}
 
-    width: 40px;
-    height: 40px;
+.menu.is-open span:nth-child(2) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
 
-    padding: 8px;
+  /* ---------------------------------------
+     CENTER LOGO
+  --------------------------------------- */
+
+  .logo {
+     position: static;
+
+    width: 135px;
+
     margin: 0;
 
-    border: 0;
-    background: transparent;
-
-    cursor: pointer;
-  }
-
-  .menu span {
-    display: block;
-
-    width: 22px;
-    height: 2px;
-
-    margin: 4px auto;
-
-    background: #111827;
+    z-index: auto;
   }
 
 
-  /* -------------------------------------
-     DROPDOWN BUTTON
-  ------------------------------------- */
+  /* ---------------------------------------
+     BEYOND TBILISI
+  --------------------------------------- */
+
+  .nav-actions {
+   display: flex;
+
+    align-items: center;
+
+    margin-left: auto;
+
+    gap: 4px;
+  }
 
   .nav-button {
     height: 32px;
 
-    padding: 0 10px;
+    padding: 0 8px;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    gap: 6px;
+    gap: 5px;
   }
 
 
-  /* -------------------------------------
-     DROPDOWN
-  ------------------------------------- */
+  /* ---------------------------------------
+     BEYOND TBILISI DROPDOWN
+  --------------------------------------- */
 
   .nav-dropdown__menu {
-    right: 0;
     top: calc(100% + 8px);
 
-    min-width: 220px;
+    right: 0;
+
+    width: 210px;
+
+    padding: 6px;
+
+    border-radius: 10px;
+  }
+
+  .nav-dropdown__menu a {
+    padding: 11px 10px;
+
+    font-size: 15px;
+  }
+
+
+  /* ---------------------------------------
+     MOBILE MENU PANEL
+  --------------------------------------- */
+
+  .mobile-menu {
+    position: fixed;
+
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 100%;
+
+    padding: 24px 5vw;
+
+    box-sizing: border-box;
+
+    background: #fff;
+
+    z-index: 90;
+
+    overflow-y: auto;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity .2s ease,
+      transform .2s ease,
+      visibility .2s ease;
+  }
+
+
+  /* ---------------------------------------
+     OPEN MOBILE MENU
+  --------------------------------------- */
+
+  .mobile-menu.is-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+
+  /* ---------------------------------------
+     MOBILE MENU NAV
+  --------------------------------------- */
+
+  .mobile-menu__nav {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  /* ---------------------------------------
+     MOBILE MENU LINKS
+  --------------------------------------- */
+
+  .mobile-menu__nav a {
+    display: block;
+
+    padding: 18px 0;
+
+    color: #111827;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    line-height: .95;
+
+    font-weight: 700;
+
+    letter-spacing: -.04em;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mobile-menu__nav a:first-child {
+    border-top: 1px solid #ddd;
+  }
+
+  .mobile-menu__nav a:hover {
+    opacity: .6;
   }
 
 }
 
 
-/* =====================================
-   SMALL MOBILE
-===================================== */
+/* =========================================
+   SMALL PHONES
+========================================= */
 
 @media (max-width: 480px) {
 
   .nav {
-    padding: 0 10px;
+    padding: 0 8px;
   }
 
-  .nav-actions {
+
+
+
+  .logo {
+    width: 55px;
+    margin-left: 8px;
+  }
+
+
+  .nav-button {
+    padding: 0 7px;
+
+    font-size: 12px;
+
     gap: 4px;
   }
 
-  .nav-button {
-    padding: 0 8px;
 
-    font-size: 13px;
+  .nav-button .chevron svg {
+    width: 14px;
+    height: 14px;
   }
 
-  .nav-dropdown__menu {
-    min-width: 210px;
+
+  .mobile-menu {
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
 
+
+  .mobile-menu__nav a {
+    font-size: 26px;
+
+    padding: 17px 0;
+  }
+
+}
+
+
+.nav-links a[href="#map"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links a[href="#map"] svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-1px);
 }
