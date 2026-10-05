@@ -270,7 +270,9 @@ select {
 
   min-height: 780px;
 
-  display: flex;
+   display: flex;
+  flex-direction: column;
+  min-height: 80vh;
   align-items: center;
 
   padding: 140px 5vw 160px;
@@ -288,9 +290,14 @@ select {
 }
 
 .hero-content {
-  max-width: 680px;
+  width: 100%;
 }
 
+
+.tv-affiliations-section {
+  width: 100%;
+  margin-top: auto;
+}
 .hero .text-label {
   color: var(--white);
   opacity: .9;

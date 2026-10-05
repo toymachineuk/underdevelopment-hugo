@@ -596,3 +596,265 @@ margin-bottom: var(--space-md);
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------
+   AFFILIATIONS CAROUSEL
+--------------------------------- */
+
+.tv-affiliations-section {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 48px;
+  padding-bottom: 28px;
+  overflow: hidden;
+}
+
+.tv-affiliations-carousel {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  width: max-content;
+
+  animation: tv-affiliations-scroll 24s linear infinite;
+}
+
+
+/* Individual item */
+
+.tv-affiliation-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 300px;
+  min-height: 82px;
+
+  padding: 14px 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, .04);
+
+  color: #fff;
+
+  flex-shrink: 0;
+}
+
+
+/* Badge */
+
+.tv-affiliation-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  flex: 0 0 54px;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #000;
+
+  text-decoration: none;
+}
+
+
+/* Logo */
+
+.tv-affiliation-logo {
+  font-family: var(--font-sans);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+
+.tv-affiliation-logo--bolt {
+  font-size: 30px;
+}
+
+.tv-affiliation-logo--wolt {
+  font-size: 30px;
+}
+
+
+/* Description */
+
+.tv-affiliation-description {
+  min-width: 0;
+}
+
+.tv-affiliation-description h3 {
+  margin: 0 0 5px;
+
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  color: #fff;
+}
+
+.tv-affiliation-description p {
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.4;
+
+  color: rgba(255, 255, 255, .58);
+}
+
+
+/* --------------------------------
+   MOVEMENT
+--------------------------------- */
+
+@keyframes tv-affiliations-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Pause when hovering */
+
+.tv-affiliations-section:hover .tv-affiliations-carousel {
+  animation-play-state: paused;
+}
+
+
+/* --------------------------------
+   MOBILE
+--------------------------------- */
+
+@media (max-width: 768px) {
+
+  .tv-affiliations-section {
+    padding-top: 36px;
+    padding-bottom: 20px;
+  }
+
+  .tv-affiliations-carousel {
+    gap: 14px;
+    animation-duration: 20s;
+  }
+
+  .tv-affiliation-item {
+    width: 280px;
+    min-height: 76px;
+    padding: 12px 14px;
+  }
+
+  .tv-affiliation-badge {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
+  .tv-affiliation-description h3 {
+    font-size: 14px;
+  }
+
+  .tv-affiliation-description p {
+    font-size: 11px;
+  }
+
+}
