@@ -667,143 +667,178 @@ margin-bottom: var(--space-md);
 
 
 
+.tv-affiliations-section {
+  position: relative;
 
+  width: 100%;
 
+  margin: 0;
+  padding: 0;
 
+  display: flex;
+  justify-content: center;
 
-
-
-
-
-
-
-
-
-
-
+  z-index: 10;
+}
 
 
 /* --------------------------------
-   AFFILIATIONS CAROUSEL
---------------------------------- */
+   CENTERED BOX
+-------------------------------- */
 
-.tv-affiliations-section {
-  width: 100%;
-  margin-top: auto;
-  padding-top: 48px;
-  padding-bottom: 28px;
+.tv-affiliations-box {
+  position: relative;
+
+  width: min(840px, calc(100% - 32px));
+  height: 150px;
+
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: #f7f5f2;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, .12);
 }
 
-.tv-affiliations-carousel {
+
+/* --------------------------------
+   MOVING TRACK
+-------------------------------- */
+
+.tv-affiliations-track {
   display: flex;
-  align-items: stretch;
-  gap: 20px;
+  align-items: center;
+
   width: max-content;
+  height: 100%;
+
+  will-change: transform;
 
   animation: tv-affiliations-scroll 24s linear infinite;
 }
 
 
-/* Individual item */
+/* --------------------------------
+   GROUP
+-------------------------------- */
+
+.tv-affiliations-group {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  flex-shrink: 0;
+
+  padding-right: 18px;
+}
+
+
+/* --------------------------------
+   AFFILIATION CARD
+-------------------------------- */
 
 .tv-affiliation-item {
   display: flex;
   align-items: center;
-  gap: 16px;
 
-  width: 300px;
-  min-height: 82px;
+  gap: 14px;
 
-  padding: 14px 18px;
+  width: 250px;
+  height: 70px;
+
+  padding: 10px 14px;
+
+  flex: 0 0 250px;
 
   box-sizing: border-box;
 
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: 12px;
+  background: #fff;
 
-  background: rgba(255, 255, 255, .04);
+  border-radius: 10px;
 
-  color: #fff;
-
-  flex-shrink: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
 }
 
 
-/* Badge */
+/* --------------------------------
+   LOGO BADGE
+-------------------------------- */
 
 .tv-affiliation-badge {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 54px;
-  height: 54px;
+  width: 44px;
+  height: 44px;
 
-  flex: 0 0 54px;
+  flex: 0 0 44px;
 
-  border-radius: 10px;
+  background: #000;
 
-  background: #fff;
+  color: #fff;
 
-  color: #000;
+  border-radius: 8px;
 
   text-decoration: none;
 }
 
 
-/* Logo */
-
 .tv-affiliation-logo {
   font-family: var(--font-sans);
-  font-size: 26px;
-  font-weight: 800;
+
+  font-size: 17px;
+  font-weight: 500;
+
   line-height: 1;
-  letter-spacing: -.06em;
-}
-
-.tv-affiliation-logo--bolt {
-  font-size: 30px;
-}
-
-.tv-affiliation-logo--wolt {
-  font-size: 30px;
 }
 
 
-/* Description */
+/* --------------------------------
+   TEXT
+-------------------------------- */
 
 .tv-affiliation-description {
   min-width: 0;
 }
 
 .tv-affiliation-description h3 {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 
   font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.2;
 
-  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  color: #111;
 }
 
 .tv-affiliation-description p {
   margin: 0;
 
   font-family: var(--font-sans);
-  font-size: 12px;
-  line-height: 1.4;
 
-  color: rgba(255, 255, 255, .58);
+  font-size: 11px;
+  line-height: 1.35;
+
+  color: #666;
 }
 
 
 /* --------------------------------
-   MOVEMENT
---------------------------------- */
+   CONTINUOUS MOVEMENT
+-------------------------------- */
 
 @keyframes tv-affiliations-scroll {
+
   from {
     transform: translateX(0);
   }
@@ -811,50 +846,33 @@ margin-bottom: var(--space-md);
   to {
     transform: translateX(-50%);
   }
-}
 
-
-/* Pause when hovering */
-
-.tv-affiliations-section:hover .tv-affiliations-carousel {
-  animation-play-state: paused;
 }
 
 
 /* --------------------------------
    MOBILE
---------------------------------- */
+-------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
-  .tv-affiliations-section {
-    padding-top: 36px;
-    padding-bottom: 20px;
-  }
+  .tv-affiliations-box {
+    width: calc(100% - 24px);
+    height: 130px;
 
-  .tv-affiliations-carousel {
-    gap: 14px;
-    animation-duration: 20s;
+    border-radius: 20px;
   }
 
   .tv-affiliation-item {
-    width: 280px;
-    min-height: 76px;
-    padding: 12px 14px;
+    width: 220px;
+    flex-basis: 220px;
+
+    height: 64px;
   }
 
-  .tv-affiliation-badge {
-    width: 48px;
-    height: 48px;
-    flex-basis: 48px;
-  }
-
-  .tv-affiliation-description h3 {
-    font-size: 14px;
-  }
-
-  .tv-affiliation-description p {
-    font-size: 11px;
+  .tv-affiliations-group {
+    gap: 14px;
+    padding-right: 14px;
   }
 
 }

@@ -1,4 +1,11 @@
-
+.map-page {
+  background: linear-gradient(
+    135deg,
+    #f7ebfc 0%,
+    #f3eafa 50%,
+    #eee8f8 100%
+  );
+}
 
 .tv-georgia-destinations .tv-filter-count {
 

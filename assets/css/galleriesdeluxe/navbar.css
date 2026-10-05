@@ -165,6 +165,14 @@
    MOBILE MENU BUTTON
 ===================================== */
 
+
+.menu {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -175,6 +183,7 @@
   border: 0;
   background: transparent;
   cursor: pointer;
+}
 }
 
 .menu span {
@@ -561,4 +570,93 @@
   width: 20px;
   height: 20px;
   transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.map-page {
+  background: #f7ebfc;
 }

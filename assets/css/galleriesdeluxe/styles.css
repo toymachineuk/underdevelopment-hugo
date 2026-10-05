@@ -294,10 +294,7 @@ select {
 }
 
 
-.tv-affiliations-section {
-  width: 100%;
-  margin-top: auto;
-}
+
 .hero .text-label {
   color: var(--white);
   opacity: .9;

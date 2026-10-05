@@ -125,7 +125,7 @@
     {{ end }}
 
   </head>
-  <body>
+  <body class="{{ if eq .Layout "map-page" }}map-page{{ end }}">
  {{ if .IsPage }}
 
   {{ if eq .Layout "map-page" }}
