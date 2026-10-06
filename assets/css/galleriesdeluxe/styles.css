@@ -6,7 +6,6 @@
 @import "page-header.css";
 @import "sections.css";
 @import "maps.css";
-@import "carousel-narrow.css";
 @import "navbar.css";
 @import "animation.css";
 @import "map-page.css";
@@ -14,6 +13,7 @@
 @import "filters.css";
 @import "gallery-carousels.css";
 @import "strips.css";
+@import "footer.css";
 
 
 
@@ -34,27 +34,6 @@ body {
   fill: currentColor; /* Applies to SVG only */
 }
 
-footer {
-  background: var(--color-background-footer);
-  color: var(--color-text-footer);
-  box-shadow: 0 50vh 0 50vh var(--color-background-footer);
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  margin-top: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-  & > div {
-    min-height: 80px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-  }
-}
 
 a {
   color: var(--color-primary);

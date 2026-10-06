@@ -1,504 +1,6 @@
-
-
-
-
-/* =====================================
-   THINGS TO DO
-===================================== */
-
-.destinations {
-  padding-inline: 5vw;
-  background: var(--white);
-}
-
-
-/* =====================================
-   SECTION HEADERS
-===================================== */
-
-.section-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--space-md);
-  text-align: left;
-}
-
-.section-header .text-label {
-  color: var(--muted);
-}
-
-
-/* =====================================
-   RIGHT-ALIGNED HEADER — CHILL OUT
-===================================== */
-
-.tv-chillout-intro {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 8vw;
-  padding: 0 0 0 5vw;
-}
-
-
-
-
-
-
-
-.tv-shape-caption {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: white;
-}
-
-.section-header.right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-}
-
-@media (max-width: 650px) {
-
-  .tv-chillout-intro {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 32px;
-  }
-
-
-
-}
-
-.chillout .section-header {
-  align-items: flex-end;
-  text-align: right;
-}
-
-.tv-chillout .tv-see-do-filters {
-  justify-content: flex-end;
-}
-
-@media (max-width: 650px) {
-  .tv-chillout .tv-see-do-filters {
-    justify-content: flex-start;
-  }
-}
-
-
-.chillout .tv-filter-count {
-  text-align: right;
-}
-
-
-.section-header.right .text-md {
-  margin-left: auto;
-  max-width: 500px;
-}
-
-
-
-
-/* =====================================
-   CARDS
-===================================== */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: var(--cream);
-  overflow: hidden;
-}
-
-.card-image {
-  position: relative;
-  height: 380px;
-  overflow: hidden;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .5s ease;
-}
-
-.card:hover .card-image img {
-  transform: scale(1.04);
-}
-
-
-.tv-square-card-content {
-padding: 11px 13px;
-}
-
-.tv-square-card-content .text-label {
-  margin-bottom: 8px;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Instagram / site */
-
-.tv-square-card-content .tv-info-row--site {
-  margin-top: 2px;
-}
-
-.tv-square-card-content p {
-  margin: 0;
-  color: var(--muted);
-}
-
-
-/* =====================================
-   FEATURE-SECTION
-===================================== */
-
-/* =====================================
-   FEATURE-SECTION
-===================================== */
-
-.feature {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  min-height: 650px;
-
-  color: var(--black);
-}
-
-.feature-image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.feature-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.feature-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-inline: 10%;
-}
-
-.feature-content .text-label {
-  color: rgba(255, 255, 255, .7);
-}
-
-.feature-content h2 {
-  max-width: 700px;
-}
-
-.feature-content p {
-  color: #aaa;
-}
-
-.feature-content .button {
-  align-self: flex-start;
-}
-
-
-/* =====================================
-   FEATURE — MOBILE
-===================================== */
-
-@media (max-width: 768px) {
-
-  .feature {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .feature-image {
-    height: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-
-  .feature-image img {
-    width: 100%;
-    min-width: 100%;
-    height: auto;
-    max-width: none;
-  }
-
-  .feature-content {
-    padding: 55px 20px 70px;
-  }
-
-}
-
-
-/* =====================================
-   PLACES
-===================================== */
-
-.places {
-  padding-inline: 5vw;
-}
-
-.places-heading {
-  max-width: 1000px;
-}
-
-.place-list {
-  border-top: 1px solid var(--border);
-}
-
-.place {
-  display: grid;
-  grid-template-columns: 80px 1fr 1fr 40px;
-  align-items: center;
-  gap: 20px;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--border);
-  transition: padding .2s ease;
-}
-
-.place:hover {
-  padding-left: 15px;
-}
-
-.place>span {
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.place strong {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.place small {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.place b {
-  font-size: 20px;
-  font-weight: 400;
-  text-align: right;
-}
-
-
-/* =====================================
-   NEWSLETTER / CTA
-===================================== */
-
-.newsletter {
-  padding-inline: 5vw;
-  text-align: center;
-  background: #ded6c8;
-}
-
-.newsletter .text-label {
-  color: var(--muted);
-}
-
-.newsletter h2 {
-  max-width: 1100px;
-  margin-inline: auto;
-}
-
-.newsletter p {
-  margin-inline: auto;
-  color: var(--muted);
-}
-
-.newsletter .button {
-  margin-top: 0;
-}
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 900px) {
-
-  .nav {
-    padding: 22px 5vw;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-
-
-  .hero {
-    min-height: 700px;
-    padding: 130px 5vw 120px;
-  }
-
-  .intro-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-
-  .photo-grid {
-    min-height: 500px;
-  }
-
-
-  /* ================================
-     SECTION HEADERS
-  ================================ */
-
- .section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    height: auto;
-    gap: var(--space-xs);
-  }
-
- 
-  .section-header.right {
- 
-    align-items: flex-end;
-  
-  }
-
-
-
-
-  /* ================================
-     CARDS
-  ================================ */
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-
-  /* ================================
-     FEATURE
-  ================================ */
-
-  .feature {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-image {
-    min-height: 400px;
-  }
-
-  .feature-content {
-    padding: var(--space-xxl) 8vw;
-  }
-
-
-  /* ================================
-     PLACES
-  ================================ */
-
-  .place {
-    grid-template-columns: 45px 1fr 30px;
-  }
-
-  .place small {
-    display: none;
-  }
-
-}
-
-
-/* =====================================
-   SMALL MOBILE
-===================================== */
-
-@media (max-width: 600px) {
-
-  .nav {
-    padding: 22px;
-  }
-
-  .hero {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .hero h1 {
-    font-size: 70px;
-  }
-
-  .intro,
-  .destinations,
-  .places,
-  .newsletter {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .intro>.title-lg,
-  .section-header .title-lg,
-  .places .title-lg,
-  .newsletter .title-lg {
-    letter-spacing: -.045em;
-  }
-
-  .photo-grid {
-    min-height: 380px;
-  }
-
-  .card-image {
-    height: 300px;
-  }
-
-  .feature-image {
-    min-height: 320px;
-  }
-
-  .feature-content {
-    padding: 72px 22px;
-  }
-
-  .newsletter {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-
-}
-
-
-
-
 /* =========================================================
    SEE & DO
-   ========================================================= */
+========================================================= */
 
 .tv-see-do {
   width: 100%;
@@ -508,26 +10,14 @@ padding: 11px 13px;
 }
 
 
-
-
-
-
-
-
-
-
-
 /* =========================================================
    FILTERS
-   ========================================================= */
-
-
+========================================================= */
 
 .tv-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
-
   margin: 32px 0 36px;
 }
 
@@ -591,31 +81,27 @@ padding: 11px 13px;
 
   z-index: 2;
 }
+
 .tv-filter-label {
   margin-left: 15px;
 }
-
 
 .tv-filter:hover,
 .tv-filter.active {
   background: var(--tv-black);
   color: #fff;
 }
+
 .tv-filter:hover .tv-filter-icon,
 .tv-filter.active .tv-filter-icon {
-   fill: #fff;
+  fill: #fff;
   stroke: #fff;
 }
 
 
-
-
-
-
-
 /* =========================================================
-   COUNT
-   ========================================================= */
+   FILTER COUNT
+========================================================= */
 
 .tv-filter-count {
   width: 100%;
@@ -628,6 +114,7 @@ padding: 11px 13px;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.01em;
+
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -638,7 +125,7 @@ padding: 11px 13px;
 
 /* =========================================================
    CAROUSEL WRAPPER
-   ========================================================= */
+========================================================= */
 
 .tv-see-do-carousel {
   position: relative;
@@ -647,8 +134,34 @@ padding: 11px 13px;
 
 
 /* =========================================================
-   CAROUSEL TRACK
-   ========================================================= */
+   RECTANGLE CAROUSEL
+========================================================= */
+
+.tv-see-do-grid {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 255, 255, .7) 0 120px,
+      transparent 121px
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(0, 0, 0, .025) 0 180px,
+      transparent 181px
+    ),
+    var(--tv-pearl);
+}
+
+.tv-food-grid {
+  background: var(--tv-vanilla);
+}
+
+.tv-chillout-grid {
+  background: var(--tv-pink);
+}
+
+
+/* Rectangle track */
 
 .tv-grid {
   width: 100%;
@@ -657,8 +170,8 @@ padding: 11px 13px;
 
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 25%;
-  gap: var(--space-md);
+
+  gap: 16px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -669,71 +182,21 @@ padding: 11px 13px;
 
   position: relative;
   z-index: 1;
-
 }
-
-
-
-
 
 .tv-grid::-webkit-scrollbar {
   display: none;
 }
 
 
-
-
-.tv-see-do-grid {
-  background:
-    radial-gradient(circle at 90% 10%,
-      rgba(255, 255, 255, .7) 0 120px,
-      transparent 121px),
-    radial-gradient(circle at 5% 90%,
-      rgba(0, 0, 0, .025) 0 180px,
-      transparent 181px),
-    var(--tv-pearl);
-  
-}
-
-.tv-food-grid {
-  background: var(--tv-vanilla);
-}
-
-.tv-chillout-grid {
-  background: var(--tv-pink);
- 
-}
-
-
-.tv-square-grid {
-  background:
-    radial-gradient(circle at 85% 15%,
-      rgba(255, 255, 255, .28) 0 140px,
-      transparent 141px),
-    radial-gradient(circle at 10% 85%,
-      rgba(255, 255, 255, .16) 0 200px,
-      transparent 201px),
-    var(--tv-vanilla);
- 
-}
-
-.tv-square-grid h3 {
-    margin: 12px 0 10px;
-  font-size: 16px;
-  line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  min-height: 34px;
-}
-
-
-/* =========================================================
-   CARD
-   ========================================================= */
+/* Rectangle card */
 
 .tv-rectangle-card {
-  min-width: 0;
-position:relative;
+  position: relative;
+
+  width: 320px;
+  min-width: 320px;
+
   scroll-snap-align: start;
 }
 
@@ -741,20 +204,18 @@ position:relative;
   display: none;
 }
 
-.tv-rectangle-card-content {
-  padding: 11px 13px;
-}
-/* =========================================================
-   IMAGE
-   ========================================================= */
+
+/* Rectangle image */
 
 .tv-rectangle-image {
   position: relative;
   display: block;
+
   width: 100%;
-  /* slightly less tall */
   aspect-ratio: 1.65 / 1;
+
   overflow: hidden;
+
   background: #eee;
   border-radius: 14px;
 }
@@ -776,80 +237,11 @@ position:relative;
 }
 
 
-/* =========================================================
-   CARD ARROW
-   ========================================================= */
+/* Rectangle content */
 
-.tv-see-arrow {
-  position: absolute;
-
-  right: 10px;
-  bottom: 10px;
-
-  width: 58px;
-  height: 58px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #fff;
-  color: var(--tv-black);
-
-  font-size: 28px;
-  line-height: 1;
-
-  opacity: 0;
-
-  transform: translateX(8px);
-
-  transition:
-    opacity .25s ease,
-    transform .25s ease;
+.tv-rectangle-card-content {
+  padding: 11px 13px;
 }
-
-.tv-rectangle-image:hover .tv-see-arrow {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-
-
-/* Category */
-
-.tv-see-category {
-  --category-accent: var(--tv-black);
-
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  margin-top: 10px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-
-  color: var(--tv-black);
-
-  margin-bottom: 8px;
-
-
-}
-
-
-
-
-
-/* =========================================
-   RECTANGLE CARD — TITLE
-========================================= */
 
 .tv-rectangle-card h3 {
   margin: 0 0 8px;
@@ -866,44 +258,58 @@ position:relative;
 }
 
 
-/* =========================================
-   PRACTICAL INFORMATION
-========================================= */
+/* =========================================================
+   SHARED CARD INFORMATION
+========================================================= */
 
-.tv-info {
-  margin-top: 2px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  font-size: 13px;
-  line-height: 1.3;
-    font-weight: 500;
-}
+.tv-see-category {
+  --category-accent: var(--tv-black);
 
-.tv-info-row {
-  display: flex;
+  display: inline-flex;
   align-items: center;
- 
-  min-height: 25px;
-    display: flex;
-  align-items: flex-start;
-  gap: 7px;
+  gap: 6px;
+
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 
   color: var(--tv-black);
 }
 
+.tv-info {
+  margin-top: 2px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+}
 
+.tv-info-row {
+  display: flex;
+  align-items: flex-start;
+
+  min-height: 25px;
+
+  gap: 7px;
+  color: var(--tv-black);
+}
 
 .tv-info-row img {
- width: 14px;
+  width: 14px;
   height: 14px;
   flex: 0 0 14px;
   margin-top: 1px;
   opacity: .7;
-
-
 }
 
 .tv-info-row a {
@@ -911,24 +317,11 @@ position:relative;
   text-decoration: none;
 }
 
-.tv-square-card-content .tv-info-row a:hover {
-  text-decoration: underline;
-}
-/* =========================================
-   SITE
-========================================= */
 .tv-info-row--site {
   display: flex;
   align-items: center;
   gap: 7px;
 }
-
-
-/* =========================================
-   LOCATION
-========================================= */
-
-
 
 .tv-info-row--location > img {
   width: 16px;
@@ -936,13 +329,6 @@ position:relative;
   flex: 0 0 16px;
   display: block;
 }
-
-
-
-
-/* =========================================
-   METRO
-========================================= */
 
 .tv-info-row--metro {
   display: flex;
@@ -960,20 +346,11 @@ position:relative;
   display: block;
 }
 
-
-
-
-/* =========================================
-   TYPE / CLASSIFICATION
-========================================= */
-
-
 .tv-info-desription {
   margin-top: 12px;
   padding: 10px 0 11px;
 
   border-top: 1px solid #c9c9c9;
-
 
   color: #666;
 }
@@ -981,13 +358,6 @@ position:relative;
 .tv-info-entry {
   margin-top: 8px;
 }
-
-
-
-/* =========================================
-   ENTRY / PRICE
-========================================= */
-
 
 .tv-info-icon {
   width: 22px;
@@ -1020,11 +390,9 @@ position:relative;
 }
 
 
-
-
 /* =========================================================
-   CAROUSEL NAVIGATION
-   ========================================================= */
+   RECTANGLE CAROUSEL NAVIGATION
+========================================================= */
 
 .tv-see-prev,
 .tv-see-next {
@@ -1081,207 +449,88 @@ position:relative;
 }
 
 
-
-
-
 /* =========================================================
-   MOBILE
-   ========================================================= */
-@media (max-width: 768px) {
-  .tv-grid {
-  
-    grid-auto-columns: 76%;
-    gap: 12px;
-    padding: var(--space-md);
-  }
-
-  .tv-rectangle-image {
-    aspect-ratio: 1.55 / 1;
-  }
-}
-
-
-
-
-
-
-
-
-
-@media (max-width: 650px) {
-
-
-
-
-  /* HEADER */
-
-  .tv-see-do-header h2 {
-    font-size: 3.5rem;
-  }
-
-  .tv-see-do-header p {
-    font-size: 17px;
-  }
-
-
-  /* FILTERS */
-
-  .tv-filters {
-    gap: 7px;
-    margin-top: 26px;
-    justify-content: flex-start;
-
-    flex-wrap: nowrap;
-    overflow-x: auto;
-
-    padding-bottom: 5px;
-        scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .tv-see-do-filters::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tv-filter {
-    flex: 0 0 auto;
-
-    font-size: 14px;
-    padding: 8px 13px;
-  }
-
-
- 
-
-
- 
-
-
-
-
-  /* CARD ARROW */
-
-  .tv-see-arrow {
-    width: 48px;
-    height: 48px;
-
-    opacity: 1;
-    transform: none;
-
-    font-size: 23px;
-  }
-
-
-  /* CAROUSEL ARROWS */
-
-  .tv-see-prev,
-  .tv-see-next {
-    width: 48px;
-    height: 48px;
-
-    font-size: 21px;
-  }
-
-}
-
-
-
-/* -----------------------------------------
-   CARD CONTENT
-   ----------------------------------------- */
-
-/* NO coloured line under the image */
-
-.tv-see-card-content {
-  padding-top: 12px;
-}
-
-
-/* -----------------------------------------
-   REMOVE OLD ACCENTS
-   ----------------------------------------- */
-
-.tv-see-arrow {
-  display: none;
-}
-
-.tv-see-location span {
-  border-color: inherit;
-  color: inherit;
-}
-
-/* =========================================
-   CHILL OUT SPACING
-   ========================================= */
-
-.tv-filters {
-  margin-top: 20px;
-  margin-bottom: 24px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   FOOD CAROUSEL
-   ========================================================= */
-
+   SQUARE CAROUSEL
+========================================================= */
 
 .tv-food {
   width: 100%;
   margin: 0;
-
-padding: var(--space-md) 5vw 0;
-
-  
+  padding: var(--space-md) 5vw 0;
 }
 
 
+/* Square track */
+
+.tv-square-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 230px;
+
+  gap: 16px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, .28) 0 140px,
+      transparent 141px
+    ),
+    radial-gradient(
+      circle at 10% 85%,
+      rgba(255, 255, 255, .16) 0 200px,
+      transparent 201px
+    ),
+    var(--tv-vanilla);
+}
 
 .tv-square-grid::-webkit-scrollbar {
   display: none;
 }
 
 
-/* =========================================================
-   FOOD CARD
-   ========================================================= */
+/* Square card */
 
 .tv-square-card {
-  min-width: 0;
-  scroll-snap-align: start;
-   position: relative;
-}
+  position: relative;
 
+  width: 230px;
+  min-width: 230px;
+
+  scroll-snap-align: start;
+}
 
 .tv-square-card h3 {
-  margin: 0 0 8px;
-  font-size: 17px;
+  margin: 12px 0 10px;
+
+  font-size: 16px;
+  line-height: 1.05;
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -.01em;
+  letter-spacing: -.015em;
+
+  min-height: 34px;
 }
 
-/* =========================================================
-   FOOD IMAGE — SQUARE
-   ========================================================= */
+
+/* Square image */
 
 .tv-square-image {
   position: relative;
   display: block;
-border-radius: 14px;
-  width: 100%;
+
+  width: 230px;
   aspect-ratio: 1 / 1;
 
   overflow: hidden;
+
   background: #eee;
+  border-radius: 14px;
 }
 
 .tv-square-image img {
@@ -1301,197 +550,148 @@ border-radius: 14px;
 }
 
 
+/* Square content */
 
+.tv-square-card-content {
+  padding: 11px 13px;
+}
+
+.tv-square-card-content .text-label {
+  margin-bottom: 8px;
+}
+
+.tv-square-card-content p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.tv-square-card-content .tv-info-row--site {
+  margin-top: 2px;
+}
+
+.tv-square-card-content .tv-info-row a:hover {
+  text-decoration: underline;
+}
 
 
 /* =========================================================
-   TABLET
-   ========================================================= */
+   GENERAL CARD CLEANUP
+========================================================= */
 
-@media (max-width: 1000px) {
+.tv-see-card-content {
+  padding-top: 12px;
+}
+
+.tv-see-arrow {
+  display: none;
+}
+
+.tv-see-location span {
+  border-color: inherit;
+  color: inherit;
+}
+
+
+/* =========================================================
+   SPACING
+========================================================= */
+
+.tv-filters {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   MOBILE — BOTH CAROUSELS
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* RECTANGLE */
+
+  .tv-grid {
+    grid-auto-columns: 76%;
+    gap: 12px;
+    padding: var(--space-md);
+  }
+
+  .tv-rectangle-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tv-rectangle-image {
+    aspect-ratio: 1.55 / 1;
+  }
+
+
+  /* SQUARE */
 
   .tv-square-grid {
-    grid-auto-columns: 25%;
-    gap: 24px;
-  
+    grid-auto-columns: 76%;
+    gap: 12px;
+    padding: var(--space-md);
   }
 
-   .tv-square-grid .tv-grid {
-    grid-auto-columns: 48%;
-    gap: 10px;
-
-  }
-
-
-
-
-}
-
-
-
-
-
-/* =====================================
-   FOOD SECTION HEADER
-===================================== */
-
-.section-header--image {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  height: auto;
-  min-height: 0;
-
-  margin-bottom: 40px;
-}
-
-
-/* =====================================
-   CONTENT — RIGHT
-===================================== */
-
-.section-header-content {
-  text-align: left;
-  max-width: 700px;
-}
-
-.section-header-content .text-label {
-  display: block;
-  margin: 0 0 8px;
-}
-
-.section-header-content .title-lg {
-  margin: 0 0 20px;
-}
-
-.section-header-content .text-md {
-  max-width: 600px;
-  margin: 0;
-  text-align: left;
-}
-
-
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 650px) {
-
-
-
-  .section-header-content {
-    max-width: none;
-  }
-
-  .section-header-content .text-md {
-    max-width: none;
-  }
-
-}
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 650px) {
-
-  .section-header--image {
+  .tv-square-card {
     width: 100%;
+    min-width: 0;
+  }
 
-    display: flex;
-    flex-direction: column;
+  .tv-square-image {
+    width: 100%;
+  }
 
-    align-items: flex-start;
+
+  /* RECTANGLE NAVIGATION */
+
+  .tv-see-prev,
+  .tv-see-next {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .tv-filters {
+    gap: 7px;
+    margin-top: 26px;
+    margin-bottom: 24px;
+
     justify-content: flex-start;
 
-    margin-bottom: 32px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
-
-  /* IMAGE FIRST */
-  .section-header-image {
-    order: 1;
-
-    width: 100%;
-    height: 150px;
-
-    flex: none;
-
-    margin: 0 0 24px 0;
-
-    overflow: hidden;
+  .tv-filters::-webkit-scrollbar {
+    display: none;
   }
 
+  .tv-filter {
+    flex: 0 0 auto;
 
-  .section-header-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
+    font-size: 14px;
+    padding: 8px 13px;
   }
 
-
-  /* TEXT SECOND */
-  .section-header-content {
-    order: 2;
-
-    width: 100%;
-    max-width: none;
-
-    text-align: left;
-  }
-
-
-  .section-header-content .text-label {
-    margin: 0 0 8px;
-  }
-
-
-  .section-header-content .title-lg {
-    margin: 0 0 16px;
-  }
-
-
-  .section-header-content .text-md {
-    max-width: none;
-
-    margin: 0;
-
-    text-align: left;
+  .tv-see-prev,
+  .tv-see-next {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

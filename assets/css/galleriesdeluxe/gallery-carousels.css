@@ -3,7 +3,7 @@
 ========================================= */
 
 .tv-destination-carousel {
-  width: 90%;
+  width: 100%;
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
@@ -358,9 +358,7 @@
 
 @media (max-width: 900px) {
 
-  .tv-destination-carousel {
-    width: 92%;
-  }
+
 
 
   .tv-destination-heading {
@@ -423,9 +421,7 @@
 
 @media (max-width: 650px) {
 
-  .tv-destination-carousel {
-    width: 92%;
-  }
+
 
 
   .tv-destination-heading {
@@ -450,18 +446,15 @@
   }
 
 
-  .tv-destination-card {
-    flex: 0 0 78vw;
 
-    width: 78vw;
-
-    height: 108vw;
-
-    max-height: 500px;
-
-    margin-right: -35px;
-
-    border-radius: 20px;
+    .tv-destination-card {
+    flex: 0 0 68vw;
+    width: 68vw;
+    height: 95vw;
+    max-height: 440px;
+    margin-right: -25px;
+    border-radius: 12px;
+  
   }
 
 
