@@ -13,7 +13,17 @@
 
   margin-bottom: var(--space-lg);
  padding: var(--space-xs) 0 var(--space-sm);
-  background: radial-gradient( circle at 90% 10%, rgba(255, 255, 255, .7) 0 120px, transparent 121px), radial-gradient( circle at 5% 90%, rgba(0, 0, 0, .025) 0 180px, transparent 181px), var(--tv-pearl);
+ 
+}
+
+
+
+@media (max-width: 650px) {
+  .tv-carousel-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
 }
 
 
@@ -952,7 +962,7 @@ padding-top: 8vw;
   .tv-super-narrow-header {
     margin-bottom: 22px;
 
-    padding: 0 24px;
+    padding: 0;
 
     display: block;
   }
@@ -1261,7 +1271,7 @@ margin-bottom: var(--space-md);
     flex: 0 0 280px;
 
     width: 280px;
-    height: 130px;
+    height: 120px;
   }
 
 
@@ -1552,7 +1562,7 @@ margin-bottom: var(--space-md);
 
 
   .tv-apps-section {
-    padding-inline: 5vw;
+   
     padding-bottom: var(--space-sm);
   }
 

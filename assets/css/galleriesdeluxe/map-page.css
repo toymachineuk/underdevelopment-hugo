@@ -54,16 +54,7 @@
   max-width: 900px;
 }
 
-.tv-map-intro h1 {
-  margin: 0;
 
-  font-size: clamp(72px, 8.5vw, 145px);
-  line-height: .88;
-  font-weight: 700;
-  letter-spacing: -.065em;
-
-  white-space: nowrap;
-}
 
 .tv-map-intro p {
   width: min(100%, 390px);
@@ -139,13 +130,16 @@
 .tv-region-filter-initial {
   position: relative;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.4fr .8fr .9fr;
   gap: 0;
 
-  padding: 4rem 4vw;
+  width: min(100%, 1050px);
+  margin: 0 auto;
+
+  padding: var(--space-sm) 3vw var(--space-xs);
 
   color: #151515;
-  border-radius: 32px 32px 0 0;
+  border-radius: 24px 24px 0 0;
   overflow: hidden;
 }
 
@@ -271,6 +265,23 @@
 
 .tv-region-filter.is-visible {
   display: grid !important;
+  
+}
+
+.tv-region-name {
+    position: relative;
+  display: grid;
+
+  gap: 0;
+
+  width: min(100%, 1050px);
+  margin: 0 auto;
+
+  padding: var(--space-sm) 3vw var(--space-xs);
+
+  color: #151515;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
 }
 
 
@@ -776,4 +787,31 @@
   background: transparent !important;
   background-color: transparent !important;
 }
-```
+
+
+
+
+.tv-georgia-map {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.tv-map-side-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.tv-map-side-title h2 {
+  margin: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+.tv-map-content {
+  min-width: 0;
+}
