@@ -1,16 +1,9 @@
-.map-page {
-  background: linear-gradient(
-    135deg,
-    #f7ebfc 0%,
-    #f3eafa 50%,
-    #eee8f8 100%
-  );
-}
+
 
 .tv-georgia-destinations .tv-filter-count {
 
-
-  padding: var(--space-sm) 5vw var(--space-xs);
+text-align: left;
+  padding: var(--space-sm) 0 var(--space-xs);
 
   border-bottom: 0;
 
@@ -127,21 +120,7 @@
   padding: 0 5vw;
 }
 
-.tv-region-filter-initial {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.4fr .8fr .9fr;
-  gap: 0;
 
-  width: min(100%, 1050px);
-  margin: 0 auto;
-
-  padding: var(--space-sm) 3vw var(--space-xs);
-
-  color: #151515;
-  border-radius: 24px 24px 0 0;
-  overflow: hidden;
-}
 
 
 /* =========================================
@@ -238,33 +217,43 @@
    REGION FILTER
 ========================================= */
 
-.tv-region-filter {
-  position: relative;
 
-  display: none !important;
 
+.tv-region-filter,
+.tv-region-filter-initial {
   width: 100%;
-  min-width: 0;
+  height: 80px;
 
   box-sizing: border-box;
 
-
-
   border: 0;
+  padding: 0;
+  margin: 0;
 
-
-
+  background: none;
   text-align: left;
-  cursor: default;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+.tv-region-filter {
+  display: none;
+}
+
+.tv-region-filter.is-visible,
+.tv-region-filter-initial {
+  display: flex;
+}
 
 /* =========================================
    SHOW SELECTED REGION
 ========================================= */
 
 .tv-region-filter.is-visible {
-  display: grid !important;
+  display: flex !important;
   
 }
 
@@ -313,29 +302,6 @@
   letter-spacing: -.04em;
 }
 
-
-/* =========================================
-   COLOUR CIRCLE
-========================================= */
-
-.tv-region-filter::before {
-  content: "";
-
-  position: absolute;
-
-  top: 22px;
-  left: 4px;
-
-  width: 58px;
-  height: 58px;
-
-  background: var(--region-color);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-  z-index: 0;
-}
 
 
 /* =========================================
@@ -494,18 +460,15 @@
    REGION FILTERS WRAPPER
 ========================================= */
 
-.tv-filters.tv-region-filters {
+.tv-region-filters {
   display: grid;
-
   grid-template-columns: 1fr;
-
   gap: 1px;
-
   width: 100%;
-
   position: relative;
 
-  background: transparent;
+  margin: 20px 0;
+  padding: 0;
 }
 
 
@@ -632,9 +595,7 @@
     margin-bottom: 13px;
   }
 
-  .tv-region-filter.is-visible {
-    display: grid !important;
-  }
+
 
   .tv-region-name,
   .tv-region-meta,
@@ -642,9 +603,7 @@
     min-height: auto;
   }
 
-  .tv-region-name {
-    min-height: 130px;
-  }
+
 
 
   /* -----------------------------------------
@@ -752,17 +711,7 @@
   }
 
 
-  /* -----------------------------------------
-     MOBILE COLOUR CIRCLE
-  ----------------------------------------- */
 
-  .tv-region-filter::before {
-    top: 5px;
-    left: -12px;
-
-    width: 45px;
-    height: 45px;
-  }
 
 
   /* -----------------------------------------
@@ -796,16 +745,12 @@
   grid-template-columns: 48px minmax(0, 1fr);
   gap: 24px;
   width: 100%;
+  padding:0;
 }
 
-.tv-map-side-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-}
 
-.tv-map-side-title h2 {
+
+.tv-map-side-title h3 {
   margin: 0;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -814,4 +759,116 @@
 
 .tv-map-content {
   min-width: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-region-heading {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 0 32px;
+}
+
+
+
+.tv-region-accent {
+  width: 10px;
+  height: 70px;
+  flex: 0 0 auto;
+
+  background: #9fd9d8; /* Adjara */
+  border-radius: 10px;
+}
+
+.tv-region-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tv-region-accent {
+  width: 10px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  background: var(--region-color);
+}
+
+.tv-region-title .title-xxs {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-grid.region-adjara {
+  background: #a4dfdf;
+}
+
+.tv-grid.region-guria {
+  background: #cdf5c2;
+}
+
+.tv-grid.region-imereti {
+  background: #b5dbf1;
+}
+
+.tv-grid.region-kakheti {
+  background: #fff39c;
+}
+
+.tv-grid.region-kvemo-kartli {
+  background: #ffcc8a;
+}
+
+.tv-grid.region-mtskheta-mtianeti {
+  background: #f4dfff;
+}
+
+.tv-grid.region-racha-lechkhumi-kvemo-svaneti {
+  background: #dae6f9;
+}
+
+.tv-grid.region-samegrelo-zemo-svaneti {
+  background: #d5e2dc;
+}
+
+.tv-grid.region-samtskhe-javakheti {
+  background: #ffcbb3;
+}
+
+.tv-grid.region-shida-kartli {
+  background: #ffe7a9;
+}
+
+.tv-grid.region-tbilisi {
+  background: #f1b3d2;
 }
