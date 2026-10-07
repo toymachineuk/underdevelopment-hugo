@@ -205,7 +205,7 @@
    
 
   margin: 0;
-  padding: var(--space-md) 5vw var(--space-xl);
+  padding: var(--space-md) 5vw var(--space-md);
 
   display: grid;
   grid-auto-flow: column;
@@ -275,7 +275,7 @@
   transform: scale(1.035);
 }
 
-.tv-grid article:first-child .tv-rectangle-image {
+.tv-grid .tv-rectangle-card.is-region-first .tv-rectangle-image {
   border-radius: 0 14px 14px 0;
 }
 /* Rectangle content */

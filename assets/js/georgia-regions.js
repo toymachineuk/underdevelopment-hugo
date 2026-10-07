@@ -47,39 +47,50 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Hide all region buttons */
 
   filters.forEach(function (filter) {
+
     filter.classList.remove(
       "is-visible",
       "active"
     );
+
   });
 
 
   /* Show initial Georgia text */
 
   if (initialText) {
+
     initialText.style.display = "grid";
+
   }
 
 
   /* Show all destination cards */
 
   cards.forEach(function (card) {
+
     card.style.display = "";
+    card.classList.remove("is-region-first");
+
   });
 
 
   /* Remove any region class from grid */
 
   if (grid) {
+
     grid.className = "tv-grid";
+
   }
 
 
   /* Show total destination count */
 
   if (count) {
+
     count.textContent =
       "Showing " + cards.length + " destinations";
+
   }
 
 
@@ -164,11 +175,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* -----------------------------------------
        Hide all destination cards
+       + remove previous first-card class
     ----------------------------------------- */
 
     cards.forEach(function (card) {
 
       card.style.display = "none";
+
+      card.classList.remove(
+        "is-region-first"
+      );
 
     });
 
@@ -193,9 +209,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* -----------------------------------------
        Show selected destination cards
+       + identify first card
     ----------------------------------------- */
 
     let visibleCards = 0;
+    let firstVisibleCard = null;
 
     cards.forEach(function (card) {
 
@@ -203,11 +221,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
         card.style.display = "";
 
+        /* Store the first matching card */
+
+        if (!firstVisibleCard) {
+
+          firstVisibleCard = card;
+
+        }
+
         visibleCards++;
 
       }
 
     });
+
+
+    /* -----------------------------------------
+       Add first-card class
+    ----------------------------------------- */
+
+    if (firstVisibleCard) {
+
+      firstVisibleCard.classList.add(
+        "is-region-first"
+      );
+
+    }
 
 
     /* -----------------------------------------
