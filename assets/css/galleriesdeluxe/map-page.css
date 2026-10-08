@@ -702,21 +702,15 @@ text-align: left;
 
 
 .tv-georgia-map {
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 24px;
+  display: block;
+ 
   width: 100%;
   padding:0;
 }
 
 
 
-.tv-map-side-title h3 {
-  margin: 0;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-}
+
 
 .tv-map-content {
   min-width: 0;
@@ -999,10 +993,10 @@ text-align: left;
 
 .region-badge {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  flex: 0 0 10px;
-  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  margin-right: 2px;
   background: var(--region-color);
   border-radius: 1px;
 }

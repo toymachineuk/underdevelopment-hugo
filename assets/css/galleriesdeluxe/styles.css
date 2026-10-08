@@ -299,6 +299,19 @@ select {
 }
 
 
+.narrow-hero {
+  background: linear-gradient( rgba(152, 190, 200, 0.55), rgba(152, 190, 200, 0.55) );
+  height: 280px;
+}
+
+@media (max-width: 700px) {
+  .narrow-hero {
+    min-height: 180px;
+    height: auto;
+    padding: 32px 5vw;
+  }
+}
+
 /* =====================================
    INTRO
 ===================================== */

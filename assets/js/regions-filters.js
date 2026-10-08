@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ".tv-map-region[data-region]"
   );
 
+  const regionIndexItems = document.querySelectorAll(
+    ".tv-region-index-item[data-region]"
+  );
+
   const filters = document.querySelectorAll(
     ".tv-region-filter[data-region]"
   );
@@ -20,44 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ".tv-filter-count strong"
   );
 
-
-  /* =========================================
-     DEBUG
-  ========================================= */
-
-  console.log("Region filter loaded");
-  console.log("Map regions:", mapRegions.length);
-  console.log("Region filters:", filters.length);
-  console.log("Destination cards:", cards.length);
-
-
-  /* =========================================
-     INITIAL STATE
-  ========================================= */
-
-  filters.forEach(function (filter) {
-    filter.classList.remove("is-visible", "active");
-  });
-
-  cards.forEach(function (card) {
-    card.style.display = "";
-  });
-
-  /* Initial filter text */
   const initialText = document.querySelector(
     ".tv-region-filter-initial"
   );
-
-  if (initialText) {
-    initialText.textContent = "Hello";
-    initialText.style.display = "none";
-  }
-
-  /* Show all destinations initially */
-  if (count) {
-    count.textContent =
-      "Showing " + cards.length + " destinations";
-  }
 
 
   /* =========================================
@@ -66,12 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showRegion(region) {
 
-    console.log("Selected region:", region);
-
-
-    /* -----------------------------------------
-       Hide initial text
-    ----------------------------------------- */
+    /* Hide initial message */
 
     if (initialText) {
       initialText.style.display = "none";
@@ -79,76 +43,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* -----------------------------------------
-       Hide all region filters
+       ACTIVE REGION BUTTON
+    ----------------------------------------- */
+
+    regionIndexItems.forEach(function (button) {
+      button.classList.toggle(
+        "active",
+        button.dataset.region === region
+      );
+    });
+
+
+    /* -----------------------------------------
+       REGION CONTENT
     ----------------------------------------- */
 
     filters.forEach(function (filter) {
-      filter.classList.remove("is-visible", "active");
+      filter.classList.toggle(
+        "is-visible",
+        filter.dataset.region === region
+      );
+
+      filter.classList.toggle(
+        "active",
+        filter.dataset.region === region
+      );
     });
 
 
     /* -----------------------------------------
-       Hide all destination cards
-    ----------------------------------------- */
-
-    cards.forEach(function (card) {
-      card.style.display = "none";
-    });
-
-
-    /* -----------------------------------------
-       Show selected region filter
-    ----------------------------------------- */
-
-    const selectedFilter = document.querySelector(
-      '.tv-region-filter[data-region="' + region + '"]'
-    );
-
-    if (selectedFilter) {
-      selectedFilter.classList.add("is-visible", "active");
-    }
-
-
-    /* -----------------------------------------
-       Show selected destination cards
+       DESTINATION CARDS
     ----------------------------------------- */
 
     let visibleCards = 0;
 
     cards.forEach(function (card) {
 
-      if (card.dataset.region === region) {
+      const isMatch =
+        card.dataset.region === region;
 
-        card.style.display = "";
+      card.style.display =
+        isMatch ? "" : "none";
 
+      if (isMatch) {
         visibleCards++;
-
       }
 
     });
 
 
     /* -----------------------------------------
-       Update count
+       UPDATE COUNT
     ----------------------------------------- */
 
     if (count) {
-
       count.textContent =
-        "Showing " + visibleCards + " destinations";
-
+        "Showing " +
+        visibleCards +
+        " destinations";
     }
 
   }
 
 
   /* =========================================
-     MAP CLICK
+     REGION BUTTONS
   ========================================= */
 
-  mapRegions.forEach(function (mapRegion) {
+  regionIndexItems.forEach(function (button) {
 
-    mapRegion.addEventListener("click", function (event) {
+    button.addEventListener("click", function (event) {
 
       event.preventDefault();
 
@@ -160,7 +124,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================================
-     REGION FILTER CLICK
+     MAP REGIONS
+  ========================================= */
+
+  mapRegions.forEach(function (mapRegion) {
+
+    mapRegion.addEventListener("click", function (event) {
+
+      event.preventDefault();
+
+      const region = this.dataset.region;
+
+      const matchingButton =
+        document.querySelector(
+          '.tv-region-index-item[data-region="' +
+          region +
+          '"]'
+        );
+
+      if (matchingButton) {
+        matchingButton.click();
+      }
+
+    });
+
+  });
+
+
+  /* =========================================
+     REGION CONTENT
   ========================================= */
 
   filters.forEach(function (filter) {

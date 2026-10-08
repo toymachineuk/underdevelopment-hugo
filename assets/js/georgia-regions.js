@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ".tv-region-filter[data-region]"
   );
 
+  const regionIndexItems = document.querySelectorAll(
+    ".tv-region-index-item[data-region]"
+  );
+
   const cards = document.querySelectorAll(
     ".tv-georgia-destinations .tv-rectangle-card[data-region]"
   );
@@ -28,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ".tv-region-filter-initial"
   );
 
+  /* Caves carousel */
+
+  const cavesCarousel = document.querySelector(
+    ".caves-strip .tv-carousel"
+  );
+
 
   /* =========================================
      DEBUG
@@ -36,15 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Region filter loaded");
   console.log("Map regions:", mapRegions.length);
   console.log("Region filters:", filters.length);
+  console.log("Region index items:", regionIndexItems.length);
   console.log("Destination cards:", cards.length);
   console.log("Grid:", grid);
+  console.log("Caves carousel:", cavesCarousel);
 
 
   /* =========================================
      INITIAL STATE
   ========================================= */
 
-  /* Hide all region buttons */
+  /* Hide all region filters */
 
   filters.forEach(function (filter) {
 
@@ -52,6 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "is-visible",
       "active"
     );
+
+  });
+
+
+  /* Set initial region index state */
+
+  regionIndexItems.forEach(function (item) {
+
+    item.classList.remove("active");
 
   });
 
@@ -90,6 +111,63 @@ document.addEventListener("DOMContentLoaded", function () {
 
     count.textContent =
       "Showing " + cards.length + " destinations";
+
+  }
+
+
+  /* =========================================
+     SCROLL REGIONAL CAROUSEL
+  ========================================= */
+
+  function scrollCarouselToRegion(region) {
+
+    if (!cavesCarousel) {
+      return;
+    }
+
+
+    const targetCard = cavesCarousel.querySelector(
+      '.tv-carousel-card[data-region="' + region + '"]'
+    );
+
+
+    /* No card for this region */
+
+    if (!targetCard) {
+
+      console.log(
+        "No Caves card found for region:",
+        region
+      );
+
+      return;
+
+    }
+
+
+    /* Calculate position relative to carousel */
+
+    const targetLeft =
+      targetCard.getBoundingClientRect().left -
+      cavesCarousel.getBoundingClientRect().left +
+      cavesCarousel.scrollLeft;
+
+
+    /* Scroll carousel */
+
+    cavesCarousel.scrollTo({
+
+      left: targetLeft,
+
+      behavior: "smooth"
+
+    });
+
+
+    console.log(
+      "Caves carousel moved to:",
+      region
+    );
 
   }
 
@@ -171,6 +249,32 @@ document.addEventListener("DOMContentLoaded", function () {
       );
 
     });
+
+
+    /* -----------------------------------------
+       Reset region index buttons
+    ----------------------------------------- */
+
+    regionIndexItems.forEach(function (item) {
+
+      item.classList.remove("active");
+
+    });
+
+
+    /* -----------------------------------------
+       Activate selected region index button
+    ----------------------------------------- */
+
+    const selectedIndexItem = document.querySelector(
+      '.tv-region-index-item[data-region="' + region + '"]'
+    );
+
+    if (selectedIndexItem) {
+
+      selectedIndexItem.classList.add("active");
+
+    }
 
 
     /* -----------------------------------------
@@ -260,6 +364,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
+    /* -----------------------------------------
+       Move Caves carousel to region
+    ----------------------------------------- */
+
+    scrollCarouselToRegion(region);
+
   }
 
 
@@ -294,6 +405,28 @@ document.addEventListener("DOMContentLoaded", function () {
     filter.addEventListener(
       "click",
       function () {
+
+        showRegion(
+          this.dataset.region
+        );
+
+      }
+    );
+
+  });
+
+
+  /* =========================================
+     REGION INDEX CLICK
+  ========================================= */
+
+  regionIndexItems.forEach(function (item) {
+
+    item.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
 
         showRegion(
           this.dataset.region

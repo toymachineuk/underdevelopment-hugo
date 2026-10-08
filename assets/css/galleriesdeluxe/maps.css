@@ -3,11 +3,11 @@
 ========================================= */
 
 .georgia-map {
-   width: 100%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  position:relative;
+  position: relative;
 }
 
 @media (min-width: 1400px) {
@@ -17,7 +17,7 @@
 }
 
 .georgia-map svg {
- display: block;
+  display: block;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -29,17 +29,49 @@
    REGION COLOURS
 ========================================= */
 
-.georgia-map #GESZ { fill: #a9c1b3; } /* Samegrelo */
-.georgia-map #GESK { fill: #d6b987; } /* Shida Kartli */
-.georgia-map #GERL { fill: #aeb8c7; } /* Racha */
-.georgia-map #GEMM { fill: #c3b2cf; } /* Mtskheta */
-.georgia-map #GEKA { fill: #d8c27d; } /* Kakheti */
-.georgia-map #GESJ { fill: #d2a28f; } /* Samtskhe */
-.georgia-map #GEAJ { fill: #83b2b2; } /* Adjara */
-.georgia-map #GEKK { fill: #d6a36e; } /* Kvemo Kartli */
-.georgia-map #GEGU { fill: #a4c49b; } /* Guria */
-.georgia-map #GETB { fill: #c18fa8; } /* Tbilisi */
-.georgia-map #GEIM { fill: #91afc1; } /* Imereti */
+.georgia-map #GESZ {
+  fill: #a9c1b3;
+}
+
+.georgia-map #GESK {
+  fill: #d6b987;
+}
+
+.georgia-map #GERL {
+  fill: #aeb8c7;
+}
+
+.georgia-map #GEMM {
+  fill: #c3b2cf;
+}
+
+.georgia-map #GEKA {
+  fill: #d8c27d;
+}
+
+.georgia-map #GESJ {
+  fill: #d2a28f;
+}
+
+.georgia-map #GEAJ {
+  fill: #83b2b2;
+}
+
+.georgia-map #GEKK {
+  fill: #d6a36e;
+}
+
+.georgia-map #GEGU {
+  fill: #a4c49b;
+}
+
+.georgia-map #GETB {
+  fill: #c18fa8;
+}
+
+.georgia-map #GEIM {
+  fill: #91afc1;
+}
 
 
 /* =========================================
@@ -84,7 +116,7 @@
 ========================================= */
 
 .georgia-map .region-name {
-   font-size: 11px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.035em;
   fill: var(--tv-black);
@@ -108,12 +140,9 @@
   fill: var(--tv-black);
   opacity: 0.5;
   stroke: none;
-
   text-anchor: middle;
   pointer-events: none;
 }
-
-
 
 
 /* =========================================
@@ -128,11 +157,28 @@
 }
 
 
+/* =========================================
+   MAP LABELS
+========================================= */
 
+.georgia-map #labels {
+  pointer-events: none;
+}
+
+.georgia-map .tv-map-region {
+  cursor: pointer;
+}
+
+.georgia-map .tv-map-region path {
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    fill 0.2s ease;
+}
 
 
 /* =========================================
-   MOBILE
+   MOBILE MAP
 ========================================= */
 
 @media (max-width: 700px) {
@@ -140,11 +186,9 @@
   .georgia-map {
     width: 100vw;
     max-width: none;
-
     position: relative;
-    left: 50%;
+    left: 60%;
     transform: translateX(-58%);
-
     margin: 0;
     padding: 0;
   }
@@ -155,21 +199,18 @@
     max-width: none;
     height: auto !important;
     margin: 0;
-   
   }
 
   .georgia-map .region-name {
-     font-size: 10px;
+    font-size: 10px;
     letter-spacing: -0.015em;
   }
 
   .georgia-map .city-name {
-      font-size: 8px;
+    font-size: 8px;
     letter-spacing: 0;
     opacity: 0.5;
   }
-
- 
 
   .georgia-map .city-dot {
     r: 2.5;
@@ -192,25 +233,13 @@
     stroke-width: 1.5px;
   }
 
- 
-
   .georgia-map .city-dot {
     r: 2;
   }
 }
 
-.georgia-map #labels {
-  pointer-events: none;
-}
 
-.georgia-map .tv-map-region {
-  cursor: pointer;
-}
 
-.georgia-map .tv-map-region path {
-  cursor: pointer;
-  transition: opacity .2s ease, fill .2s ease;
-}
 
 
 
@@ -238,56 +267,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* =========================================
+   REGION FILTER TABLE
+========================================= */
 
 .tv-filter-table {
   width: 100%;
@@ -296,30 +278,41 @@
   border-bottom: 1px solid rgba(0, 0, 0, .12);
 }
 
+
+/* =========================================
+   REGION INDEX
+========================================= */
+
 .tv-region-index {
   width: 100%;
+  min-width: 0;
   min-height: 52px;
 
   display: flex;
   align-items: center;
- gap: var(--space-sm);
+  gap: var(--space-sm);
 
-  padding: 0;
+  padding: 0 20px;
 
   overflow-x: auto;
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+
   white-space: nowrap;
 
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tv-region-index::-webkit-scrollbar {
   display: none;
 }
 
-.tv-region-index > .text-label {
-  flex: 0 0 auto;
-  margin-right: 8px;
-}
+
+/* =========================================
+   REGION BUTTON
+========================================= */
 
 .tv-region-index-item {
   position: relative;
@@ -328,30 +321,121 @@
 
   display: inline-flex;
   align-items: center;
+
   gap: 8px;
 
-  padding: 0;
+  padding: 6px 10px;
 
   border: 0;
+  border-radius: 2px;
+
   background: transparent;
 
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 600;
+
   white-space: nowrap;
 
   cursor: pointer;
 }
 
-.tv-region-dot {
-  width: 7px;
-  height: 7px;
-  flex: 0 0 7px;
 
-  border-radius: 50%;
-  background: var(--region-color);
-}
+/* =========================================
+   ACTIVE
+========================================= */
 
 .tv-region-index-item.active {
   font-weight: 800;
+  background: var(--tv-black);
+  color: var(--tv-pearl);
+}
+
+
+@media (max-width: 700px) {
+
+  .tv-region-index {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+
+    width: 100%;
+    min-height: auto;
+
+    padding: 8px 0;
+
+    overflow: hidden;
+  }
+
+  .tv-region-index-item {
+    width: 100%;
+    justify-content: flex-start;
+
+    padding: 6px 6px;
+
+    font-size: 12px;
+  }
+
+}
+
+/* =========================================
+   REGION DOT
+========================================= */
+
+.tv-region-dot {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   REGION DOT COLOURS
+========================================= */
+
+.tv-region-index-item[data-region="adjara"] .tv-region-dot {
+  background: #a4dfdf;
+}
+
+.tv-region-index-item[data-region="guria"] .tv-region-dot {
+  background: #cdf5c2;
+}
+
+.tv-region-index-item[data-region="imereti"] .tv-region-dot {
+  background: #b5dbf1;
+}
+
+.tv-region-index-item[data-region="kakheti"] .tv-region-dot {
+  background: #fff39c;
+}
+
+.tv-region-index-item[data-region="kvemo-kartli"] .tv-region-dot {
+  background: #ffcc8a;
+}
+
+.tv-region-index-item[data-region="mtskheta-mtianeti"] .tv-region-dot {
+  background: #f4dfff;
+}
+
+.tv-region-index-item[data-region="racha-lechkhumi-kvemo-svaneti"] .tv-region-dot {
+  background: #dae6f9;
+}
+
+.tv-region-index-item[data-region="samegrelo-zemo-svaneti"] .tv-region-dot {
+  background: #d5e2dc;
+}
+
+.tv-region-index-item[data-region="samtskhe-javakheti"] .tv-region-dot {
+  background: #ffcbb3;
+}
+
+.tv-region-index-item[data-region="shida-kartli"] .tv-region-dot {
+  background: #ffe7a9;
+}
+
+.tv-region-index-item[data-region="tbilisi"] .tv-region-dot {
+  background: #f1b3d2;
 }
