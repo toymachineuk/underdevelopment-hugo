@@ -274,21 +274,7 @@ text-align: left;
   
 }
 
-.tv-region-name {
-    position: relative;
-  display: grid;
 
-  gap: 0;
-
-  width: min(100%, 1050px);
-  margin: 0 auto;
-
-  padding: var(--space-sm) 3vw var(--space-xs);
-
-  color: #151515;
-  border-radius: 24px 24px 0 0;
-  overflow: hidden;
-}
 
 
 /* =========================================
@@ -303,21 +289,7 @@ text-align: left;
 }
 
 
-/* =========================================
-   REGION NAME
-========================================= */
 
-
-
-.tv-region-name > span {
-  display: block;
-
-  font-size: clamp(36px, 3vw, 48px);
-  line-height: .95;
-
-  font-weight: 700;
-  letter-spacing: -.04em;
-}
 
 
 
@@ -536,21 +508,6 @@ text-align: left;
 }
 
 
-/* =========================================
-   REGION FILTER AREA
-========================================= */
-
-.tv-filter-regions {
-  width: 100%;
-
-  margin: 0;
-
-  padding: 0 5vw;
-
-  background: #fff;
-
-  box-sizing: border-box;
-}
 
 
 /* =========================================
@@ -614,7 +571,7 @@ text-align: left;
 
 
 
-  .tv-region-name,
+ 
   .tv-region-meta,
   .tv-region-description {
     min-height: auto;
@@ -623,20 +580,7 @@ text-align: left;
 
 
 
-  /* -----------------------------------------
-     EACH PANEL
-  ----------------------------------------- */
 
-  .tv-region-filter.is-visible > .tv-region-name {
-    flex: 0 0 32vw !important;
-    width: 32vw !important;
-    min-width: 32vw !important;
-    max-width: 32vw !important;
-
-    display: flex !important;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
 
 
 
@@ -1007,4 +951,58 @@ text-align: left;
       transparent 176px
     ),
     #f1b3d2;
+}
+
+.region-adjara {
+  --region-color: #a4dfdf;
+}
+
+.region-guria {
+  --region-color: #cdf5c2;
+}
+
+.region-imereti {
+  --region-color: #b5dbf1;
+}
+
+.region-kakheti {
+  --region-color: #fff39c;
+}
+
+.region-kvemo-kartli {
+  --region-color: #ffcc8a;
+}
+
+.region-mtskheta-mtianeti {
+  --region-color: #f4dfff;
+}
+
+.region-racha-lechkhumi-kvemo-svaneti {
+  --region-color: #dae6f9;
+}
+
+.region-samegrelo-zemo-svaneti {
+  --region-color: #d5e2dc;
+}
+
+.region-samtskhe-javakheti {
+  --region-color: #ffcbb3;
+}
+
+.region-shida-kartli {
+  --region-color: #ffe7a9;
+}
+
+.region-tbilisi {
+  --region-color: #f1b3d2;
+}
+
+.region-badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  margin-right: 8px;
+  background: var(--region-color);
+  border-radius: 1px;
 }

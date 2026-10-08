@@ -211,3 +211,147 @@
   cursor: pointer;
   transition: opacity .2s ease, fill .2s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-filter-table {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.tv-region-index {
+  width: 100%;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+ gap: var(--space-sm);
+
+  padding: 0;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  scrollbar-width: none;
+}
+
+.tv-region-index::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-region-index > .text-label {
+  flex: 0 0 auto;
+  margin-right: 8px;
+}
+
+.tv-region-index-item {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.tv-region-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+  background: var(--region-color);
+}
+
+.tv-region-index-item.active {
+  font-weight: 800;
+}

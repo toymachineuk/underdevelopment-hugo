@@ -809,6 +809,38 @@ padding-top: 8vw;
 }
 
 
+
+.tv-super-narrow .tv-carousel-meta-row {
+  display: block;
+
+  max-width: 175px;
+
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  letter-spacing: -.005em;
+
+  color: var(--tv-black);
+}
+
+.tv-carousel-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-carousel-meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tv-carousel-meta-row--location {
+  margin-top: auto;
+}
+
+
 /* =====================================
    MOBILE
 ===================================== */
@@ -1171,9 +1203,6 @@ margin-bottom: var(--space-md);
 
 .wide-cards-strip .tv-carousel-content {
   min-width: 0;
-
-  padding: 8px 0 8px 18px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1883,4 +1912,51 @@ margin-bottom: var(--space-md);
     padding-right: 14px;
   }
 
+}
+
+
+
+
+
+
+
+.caves-strip .tv-carousel-content {
+  min-width: 0;
+
+  padding: 8px 0 8px 18px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Metadata fills remaining card height */
+.caves-strip .tv-carousel-meta {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  flex: 1;
+  min-height: 0;
+}
+
+
+/* Description */
+.caves-strip .tv-info-row--description {
+  max-width: 215px;
+}
+
+
+/* Location */
+.caves-strip .tv-info-row--location {
+  align-self: end;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* Length */
+.caves-strip .tv-info-row--length {
+  display: flex;
+  align-items: center;
 }
