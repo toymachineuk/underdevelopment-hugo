@@ -2,9 +2,7 @@
 <html lang="{{ site.Language.Locale }}">
   <head>
     <meta charset="utf-8" />
-    <title>
-      {{ .Title }}
-    </title>
+    <title>{{ .Title }}</title>
 
     <link rel="icon" href="{{ `favicon.svg` | relURL }}" type="image/svg+xml" />
 
@@ -24,7 +22,7 @@
         href="{{ .Permalink | safeURL }}" />
     {{ end -}}
 
-    {{/* SEO. */}}
+    {{/* SEO */}}
     {{ partial "common-partials/head-seo.html" . }}
 
     {{/* Load styles */}}
@@ -32,118 +30,119 @@
     {{ $target := slice "chrome115" "edge115" "firefox116" "ios16.4" "opera101" "safari16.4" }}
     {{ $options := dict "vars" $vars "target" $target "minify" (not hugo.IsDevelopment) }}
     {{ $styles := resources.Get "css/galleriesdeluxe/styles.css" | css.Build $options }}
+
     {{ if hugo.IsProduction }}
       {{ $styles = $styles | fingerprint }}
     {{ end }}
+
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
 
-        <!-- Anime.js 2.0.2 -->
+    {{/* Anime.js 2.0.2 */}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-    {{/* Load JavaScript */}}
-{{ $js := resources.Get "js/galleriesdeluxe/index.js" }}
-{{ $params := dict }}
-{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
-{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
-{{ $js = $js | js.Build $opts }}
+    {{/* Galleries Deluxe JavaScript */}}
+    {{ $js := resources.Get "js/galleriesdeluxe/index.js" }}
+    {{ $params := dict }}
+    {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+    {{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+    {{ $js = $js | js.Build $opts }}
 
-{{ if hugo.IsProduction }}
-  {{ $js = $js | fingerprint }}
-{{ end }}
+    {{ if hugo.IsProduction }}
+      {{ $js = $js | fingerprint }}
+    {{ end }}
 
-<script
-  src="{{ $js.RelPermalink }}"
-  {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
-  defer></script>
+    <script
+      src="{{ $js.RelPermalink }}"
+      {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
+      defer></script>
 
+    {{/* Moving Letters */}}
+    {{ $movingLetters := resources.Get "js/movingletters.js" }}
 
-{{/* Moving Letters */}}
-{{ $movingLetters := resources.Get "js/movingletters.js" }}
+    {{ if hugo.IsProduction }}
+      {{ $movingLetters = $movingLetters | fingerprint }}
+    {{ end }}
 
-{{ if hugo.IsProduction }}
-  {{ $movingLetters = $movingLetters | fingerprint }}
-{{ end }}
+    <script
+      src="{{ $movingLetters.RelPermalink }}"
+      {{ if hugo.IsProduction }}integrity="{{ $movingLetters.Data.Integrity }}"{{ end }}
+      defer></script>
 
-<script
-  src="{{ $movingLetters.RelPermalink }}"
-  {{ if hugo.IsProduction }}integrity="{{ $movingLetters.Data.Integrity }}"{{ end }}
-  defer></script>
-      
-{{/* Georgia region filters */}}
-{{ $georgiaRegions := resources.Get "js/georgia-regions.js" }}
+    {{/* Georgia region filters */}}
+    {{ $georgiaRegions := resources.Get "js/georgia-regions.js" }}
 
-{{ if hugo.IsProduction }}
-  {{ $georgiaRegions = $georgiaRegions | fingerprint }}
-{{ end }}
+    {{ if hugo.IsProduction }}
+      {{ $georgiaRegions = $georgiaRegions | fingerprint }}
+    {{ end }}
 
-<script
-  src="{{ $georgiaRegions.RelPermalink }}"
-  {{ if hugo.IsProduction }}integrity="{{ $georgiaRegions.Data.Integrity }}"{{ end }}
-  defer></script>
+    <script
+      src="{{ $georgiaRegions.RelPermalink }}"
+      {{ if hugo.IsProduction }}integrity="{{ $georgiaRegions.Data.Integrity }}"{{ end }}
+      defer></script>
 
-{{/* Gallery carousels */}}
+    {{/* Gallery carousels */}}
+    {{ $galleryCarousels := resources.Get "js/gallery-carousels.js" }}
 
-{{ $galleryCarousels := resources.Get "js/gallery-carousels.js" }}
+    {{ if hugo.IsProduction }}
+      {{ $galleryCarousels = $galleryCarousels | fingerprint }}
+    {{ end }}
 
-{{ if hugo.IsProduction }}
-  {{ $galleryCarousels = $galleryCarousels | fingerprint }}
-{{ end }}
+    <script
+      src="{{ $galleryCarousels.RelPermalink }}"
+      {{ if hugo.IsProduction }}integrity="{{ $galleryCarousels.Data.Integrity }}"{{ end }}
+      defer></script>
 
-<script
-  src="{{ $galleryCarousels.RelPermalink }}"
-  {{ if hugo.IsProduction }}integrity="{{ $galleryCarousels.Data.Integrity }}"{{ end }}
-  defer></script>
+    {{/* Mobile menu */}}
+    {{ $mobileMenu := resources.Get "js/mobile-menu.js" }}
 
+    {{ if hugo.IsProduction }}
+      {{ $mobileMenu = $mobileMenu | fingerprint }}
+    {{ end }}
 
-
-
-  {{ $mobileMenu := resources.Get "js/mobile-menu.js" }}
-
-{{ if hugo.IsProduction }}
-  {{ $mobileMenu = $mobileMenu | fingerprint }}
-{{ end }}
-
-<script
-  src="{{ $mobileMenu.RelPermalink }}"
-  {{ if hugo.IsProduction }}
-    integrity="{{ $mobileMenu.Data.Integrity }}"
-  {{ end }}
-  defer>
-</script>
-  
+    <script
+      src="{{ $mobileMenu.RelPermalink }}"
+      {{ if hugo.IsProduction }}
+        integrity="{{ $mobileMenu.Data.Integrity }}"
+      {{ end }}
+      defer></script>
 
     {{ block "head-custom" . }}{{ end }}
 
     {{ if .IsHome }}
       {{ $migrationLink := "https://github.com/bep/galleriesdeluxe#sass-was-replaced-with-css-in-v060" }}
+
       {{ if site.Params.galleriesdeluxe.sassvars }}
         {{ errorf "galleriesdeluxe: params.galleriesdeluxe.sassvars is removed. See %s" $migrationLink }}
       {{ end }}
+
       {{ if resources.Get "scss/galleriesdeluxe/vars-custom.scss" }}
         {{ errorf "galleriesdeluxe: assets/scss/galleriesdeluxe/vars-custom.scss is no longer used. See %s" $migrationLink }}
       {{ end }}
     {{ end }}
-
   </head>
-  <body class="{{ if eq .Layout "map-page" }}map-page{{ end }}">
- {{ if .IsPage }}
 
+  <body class="{{ if eq .Layout "map-page" }}map-page{{ end }}">
+
+{{/* Page headers */}}
+{{ if .IsPage }}
   {{ if eq .Layout "map-page" }}
     {{ partial "narrow-header.html" . }}
+  {{ else if eq .Layout "accommodations" }}
+    {{ partial "header.html" . }}
   {{ else }}
     {{ partial "page-header.html" . }}
   {{ end }}
-
 {{ else }}
-
   {{ partial "header.html" . }}
-
 {{ end }}
+
     <main>
       {{ block "main" . }}{{ end }}
     </main>
+
     <footer>
       {{ partial "footer.html" . }}
     </footer>
+
   </body>
 </html>
