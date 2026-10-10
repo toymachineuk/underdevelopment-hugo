@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="20"
-     height="20"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="#252525"
-     stroke-width="1.6"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     aria-hidden="true">
-  <path d="M5 19V5l7 8 7-8v14"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-720h162l198 522 196-522h164v720H720v-490L531-120H429L240-607v487H120Z"/></svg>
