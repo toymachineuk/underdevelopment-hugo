@@ -144,10 +144,15 @@
 }
 
 
-.tv-see-do .tv-filter.active {
-  background: var(--category-accent);
-  border-color: var(--category-accent);
-  color: #252525;
+.tv-luxury .tv-filter.active {
+  background: #252525;
+  border-color: #252525;
+  color: white;
+}
+
+.tv-luxury .tv-filter.active .tv-filter-icon {
+  fill: white;
+  stroke: white;
 }
 
 /* =========================================================
