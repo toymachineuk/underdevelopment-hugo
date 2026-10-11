@@ -64,14 +64,11 @@ height: 68px;
 .nav-links a {
   color: #111827;
   text-decoration: none;
-
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1;
-  font-weight: 600;
-  letter-spacing: -.025em;
-
+  font-weight: 500;
+  letter-spacing: -0.02em;
   white-space: nowrap;
-
   transition: opacity .2s ease;
 }
 
@@ -267,14 +264,11 @@ height: 68px;
 }
 
 .nav-dropdown__menu strong {
-  display: block;
-
-  font-size: 15px;
-  line-height: 1.1;
-
+   display: block;
+  font-size: 14px;
+  line-height: 1.2;
   font-weight: 600;
-  letter-spacing: -.02em;
-
+  letter-spacing: -0.015em;
   text-align: left;
 }
 

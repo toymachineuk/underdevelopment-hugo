@@ -1,8 +1,12 @@
 .section-header {
   display: flex;
   
-  gap: 0;
+  gap: var(--space-md);
     flex-direction: column
+}
+
+.section-header:has(.title-sm) {
+  gap: var(--space-sm);
 }
 
 .section-header > div {
@@ -83,13 +87,7 @@
   white-space: nowrap;
 }
 
-.tv-filter::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 30px;
-  background: var(--category-accent);
-}
+
 
 .tv-filter-icon-wrap {
   width: 30px;
@@ -150,7 +148,7 @@
   color: white;
 }
 
-.tv-luxury .tv-filter.active .tv-filter-icon {
+ .tv-filter.active .tv-filter-icon {
   fill: white;
   stroke: white;
 }

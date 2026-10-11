@@ -71,65 +71,6 @@
 
 
 
-/* =========================================
-   CATEGORY ACCENTS
-   ========================================= */
-
-
-/* Filter category colours */
-
-.tv-filter-parks {
-  --category-accent: #b8cbb9;
-  padding-left: 20px;
-}
-
-.tv-filter-history {
-  --category-accent: #f4e3df;
-  padding-left: 20px;
-}
-
-.tv-filter-religion {
-  --category-accent: #d6e2f9;
-  padding-left: 20px;
-}
-
-.tv-filter-architecture {
-  --category-accent: #e6e6e8;
-  padding-left: 20px;
-}
-
-.tv-filter-georgian {
-  --category-accent: #f4e3df;
-  padding-left: 20px;
-}
-
-.tv-filter-contemporary {
-  --category-accent: #f4e3df;
-  padding-left: 20px;
-}
-
-
-.tv-filter-coffee {
-  --category-accent: #f6f0e2;
-  padding-left: 20px;
-}
-
-/* Category colours */
-.tv-category.tv-filter-parks {
-  --category-accent: #5F8061;
-}
-
-.tv-category.tv-filter-history {
-   --category-accent: #f4e3df;
-}
-
-.tv-category.tv-filter-landmarks {
-  --category-accent: #65758B;
-}
-
-.tv-category.tv-filter-daytrips {
-  --category-accent: #B66A4C;
-}
 
 
 
@@ -138,38 +79,6 @@
 
 
 
-
-
-
-/* All button */
-
-.tv-filter-all {
-  --category-accent: var(--tv-black);
-
-  background: var(--tv-black);
-  color: #fff;
-}
-
-.tv-filter-all::before {
-  display: none;
-}
-
-
-/* Active category filter */
-
-.tv-filter.active {
-  background: var(--category-accent);
-  border-color: var(--category-accent);
-  color: #fff;
-}
-
-
-/* Keep the active All button black */
-
-.tv-filter-all.active {
-  background: var(--tv-black);
-  border-color: var(--tv-black);
-}
 
 
 
