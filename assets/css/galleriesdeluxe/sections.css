@@ -132,12 +132,23 @@
   color: #fff;
 }
 
-.tv-filter:hover .tv-filter-icon,
-.tv-filter.active .tv-filter-icon {
+.tv-filter:hover .tv-filter-icon{
   fill: #fff;
   stroke: #fff;
 }
 
+
+.tv-filter.active .tv-filter-icon {
+  fill: #252525;
+  stroke: #252525;
+}
+
+
+.tv-see-do .tv-filter.active {
+  background: var(--category-accent);
+  border-color: var(--category-accent);
+  color: #252525;
+}
 
 /* =========================================================
    FILTER COUNT
@@ -337,7 +348,7 @@
   align-items: flex-start;
   min-height: 21px;
   gap: 7px;
-  color: var(--tv-black);
+  
 }
 
 .tv-info-row img {
@@ -353,10 +364,147 @@
   text-decoration: none;
 }
 
+
+
+/* Clickable links inside destination cards */
+.tv-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+/* Subtle external-link indicator */
+.tv-link-arrow {
+  flex: 0 0 auto;
+  opacity: 0.55;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+/* Interaction */
+.tv-card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tv-card-link:hover .tv-link-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+/* Keyboard accessibility */
+.tv-card-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
 .tv-info-row--site {
   display: flex;
   align-items: center;
   gap: 7px;
+}
+
+
+.tv-info-row--location {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+}
+
+.tv-card-divider {
+  border: 0;
+  border-top: 1px solid #c9c9c9;
+  margin: 8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-info-row--location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tv-location-icon,
+.tv-metro-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  opacity: 0.7;
+}
+
+.tv-info-row--location .tv-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+   color: #666;
 }
 
 .tv-info-row--location > img {
