@@ -122,12 +122,13 @@
   </head>
 
   <body class="{{ if eq .Layout "map-page" }}map-page{{ end }}">
-
 {{/* Page headers */}}
 {{ if .IsPage }}
   {{ if eq .Layout "map-page" }}
     {{ partial "narrow-header.html" . }}
   {{ else if eq .Layout "accommodations" }}
+    {{ partial "header.html" . }}
+  {{ else if eq .Layout "iamintbilisi" }}
     {{ partial "header.html" . }}
   {{ else }}
     {{ partial "page-header.html" . }}
@@ -135,7 +136,6 @@
 {{ else }}
   {{ partial "header.html" . }}
 {{ end }}
-
     <main>
       {{ block "main" . }}{{ end }}
     </main>

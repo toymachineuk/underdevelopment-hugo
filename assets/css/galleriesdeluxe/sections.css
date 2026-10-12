@@ -878,3 +878,28 @@
     font-size: 21px;
   }
 }
+
+
+
+
+
+
+/* =========================================================
+   ACCOMMODATION-SECTION
+========================================================= */
+
+.stay-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: #A47B46;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.stay-price svg {
+  width: 14px;
+  height: 14px;
+}

@@ -1,0 +1,185 @@
+```css
+/* =====================================
+   EDITORIAL FEATURE ROWS
+===================================== */
+
+.tv-editorial {
+  width: 100%;
+  font-family: var(--font-sans);
+  color: var(--tv-black);
+}
+
+/* Each alternating row */
+
+.tv-editorial-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 112px);
+
+  padding: clamp(40px, 5.5vw, 64px) 4.5vw;
+  background: var(--tv-white);
+
+  box-sizing: border-box;
+}
+
+/* Pale background on alternating row */
+
+.tv-editorial-row--tinted {
+  background: var(--tv-green);
+}
+
+/* Text column */
+
+.tv-editorial-copy {
+  width: 100%;
+  max-width: 390px;
+  justify-self: center;
+}
+
+/* Small eyebrow label */
+
+.tv-editorial-copy .text-label {
+  margin: 0 0 12px;
+  color: var(--tv-green-dark);
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: var(--weight-medium);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+/* Heading */
+
+.tv-editorial-copy .title-xs {
+  max-width: 360px;
+  margin: 0 0 14px;
+
+  font-size: clamp(25px, 2.35vw, 32px);
+  line-height: 1.13;
+  font-weight: var(--weight-medium);
+  letter-spacing: -.035em;
+}
+
+/* Body text */
+
+.tv-editorial-copy .text-md {
+  max-width: 350px;
+  margin: 0 0 28px;
+
+  font-size: 14px;
+  line-height: 1.55;
+  letter-spacing: -.01em;
+  font-weight: var(--weight-regular);
+}
+
+/* Link styled like a compact button */
+
+.tv-editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 13px;
+  border-radius: 2px;
+
+  background: var(--tv-green-dark);
+  color: var(--tv-white);
+
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  line-height: 1.2;
+  text-decoration: none;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.tv-editorial-link:hover {
+  background: var(--tv-black);
+  transform: translateY(-1px);
+}
+
+.tv-editorial-link span {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* Image */
+
+.tv-editorial-media {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  aspect-ratio: 1.45 / 1;
+}
+
+.tv-editorial-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+  .tv-editorial-row {
+    gap: 36px;
+    padding-inline: 4vw;
+  }
+
+  .tv-editorial-copy .title-xs {
+    font-size: 26px;
+  }
+
+  .tv-editorial-copy .text-md {
+    font-size: 14px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 650px) {
+  .tv-editorial-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 5vw 36px;
+  }
+
+  .tv-editorial-copy {
+    max-width: none;
+    justify-self: stretch;
+    grid-row: 2;
+  }
+
+  .tv-editorial-media {
+    grid-row: 1;
+    aspect-ratio: 1.35 / 1;
+  }
+
+  .tv-editorial-copy .title-xs {
+    max-width: 400px;
+    font-size: 26px;
+    line-height: 1.12;
+  }
+
+  .tv-editorial-copy .text-md {
+    max-width: 48ch;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .tv-editorial-row--tinted {
+    gap: 24px;
+  }
+}
+```
