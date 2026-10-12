@@ -1968,3 +1968,226 @@ margin-bottom: var(--space-md);
   display: flex;
   align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```css
+/* AIRLINE CARDS */
+
+.tv-logo-strip-section {
+  padding: var(--space-lg) 4vw;
+  color: var(--tv-black);
+  background: var(--tv-white);
+}
+
+.tv-logo-strip-section .tv-super-narrow-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.tv-logo-strip-section .text-label {
+  color: var(--tv-green-dark);
+  margin-bottom: 10px;
+}
+
+.tv-logo-strip-section .tv-super-narrow-header > .text-sm {
+  max-width: 340px;
+  margin: 0;
+  color: #6f6f6f;
+}
+
+/* GRID */
+
+.tv-logo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tv-logo-item {
+  min-width: 0;
+}
+
+/* WHOLE CARD IS CLICKABLE */
+
+.tv-logo-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px;
+
+  color: var(--tv-black);
+  background: var(--tv-white);
+  border: 1px solid var(--tv-pearl);
+  border-radius: 5px;
+
+  text-decoration: none;
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease;
+}
+
+.tv-logo-card:hover {
+  border-color: var(--tv-green-border);
+  background: #fafcfb;
+  transform: translateY(-3px);
+}
+
+.tv-logo-card:focus-visible {
+  outline: 2px solid var(--tv-green-dark);
+  outline-offset: 3px;
+}
+
+/* LOGO AREA */
+
+.tv-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #f7f7f5;
+  border-radius: 3px;
+}
+
+.tv-logo-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 190px;
+  max-height: 55px;
+  object-fit: contain;
+}
+
+/* DESCRIPTION */
+
+.tv-logo-description {
+  padding: 16px 2px 20px;
+  flex: 1;
+}
+
+.tv-logo-description h3 {
+  margin: 0 0 7px;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.25;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.tv-logo-description p {
+  margin: 0;
+  color: #6f6f6f;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+/* CARD FOOTER */
+
+.tv-logo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 2px 2px;
+  border-top: 1px solid var(--tv-pearl);
+
+  color: var(--tv-green-dark);
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.tv-logo-arrow {
+  font-size: 17px;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+
+.tv-logo-card:hover .tv-logo-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .tv-logo-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .tv-logo-strip-section {
+    padding: var(--space-lg) 5vw;
+  }
+
+  .tv-logo-strip-section .tv-super-narrow-header {
+    display: block;
+  }
+
+  .tv-logo-strip-section .tv-super-narrow-header > .text-sm {
+    margin-top: 12px;
+  }
+
+  .tv-logo-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tv-logo-card {
+    padding: 8px;
+  }
+
+  .tv-logo-panel {
+    height: 76px;
+    padding: 10px;
+  }
+
+  .tv-logo-description {
+    padding: 12px 2px 16px;
+  }
+
+  .tv-logo-description h3 {
+    font-size: 14px;
+  }
+
+  .tv-logo-description p {
+    font-size: 12px;
+  }
+
+  .tv-logo-footer {
+    font-size: 9px;
+  }
+}
+```
