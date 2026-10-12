@@ -22,17 +22,16 @@
 .vertical-badge .tv-category {
   position: static !important;
 
-  width: 30px;
-  height: 30px;
-
-  margin: 0 0 6px 0;
+width: 24px;
+  height: 24px;
+  margin: 0 0 4px 0;
   padding: 0 !important;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: var(--category-accent);
+ border: 1.5px black dotted;
   border-radius: 2px;
 
   writing-mode: horizontal-tb;
@@ -111,9 +110,9 @@
   /* CATEGORY ICON BOX */
 
   .vertical-badge .tv-category {
-  width: 23px;
-    height: 23px;
-    margin: 0 0 5px 0;
+  width: 18px;
+    height: 18px;
+    margin: 0 0 3px 0;
     padding: 0 !important;
     border-radius: 2px;
   }

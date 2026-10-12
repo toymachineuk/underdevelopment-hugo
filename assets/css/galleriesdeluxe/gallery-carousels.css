@@ -19,15 +19,7 @@
   margin-bottom: var(--space-lg);
 }
 
-.tv-destination-heading h2 {
-  margin: 0;
 
-  font-family: var(--font-sans);
-  font-size: clamp(52px, 8vw, 120px);
-  line-height: .88;
-  letter-spacing: var(--tracking-tight);
-  font-weight: var(--weight-black);
-}
 
 
 /* =========================================
@@ -82,36 +74,39 @@
    CARDS
 ========================================= */
 
+
+
 .tv-destination-card {
   position: relative;
+  flex: 0 0 300px;
+  width: 300px;
+  height: 420px;
 
-  flex: 0 0 360px;
-
-  width: 360px;
-  height: 500px;
-
-  margin-right: -55px;
+  margin-right: -100px;
 
   overflow: hidden;
-
-  border-radius: 24px;
-
+  border-radius: 20px;
   background: var(--tv-pearl);
 
   scroll-snap-align: center;
 
   opacity: .55;
-
-  transform: scale(.88);
-
+  transform: scale(.84);
   transform-origin: center center;
-
   z-index: 1;
 
   transition:
     transform .55s cubic-bezier(.2, .7, .2, 1),
     opacity .55s ease;
 }
+
+.tv-destination-card.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+}
+
+
 
 
 /* =========================================
@@ -120,10 +115,8 @@
 
 .tv-destination-card.is-active {
   opacity: 1;
-
-  transform: scale(1.08);
-
-  z-index: 20;
+  transform: scale(1);
+  z-index: 3;
 }
 
 
@@ -180,8 +173,8 @@
 .tv-destination-content {
   position: absolute;
 
-  left: var(--space-md);
-  right: var(--space-md);
+  left: var(--space-sm);
+  right: var(--space-sm);
   bottom: var(--space-md);
 
   display: grid;
@@ -190,7 +183,7 @@
 
   align-items: end;
 
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 
   color: var(--tv-white);
 }
@@ -228,7 +221,7 @@
 
   font-family: var(--font-sans);
 
-  font-size: var(--heading-lg);
+  font-size: var(--heading-sm);
 
   line-height: var(--line-tight);
 
@@ -245,15 +238,13 @@
 .tv-destination-content p {
   margin: var(--space-xs) 0 0;
 
-  font-family: var(--font-sans);
 
-  font-size: var(--text-sm);
 
-  line-height: var(--line-subheading);
+  font-size: var(--text-xs);
 
-  font-weight: var(--weight-regular);
 
-  letter-spacing: var(--tracking-normal);
+
+  letter-spacing: var(--tracking-tight);
 
   opacity: .8;
 }
@@ -380,19 +371,15 @@
 
 
   .tv-destination-card {
-    flex-basis: 330px;
-
-    width: 330px;
-    height: 470px;
-
-    margin-right: -45px;
+    flex-basis: 290px;
+    width: 290px;
+    height: 410px;
+    margin-right: -95px;
   }
 
-
-  /*
-    Tablet card = 470px high.
-    Center = 235px.
-  */
+  .tv-destination-controls {
+    top: calc(var(--space-sm) + 205px);
+  }
 
   .tv-destination-controls {
     top: calc(
@@ -409,7 +396,7 @@
 
 
   .tv-destination-content h3 {
-    font-size: var(--heading-md);
+    font-size: var(--heading-xxs);
   }
 
 }
@@ -447,16 +434,13 @@
 
 
 
-    .tv-destination-card {
-    flex: 0 0 68vw;
-    width: 68vw;
-    height: 95vw;
-    max-height: 440px;
-    margin-right: -25px;
-    border-radius: 12px;
-  
+  .tv-destination-card {
+    flex: 0 0 250px;
+    width: 250px;
+    height: 350px;
+    margin-right: -85px;
+    border-radius: 18px;
   }
-
 
   .tv-destination-card.is-active {
     transform: scale(1.04);
@@ -473,7 +457,7 @@
 
 
   .tv-destination-content h3 {
-    font-size: var(--heading-lg);
+    font-size: var(--heading-sm);
   }
 
 
