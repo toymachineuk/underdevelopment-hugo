@@ -903,3 +903,360 @@
   width: 14px;
   height: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   REUSABLE SECTION LAYOUTS
+========================================= */
+
+.tv-split-grid {
+  --tv-split-gap: var(--space-lg);
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--tv-split-gap);
+
+  width: 100%;
+  max-width: 1600px;
+  min-width: 0;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Three-column layout with a wider first column */
+.tv-split-grid--contact {
+  grid-template-columns: 1.1fr 1fr 1fr;
+}
+
+/* Two-column layout */
+.tv-split-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Four-column layout */
+.tv-split-grid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+/* =========================================
+   REUSABLE SECTION INTRO
+========================================= */
+
+.tv-section-intro {
+  min-width: 0;
+  align-self: center;
+}
+
+.tv-section-intro > :first-child {
+  margin-top: 0;
+}
+
+.tv-section-intro > :last-child {
+  margin-bottom: 0;
+}
+
+.tv-section-intro .title-sm,
+.tv-section-intro .title-xs {
+  max-width: 12ch;
+  margin-top: 0;
+}
+
+.tv-section-intro p {
+  max-width: 48ch;
+}
+
+/* Intro that spans the full grid */
+.tv-section-intro--full {
+  grid-column: 1 / -1;
+  max-width: 100%;
+}
+
+.tv-section-intro--full .title-sm,
+.tv-section-intro--full .title-xs {
+  max-width: 100%;
+}
+
+/* Link integrated into a heading */
+.tv-section-intro h2 a,
+.tv-section-intro h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+
+/* =========================================
+   REUSABLE SPLIT CARD
+   Image + text
+========================================= */
+
+.tv-split-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-sm);
+
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-split-card > img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.tv-split-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.tv-split-card-content > :first-child {
+  margin-top: 0;
+}
+
+.tv-split-card-content > :last-child {
+  margin-bottom: 0;
+}
+
+.tv-split-card-content .title-xxs {
+  margin: 0;
+}
+
+.tv-split-card-content .text-sm {
+  margin: 0;
+  color: #6f6f6f;
+}
+
+
+/* =========================================
+   REUSABLE PILL LINK
+========================================= */
+
+.tv-button-link,
+.tv-contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: fit-content;
+  max-width: 100%;
+  margin-top: var(--space-sm);
+  padding: 8px 14px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--tv-pearl);
+  border-radius: 999px;
+
+  color: var(--tv-black);
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tv-button-link:hover,
+.tv-contact-link:hover {
+  background-color: var(--tv-vanilla);
+}
+
+
+/* =========================================
+   CONTACT SECTION
+   Section-specific styling only
+========================================= */
+
+.tv-contact {
+  background: var(--tv-white);
+  color: var(--tv-black);
+}
+
+.tv-contact-grid {
+  /* Fallback if the shared layout class is omitted */
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  align-items: center;
+  gap: var(--space-lg);
+
+  width: 100%;
+  max-width: 1600px;
+  min-width: 0;
+  margin-inline: auto;
+}
+
+.tv-contact-intro {
+  align-self: center;
+  min-width: 0;
+}
+
+.tv-contact-intro .title-sm {
+  max-width: 12ch;
+  margin: 0;
+}
+
+
+
+
+
+/* =========================================
+   REUSABLE SECTION DESCRIPTION
+========================================= */
+
+.tv-section-description {
+  max-width: 36ch;
+  margin: var(--space-sm) 0 0;
+  color: #6f6f6f;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+/* Contact-specific heading width */
+.tv-contact-intro .title-sm {
+  max-width: 12ch;
+  margin: 0;
+}
+
+.tv-contact-intro .tv-section-description {
+  max-width: 32ch;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1100px) {
+  .tv-contact-intro .title-sm,
+  .tv-contact-intro .tv-section-description {
+    max-width: 48ch;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .tv-split-grid--contact,
+  .tv-contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tv-split-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tv-contact-intro,
+  .tv-section-intro--full {
+    grid-column: 1 / -1;
+  }
+
+  .tv-contact-intro .title-sm,
+  .tv-section-intro--full .title-sm,
+  .tv-section-intro--full .title-xs {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .tv-split-grid,
+  .tv-split-grid--contact,
+  .tv-split-grid--2,
+  .tv-split-grid--4,
+  .tv-contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .tv-contact-intro,
+  .tv-section-intro--full {
+    grid-column: auto;
+  }
+
+  .tv-contact-intro .title-sm,
+  .tv-section-intro .title-sm,
+  .tv-section-intro .title-xs {
+    max-width: 100%;
+  }
+
+  .tv-split-card {
+    grid-template-columns: minmax(100px, 120px) minmax(0, 1fr);
+    gap: var(--space-sm);
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .tv-button-link,
+  .tv-contact-link {
+    transition: none;
+  }
+}

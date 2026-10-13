@@ -2190,4 +2190,150 @@ margin-bottom: var(--space-md);
     font-size: 9px;
   }
 }
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   TRANSPORT — EQUAL-WIDTH CARDS
+========================================= */
+
+.wide-cards-strip.fewcards-strip .tv-carousel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 4vw;
+
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.wide-cards-strip.fewcards-strip .tv-carousel-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Image */
+.wide-cards-strip.fewcards-strip .tv-carousel-image {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.wide-cards-strip.fewcards-strip .tv-carousel-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.wide-cards-strip.fewcards-strip .tv-carousel-content {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.wide-cards-strip.fewcards-strip .tv-carousel-description {
+  max-width: none;
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* =========================================
+   TABLET — TWO COLUMNS
+========================================= */
+
+@media (max-width: 1000px) and (min-width: 651px) {
+  .wide-cards-strip.fewcards-strip .tv-carousel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   MOBILE — HORIZONTAL SCROLL
+========================================= */
+
+@media (max-width: 650px) {
+
+  .wide-cards-strip.fewcards-strip .tv-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 16px;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 20px 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .wide-cards-strip.fewcards-strip .tv-carousel-card {
+    flex: 0 0 85%;
+    width: 85%;
+    min-width: 0;
+    height: auto;
+
+    scroll-snap-align: start;
+  }
+
+  .wide-cards-strip.fewcards-strip .tv-carousel-image {
+    flex: 0 0 88px;
+    width: 88px;
+    height: 88px;
+  }
+
+  .wide-cards-strip.fewcards-strip .tv-carousel-content {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .wide-cards-strip.fewcards-strip .tv-carousel-description {
+    max-width: none;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+
+}
