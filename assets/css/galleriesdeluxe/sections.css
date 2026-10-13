@@ -962,7 +962,7 @@
   gap: var(--tv-split-gap);
 
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   min-width: 0;
   margin-inline: auto;
   box-sizing: border-box;
@@ -1172,8 +1172,13 @@
 
 /* Contact-specific heading width */
 .tv-contact-intro .title-sm {
-  max-width: 12ch;
-  margin: 0;
+
+  max-width: 360px;
+  margin: 0 0 14px;
+  font-size: clamp(25px, 2.35vw, 32px);
+  line-height: 1.13;
+  font-weight: var(--weight-bold);
+  letter-spacing: -.035em;
 }
 
 .tv-contact-intro .tv-section-description {
