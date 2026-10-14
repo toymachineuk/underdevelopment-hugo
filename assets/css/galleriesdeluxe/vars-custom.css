@@ -66,6 +66,26 @@
   --tv-green-border: #b8cbb9;
 
 
+
+  /* =========================================
+   QUICK LINKS — BACKGROUND COLORS
+========================================= */
+
+.tv-vanilla {
+  background-color: var(--tv-vanilla);
+}
+
+.tv-green {
+  background-color: var(--tv-green);
+}
+
+.tv-blue {
+  background-color: var(--tv-blue);
+}
+
+.tv-pink {
+  background-color: var(--tv-pink);
+}
   /* ---------------------------------
      TYPOGRAPHY
   --------------------------------- */
