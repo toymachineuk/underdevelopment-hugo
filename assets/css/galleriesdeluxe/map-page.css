@@ -294,158 +294,6 @@ text-align: left;
 
 
 /* =========================================
-   REGION DETAILS
-========================================= */
-
-.tv-region-details {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  margin-top: 30px;
-
-  font-size: 10px;
-  line-height: 1.2;
-
-  font-weight: 700;
-  letter-spacing: .08em;
-
-  text-transform: uppercase;
-}
-
-
-/* =========================================
-   META
-========================================= */
-
-.tv-region-meta {
-  min-width: 0;
-  min-height: 150px;
-
-  box-sizing: border-box;
-}
-
-.tv-region-meta h3 {
-  display: block;
-
-  margin: 0 0 20px;
-
-  font-size: 20px;
-  line-height: 1.1;
-  font-weight: 700;
-}
-@media (max-width: 700px) {
-
-  .tv-region-meta h3 {
-    margin: 0 0 10px;
-    font-size: 12px;
-    line-height: 1.1;
-    font-weight: 700;
-  }
-
-}
-
-/* =========================================
-   PLACE NAMES
-========================================= */
-
-.tv-place-list strong {
-  display: block;
-
-  margin-bottom: 0;
-
-  font-size: 13px;
-  line-height: 1.2;
-
-  font-weight: 700;
-  letter-spacing: -.01em;
-}
-
-
-/* =========================================
-   META LIST
-========================================= */
-
-.tv-region-meta ul {
-  list-style: none;
-
-  margin: 0;
-  padding: 0;
-}
-
-
-/* =========================================
-   META ITEMS
-========================================= */
-
-.tv-region-meta li {
-  padding: 0;
-  margin-bottom: 13px;
-
-  font-size: 15px;
-  line-height: 1.35;
-
-  letter-spacing: -.01em;
-}
-
-
-/* =========================================
-   GETTING THERE — ROUTE
-========================================= */
-
-/*
-   No special h3 margin here.
-   "Getting there" now uses the same
-   heading spacing as "Towns & Villages".
-*/
-
-.tv-route {
-  margin: 0 0 14px;
-}
-
-
-/* =========================================
-   GETTING THERE — 2 COLUMNS
-========================================= */
-
-.tv-region-meta .two-columns {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  column-gap: 22px;
-  row-gap: 13px;
-
-  margin: 0;
-}
-
-.tv-region-meta .two-columns li {
-  margin: 0;
-}
-
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-.tv-region-description {
-  min-width: 0;
-  min-height: 150px;
-
-  margin: 0;
-
-  box-sizing: border-box;
-
-  max-width: 330px;
-
-  font-size: 17px;
-  line-height: 1.45;
-
-  letter-spacing: -.015em;
-}
-
-
-/* =========================================
    REGION FILTERS WRAPPER
 ========================================= */
 
@@ -583,15 +431,33 @@ text-align: left;
 
 
 
+@media (max-width: 700px) {
 
-  .tv-region-filter.is-visible > * {
-    height: 149px;
+  /* Selected region panel */
+  .tv-region-filter.is-visible {
+    height: auto;
     min-height: 149px;
     margin: 0 !important;
     padding: 16px !important;
     box-sizing: border-box;
     scroll-snap-align: start;
   }
+
+  /* Let the content determine the panel height */
+  .tv-region-filter.is-visible > * {
+    height: auto;
+    min-height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+
+  /* Stack the two detail columns on mobile */
+  .tv-region-filter.is-visible .tv-region-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}
 
 
   /* -----------------------------------------
@@ -675,14 +541,7 @@ text-align: left;
 
 
 
-  /* -----------------------------------------
-     MOBILE REGION FILTER AREA
-  ----------------------------------------- */
 
-  .tv-filter-regions {
-    width: 100%;
-    padding: 0;
-  }
 
 }
 

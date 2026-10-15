@@ -575,12 +575,17 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 16px;
     width: 100%;
+     row-gap: 6px;
   }
 
-  .tv-region-filters .tv-region-index-item {
-    min-height: 44px;
+   .tv-region-filters .tv-region-index-item {
+    min-height: 28px;
     gap: 8px;
+    padding: 4px 0;
+    line-height: 1.3;
   }
+
+  
 
   .tv-region-filters .tv-region-filter.is-visible {
     grid-column: 1;
@@ -589,15 +594,15 @@
   }
 
   .tv-region-filters .tv-region-title .title-xxs {
-    font-size: 34px;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
   }
+
+  
 }
 
-@media (max-width: 420px) {
-  .tv-region-filters .tv-region-index {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
+
 
 
 
@@ -640,6 +645,13 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.65;
+}
+
+@media (max-width: 700px) {
+  .tv-region-filters .tv-info-label {
+    font-size: 9px;
+    letter-spacing: 0.07em;
+  }
 }
 
 .tv-region-filters .tv-info-value {
@@ -757,6 +769,13 @@
   overflow-wrap: anywhere;
 }
 
+@media (max-width: 700px) {
+  .tv-region-filters .tv-region-content .tv-region-description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
 /* Don't force the info strip down */
 .tv-region-filters .tv-info-strip {
   margin: 24px 0;
@@ -768,5 +787,162 @@
     grid-column: 1;
     grid-row: auto;
     padding: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Two-column region details */
+.tv-region-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(21, 21, 21, 0.16);
+}
+
+.tv-region-detail {
+  min-width: 0;
+}
+
+.tv-region-town-list,
+.tv-region-transport-list {
+  margin-top: 14px;
+}
+
+.tv-region-town-item,
+.tv-region-transport-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.12);
+}
+
+.tv-region-town-item:first-child,
+.tv-region-transport-item:first-child {
+  padding-top: 0;
+}
+
+.tv-region-town-item:last-child,
+.tv-region-transport-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tv-region-town-item h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .tv-region-town-item h4 {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+}
+
+.tv-region-town-item p,
+.tv-region-transport-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(21, 21, 21, 0.72);
+}
+
+.tv-region-transport-item .tv-info-value {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Mobile: stack the columns */
+@media (max-width: 600px) {
+  .tv-region-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+
+  /* Reduce panel padding */
+  .tv-region-filters .tv-region-filter.is-visible {
+    padding: 16px 14px !important;
+    border-radius: 6px;
+  }
+
+  /* Title */
+  .tv-region-filters .tv-region-title {
+    margin-bottom: 14px;
+  }
+
+  /* Intro spacing */
+  .tv-region-filters .tv-region-intro {
+    margin-bottom: 16px;
+  }
+
+  .tv-region-filters .tv-region-eyebrow {
+    margin-bottom: 4px;
+    font-size: 9px;
+  }
+
+  .tv-region-filters .tv-region-content .tv-region-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* Two content sections */
+  .tv-region-filters .tv-region-details {
+    margin-top: 16px;
+    padding-top: 14px;
+    gap: 16px;
+  }
+
+  /* Section labels */
+  .tv-region-filters .tv-region-detail > .tv-info-label {
+    margin-bottom: 8px;
+    font-size: 9px;
+  }
+
+  /* Towns and transport items */
+  .tv-region-filters .tv-region-town-list,
+  .tv-region-filters .tv-region-transport-list {
+    margin-top: 8px;
+  }
+
+  .tv-region-filters .tv-region-town-item,
+  .tv-region-filters .tv-region-transport-item {
+    padding: 8px 0;
+  }
+
+  .tv-region-filters .tv-region-town-item h4,
+  .tv-region-filters .tv-region-transport-item .tv-info-value {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .tv-region-filters .tv-region-town-item p,
+  .tv-region-filters .tv-region-transport-item p {
+    font-size: 12px;
+    line-height: 1.4;
   }
 }
