@@ -192,11 +192,11 @@
 @media (max-width: 700px) {
 
   .georgia-map {
-    width: 100vw;
+   width: 120vw;
     max-width: none;
     position: relative;
     left: 60%;
-    transform: translateX(-58%);
+    transform: translateX(-55%);
     margin: 0;
     padding: 0;
   }
@@ -946,3 +946,7 @@
     line-height: 1.4;
   }
 }
+
+
+
+
