@@ -514,3 +514,9 @@ select {
   color: var(--black);
 }
 
+
+
+
+main > section.tv-see-do {
+  padding-inline: 0;
+}
