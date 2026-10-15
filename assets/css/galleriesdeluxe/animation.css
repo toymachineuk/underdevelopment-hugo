@@ -8,15 +8,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1.75fr;
-  align-items: center;
-
-  min-height: 380px;
-  padding: 55px 5vw;
-
-  background-color: var(--tv-cream);
-  background-position: 80% center;
-  background-size: 1200px auto;
-  background-repeat: no-repeat;
+ 
 }
 
 
@@ -45,28 +37,10 @@
   display: contents;
 }
 
-.tv-moving-copy {
-  position: relative;
-  z-index: 2;
 
-  max-width: 440px;
-}
 
-.tv-moving-copy .tv-language-intro {
-  margin: 0 0 18px;
 
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-}
 
-.tv-moving-copy p:not(.tv-language-intro) {
-  margin: 0;
-
-  font-size: 14px;
-  line-height: 1.45;
-  max-width: 410px;
-}
 
 
 /* =====================================
