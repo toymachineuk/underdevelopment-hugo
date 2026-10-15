@@ -691,12 +691,6 @@ text-align: left;
    FORCE REGION CARDS TO STAY TRANSPARENT
 ========================================= */
 
-.tv-region-filter,
-.tv-region-filter.is-visible,
-.tv-region-filter.active {
-  background: transparent !important;
-  background-color: transparent !important;
-}
 
 
 
