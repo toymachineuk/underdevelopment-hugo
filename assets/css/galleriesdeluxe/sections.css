@@ -1181,7 +1181,7 @@ main > section.tv-filter-section {
 main > section.tv-filter-section > .section-header,
 main > section.tv-filter-section > .tv-filters,
 main > section.tv-filter-section > .tv-filter-count,
-main > section.tv-filter-section > .tv-see-do-grid {
+main > section.tv-filter-section > .tv-grid--wrapper {
  width: calc(100% - 32px);
   max-width: var(--tv-section-width, 1200px);
   margin-inline: auto;
@@ -1195,7 +1195,7 @@ main > section.tv-filter-section > .tv-see-do-grid {
   main > section.tv-filter-section > .section-header,
   main > section.tv-filter-section > .tv-filters,
   main > section.tv-filter-section > .tv-filter-count,
-  main > section.tv-filter-section > .tv-see-do-grid {
+  main > section.tv-filter-section > .tv-grid--wrapper {
     width: calc(100% - 32px);
   }
 }

@@ -13,9 +13,9 @@
 
 .tv-editorial-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(48px, 8vw, 112px);
+  gap: clamp(40px, 5vw, 72px);
 
   width: 100%;
   max-width: 1200px;
@@ -201,4 +201,24 @@
   .tv-editorial-copy .text-md {
     margin-bottom: 20px;
   }
+}
+
+
+
+
+
+
+
+.tv-editorial-row--map > img {
+  width: 130%;
+  max-width: none;
+  justify-self: center;
+}
+
+.tv-editorial--index-page .tv-editorial-row > img {
+  display: block;
+  
+  min-width: 0;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
