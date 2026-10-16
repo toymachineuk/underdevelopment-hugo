@@ -4,20 +4,12 @@
 
 .tv-destination-carousel {
   width: 100%;
-  max-width: 1600px;
+
   margin: 0 auto;
   overflow: hidden;
-  background: #f0f1fe;
+ 
 }
 
-
-/* =========================================
-   HEADER
-========================================= */
-
-.tv-destination-heading {
-  margin-bottom: var(--space-lg);
-}
 
 
 
@@ -352,15 +344,6 @@
 
 
 
-  .tv-destination-heading {
-    margin-bottom: var(--space-md);
-  }
-
-
-  .tv-destination-heading h2 {
-    font-size: clamp(48px, 10vw, 80px);
-  }
-
 
   .tv-destination-track {
     gap: 0;
@@ -411,14 +394,6 @@
 
 
 
-  .tv-destination-heading {
-    margin-bottom: var(--space-md);
-  }
-
-
-  .tv-destination-heading h2 {
-    font-size: var(--heading-xl);
-  }
 
 
   .tv-destination-track {

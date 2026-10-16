@@ -21,6 +21,16 @@
   margin: 0;
 }
 
+ .section-header h3 {
+  margin: 8px 0 0;
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.6vw, 21px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #666;
+}
+
 
 main > section.tv-filter-section > .section-header {
   padding-bottom: var(--space-sm);
