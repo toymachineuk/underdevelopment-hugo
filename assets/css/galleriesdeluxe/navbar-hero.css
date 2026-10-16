@@ -661,6 +661,18 @@ height: 68px;
 }
 
 
+.tv-editorial-hero--featured {
+  padding: 0;
+
+}
+
+.tv-editorial-hero--featured .tv-editorial-hero-content {
+  padding-block: 0;
+}
+
+.tv-editorial-hero--featured .tv-editorial-hero-media {
+  aspect-ratio: 1.3 / 1;
+}
 /* =========================================
    IMAGE
 ========================================= */
@@ -812,20 +824,125 @@ height: 68px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================
-   QUICK LINKS — FOUR-COLUMN GRID
+   QUICK LINKS — BASE
 ========================================= */
 
 .tv-quick-links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-sm);
   width: 100%;
+  min-width: 0;
 }
 
 
 /* =========================================
-   CARD
+   FEATURED — HOMEPAGE
+========================================= */
+
+.tv-quick-links--featured {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+
+/* =========================================
+   QUICK LINKS — FEATURED
+========================================= */
+
+.tv-quick-links--featured {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+
+.tv-quick-links--featured .tv-quick-link {
+  min-height: 100px;
+  padding: var(--space-sm);
+}
+
+.tv-quick-links--featured .tv-quick-link-title {
+  font-size: var(--text-sm);
+}
+
+.tv-quick-links--featured .tv-quick-link-detail {
+  font-size: var(--text-xs);
+}
+
+
+/* =========================================
+   COMPACT — SIDEBAR GRID
+========================================= */
+
+.tv-quick-links--compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+
+.tv-quick-links--compact .tv-quick-link {
+  min-height: 125px;
+  padding: var(--space-sm);
+  gap: var(--space-xs);
+}
+
+.tv-quick-links--compact .tv-quick-link-title {
+  margin-top: auto;
+  font-size: var(--text-sm);
+}
+
+.tv-quick-links--compact .tv-quick-link-detail {
+  font-size: var(--text-xs);
+}
+
+/* =========================================
+   CARD — BASE
 ========================================= */
 
 .tv-quick-link {
@@ -946,50 +1063,65 @@ height: 68px;
 
 
 /* =========================================
-   TABLET
+   FEATURED — TABLET
 ========================================= */
 
 @media (max-width: 900px) {
-  .tv-quick-links {
+  .tv-quick-links--featured {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .tv-quick-link {
+  .tv-quick-links--featured .tv-quick-link {
     min-height: 140px;
   }
 }
 
 
 /* =========================================
-   MOBILE
+   FEATURED — MOBILE
 ========================================= */
 
 @media (max-width: 450px) {
-  .tv-quick-links {
+  .tv-quick-links--featured {
     gap: var(--space-xs);
   }
 
-  .tv-quick-link {
+  .tv-quick-links--featured .tv-quick-link {
     min-height: 125px;
     padding: var(--space-sm);
   }
 
-  .tv-quick-link-number {
+  .tv-quick-links--featured .tv-quick-link-number {
     font-size: 10px;
   }
 
-  .tv-quick-link-title {
+  .tv-quick-links--featured .tv-quick-link-title {
     font-size: var(--text-sm);
   }
 
-  .tv-quick-link-detail {
+  .tv-quick-links--featured .tv-quick-link-detail {
     font-size: var(--text-xs);
   }
+}
 
-  .tv-quick-link-arrow {
-    top: var(--space-sm);
-    right: var(--space-sm);
-  }
+
+/* =========================================
+   COMPACT — SIDEBAR CARD
+========================================= */
+
+.tv-quick-links--compact .tv-quick-link {
+  min-height: 0;
+  padding: var(--space-sm);
+  gap: var(--space-xs);
+}
+
+.tv-quick-links--compact .tv-quick-link-title {
+  margin-top: var(--space-sm);
+  font-size: var(--text-sm);
+}
+
+.tv-quick-links--compact .tv-quick-link-detail {
+  font-size: var(--text-xs);
 }
 
 
@@ -1003,3 +1135,4 @@ height: 68px;
     transition: none;
   }
 }
+

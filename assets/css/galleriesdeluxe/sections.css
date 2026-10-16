@@ -1,7 +1,7 @@
 .section-header {
   display: flex;
   padding: var(--space-lg) 0 var(--space-md);
-  gap: var(--space-md);
+  gap: var(--space-xs);
     flex-direction: column
 }
 
@@ -21,6 +21,11 @@
   margin: 0;
 }
 
+
+main > section.tv-filter-section > .section-header {
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid #d8d8d8;
+}
 
 @media (max-width: 650px) {
 
@@ -62,7 +67,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
-  margin: 32px 0 36px;
+ 
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .tv-filter {
@@ -778,14 +785,6 @@
 }
 
 
-/* =========================================================
-   SPACING
-========================================================= */
-
-.tv-filters {
-  margin-top: 20px;
-  margin-bottom: 24px;
-}
 
 
 /* =========================================================
@@ -954,6 +953,11 @@
   margin-inline: auto;
   color: var(--tv-black);
   box-sizing: border-box;
+}
+
+/* Wider editorial layout */
+.tv-editorial--wide {
+  max-width: 1400px;
 }
 
 /* Header */
@@ -1157,13 +1161,64 @@ main > section.tv-filter-section {
 }
 
 
-/* Shared content alignment */
+
+
+
+
+
+
+
 main > section.tv-filter-section > .section-header,
 main > section.tv-filter-section > .tv-filters,
-main > section.tv-filter-section > .tv-filter-count {
-  width: 100%;
-  max-width: 1200px;
-  padding-inline: 5vw;
+main > section.tv-filter-section > .tv-filter-count,
+main > section.tv-filter-section > .tv-see-do-grid {
+ width: calc(100% - 32px);
+  max-width: var(--tv-section-width, 1200px);
   margin-inline: auto;
+  padding-inline: 0;
   box-sizing: border-box;
+}
+
+
+
+@media (max-width: 650px) {
+  main > section.tv-filter-section > .section-header,
+  main > section.tv-filter-section > .tv-filters,
+  main > section.tv-filter-section > .tv-filter-count,
+  main > section.tv-filter-section > .tv-see-do-grid {
+    width: calc(100% - 32px);
+  }
+}
+
+main > section.tv-filter-section {
+  width: 100%;
+  padding-inline: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Full-width background styling */
+main > section.tv-filter-section > .tv-see-do-grid {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 255, 255, .7) 0 120px,
+      transparent 121px
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(0, 0, 0, .025) 0 180px,
+      transparent 181px
+    ),
+    var(--tv-vanilla);
+}
+
+/* Optional width variants */
+.tv-filter-section--wide {
+  --tv-section-width: 1400px;
+}
+
+.tv-filter-section--extra-wide {
+  --tv-section-width: 1600px;
 }
