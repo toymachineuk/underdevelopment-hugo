@@ -106,7 +106,32 @@
       {{ end }}
       defer></script>
 
-    {{ block "head-custom" . }}{{ end }}
+
+
+    {{/* Homepage district map popup */}}
+    {{ if .IsHome }}
+      {{ $districtMap := resources.Get "js/tbilisi-districts.js" }}
+
+      {{ if $districtMap }}
+        {{ if hugo.IsProduction }}
+          {{ $districtMap = $districtMap | minify | fingerprint }}
+        {{ end }}
+
+        <script
+          src="{{ $districtMap.RelPermalink }}"
+          {{ if hugo.IsProduction }}
+            integrity="{{ $districtMap.Data.Integrity }}"
+          {{ end }}
+          defer></script>
+      {{ end }}
+    {{ end }}
+
+
+    {{ block "head-custom" . }} 
+    
+    
+    
+    {{ end }}
 
     {{ if .IsHome }}
       {{ $migrationLink := "https://github.com/bep/galleriesdeluxe#sass-was-replaced-with-css-in-v060" }}

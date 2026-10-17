@@ -1,0 +1,654 @@
+<!-- =========================================
+     TBILISI DISTRICT NAVIGATION
+========================================= -->
+
+<section class="tv-district-explorer">
+
+
+
+  <nav class="tv-district-nav" aria-label="Tbilisi districts">
+    <button type="button" class="tv-district-btn" data-district="nadzaladevi">
+      Nadzaladevi
+    </button>
+    <button type="button" class="tv-district-btn" data-district="dighomi">
+      Dighomi
+    </button>
+    <button type="button" class="tv-district-btn" data-district="saburtalo">
+      Saburtalo
+    </button>
+    <button type="button" class="tv-district-btn" data-district="vake">
+      Vake
+    </button>
+    <button type="button" class="tv-district-btn" data-district="chugureti">
+      Chugureti
+    </button>
+    <button type="button" class="tv-district-btn" data-district="mtatsminda">
+      Mtatsminda
+    </button>
+    <button type="button" class="tv-district-btn" data-district="avlabari">
+      Avlabari
+    </button>
+    <button type="button" class="tv-district-btn" data-district="krtsanisi">
+      Krtsanisi
+    </button>
+    <button type="button" class="tv-district-btn" data-district="isani-samgori">
+      Isani / Samgori
+    </button>
+  </nav>
+
+</section>
+
+
+<!-- =========================================
+     UNIVERSAL DISTRICT MODAL
+========================================= -->
+
+<div
+  id="district-modal"
+  class="tv-district-modal"
+  aria-hidden="true"
+>
+  <div
+    class="tv-district-modal__overlay"
+    data-district-close
+  ></div>
+
+  <section
+    class="tv-district-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-label="District guide"
+    tabindex="-1"
+  >
+    <button
+      type="button"
+      class="tv-district-modal__close"
+      aria-label="Close district guide"
+      data-district-close
+    >
+      &times;
+    </button>
+
+    <div
+      class="tv-district-modal__content"
+      id="district-modal-content"
+    ></div>
+  </section>
+</div>
+
+
+<!-- =========================================
+     VAKE MODAL CONTENT
+     Compact preview — no carousels
+========================================= -->
+
+<template data-district-content="vake">
+
+  <article class="tv-district-preview tv-district--vake">
+
+    <!-- HERO -->
+
+    <header class="tv-district-preview__hero">
+
+      <div class="tv-district-preview__intro">
+
+        <span class="text-label">
+          EXPLORE TBILISI · DISTRICT GUIDE
+        </span>
+
+        <h2 class="title-lg">
+          Vake.<br>
+          A greener side of Tbilisi.
+        </h2>
+
+        <p class="text-md">
+          Leafy streets, relaxed cafés and spacious parks.
+          Discover a different side of Tbilisi, from Vake Park
+          to the hillside paths around Turtle Lake.
+        </p>
+
+        <div class="tv-district-tags">
+          <span>Parks & nature</span>
+          <span>Cafés & dining</span>
+          <span>Residential</span>
+        </div>
+
+      </div>
+
+      <div class="tv-district-preview__hero-image">
+        <img
+          src="/images/districts/vake-hero.jpg"
+          alt="Tree-lined streets in Vake, Tbilisi"
+          loading="lazy"
+        >
+        <span class="tv-district-image-label">
+          TBILISI, GEORGIA
+        </span>
+      </div>
+
+    </header>
+
+
+    <!-- PLACES -->
+
+    <section class="tv-district-preview__section">
+
+      <div class="tv-district-preview__section-header">
+        <span class="text-label">GO A LITTLE FURTHER</span>
+        <h3 class="title-xs">Places worth knowing.</h3>
+        <p class="text-md">
+          Green escapes, hillside views and Georgian heritage.
+        </p>
+      </div>
+
+      <div class="tv-district-preview__grid">
+
+        <article class="tv-district-preview-card">
+
+          <a
+            href="/articles/vake-park/"
+            class="tv-district-preview-card__image"
+          >
+            <img
+              src="/images/places/vake-park.jpg"
+              alt="Green paths and trees in Vake Park"
+              loading="lazy"
+            >
+            <span class="tv-district-card-category">
+              PARKS & NATURE
+            </span>
+          </a>
+
+          <div class="tv-district-preview-card__copy">
+            <h4>
+              <a href="/articles/vake-park/">Vake Park</a>
+            </h4>
+            <p>
+              A spacious urban park for a walk, a picnic
+              or a quiet break from the city.
+            </p>
+            <a
+              href="/articles/vake-park/"
+              class="tv-district-card-link"
+            >
+              Explore the park <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </article>
+
+
+        <article class="tv-district-preview-card">
+
+          <a
+            href="/articles/turtle-lake/"
+            class="tv-district-preview-card__image"
+          >
+            <img
+              src="/images/places/turtle-lake.jpg"
+              alt="Turtle Lake surrounded by wooded hills"
+              loading="lazy"
+            >
+            <span class="tv-district-card-category">
+              VIEWS & NATURE
+            </span>
+          </a>
+
+          <div class="tv-district-preview-card__copy">
+            <h4>
+              <a href="/articles/turtle-lake/">Turtle Lake</a>
+            </h4>
+            <p>
+              A hillside escape with walking paths, lake views
+              and places to stop for a drink.
+            </p>
+            <a
+              href="/articles/turtle-lake/"
+              class="tv-district-card-link"
+            >
+              Explore the lake <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </article>
+
+
+        <article class="tv-district-preview-card">
+
+          <a
+            href="/articles/open-air-museum/"
+            class="tv-district-preview-card__image"
+          >
+            <img
+              src="/images/places/open-air-museum.jpg"
+              alt="Traditional Georgian architecture at the Open Air Museum"
+              loading="lazy"
+            >
+            <span class="tv-district-card-category">
+              CULTURE & HERITAGE
+            </span>
+          </a>
+
+          <div class="tv-district-preview-card__copy">
+            <h4>
+              <a href="/articles/open-air-museum/">
+                Open Air Museum
+              </a>
+            </h4>
+            <p>
+              Traditional Georgian houses and buildings
+              gathered in a hillside outdoor museum.
+            </p>
+            <a
+              href="/articles/open-air-museum/"
+              class="tv-district-card-link"
+            >
+              Explore the museum <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="tv-district-preview__footer">
+        <span>EXPLORE AT YOUR OWN PACE</span>
+        <a href="/see-and-do/">All places to visit ↗</a>
+      </div>
+
+    </section>
+
+
+    <!-- FOOD -->
+
+    <section class="tv-district-preview__section tv-district-food">
+
+      <div class="tv-district-preview__section-header">
+        <span class="text-label">A TABLE IN VAKE</span>
+        <h3 class="title-xs">Good places to eat.</h3>
+        <p class="text-md">
+          Coffee stops, neighborhood favorites and places
+          to settle in for a meal.
+        </p>
+      </div>
+
+      <div class="tv-district-preview__grid">
+
+        <article class="tv-district-preview-card">
+
+          <a
+            href="/articles/eateries/"
+            class="tv-district-preview-card__image"
+          >
+            <img
+              src="/images/food/vake-cafe.jpg"
+              alt="A café in Vake"
+              loading="lazy"
+            >
+            <span class="tv-district-card-category">
+              SPECIALTY COFFEE
+            </span>
+          </a>
+
+          <div class="tv-district-preview-card__copy">
+            <h4>
+              <a href="/articles/eateries/">Coffee stops</a>
+            </h4>
+            <p>
+              Find a good coffee and a relaxed place
+              to start the day.
+            </p>
+            <a
+              href="/articles/eateries/"
+              class="tv-district-card-link"
+            >
+              Find a café <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </article>
+
+
+        <article class="tv-district-preview-card">
+
+          <a
+            href="/articles/eateries/"
+            class="tv-district-preview-card__image"
+          >
+            <img
+              src="/images/food/vake-dining.jpg"
+              alt="Restaurant dining in Tbilisi"
+              loading="lazy"
+            >
+            <span class="tv-district-card-category">
+              RESTAURANTS
+            </span>
+          </a>
+
+          <div class="tv-district-preview-card__copy">
+            <h4>
+              <a href="/articles/eateries/">Neighborhood dining</a>
+            </h4>
+            <p>
+              Explore Georgian cooking and contemporary menus.
+            </p>
+            <a
+              href="/articles/eateries/"
+              class="tv-district-card-link"
+            >
+              Find a restaurant <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </article>
+
+
+        <article class="tv-district-preview-card">
+
+          <a
+            href="/articles/eateries/"
+            class="tv-district-preview-card__image"
+          >
+            <img
+              src="/images/food/vake-wine.jpg"
+              alt="Georgian wine served at a wine bar"
+              loading="lazy"
+            >
+            <span class="tv-district-card-category">
+              WINE
+            </span>
+          </a>
+
+          <div class="tv-district-preview-card__copy">
+            <h4>
+              <a href="/articles/eateries/">Wine bars</a>
+            </h4>
+            <p>
+              Make time for Georgian wine and a slower evening.
+            </p>
+            <a
+              href="/articles/eateries/"
+              class="tv-district-card-link"
+            >
+              Explore wine bars <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+
+      <div class="tv-district-preview__footer">
+        <span>YOUR NEXT FAVORITE TABLE</span>
+        <a href="/articles/eateries/">All eateries ↗</a>
+      </div>
+
+    </section>
+
+
+    <!-- GETTING AROUND -->
+
+    <section class="tv-district-preview__transport">
+
+      <div class="tv-district-preview__transport-intro">
+        <span class="text-label">PRACTICAL NOTES</span>
+        <h3 class="title-xs">Getting around Vake.</h3>
+        <p class="text-md">
+          Vake is well connected by road, but unlike many
+          central neighborhoods, it doesn't have its own
+          metro station in the main district.
+        </p>
+      </div>
+
+      <div class="tv-district-preview__transport-items">
+
+        <article>
+          <span class="tv-transport-number">01</span>
+          <div>
+            <h4>Bus connections</h4>
+            <p>
+              Chavchavadze Avenue is a useful corridor for
+              reaching central Tbilisi. Check current routes
+              for your destination.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span class="tv-transport-number">02</span>
+          <div>
+            <h4>Walking & hills</h4>
+            <p>
+              The main avenue is relatively straightforward
+              to explore, but trips towards Turtle Lake and
+              the surrounding hills involve an incline.
+            </p>
+          </div>
+        </article>
+
+        <article>
+          <span class="tv-transport-number">03</span>
+          <div>
+            <h4>Getting to Turtle Lake</h4>
+            <p>
+              Consider the ropeway from Vake Park when
+              operating, or use a taxi. Check service status
+              before your visit.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- FULL GUIDE LINK -->
+
+    <footer class="tv-district-preview__cta">
+      <div>
+        <span class="text-label">WANT TO KNOW MORE?</span>
+        <h3 class="title-xs">Explore Vake in more detail.</h3>
+        <p class="text-md">
+          Find more places, practical tips and local recommendations
+          in the full district guide.
+        </p>
+      </div>
+
+      <a href="/districts/vake/" class="tv-district-preview__cta-link">
+        Explore the Vake guide <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+
+  </article>
+
+</template>
+
+
+<!-- =========================================
+     OTHER DISTRICT TEMPLATES
+     Add content to these as each guide is ready.
+========================================= -->
+
+<template data-district-content="nadzaladevi">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Nadzaladevi.</h2>
+      <p class="text-md">
+        Discover local neighborhoods and everyday life in this
+        part of Tbilisi.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Nadzaladevi.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/nadzaladevi/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="dighomi">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Dighomi.</h2>
+      <p class="text-md">
+        Explore north-western Tbilisi, from residential
+        neighborhoods to green spaces.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Dighomi.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/dighomi/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="saburtalo">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Saburtalo.</h2>
+      <p class="text-md">
+        A lively part of modern Tbilisi, with cafés, shopping
+        and university neighborhoods.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Saburtalo.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/saburtalo/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="chugureti">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Chugureti.</h2>
+      <p class="text-md">
+        Historic streets, independent cafés and creative spaces
+        give this neighborhood its character.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Chugureti.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/chugureti/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="mtatsminda">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Mtatsminda.</h2>
+      <p class="text-md">
+        Discover hillside views, historic streets and
+        well-known city landmarks.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Mtatsminda.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/mtatsminda/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="avlabari">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Avlabari.</h2>
+      <p class="text-md">
+        A historic neighborhood with churches, local streets
+        and views across the river.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Avlabari.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/avlabari/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="krtsanisi">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Krtsanisi.</h2>
+      <p class="text-md">
+        Discover a quieter southern part of Tbilisi,
+        with residential streets and green surroundings.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Krtsanisi.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/krtsanisi/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>
+
+
+<template data-district-content="isani-samgori">
+  <article class="tv-district-preview">
+    <header class="tv-district-preview__simple-hero">
+      <span class="text-label">EXPLORE TBILISI · DISTRICT GUIDE</span>
+      <h2 class="title-lg">Isani / Samgori.</h2>
+      <p class="text-md">
+        Explore eastern Tbilisi, with local markets,
+        residential areas and transport connections.
+      </p>
+    </header>
+    <footer class="tv-district-preview__cta">
+      <div>
+        <h3 class="title-xs">Explore Isani / Samgori.</h3>
+        <p class="text-md">More places and practical information coming soon.</p>
+      </div>
+      <a href="/districts/isani-samgori/" class="tv-district-preview__cta-link">
+        District guide ↗
+      </a>
+    </footer>
+  </article>
+</template>

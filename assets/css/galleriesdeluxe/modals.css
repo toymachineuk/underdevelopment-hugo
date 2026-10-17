@@ -1,0 +1,945 @@
+
+/* =========================================
+   DISTRICT EXPLORER
+========================================= */
+
+.tv-district-explorer {
+  --district-explorer-gap: 12px;
+
+  width: 100%;
+  margin-inline: auto;
+}
+
+.tv-district-explorer__header {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.tv-district-explorer__header .text-label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.tv-district-explorer__header h2 {
+  margin: 0 0 14px;
+}
+
+.tv-district-explorer__header p {
+  margin: 0;
+  max-width: 580px;
+}
+
+
+/* =========================================
+   DISTRICT BUTTONS
+========================================= */
+
+.tv-district-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--district-explorer-gap);
+}
+
+.tv-district-btn {
+  --district-color: var(--color-secondary, #fff1dc);
+  --district-color-light: #f8f5f0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 10px 17px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  background: var(--district-color-light);
+  color: var(--black, #000);
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.tv-district-btn:hover {
+  background: var(--district-color);
+  transform: translateY(-2px);
+}
+
+.tv-district-btn:focus-visible {
+  outline: 2px solid var(--black, #000);
+  outline-offset: 3px;
+}
+
+
+/* District button palette */
+
+.tv-district-btn[data-district="nadzaladevi"] {
+  --district-color: #A1AA88;
+  --district-color-light: #F0F1E9;
+}
+
+.tv-district-btn[data-district="dighomi"] {
+  --district-color: #EBAAA3;
+  --district-color-light: #FAEFED;
+}
+
+.tv-district-btn[data-district="saburtalo"] {
+  --district-color: #91AABD;
+  --district-color-light: #EAF0F4;
+}
+
+.tv-district-btn[data-district="vake"] {
+  --district-color: #BFA9C9;
+  --district-color-light: #F2EAF5;
+}
+
+.tv-district-btn[data-district="chugureti"] {
+  --district-color: #EAC587;
+  --district-color-light: #FAF3E5;
+}
+
+.tv-district-btn[data-district="mtatsminda"] {
+  --district-color: #F5A36F;
+  --district-color-light: #FEF0E6;
+}
+
+.tv-district-btn[data-district="avlabari"] {
+  --district-color: #D99791;
+  --district-color-light: #F8EAE8;
+}
+
+.tv-district-btn[data-district="krtsanisi"] {
+  --district-color: #C5CBA9;
+  --district-color-light: #F1F2E9;
+}
+
+.tv-district-btn[data-district="isani-samgori"] {
+  --district-color: #D2BFA9;
+  --district-color-light: #F4EFE9;
+}
+
+
+/* =========================================
+   UNIVERSAL DISTRICT MODAL
+========================================= */
+
+.tv-district-modal {
+  --district-color: #BFA9C9;
+  --district-color-light: #F2EAF5;
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 220ms ease,
+    visibility 220ms ease;
+}
+
+.tv-district-modal[data-district="nadzaladevi"] {
+  --district-color: #A1AA88;
+  --district-color-light: #F0F1E9;
+}
+
+.tv-district-modal[data-district="dighomi"] {
+  --district-color: #EBAAA3;
+  --district-color-light: #FAEFED;
+}
+
+.tv-district-modal[data-district="saburtalo"] {
+  --district-color: #91AABD;
+  --district-color-light: #EAF0F4;
+}
+
+.tv-district-modal[data-district="vake"] {
+  --district-color: #BFA9C9;
+  --district-color-light: #F2EAF5;
+}
+
+.tv-district-modal[data-district="chugureti"] {
+  --district-color: #EAC587;
+  --district-color-light: #FAF3E5;
+}
+
+.tv-district-modal[data-district="mtatsminda"] {
+  --district-color: #F5A36F;
+  --district-color-light: #FEF0E6;
+}
+
+.tv-district-modal[data-district="avlabari"] {
+  --district-color: #D99791;
+  --district-color-light: #F8EAE8;
+}
+
+.tv-district-modal[data-district="krtsanisi"] {
+  --district-color: #C5CBA9;
+  --district-color-light: #F1F2E9;
+}
+
+.tv-district-modal[data-district="isani-samgori"] {
+  --district-color: #D2BFA9;
+  --district-color-light: #F4EFE9;
+}
+
+.tv-district-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tv-district-modal__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgb(20 20 20 / 55%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.tv-district-modal__panel {
+  position: relative;
+  z-index: 1;
+
+  width: min(100%, 1000px);
+  max-height: calc(100vh - 48px);
+  max-height: calc(100dvh - 48px);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  background: var(--white, #fff);
+  color: var(--black, #000);
+
+  border-radius: 18px;
+  box-shadow: 0 24px 90px rgb(0 0 0 / 20%);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--district-color) transparent;
+
+  transform: translateY(14px);
+  transition: transform 220ms ease;
+}
+
+.tv-district-modal.is-open .tv-district-modal__panel {
+  transform: translateY(0);
+}
+
+.tv-district-modal__panel:focus {
+  outline: none;
+}
+
+.tv-district-modal__close {
+  position: sticky;
+  top: 14px;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  margin: 14px 14px -56px auto;
+
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 50%;
+
+  background: var(--white, #fff);
+  color: var(--black, #000);
+
+  font: inherit;
+  font-size: 28px;
+  line-height: 1;
+
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.tv-district-modal__close:hover {
+  background: var(--district-color-light);
+  transform: rotate(90deg);
+}
+
+.tv-district-modal__close:focus-visible {
+  outline: 2px solid var(--black, #000);
+  outline-offset: 3px;
+}
+
+.tv-district-modal__content {
+  min-width: 0;
+  padding: 28px 34px 34px;
+}
+
+body.district-modal-open {
+  overflow: hidden;
+}
+
+
+/* =========================================
+   DISTRICT PREVIEW — SHARED TYPOGRAPHY
+========================================= */
+
+.tv-district-preview {
+  --preview-accent: var(--district-color, #BFA9C9);
+  --preview-tint: var(--district-color-light, #F2EAF5);
+
+  min-width: 0;
+  color: var(--black, #000);
+}
+
+.tv-district-preview *,
+.tv-district-preview *::before,
+.tv-district-preview *::after {
+  box-sizing: border-box;
+}
+
+.tv-district-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tv-district-preview a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tv-district-preview a:focus-visible {
+  outline: 2px solid var(--black, #000);
+  outline-offset: 3px;
+}
+
+.tv-district-preview p {
+  max-width: 65ch;
+}
+
+.tv-district-preview h2,
+.tv-district-preview h3,
+.tv-district-preview h4,
+.tv-district-preview p {
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   PREVIEW HERO
+========================================= */
+
+.tv-district-preview__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.85fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+
+  padding: 12px 0 34px;
+}
+
+.tv-district-preview__intro {
+  min-width: 0;
+}
+
+.tv-district-preview__intro > .text-label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.tv-district-preview__intro h2 {
+  margin: 0 0 16px;
+}
+
+.tv-district-preview__intro p {
+  margin: 0;
+}
+
+.tv-district-preview__hero-image {
+  position: relative;
+  min-width: 0;
+  height: 290px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--preview-tint);
+}
+
+.tv-district-preview__hero-image img {
+  position: absolute;
+  inset: 0;
+}
+
+.tv-district-image-label {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  padding: 7px 10px;
+  border-radius: 3px;
+
+  background: rgb(255 255 255 / 90%);
+  color: var(--black, #000);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.tv-district-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.tv-district-tags span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 11px;
+  border-radius: 999px;
+
+  background: var(--preview-tint);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+
+/* Simple hero for districts still being developed */
+
+.tv-district-preview__simple-hero {
+  padding: 32px 0;
+}
+
+.tv-district-preview__simple-hero > .text-label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.tv-district-preview__simple-hero h2 {
+  margin: 0 0 14px;
+}
+
+.tv-district-preview__simple-hero p {
+  margin: 0;
+}
+
+
+/* =========================================
+   PREVIEW SECTIONS
+========================================= */
+
+.tv-district-preview__section {
+  padding: 28px 0;
+  border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+.tv-district-preview__section-header {
+  max-width: 650px;
+  margin-bottom: 22px;
+}
+
+.tv-district-preview__section-header > .text-label {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.tv-district-preview__section-header h3 {
+  margin: 0 0 9px;
+}
+
+.tv-district-preview__section-header p {
+  margin: 0;
+}
+
+.tv-district-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tv-district-preview-card {
+  min-width: 0;
+  overflow: hidden;
+
+  border: 1px solid rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  background: var(--white, #fff);
+}
+
+.tv-district-preview-card__image {
+  position: relative;
+  display: block;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  background: var(--preview-tint);
+}
+
+.tv-district-preview-card__image img {
+  transition: transform 300ms ease;
+}
+
+.tv-district-preview-card__image:hover img {
+  transform: scale(1.04);
+}
+
+.tv-district-card-category {
+  position: absolute;
+  left: 9px;
+  bottom: 9px;
+
+  max-width: calc(100% - 18px);
+  padding: 6px 8px;
+
+  background: var(--white, #fff);
+  color: var(--black, #000);
+
+  border-radius: 3px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.tv-district-preview-card__copy {
+  padding: 15px;
+}
+
+.tv-district-preview-card__copy h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.tv-district-preview-card__copy p {
+  margin: 0 0 13px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgb(0 0 0 / 72%);
+}
+
+.tv-district-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tv-district-card-link span {
+  transition: transform 180ms ease;
+}
+
+.tv-district-card-link:hover span {
+  transform: translate(2px, -2px);
+}
+
+.tv-district-preview__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.tv-district-preview__footer > span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgb(0 0 0 / 55%);
+}
+
+.tv-district-preview__footer > a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   GETTING AROUND
+========================================= */
+
+.tv-district-preview__transport {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 32px;
+
+  padding: 28px 0;
+  border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+.tv-district-preview__transport-intro > .text-label {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.tv-district-preview__transport-intro h3 {
+  margin: 0 0 10px;
+}
+
+.tv-district-preview__transport-intro p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.tv-district-preview__transport-items {
+  display: grid;
+  gap: 0;
+}
+
+.tv-district-preview__transport-items article {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 13px;
+
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(0 0 0 / 9%);
+}
+
+.tv-district-preview__transport-items article:first-child {
+  padding-top: 0;
+}
+
+.tv-district-preview__transport-items article:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.tv-transport-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: var(--preview-tint);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tv-district-preview__transport-items h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tv-district-preview__transport-items p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgb(0 0 0 / 72%);
+}
+
+
+/* =========================================
+   FULL GUIDE CTA
+========================================= */
+
+.tv-district-preview__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--preview-tint);
+}
+
+.tv-district-preview__cta > div {
+  min-width: 0;
+}
+
+.tv-district-preview__cta .text-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tv-district-preview__cta h3 {
+  margin: 0 0 8px;
+}
+
+.tv-district-preview__cta p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.tv-district-preview__cta-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+
+  padding: 12px 15px;
+  border: 1px solid var(--black, #000);
+  border-radius: 999px;
+
+  background: var(--black, #000);
+  color: var(--white, #fff) !important;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.tv-district-preview__cta-link:hover {
+  background: transparent;
+  color: var(--black, #000) !important;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .tv-district-btn,
+  .tv-district-modal,
+  .tv-district-modal__panel,
+  .tv-district-modal__close,
+  .tv-district-preview-card__image img,
+  .tv-district-card-link span {
+    transition: none;
+  }
+
+  .tv-district-btn:hover,
+  .tv-district-modal__close:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 760px) {
+  .tv-district-modal {
+    padding: 16px;
+  }
+
+  .tv-district-modal__panel {
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    border-radius: 14px;
+  }
+
+  .tv-district-modal__content {
+    padding: 24px;
+  }
+
+  .tv-district-preview__hero {
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 0.8fr);
+    gap: 22px;
+  }
+
+  .tv-district-preview__hero-image {
+    height: 240px;
+  }
+
+  .tv-district-preview__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tv-district-preview__transport {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .tv-district-preview__cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+  .tv-district-explorer__header {
+    margin-bottom: 20px;
+  }
+
+  .tv-district-nav {
+    gap: 8px;
+  }
+
+  .tv-district-btn {
+    min-height: 39px;
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  /* Bottom-sheet modal on mobile */
+
+  .tv-district-modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .tv-district-modal__panel {
+    width: 100%;
+    max-height: 92vh;
+    max-height: 92dvh;
+
+    border-radius: 18px 18px 0 0;
+
+    transform: translateY(24px);
+  }
+
+  .tv-district-modal.is-open .tv-district-modal__panel {
+    transform: translateY(0);
+  }
+
+  .tv-district-modal__close {
+    top: 10px;
+    width: 38px;
+    height: 38px;
+    margin: 10px 10px -48px auto;
+  }
+
+  .tv-district-modal__content {
+    padding: 22px 18px 28px;
+  }
+
+  .tv-district-preview__hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 6px;
+    padding-bottom: 25px;
+  }
+
+  .tv-district-preview__hero-image {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .tv-district-preview__section {
+    padding: 24px 0;
+  }
+
+  .tv-district-preview__section-header {
+    margin-bottom: 16px;
+  }
+
+  .tv-district-preview__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .tv-district-preview-card {
+    display: grid;
+    grid-template-columns: minmax(105px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .tv-district-preview-card__image {
+    min-height: 150px;
+    aspect-ratio: auto;
+  }
+
+  .tv-district-preview-card__copy {
+    padding: 12px;
+  }
+
+  .tv-district-preview-card__copy h4 {
+    font-size: 15px;
+  }
+
+  .tv-district-preview-card__copy p {
+    font-size: 12px;
+  }
+
+  .tv-district-card-category {
+    left: 6px;
+    bottom: 6px;
+    padding: 5px 6px;
+    font-size: 8px;
+  }
+
+  .tv-district-preview__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tv-district-preview__transport {
+    padding: 24px 0;
+  }
+
+  .tv-district-preview__cta {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .tv-district-preview__cta-link {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-editorial-districts {
+  width: 100%;
+  margin: 32px 0 48px;
+}
+
+@media (max-width: 767px) {
+  .tv-editorial-districts {
+    margin: 24px 0 36px;
+  }
+}
