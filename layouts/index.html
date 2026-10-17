@@ -222,7 +222,7 @@
 
 {{ partial "strips/strip--transport.html" . }}
 
-
+ 
 
 
 <section class="tv-editorial tv-editorial--index-page   tv-filter-section--wide tv-editorial--wide  tv-green section-md">
@@ -240,12 +240,7 @@
 
     <div class="tv-editorial-intro">
    
-      <p class="text-sm tv-section-description">
-       Find your neighbourhood.
-Choose an area to explore its character, cafés and places to visit.
-From leafy Vake to the old streets of Avlabari, explore
-      Tbilisi's neighbourhoods, local cafés and places worth visiting.
-</p>
+ {{ partial "strips/tbilisi-districts.html" . }}
 
 
     </div>
@@ -256,7 +251,7 @@ From leafy Vake to the old streets of Avlabari, explore
 
   <!-- District selector -->
   <div class="tv-editorial-districts">
-    {{ partial "strips/tbilisi-districts.html" . }}
+   
   </div>
 
   <div class="tv-editorial-list">
@@ -273,6 +268,12 @@ From leafy Vake to the old streets of Avlabari, explore
   café districts. Choose an area to discover its landmarks, local
   favourites and places worth exploring.
 </p>
+      <p class="text-sm tv-section-description">
+       Find your neighbourhood.
+Choose an area to explore its character, cafés and places to visit.
+From leafy Vake to the old streets of Avlabari, explore
+      Tbilisi's neighbourhoods, local cafés and places worth visiting.
+</p>
 
       </div>
 
@@ -284,11 +285,7 @@ From leafy Vake to the old streets of Avlabari, explore
     </article>
 
     <article class="tv-editorial-row">
-      <img
-        src="/img/maps/tbilisi-metro-map.jpg"
-        alt="Multi-currency payment card"
-        loading="lazy"
-      >
+     {{ partial "carousels/tbilisi-gallery.html" . }}
 
       <div class="tv-editorial-content">
         <span class="text-label">02 / CURRENCY EXCHANGE</span>
@@ -304,19 +301,7 @@ From leafy Vake to the old streets of Avlabari, explore
       </div>
     </article>
 
-        <article class="tv-editorial-row">
 
-
-      <div class="tv-editorial-content">
-        <span class="text-label">01 / EVERYDAY PAYMENTS</span>
-        <h3 class="title-xxs">Contactless cards</h3>
-        <p class="text-sm">
-      Contactless cards, Apple Pay and Google Pay are convenient options wherever supported.
-        </p>
-      </div>
-
-  {{ partial "carousels/tbilisi-gallery.html" . }}
-    </article>
 
   </div>
 

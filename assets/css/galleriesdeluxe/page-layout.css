@@ -222,3 +222,130 @@
   aspect-ratio: auto;
   object-fit: contain;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   NEIGHBOURHOOD SECTION — SPACING
+===================================== */
+
+.tv-editorial--index-page {
+  padding-top: clamp(40px, 4vw, 64px);
+  padding-bottom: clamp(40px, 4vw, 64px);
+}
+
+.tv-editorial--index-page .tv-editorial-header {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.tv-editorial--index-page .tv-editorial-districts {
+  margin-bottom: clamp(28px, 3vw, 44px);
+}
+
+.tv-editorial--index-page .tv-editorial-list {
+  margin-top: 0;
+}
