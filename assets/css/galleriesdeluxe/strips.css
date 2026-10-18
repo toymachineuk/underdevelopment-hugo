@@ -669,8 +669,8 @@ padding-top: 8vw;
 
 
 .tv-super-narrow {
-  padding-top: var(--space-md);
-  padding-bottom: var(--space-md);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
 }
 
 /* =====================================
@@ -1049,8 +1049,7 @@ padding-top: 8vw;
 ===================================== */
 
 .transport-strip {
- background: radial-gradient( circle at 90% 10%, rgba(255, 255, 255, .7) 0 120px, transparent 121px), radial-gradient( circle at 5% 90%, rgba(0, 0, 0, .025) 0 180px, transparent 181px), var(--tv-pearl);
-margin-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 

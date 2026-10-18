@@ -339,7 +339,9 @@
 }
 
 .tv-editorial--index-page .tv-editorial-header {
-  margin-bottom: clamp(40px, 5vw, 64px);
+ margin-bottom: var(--space-sm);
+  padding: 0;
+
 }
 
 .tv-editorial--index-page .tv-editorial-districts {
@@ -348,4 +350,175 @@
 
 .tv-editorial--index-page .tv-editorial-list {
   margin-top: 0;
+}
+
+.tv-editorial--index-page .tv-editorial-row {
+
+  padding: var(--space-xs) 0 var(--space-sm);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   NEIGHBOURHOOD EDITORIAL
+===================================== */
+
+.tv-editorial--index-page {
+  padding-block: clamp(40px, 5vw, 72px);
+}
+
+/* Header: headline left, district selector right */
+
+.tv-editorial--index-page .tv-editorial-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(32px, 6vw, 80px);
+  margin-bottom: clamp(32px, 4vw, 52px);
+}
+
+.tv-editorial--index-page .tv-editorial-heading {
+  max-width: 460px;
+  min-width: 0;
+}
+
+.tv-editorial--index-page .tv-editorial-heading .title-sm {
+  margin: 10px 0 16px;
+  font-size: clamp(36px, 4.2vw, 52px);
+  line-height: 1;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+.tv-editorial--index-page .tv-editorial-heading .text-sm {
+  max-width: 360px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* District selector */
+
+.tv-editorial--index-page .tv-editorial-intro {
+  min-width: 0;
+}
+
+/* Main feature panel */
+
+.tv-editorial--index-page .tv-neighbourhood-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+
+  padding: clamp(24px, 4vw, 52px);
+  background: var(--tv-white);
+  border-radius: 8px;
+}
+
+/* Feature copy */
+
+.tv-editorial--index-page .tv-neighbourhood-copy {
+  max-width: 390px;
+  min-width: 0;
+}
+
+.tv-editorial--index-page .tv-neighbourhood-copy .title-xxs {
+  margin: 0 0 16px;
+  font-size: clamp(25px, 2.5vw, 32px);
+  line-height: 1.1;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+.tv-editorial--index-page .tv-neighbourhood-copy .text-sm {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Map */
+
+.tv-editorial--index-page .tv-neighbourhood-map {
+  min-width: 0;
+}
+
+.tv-editorial--index-page .tv-neighbourhood-map img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .tv-editorial--index-page .tv-editorial-header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .tv-editorial--index-page .tv-editorial-heading .title-sm {
+    max-width: 390px;
+    font-size: clamp(36px, 9vw, 44px);
+  }
+
+  .tv-editorial--index-page .tv-neighbourhood-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .tv-editorial--index-page .tv-neighbourhood-copy {
+    max-width: none;
+  }
+
+  .tv-editorial--index-page .tv-neighbourhood-map {
+    grid-row: 1;
+  }
 }

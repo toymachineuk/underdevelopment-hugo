@@ -1,131 +1,63 @@
-
-/* =========================================
-   DISTRICT EXPLORER
-========================================= */
-
-.tv-district-explorer {
-  --district-explorer-gap: 12px;
-
-  width: 100%;
-  margin-inline: auto;
-}
-
-.tv-district-explorer__header {
-  max-width: 680px;
-  margin-bottom: 28px;
-}
-
-.tv-district-explorer__header .text-label {
-  display: block;
-  margin-bottom: 12px;
-}
-
-.tv-district-explorer__header h2 {
-  margin: 0 0 14px;
-}
-
-.tv-district-explorer__header p {
-  margin: 0;
-  max-width: 580px;
-}
-
-
-/* =========================================
-   DISTRICT BUTTONS
-========================================= */
-
-.tv-district-nav {
+/* District selector */
+.tv-editorial--index-page .tv-district-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--district-explorer-gap);
+  gap: 10px;
+  width: 100%;
+  max-width: 480px;
 }
 
-.tv-district-btn {
-  --district-color: var(--color-secondary, #fff1dc);
-  --district-color-light: #f8f5f0;
-
+.tv-editorial--index-page .tv-district-btn {
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  min-height: 42px;
-  padding: 10px 17px;
+  min-height: 40px;
+  padding: 10px 16px;
 
-  border: 1px solid transparent;
+  border: 1px solid rgb(0 0 0 / 18%);
   border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
 
-  background: var(--district-color-light);
-  color: var(--black, #000);
-
-  font: inherit;
-  font-size: 14px;
+  color: var(--tv-black);
+  font-family: inherit;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.2;
-
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
+
   transition:
     background-color 180ms ease,
     color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
+    border-color 180ms ease;
 }
 
-.tv-district-btn:hover {
-  background: var(--district-color);
-  transform: translateY(-2px);
+.tv-editorial--index-page .tv-district-btn:hover,
+.tv-editorial--index-page .tv-district-btn:focus-visible {
+  background: var(--tv-green-dark);
+  border-color: var(--tv-green-dark);
+  color: var(--tv-white);
 }
 
-.tv-district-btn:focus-visible {
-  outline: 2px solid var(--black, #000);
+.tv-editorial--index-page .tv-district-btn:focus-visible {
+  outline: 2px solid var(--tv-green-dark);
   outline-offset: 3px;
 }
 
+@media (max-width: 700px) {
+  .tv-editorial--index-page .tv-district-nav {
+    gap: 8px;
+  }
 
-/* District button palette */
-
-.tv-district-btn[data-district="nadzaladevi"] {
-  --district-color: #A1AA88;
-  --district-color-light: #F0F1E9;
-}
-
-.tv-district-btn[data-district="dighomi"] {
-  --district-color: #EBAAA3;
-  --district-color-light: #FAEFED;
-}
-
-.tv-district-btn[data-district="saburtalo"] {
-  --district-color: #91AABD;
-  --district-color-light: #EAF0F4;
-}
-
-.tv-district-btn[data-district="vake"] {
-  --district-color: #BFA9C9;
-  --district-color-light: #F2EAF5;
-}
-
-.tv-district-btn[data-district="chugureti"] {
-  --district-color: #EAC587;
-  --district-color-light: #FAF3E5;
-}
-
-.tv-district-btn[data-district="mtatsminda"] {
-  --district-color: #F5A36F;
-  --district-color-light: #FEF0E6;
-}
-
-.tv-district-btn[data-district="avlabari"] {
-  --district-color: #D99791;
-  --district-color-light: #F8EAE8;
-}
-
-.tv-district-btn[data-district="krtsanisi"] {
-  --district-color: #C5CBA9;
-  --district-color-light: #F1F2E9;
-}
-
-.tv-district-btn[data-district="isani-samgori"] {
-  --district-color: #D2BFA9;
-  --district-color-light: #F4EFE9;
+  .tv-editorial--index-page .tv-district-btn {
+    min-height: 38px;
+    padding: 9px 13px;
+    font-size: 12px;
+  }
 }
 
 

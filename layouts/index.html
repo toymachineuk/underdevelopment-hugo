@@ -223,87 +223,63 @@
 {{ partial "strips/strip--transport.html" . }}
 
  
+<section class="tv-editorial tv-editorial--index-page tv-filter-section--wide tv-editorial--wide tv-green section-md">
 
-
-<section class="tv-editorial tv-editorial--index-page   tv-filter-section--wide tv-editorial--wide  tv-green section-md">
-
-  <div class="tv-editorial-header">
+  <header class="tv-editorial-header">
 
     <div class="tv-editorial-heading">
-      <span class="text-label">Travel essentials · 02</span>
-      <h2 class="title-sm">A city worth getting lost in.</h2>
+      <span class="text-label">TRAVEL ESSENTIALS · 02</span>
 
-      
+      <h2 class="title-sm">
+        A city worth getting lost in.
+      </h2>
 
-
+      <p class="text-sm">
+        Find your corner of Tbilisi. Explore the neighbourhoods
+        that make the city unique.
+      </p>
     </div>
 
     <div class="tv-editorial-intro">
-   
- {{ partial "strips/tbilisi-districts.html" . }}
+      {{ partial "strips/tbilisi-districts.html" . }}
+    </div>
 
+  </header>
+
+   {{ partial "carousels/tbilisi-gallery.html" . }}
+
+
+  <article class="tv-neighbourhood-feature">
+
+    <div class="tv-neighbourhood-copy">
+
+      <span class="text-label">YOUR NEIGHBOURHOOD GUIDE</span>
+
+      <h3 class="title-xxs">
+        One city. Many different worlds.
+      </h3>
+
+      <p class="text-sm">
+        From leafy streets and independent cafés to historic
+        balconies and lively local markets, every neighbourhood
+        offers a different way to experience Tbilisi.
+      </p>
+
+      <a class="tv-button-link" href="/districts/">
+        Explore the districts →
+      </a>
 
     </div>
 
-
-
-  </div>
-
-  <!-- District selector -->
-  <div class="tv-editorial-districts">
-   
-  </div>
-
-  <div class="tv-editorial-list">
-
-    <article class="tv-editorial-row tv-editorial-row--map">
-
-
-      <div class="tv-editorial-content">
-      <span class="text-label">01 / FIND YOUR BEARINGS</span>
-<h3 class="title-xxs">Explore Tbilisi by neighbourhood</h3>
-<p class="text-sm">
-  Every part of Tbilisi has its own character, from the historic
-  streets of the Old Town to leafy residential avenues and creative
-  café districts. Choose an area to discover its landmarks, local
-  favourites and places worth exploring.
-</p>
-      <p class="text-sm tv-section-description">
-       Find your neighbourhood.
-Choose an area to explore its character, cafés and places to visit.
-From leafy Vake to the old streets of Avlabari, explore
-      Tbilisi's neighbourhoods, local cafés and places worth visiting.
-</p>
-
-      </div>
-
-            <img
-        src="/img/maps/tbilisi.png"
-        alt="Contactless payment options"
+    <div class="tv-neighbourhood-map">
+      <img
+        src="/img/maps/tbilisi-map.jpg"
+        alt="Illustrated map of Tbilisi neighbourhoods"
         loading="lazy"
       >
-    </article>
+    </div>
 
-    <article class="tv-editorial-row">
-     {{ partial "carousels/tbilisi-gallery.html" . }}
-
-      <div class="tv-editorial-content">
-        <span class="text-label">02 / CURRENCY EXCHANGE</span>
-        <h3 class="title-xxs">Check Your Exchange Fees</h3>
-        <p class="text-sm">
-          Compare your bank's fees with multi-currency
-          services such as Revolut. Rates, limits and
-          additional charges depend on your plan.
-        </p>
-        <a class="tv-button-link" href="https://www.revolut.com/">
-          Explore Revolut →
-        </a>
-      </div>
-    </article>
-
-
-
-  </div>
+  </article>
 
 </section>
 
@@ -311,6 +287,7 @@ From leafy Vake to the old streets of Avlabari, explore
 
 
 
+ 
 
 
 
