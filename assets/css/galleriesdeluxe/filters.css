@@ -18,6 +18,20 @@
   transform: none;
 }
 
+
+.vertical-badge.solo {
+  width:24px;
+  height:24px;
+  background-color: black;
+}
+
+
+
+
+
+
+
+
 /* CATEGORY ICON BOX */
 .vertical-badge .tv-category {
   position: static !important;

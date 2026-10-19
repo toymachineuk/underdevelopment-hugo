@@ -1464,10 +1464,8 @@ padding-top: 8vw;
 
   flex-shrink: 0;
 
-  padding: 7px 8px;
+padding-right:5px;
 
-  background: var(--tv-white);
-  border: 1px solid var(--tv-pearl);
   border-radius: 4px;
 
   color: var(--tv-black);
@@ -1500,8 +1498,8 @@ padding-top: 8vw;
   align-items: center;
   justify-content: center;
 
-  width: 26px;
-  height: 26px;
+  width: 36px;
+  height: 36px;
 
   flex-shrink: 0;
 

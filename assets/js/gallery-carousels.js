@@ -1,231 +1,168 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.tv-destination-carousel').forEach((carousel) => {
 
     const track = carousel.querySelector('.tv-destination-track');
-
     const cards = Array.from(
       carousel.querySelectorAll('.tv-destination-card')
     );
 
-    const nextButton = carousel.querySelector(
-      '.tv-destination-next'
-    );
-
-    const prevButton = carousel.querySelector(
-      '.tv-destination-prev'
-    );
+    const nextButton = carousel.querySelector('.tv-destination-next');
+    const prevButton = carousel.querySelector('.tv-destination-prev');
 
     if (!track || !cards.length) return;
 
 
-    /* --------------------------------
-       FIND ACTIVE CARD
-    -------------------------------- */
+    /* ========================================
+       ACTIVE CARD
+    ======================================== */
+
+    let activeIndex = 0;
+    let scrollFrame = null;
+    let scrollTimeout = null;
 
     function updateActiveCard() {
 
       const trackRect = track.getBoundingClientRect();
+      const trackCenter = trackRect.left + track.clientWidth / 2;
 
-      const trackCenter =
-        trackRect.left + trackRect.width / 2;
-
-      let closestCard = null;
+      let closestIndex = 0;
       let closestDistance = Infinity;
 
-      cards.forEach((card) => {
+      cards.forEach((card, index) => {
 
         const rect = card.getBoundingClientRect();
-
-        const cardCenter =
-          rect.left + rect.width / 2;
-
-        const distance =
-          Math.abs(trackCenter - cardCenter);
+        const cardCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(trackCenter - cardCenter);
 
         if (distance < closestDistance) {
           closestDistance = distance;
-          closestCard = card;
+          closestIndex = index;
         }
 
       });
 
+      activeIndex = closestIndex;
 
-      cards.forEach((card) => {
-        card.classList.remove('is-active');
+      cards.forEach((card, index) => {
+        card.classList.toggle('is-active', index === activeIndex);
       });
 
-
-      if (closestCard) {
-        closestCard.classList.add('is-active');
-      }
-
-
-      /* --------------------------------
-         UPDATE NAVIGATION BUTTONS
-      -------------------------------- */
-
-      const activeIndex =
-        closestCard
-          ? cards.indexOf(closestCard)
-          : 0;
-
       if (prevButton) {
-        prevButton.disabled =
-          activeIndex <= 0;
+        prevButton.disabled = activeIndex === 0;
       }
 
       if (nextButton) {
-        nextButton.disabled =
-          activeIndex >= cards.length - 1;
+        nextButton.disabled = activeIndex === cards.length - 1;
       }
 
     }
 
 
-    /* --------------------------------
+    /* ========================================
        SCROLL TO CARD
-    -------------------------------- */
+    ======================================== */
 
     function scrollToCard(index) {
 
-      if (index < 0) {
-        index = 0;
-      }
-
-      if (index >= cards.length) {
-        index = cards.length - 1;
-      }
+      index = Math.max(0, Math.min(index, cards.length - 1));
 
       const card = cards[index];
 
       if (!card) return;
 
+      const trackRect = track.getBoundingClientRect();
+      const cardRect = card.getBoundingClientRect();
 
-      const trackRect =
-        track.getBoundingClientRect();
+      // Calculate the card's center relative to the scroll position.
+      // This remains accurate when cards overlap and scale.
 
-      const cardRect =
-        card.getBoundingClientRect();
+      const cardCenter =
+        track.scrollLeft +
+        cardRect.left +
+        cardRect.width / 2 -
+        trackRect.left;
 
+      const targetScroll =
+        cardCenter - track.clientWidth / 2;
 
-      const offset =
-        cardRect.left -
-        trackRect.left -
-        (trackRect.width - cardRect.width) / 2;
-
-
-      track.scrollBy({
-        left: offset,
+      track.scrollTo({
+        left: Math.max(
+          0,
+          Math.min(
+            targetScroll,
+            track.scrollWidth - track.clientWidth
+          )
+        ),
         behavior: 'smooth'
       });
 
     }
 
 
-    /* --------------------------------
-       FIND CURRENT CARD
-    -------------------------------- */
-
-    function getActiveIndex() {
-
-      const activeCard =
-        carousel.querySelector(
-          '.tv-destination-card.is-active'
-        );
-
-      if (!activeCard) {
-        return 0;
-      }
-
-      return cards.indexOf(activeCard);
-
-    }
-
-
-    /* --------------------------------
-       NEXT
-    -------------------------------- */
+    /* ========================================
+       ARROW CONTROLS
+    ======================================== */
 
     if (nextButton) {
-
       nextButton.addEventListener('click', () => {
-
-        const currentIndex =
-          getActiveIndex();
-
-        scrollToCard(currentIndex + 1);
-
+        scrollToCard(activeIndex + 1);
       });
-
     }
-
-
-    /* --------------------------------
-       PREVIOUS
-    -------------------------------- */
 
     if (prevButton) {
-
       prevButton.addEventListener('click', () => {
-
-        const currentIndex =
-          getActiveIndex();
-
-        scrollToCard(currentIndex - 1);
-
+        scrollToCard(activeIndex - 1);
       });
-
     }
 
 
-    /* --------------------------------
-       UPDATE WHILE SCROLLING
-    -------------------------------- */
-
-    let scrollFrame = null;
-    let scrollTimeout = null;
-
+    /* ========================================
+       TRACK SCROLL
+    ======================================== */
 
     track.addEventListener('scroll', () => {
 
       if (!scrollFrame) {
-
-        scrollFrame =
-          window.requestAnimationFrame(() => {
-
-            updateActiveCard();
-
-            scrollFrame = null;
-
-          });
-
+        scrollFrame = requestAnimationFrame(() => {
+          updateActiveCard();
+          scrollFrame = null;
+        });
       }
-
 
       clearTimeout(scrollTimeout);
 
       scrollTimeout = setTimeout(() => {
-
         updateActiveCard();
-
-      }, 100);
+      }, 120);
 
     });
 
 
-    /* --------------------------------
-       DRAG WITH MOUSE
-    -------------------------------- */
+    /* ========================================
+       MOUSE DRAGGING
+    ======================================== */
 
     let isDragging = false;
+    let hasDragged = false;
     let startX = 0;
     let startScroll = 0;
 
+    const dragThreshold = 5;
 
     track.addEventListener('mousedown', (event) => {
 
+      // Only respond to the primary mouse button.
+      if (event.button !== 0) return;
+
+      // Preserve interaction with controls and links.
+      if (event.target.closest('button, a, input, select, textarea')) {
+        return;
+      }
+
       isDragging = true;
+      hasDragged = false;
 
       startX = event.pageX;
       startScroll = track.scrollLeft;
@@ -234,58 +171,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
-    track.addEventListener('mousemove', (event) => {
+    document.addEventListener('mousemove', (event) => {
 
       if (!isDragging) return;
 
+      const distance = event.pageX - startX;
+
+      if (Math.abs(distance) > dragThreshold) {
+        hasDragged = true;
+      }
+
+      if (!hasDragged) return;
+
       event.preventDefault();
 
-      const distance =
-        event.pageX - startX;
-
-      track.scrollLeft =
-        startScroll - distance;
+      track.scrollLeft = startScroll - distance;
 
     });
-
 
     function stopDragging() {
 
       if (!isDragging) return;
 
       isDragging = false;
-
       track.classList.remove('is-dragging');
 
       updateActiveCard();
 
     }
 
-
-    track.addEventListener(
-      'mouseup',
-      stopDragging
-    );
-
-    track.addEventListener(
-      'mouseleave',
-      stopDragging
-    );
+    document.addEventListener('mouseup', stopDragging);
 
 
-    /* --------------------------------
-       TOUCH / POINTER SAFETY
-    -------------------------------- */
+    // Prevent links from opening if the user dragged the carousel.
+
+    track.addEventListener('click', (event) => {
+
+      if (!hasDragged) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      hasDragged = false;
+
+    }, true);
+
+
+    /* ========================================
+       PREVENT NATIVE IMAGE DRAGGING
+    ======================================== */
 
     track.addEventListener('dragstart', (event) => {
       event.preventDefault();
     });
 
 
-    /* --------------------------------
+    /* ========================================
+       RESIZE
+    ======================================== */
+
+    window.addEventListener('resize', () => {
+      updateActiveCard();
+    });
+
+
+    /* ========================================
        INITIAL STATE
-    -------------------------------- */
+    ======================================== */
 
     updateActiveCard();
 

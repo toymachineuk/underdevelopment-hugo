@@ -415,7 +415,7 @@
 .tv-editorial--index-page .tv-editorial-header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: end;
+  align-items: center;
   gap: clamp(32px, 6vw, 80px);
   margin-bottom: clamp(32px, 4vw, 52px);
 }
