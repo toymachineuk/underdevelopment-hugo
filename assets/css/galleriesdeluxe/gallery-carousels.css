@@ -30,7 +30,7 @@
   width: 100%;
   box-sizing: border-box;
 
-  padding: 42px 12vw 54px;
+  padding: 48px 12vw 58px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -42,6 +42,7 @@
   scroll-padding-inline: 12vw;
 
   cursor: grab;
+
   user-select: none;
   -webkit-user-select: none;
   -webkit-overflow-scrolling: touch;
@@ -60,14 +61,13 @@
    DESTINATION CARDS
 ========================================= */
 
-.tv-destination-card {
+.tv-destination-carousel .tv-destination-card {
   position: relative;
 
-  flex: 0 0 300px;
-  width: 300px;
-  height: 330px;
+  flex: 0 0 250px;
+  width: 250px;
+  height: 370px;
 
-  /* Gentle overlap */
   margin-right: -35px;
 
   box-sizing: border-box;
@@ -79,8 +79,9 @@
 
   scroll-snap-align: center;
 
-  opacity: 0.92;
+  opacity: 0.96;
   filter: none;
+
   transform: scale(0.94);
   transform-origin: center center;
 
@@ -88,15 +89,20 @@
 
   transition:
     transform 500ms cubic-bezier(.2, .75, .25, 1),
-    opacity 400ms ease;
+    opacity 400ms ease,
+    box-shadow 400ms ease;
 }
 
-/* Active card */
+/* =========================================
+   ACTIVE CARD
+========================================= */
 
-.tv-destination-card.is-active {
+.tv-destination-carousel .tv-destination-card.is-active {
   opacity: 1;
   filter: none;
-  transform: scale(1.03);
+
+  transform: scale(1.04);
+
   z-index: 5;
 }
 
@@ -140,8 +146,8 @@
 
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.02) 20%,
-    rgba(0, 0, 0, 0.05) 45%,
+    rgba(0, 0, 0, 0.02) 15%,
+    rgba(0, 0, 0, 0.04) 40%,
     rgba(0, 0, 0, 0.30) 68%,
     rgba(0, 0, 0, 0.84) 100%
   );
@@ -154,9 +160,9 @@
 .tv-destination-content {
   position: absolute;
 
-  left: 20px;
-  right: 20px;
-  bottom: 21px;
+  left: 18px;
+  right: 18px;
+  bottom: 20px;
 
   z-index: 2;
 
@@ -196,7 +202,7 @@
   margin: 0;
 
   font-family: var(--font-sans);
-  font-size: 25px;
+  font-size: 24px;
   line-height: 1.05;
 
   font-weight: var(--weight-heavy);
@@ -210,7 +216,7 @@
 ========================================= */
 
 .tv-destination-content p {
-  max-width: 30ch;
+  max-width: 28ch;
 
   margin: 8px 0 0;
 
@@ -221,7 +227,7 @@
   letter-spacing: normal;
   color: inherit;
 
-  opacity: 0.92;
+  opacity: 0.94;
 }
 
 /* =========================================
@@ -230,6 +236,7 @@
 
 .tv-destination-card .vertical-badge {
   position: absolute;
+
   top: 14px;
   left: 14px;
   right: auto;
@@ -247,7 +254,7 @@
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--tv-black);
 
   font-family: var(--font-sans);
@@ -298,7 +305,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 4vw;
+  padding: 0 3.5%;
 
   transform: translateY(-50%);
 
@@ -319,13 +326,13 @@
 
   padding: 0;
 
-  border: 1px solid rgba(23, 24, 23, 0.22);
+  border: 1px solid rgba(23, 24, 23, 0.20);
   border-radius: 50%;
 
   background: var(--tv-white);
   color: var(--tv-black);
 
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 
   pointer-events: auto;
   cursor: pointer;
@@ -341,8 +348,8 @@
 .tv-destination-control svg {
   display: block;
 
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
 }
 
 .tv-destination-control:hover:not(:disabled) {
@@ -373,22 +380,22 @@
 @media (max-width: 900px) {
 
   .tv-destination-track {
-    padding: 36px 9vw 46px;
+    padding: 38px 9vw 46px;
     scroll-padding-inline: 9vw;
   }
 
-  .tv-destination-card {
-    flex-basis: 270px;
-    width: 270px;
-    height: 310px;
+  .tv-destination-carousel .tv-destination-card {
+    flex-basis: 230px;
+    width: 230px;
+    height: 340px;
 
     margin-right: -25px;
 
     transform: scale(0.95);
   }
 
-  .tv-destination-card.is-active {
-    transform: scale(1.02);
+  .tv-destination-carousel .tv-destination-card.is-active {
+    transform: scale(1.03);
   }
 
   .tv-destination-content {
@@ -398,11 +405,11 @@
   }
 
   .tv-destination-content h3 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .tv-destination-controls {
-    padding: 0 2vw;
+    padding: 0 2%;
   }
 }
 
@@ -417,37 +424,37 @@
 
     gap: 0;
 
-    padding: 26px 8vw 34px;
+    padding: 28px 7vw 38px;
 
-    scroll-padding-inline: 8vw;
+    scroll-padding-inline: 7vw;
   }
 
-  .tv-destination-card {
-    flex: 0 0 250px;
-    width: 250px;
-    height: 320px;
+  .tv-destination-carousel .tv-destination-card {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 325px;
 
-    margin-right: -18px;
+    margin-right: -20px;
 
     border-radius: 17px;
 
-    opacity: 0.96;
-    transform: scale(0.95);
+    opacity: 0.97;
+    transform: scale(0.96);
   }
 
-  .tv-destination-card.is-active {
+  .tv-destination-carousel .tv-destination-card.is-active {
     opacity: 1;
     transform: scale(1.02);
   }
 
   .tv-destination-content {
-    left: 16px;
-    right: 16px;
-    bottom: 17px;
+    left: 15px;
+    right: 15px;
+    bottom: 16px;
   }
 
   .tv-destination-content h3 {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.05;
   }
 
@@ -495,12 +502,12 @@
     scroll-padding-inline: 7vw;
   }
 
-  .tv-destination-card {
-    flex-basis: 225px;
-    width: 225px;
-    height: 295px;
+  .tv-destination-carousel .tv-destination-card {
+    flex-basis: 205px;
+    width: 205px;
+    height: 305px;
 
-    margin-right: -14px;
+    margin-right: -16px;
 
     border-radius: 15px;
   }
@@ -528,4 +535,58 @@
     transition: none;
   }
 }
-```
+
+
+
+
+```css
+/* =========================================
+   HALF-WIDTH EDITORIAL CAROUSEL
+========================================= */
+
+.tv-destination-carousel {
+  width: 70%;
+  max-width: 1050px;
+  margin: 0 auto 0 0;
+}
+
+/* Keep the track inside the narrower container */
+.tv-destination-stage,
+.tv-destination-track {
+  width: 100%;
+}
+
+/* Reduce side padding so the cards have room */
+.tv-destination-track {
+  padding-left: 7%;
+  padding-right: 7%;
+  scroll-padding-inline: 7%;
+}
+
+/* Position controls relative to the smaller carousel */
+.tv-destination-controls {
+  left: 0;
+  right: 0;
+  padding: 0 2%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .tv-destination-carousel {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .tv-destination-carousel {
+    width: 100%;
+  }
+
+  .tv-destination-track {
+    padding-left: 7vw;
+    padding-right: 7vw;
+    scroll-padding-inline: 7vw;
+  }
+}

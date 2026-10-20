@@ -9,13 +9,14 @@
 @import "navbar-hero.css";
 @import "animation.css";
 @import "map-page.css";
-
+@import "buttons.css";
 @import "filters.css";
 @import "gallery-carousels.css";
 @import "strips.css";
 @import "footer.css";
 @import "page-layout.css";
 @import "modals.css";
+@import "index-page.css";
 
 
 

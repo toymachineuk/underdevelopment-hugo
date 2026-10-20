@@ -990,10 +990,11 @@ padding-top: 8vw;
 
   .tv-super-narrow-header {
     margin-bottom: 22px;
-
+ flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
     padding: 0;
 
-    display: block;
   }
 
   .tv-super-narrow-heading .text-label {
@@ -1007,7 +1008,7 @@ padding-top: 8vw;
 
   .tv-super-narrow-intro {
     max-width: 300px;
-    margin-top: 10px;
+  
     font-size: 12px;
   }
 
@@ -2353,3 +2354,6 @@ padding-right:5px;
   font-size: 12px;
   line-height: 1.1;
 }
+
+
+
