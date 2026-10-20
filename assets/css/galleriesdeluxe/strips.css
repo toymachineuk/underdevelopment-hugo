@@ -2357,3 +2357,143 @@ padding-right:5px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   PARTNER LOGO STRIP
+===================================== */
+
+.tv-partners {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-md, 24px) 3.2vw
+           var(--space-lg, 40px);
+  box-sizing: border-box;
+}
+
+.tv-partners-label {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: #777;
+}
+
+.tv-partners-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: clamp(24px, 5vw, 72px);
+  width: 100%;
+}
+
+.tv-partner-logo {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  max-width: 180px;
+  min-height: 42px;
+  text-decoration: none;
+  transition: opacity .2s ease;
+}
+
+.tv-partner-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+.tv-partner-logo:hover {
+  opacity: .7;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .tv-partners {
+    padding: 24px 5vw 32px;
+  }
+
+  .tv-partners-label {
+    margin-bottom: 20px;
+  }
+
+  .tv-partners-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 28px;
+  }
+
+  .tv-partner-logo {
+    width: 100%;
+    max-width: none;
+    min-height: 38px;
+  }
+
+  .tv-partner-logo img {
+    max-height: 28px;
+  }
+}

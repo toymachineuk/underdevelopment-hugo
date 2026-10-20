@@ -1,17 +1,18 @@
-```css
+
 /* =========================================
-   EDITORIAL DESTINATION CAROUSEL
+   DESTINATION CAROUSEL — EDITORIAL GALLERY
 ========================================= */
 
 .tv-destination-carousel {
-  width: 100%;
-  margin: 0 auto;
+  width: 70%;
+  max-width: 1050px;
+  min-width: 0;
+  margin: 0 auto 0 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* =========================================
-   CAROUSEL STAGE
-========================================= */
+/* Carousel stage */
 
 .tv-destination-stage {
   position: relative;
@@ -19,18 +20,17 @@
   min-width: 0;
 }
 
-/* =========================================
-   CAROUSEL TRACK
-========================================= */
+/* Track — consistent spacing, no overlap */
 
 .tv-destination-track {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  gap: 20px;
 
   width: 100%;
   box-sizing: border-box;
 
-  padding: 48px 12vw 58px;
+  padding: 32px 44px 38px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -39,10 +39,9 @@
   -ms-overflow-style: none;
 
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: 12vw;
+  scroll-padding-inline: 44px;
 
   cursor: grab;
-
   user-select: none;
   -webkit-user-select: none;
   -webkit-overflow-scrolling: touch;
@@ -57,394 +56,150 @@
   scroll-snap-type: none;
 }
 
-/* =========================================
-   DESTINATION CARDS
-========================================= */
+/* Cards */
 
 .tv-destination-carousel .tv-destination-card {
   position: relative;
 
   flex: 0 0 250px;
   width: 250px;
-  height: 370px;
+  height: 420px;
 
-  margin-right: -35px;
-
+  margin: 0;
   box-sizing: border-box;
   overflow: hidden;
   isolation: isolate;
 
-  border-radius: 20px;
+  border-radius: 14px;
   background: var(--tv-pearl);
 
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 
-  opacity: 0.96;
-  filter: none;
-
-  transform: scale(0.94);
-  transform-origin: center center;
-
+  opacity: 1;
+  transform: none;
   z-index: 1;
 
-  transition:
-    transform 500ms cubic-bezier(.2, .75, .25, 1),
-    opacity 400ms ease,
-    box-shadow 400ms ease;
+  transition: box-shadow 300ms ease;
 }
 
-/* =========================================
-   ACTIVE CARD
-========================================= */
+/* No scaling — prevents visual collisions */
 
 .tv-destination-carousel .tv-destination-card.is-active {
   opacity: 1;
-  filter: none;
-
-  transform: scale(1.04);
-
-  z-index: 5;
+  transform: none;
+  z-index: 1;
 }
 
-/* =========================================
-   CARD IMAGE
-========================================= */
+/* Images */
 
 .tv-destination-card img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 
-  opacity: 1;
-  filter: none;
-
   pointer-events: none;
-
-  transform: scale(1);
-
-  transition: transform 800ms ease;
+  transition: transform 700ms ease;
 }
 
 .tv-destination-card.is-active img {
   transform: scale(1.025);
 }
 
-/* =========================================
-   IMAGE OVERLAY
-========================================= */
-
-.tv-destination-overlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
-  pointer-events: none;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.02) 15%,
-    rgba(0, 0, 0, 0.04) 40%,
-    rgba(0, 0, 0, 0.30) 68%,
-    rgba(0, 0, 0, 0.84) 100%
-  );
-}
-
-/* =========================================
-   CARD CONTENT
-========================================= */
+/* Text */
 
 .tv-destination-content {
   position: absolute;
-
   left: 18px;
   right: 18px;
   bottom: 20px;
-
   z-index: 2;
-
-  display: block;
-
   color: var(--tv-white);
 }
 
-.tv-destination-content > div {
-  min-width: 0;
-}
-
-/* =========================================
-   CARD NUMBER
-========================================= */
-
-.tv-destination-number {
-  display: block;
-
-  margin-bottom: 8px;
-
-  font-family: var(--font-sans);
-  font-size: 10px;
-  line-height: 1.2;
-
-  font-weight: var(--weight-semibold);
-  letter-spacing: 0.08em;
-
-  opacity: 0.85;
-}
-
-/* =========================================
-   CARD TITLE
-========================================= */
-
 .tv-destination-content h3 {
   margin: 0;
-
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: 25px;
   line-height: 1.05;
-
   font-weight: var(--weight-heavy);
   letter-spacing: -0.045em;
-
   color: inherit;
 }
-
-/* =========================================
-   CARD DESCRIPTION
-========================================= */
 
 .tv-destination-content p {
   max-width: 28ch;
-
   margin: 8px 0 0;
-
   font-family: var(--font-sans);
-  font-size: 11px;
-  line-height: 1.45;
-
-  letter-spacing: normal;
+  font-size: 12px;
+  line-height: 1.5;
   color: inherit;
-
-  opacity: 0.94;
+  overflow-wrap: anywhere;
 }
 
-/* =========================================
-   DISTRICT BADGE
-========================================= */
-
-.tv-destination-card .vertical-badge {
-  position: absolute;
-
-  top: 14px;
-  left: 14px;
-  right: auto;
-
-  z-index: 4;
-
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-
-  max-width: calc(100% - 28px);
-  padding: 7px 10px;
-
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--tv-black);
-
-  font-family: var(--font-sans);
-  font-size: 10px;
-  line-height: 1.2;
-
-  font-weight: var(--weight-semibold);
-  letter-spacing: 0.01em;
-
-  white-space: nowrap;
-
-  writing-mode: horizontal-tb;
-  transform: none;
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.tv-destination-card .tv-badge-icon {
-  display: block;
-
-  flex: 0 0 14px;
-
-  width: 14px;
-  height: 14px;
-
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* =========================================
-   CAROUSEL CONTROLS
-========================================= */
+/* Controls */
 
 .tv-destination-controls {
   position: absolute;
-
   top: 50%;
   left: 0;
   right: 0;
-
   z-index: 10;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 3.5%;
-
+  padding: 0 10px;
   transform: translateY(-50%);
-
   pointer-events: none;
 }
-
-/* =========================================
-   CONTROL BUTTONS
-========================================= */
 
 .tv-destination-control {
-  display: grid;
-  place-items: center;
-
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-
-  padding: 0;
-
-  border: 1px solid rgba(23, 24, 23, 0.20);
-  border-radius: 50%;
-
-  background: var(--tv-white);
-  color: var(--tv-black);
-
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
-
   pointer-events: auto;
-  cursor: pointer;
-
-  transition:
-    background 200ms ease,
-    color 200ms ease,
-    border-color 200ms ease,
-    transform 200ms ease,
-    box-shadow 200ms ease;
 }
 
-.tv-destination-control svg {
-  display: block;
-
-  width: 18px;
-  height: 18px;
-}
-
-.tv-destination-control:hover:not(:disabled) {
-  background: var(--tv-black);
-  color: var(--tv-white);
-  border-color: var(--tv-black);
-
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
-
-  transform: scale(1.05);
-}
-
-.tv-destination-control:focus-visible {
-  outline: 2px solid var(--tv-black);
-  outline-offset: 4px;
-}
-
-.tv-destination-control:disabled {
-  opacity: 0.35;
-  cursor: default;
-  pointer-events: none;
-}
-
-/* =========================================
-   TABLET
-========================================= */
+/* Tablet */
 
 @media (max-width: 900px) {
+  .tv-destination-carousel {
+    width: 90%;
+    max-width: none;
+  }
 
   .tv-destination-track {
-    padding: 38px 9vw 46px;
-    scroll-padding-inline: 9vw;
+    gap: 16px;
+    padding: 28px 34px 34px;
+    scroll-padding-inline: 34px;
   }
 
   .tv-destination-carousel .tv-destination-card {
-    flex-basis: 230px;
-    width: 230px;
-    height: 340px;
-
-    margin-right: -25px;
-
-    transform: scale(0.95);
-  }
-
-  .tv-destination-carousel .tv-destination-card.is-active {
-    transform: scale(1.03);
-  }
-
-  .tv-destination-content {
-    left: 17px;
-    right: 17px;
-    bottom: 18px;
-  }
-
-  .tv-destination-content h3 {
-    font-size: 22px;
-  }
-
-  .tv-destination-controls {
-    padding: 0 2%;
+    flex-basis: 235px;
+    width: 235px;
+    height: 390px;
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+/* Mobile */
 
 @media (max-width: 650px) {
+  .tv-destination-carousel {
+    width: 100%;
+    max-width: none;
+  }
 
   .tv-destination-track {
-    align-items: center;
-
-    gap: 0;
-
-    padding: 28px 7vw 38px;
-
-    scroll-padding-inline: 7vw;
+    gap: 14px;
+    padding: 24px 20px 30px;
+    scroll-padding-inline: 20px;
   }
 
   .tv-destination-carousel .tv-destination-card {
-    flex: 0 0 220px;
-    width: 220px;
-    height: 325px;
-
-    margin-right: -20px;
-
-    border-radius: 17px;
-
-    opacity: 0.97;
-    transform: scale(0.96);
-  }
-
-  .tv-destination-carousel .tv-destination-card.is-active {
-    opacity: 1;
-    transform: scale(1.02);
+    flex: 0 0 235px;
+    width: 235px;
+    height: 370px;
+    border-radius: 12px;
   }
 
   .tv-destination-content {
@@ -454,34 +209,11 @@
   }
 
   .tv-destination-content h3 {
-    font-size: 21px;
-    line-height: 1.05;
+    font-size: 22px;
   }
 
   .tv-destination-content p {
-    margin-top: 7px;
     font-size: 11px;
-    line-height: 1.45;
-  }
-
-  .tv-destination-number {
-    margin-bottom: 6px;
-  }
-
-  .tv-destination-card .vertical-badge {
-    top: 11px;
-    left: 11px;
-
-    max-width: calc(100% - 22px);
-    padding: 6px 9px;
-
-    font-size: 10px;
-  }
-
-  .tv-destination-card .tv-badge-icon {
-    width: 13px;
-    height: 13px;
-    flex-basis: 13px;
   }
 
   .tv-destination-controls {
@@ -489,46 +221,26 @@
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* Small mobile */
 
 @media (max-width: 380px) {
-
   .tv-destination-track {
-    padding-left: 7vw;
-    padding-right: 7vw;
-
-    scroll-padding-inline: 7vw;
+    gap: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    scroll-padding-inline: 16px;
   }
 
   .tv-destination-carousel .tv-destination-card {
-    flex-basis: 205px;
-    width: 205px;
-    height: 305px;
-
-    margin-right: -16px;
-
-    border-radius: 15px;
-  }
-
-  .tv-destination-content {
-    left: 14px;
-    right: 14px;
-    bottom: 15px;
-  }
-
-  .tv-destination-content h3 {
-    font-size: 20px;
+    flex-basis: 215px;
+    width: 215px;
+    height: 340px;
   }
 }
 
-/* =========================================
-   REDUCED MOTION
-========================================= */
+/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
-
   .tv-destination-card,
   .tv-destination-card img,
   .tv-destination-control {
@@ -539,54 +251,97 @@
 
 
 
-```css
+
 /* =========================================
-   HALF-WIDTH EDITORIAL CAROUSEL
+   ACTIVE CARD — NO LAYOUT SHIFT
 ========================================= */
 
-.tv-destination-carousel {
-  width: 70%;
-  max-width: 1050px;
-  margin: 0 auto 0 0;
-}
-
-/* Keep the track inside the narrower container */
-.tv-destination-stage,
+/* Reserve space for the tallest card */
 .tv-destination-track {
-  width: 100%;
+  align-items: center;
+  min-height: 520px;
 }
 
-/* Reduce side padding so the cards have room */
-.tv-destination-track {
-  padding-left: 7%;
-  padding-right: 7%;
-  scroll-padding-inline: 7%;
+/* Keep every card the same size */
+.tv-destination-carousel .tv-destination-card {
+  height: 420px;
+  flex: 0 0 250px;
+  width: 250px;
+  transform: scale(0.96);
+  transform-origin: center center;
+
+  transition:
+    transform 400ms ease,
+    box-shadow 400ms ease;
 }
 
-/* Position controls relative to the smaller carousel */
-.tv-destination-controls {
-  left: 0;
-  right: 0;
-  padding: 0 2%;
+/* Enlarge visually, without changing layout dimensions */
+.tv-destination-carousel .tv-destination-card.is-active {
+  height: 420px;
+  flex-basis: 250px;
+  width: 250px;
+
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 /* Tablet */
 @media (max-width: 900px) {
-  .tv-destination-carousel {
-    width: 90%;
-    max-width: none;
+  .tv-destination-track {
+    min-height: 475px;
+  }
+
+  .tv-destination-carousel .tv-destination-card {
+    height: 390px;
+    flex-basis: 235px;
+    width: 235px;
+  }
+
+  .tv-destination-carousel .tv-destination-card.is-active {
+    height: 390px;
+    flex-basis: 235px;
+    width: 235px;
+    transform: scale(1.04);
   }
 }
 
 /* Mobile */
 @media (max-width: 650px) {
-  .tv-destination-carousel {
-    width: 100%;
+  .tv-destination-track {
+    min-height: 435px;
   }
 
+  .tv-destination-carousel .tv-destination-card {
+    height: 370px;
+    flex-basis: 235px;
+    width: 235px;
+    transform: none;
+  }
+
+  .tv-destination-carousel .tv-destination-card.is-active {
+    height: 370px;
+    flex-basis: 235px;
+    width: 235px;
+    transform: scale(1.025);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
   .tv-destination-track {
-    padding-left: 7vw;
-    padding-right: 7vw;
-    scroll-padding-inline: 7vw;
+    min-height: 405px;
+  }
+
+  .tv-destination-carousel .tv-destination-card {
+    height: 340px;
+    flex-basis: 215px;
+    width: 215px;
+  }
+
+  .tv-destination-carousel .tv-destination-card.is-active {
+    height: 340px;
+    flex-basis: 215px;
+    width: 215px;
+    transform: scale(1.02);
   }
 }

@@ -204,10 +204,10 @@
 </div>
 
 
-   {{ partial "strips/strip--affiliations.html" . }}
+  
 
 
-
+ {{ partial "strips/strip--partners.html" . }}
 
 
 
@@ -228,29 +228,33 @@
  
 <section class="tv-editorial tv-editorial--index-page tv-filter-section--wide tv-editorial--wide tv-green section-md">
 
-  <header class="tv-editorial-header">
+<header class="tv-editorial-header">
 
-    <div class="tv-editorial-heading">
-      <span class="text-label">TRAVEL ESSENTIALS · 02</span>
+  <!-- LEFT: INTRODUCTION -->
+  <div class="tv-editorial-heading">
+    <span class="text-label">TRAVEL ESSENTIALS · 02</span>
 
-      <h2 class="title-sm">
-        A city worth getting lost in.
-      </h2>
+    <h2 class="title-sm">
+      A city worth getting lost in.
+    </h2>
 
-      <p class="text-sm">
-        Find your corner of Tbilisi. Explore the neighbourhoods
-        that make the city unique.
-      </p>
-      {{ partial "carousels/tbilisi-gallery.html" . }}
-    
-    </div>
+    <p class="text-sm">
+      Find your corner of Tbilisi. Explore the neighbourhoods
+      that make the city unique.
+    </p>
+  </div>
 
-    <div class="tv-editorial-intro">
-     
-      {{ partial "strips/tbilisi-districts.html" . }}
-    </div>
+  <!-- RIGHT: DISTRICT SELECTOR -->
+  <div class="tv-editorial-intro">
+    {{ partial "strips/tbilisi-districts.html" . }}
+  </div>
 
-  </header>
+</header>
+
+<!-- CAROUSEL: SEPARATE FROM THE HEADER -->
+<div class="tv-editorial-gallery">
+  {{ partial "carousels/tbilisi-gallery.html" . }}
+</div>
 
 
 
