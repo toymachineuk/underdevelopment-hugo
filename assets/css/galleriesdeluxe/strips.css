@@ -2356,6 +2356,21 @@ padding-right:5px;
 }
 
 
+/* Mobile: allow the strip to scroll without widening the page */
+@media (max-width: 650px) {
+  .tv-info-strip--narrow {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tv-info-strip--narrow::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 
 
 

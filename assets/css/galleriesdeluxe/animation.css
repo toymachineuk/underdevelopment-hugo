@@ -4,12 +4,14 @@
 
 .tv-moving-letter {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(24px, 4vw, 64px);
 
   position: relative;
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   padding: 32px 0 48px;
   box-sizing: border-box;
 }
@@ -162,39 +164,60 @@
    MOBILE
 ========================================= */
 
+
+/* =========================================
+   MOBILE — MOVING GREETING
+========================================= */
+
 @media (max-width: 600px) {
 
+  .tv-editorial-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tv-editorial-hero-content {
+    position: relative;
+    min-width: 0;
+  }
+
   .tv-moving-letter {
-    padding-bottom: 90px;
-        grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 0 0 90px;
+    min-width: 0;
+    max-width: 100%;
   }
 
-  .tv-moving-letter .tv-moving-animation {
-    right: 8px;
-    bottom: 0;
-  }
-
-  .tv-moving-letter .ml8 {
-    font-size: 3em;
+  .tv-moving-letter .tv-moving-text {
+    grid-column: 1;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .tv-moving-letter .tv-moving-description {
-    padding-right: 0;
-  }
-
-}
-
-
-
-@media (max-width: 600px) {
-  .tv-moving-letter {
-    grid-template-columns: minmax(0, 1fr);
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .tv-moving-letter .tv-moving-animation {
-    top: -227px;
-    right: -25px;
-    bottom: auto;
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    height: 120px;
+    max-width: 100%;
+    pointer-events: none;
+  }
+
+  .tv-moving-letter .ml8 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3em;
+    height: 3em;
+    margin: 0;
+    font-size: clamp(30px, 9vw, 40px);
   }
 }

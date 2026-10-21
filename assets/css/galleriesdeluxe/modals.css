@@ -1,33 +1,58 @@
-/* District selector */
-.tv-editorial--index-page .tv-district-nav {
+```css
+/* =========================================
+   DISTRICT SELECTOR — TWO COLUMNS
+========================================= */
+
+.tv-editorial--index-page .tv-editorial-intro {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
-  max-width: 480px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-width: 0;
 }
+
+.tv-editorial--index-page .tv-district-nav {
+  display: grid !important;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: end;
+  align-content: start;
+  align-items: start;
+
+  gap: 8px 10px;
+
+  width: auto;
+  max-width: 100%;
+}
+
+/* Compact district pills */
 
 .tv-editorial--index-page .tv-district-btn {
   appearance: none;
+  -webkit-appearance: none;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  min-height: 40px;
-  padding: 10px 16px;
+  width: fit-content;
+  min-width: 0;
+  min-height: 38px;
+
+  padding: 9px 14px;
+  margin: 0;
 
   border: 1px solid rgb(0 0 0 / 18%);
   border-radius: 999px;
+
   background: transparent;
   box-shadow: none;
 
   color: var(--tv-black);
-  font-family: inherit;
-  font-size: 13px;
+  font-family: var(--font-sans);
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
-  text-align: center;
   white-space: nowrap;
+
   cursor: pointer;
 
   transition:
@@ -37,7 +62,8 @@
 }
 
 .tv-editorial--index-page .tv-district-btn:hover,
-.tv-editorial--index-page .tv-district-btn:focus-visible {
+.tv-editorial--index-page .tv-district-btn.is-active,
+.tv-editorial--index-page .tv-district-btn[aria-pressed="true"] {
   background: var(--tv-green-dark);
   border-color: var(--tv-green-dark);
   color: var(--tv-white);
@@ -48,17 +74,20 @@
   outline-offset: 3px;
 }
 
+/* Mobile: retain two columns */
+
 @media (max-width: 700px) {
-  .tv-editorial--index-page .tv-district-nav {
-    gap: 8px;
+  .tv-editorial--index-page .tv-editorial-intro {
+    justify-content: flex-start;
   }
 
-  .tv-editorial--index-page .tv-district-btn {
-    min-height: 38px;
-    padding: 9px 13px;
-    font-size: 12px;
+  .tv-editorial--index-page .tv-district-nav {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: start;
+    gap: 8px;
   }
 }
+
 
 
 /* =========================================

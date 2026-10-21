@@ -811,7 +811,7 @@ margin: 0 0 8px;
     grid-auto-columns: 76%;
     gap: 12px;
     padding: var(--space-md);
-        margin-left: calc(50% - 50vw);
+ 
   }
 
   .tv-rectangle-card {

@@ -1136,3 +1136,75 @@ height: 68px;
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   INDEX HERO — MOBILE WIDTH FIX
+========================================= */
+
+@media (max-width: 650px) {
+
+  .tv-editorial-hero,
+  .tv-editorial-hero--featured {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
+    padding: 0;
+    gap: var(--space-md);
+    box-sizing: border-box;
+  }
+
+  .tv-editorial-hero-media,
+  .tv-editorial-hero-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .tv-editorial-hero-media {
+    overflow: hidden;
+  }
+
+  .tv-editorial-hero-media img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .tv-editorial-hero-title {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .tv-moving-letter,
+  .tv-moving-animation,
+  .tv-moving-text {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tv-moving-description {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+
