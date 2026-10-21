@@ -668,18 +668,25 @@ padding-top: 8vw;
 
 
 
-.tv-super-narrow {
+.tv-super-narrow.lg {
   padding-top: var(--space-lg);
   padding-bottom: var(--space-lg);
 }
 
-/* =====================================
-   SUPER NARROW STRIP
-===================================== */
+.tv-super-narrow.md {
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
 
+.tv-super-narrow.sm {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
 
-
-
+.tv-super-narrow.xs {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
 /* =====================================
    CAROUSEL
 ===================================== */
@@ -1054,10 +1061,6 @@ padding-top: 8vw;
 }
 
 
-.food-strip {
-   background: radial-gradient( circle at 90% 10%, rgba(255, 255, 255, .7) 0 120px, transparent 121px), radial-gradient( circle at 5% 90%, rgba(0, 0, 0, .025) 0 180px, transparent 181px), var(--tv-vanilla);
-
-}
 
 /* =====================================
    HEADER
