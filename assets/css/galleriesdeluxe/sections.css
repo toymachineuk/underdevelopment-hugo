@@ -684,11 +684,7 @@ margin: 0 0 8px;
    SQUARE CAROUSEL
 ========================================================= */
 
-.tv-food {
-  width: 100%;
-  margin: 0;
-  padding: var(--space-md) 5vw 0;
-}
+
 
 
 /* Square track */
@@ -1176,37 +1172,32 @@ margin: 0 0 8px;
 
 
 
+/* =====================================
+   SECTION LAYOUT
+===================================== */
+
+main > section {
+  width: 100%;
+  padding-inline: 16px;
+  box-sizing: border-box;
+}
+
 main > section.tv-filter-section > .section-header,
 main > section.tv-filter-section > .tv-filters,
 main > section.tv-filter-section > .tv-filter-count,
 main > section.tv-filter-section > .tv-grid--wrapper {
- width: calc(100% - 32px);
+  width: 100%;
   max-width: var(--tv-section-width, 1200px);
   margin-inline: auto;
-  padding-inline: 0;
   box-sizing: border-box;
 }
 
-
-
+/* Mobile */
 @media (max-width: 650px) {
-  main > section.tv-filter-section > .section-header,
-  main > section.tv-filter-section > .tv-filters,
-  main > section.tv-filter-section > .tv-filter-count,
-  main > section.tv-filter-section > .tv-grid--wrapper {
-    width: calc(100% - 32px);
+  main > section {
+    padding-inline: 16px;
   }
 }
-
-main > section.tv-filter-section {
-  width: 100%;
-  padding-inline: 0;
-  box-sizing: border-box;
-}
-
-
-
-
 
 
 
