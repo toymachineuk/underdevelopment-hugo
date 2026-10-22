@@ -147,12 +147,22 @@
      SPACING
   --------------------------------- */
 
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 32px;
-  --space-lg: 64px;
-  --space-xl: 96px;
-  --space-xxl: 128px;
+
+--space-xs: 8px;
+--space-sm: 16px;
+--space-md: 24px;
+--space-lg: 48px;
+--space-xl: 72px;
+--space-xxl: 96px;
+
+/* Section rhythm */
+--section-gap-sm: 32px;
+--section-gap-md: 48px;
+--section-gap-lg: 64px;
+
+/* Content rhythm */
+--content-gap: 24px;
+--heading-gap: 20px;
 }
 
 
@@ -189,14 +199,21 @@
     --tracking-heading: -0.025em;
 
 
-    /* Spacing */
+/* Spacing — mobile */
+--space-xs: 6px;
+--space-sm: 12px;
+--space-md: 20px;
+--space-lg: 36px;
+--space-xl: 52px;
+--space-xxl: 72px;
 
-    --space-xs: 6px;
-    --space-sm: 12px;
-    --space-md: 24px;
-    --space-lg: 48px;
-    --space-xl: 72px;
-    --space-xxl: 96px;
+--section-gap-sm: 24px;
+--section-gap-md: 36px;
+--section-gap-lg: 48px;
+
+--content-gap: 20px;
+--heading-gap: 16px;
+
   }
 
 }
@@ -397,11 +414,27 @@ max-width: 480px;
 }
 
 
+.section-header {
+  margin-bottom: var(--heading-gap);
+}
+
+.section-header .title-sm {
+  margin-bottom: 0;
+}
+
+.section-header .title-md {
+  margin-bottom: 0;
+}
+
+.section-header .title-lg {
+  margin-bottom: 0;
+}
+
 .text-label {
 
   display: block;
 
-  margin-bottom: var(--space-sm);
+  margin-bottom: 8px;
 
   font-size: 12px;
 
@@ -429,48 +462,31 @@ max-width: 480px;
 }
 
 /* =====================================
-   SPACING
+   SECTION SPACING
 ===================================== */
 
 .section-xxs {
-
-  padding-block: var(--space-md);
-
+  padding-block: var(--space-sm);
 }
-
 
 .section-xs {
-
-  padding-block: calc(var(--space-md) + var(--space-sm));
-
+  padding-block: var(--space-md);
 }
-
 
 .section-sm {
-
-  padding-block: var(--space-sm);
-
+  padding-block: var(--section-gap-sm);
 }
-
 
 .section-md {
-
-  padding-block: calc(var(--space-lg) + var(--space-md));
-
+  padding-block: var(--section-gap-md);
 }
-
 
 .section-lg {
-
-  padding-block: var(--space-xxl);
-
+  padding-block: var(--section-gap-lg);
 }
 
-
 .section-xl {
-
-  padding-block: calc(var(--space-xxl) + var(--space-lg));
-
+  padding-block: var(--space-xl);
 }
 
 

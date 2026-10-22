@@ -925,108 +925,6 @@ padding-top: 8vw;
 
 
 
-/* =====================================
-   SUPER NARROW STRIP HEADER
-===================================== */
-
-.tv-super-narrow-header {
-   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto 28px;
-
-  padding: 0;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 40px;
-
-  box-sizing: border-box;
-}
-
-
-
-.tv-super-narrow-heading {
-  min-width: 0;
-}
-
-.tv-super-narrow-heading .text-label {
-  display: block;
-
-  margin-bottom: 8px;
-
-  font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1;
-
-  letter-spacing: .08em;
-  text-transform: uppercase;
-
-  color: var(--tv-green-dark);
-}
-
-
-
-
-/* =====================================
-   HEADER INTRO
-===================================== */
-
-.tv-super-narrow-intro {
-  max-width: 360px;
-
-  margin: 0;
-
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.45;
-
-  color: var(--tv-black);
-}
-
-
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 650px) {
-
-  .tv-super-narrow-header {
-    margin-bottom: 22px;
- flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 0;
-
-  }
-
-  .tv-super-narrow-heading .text-label {
-    margin-bottom: 7px;
-    font-size: 10px;
-  }
-
-  .tv-super-narrow-heading h2 {
-    font-size: 26px;
-  }
-
-  .tv-super-narrow-intro {
-    max-width: 300px;
-  
-    font-size: 12px;
-  }
-
-}
-
-
-
-
-
-
-
 
 
 
@@ -1394,11 +1292,8 @@ padding-top: 8vw;
    APPS SECTION
 ========================================= */
 
-.tv-apps-section {
-  width: 100%;
-  padding: 0 0 var(--space-md);
-  box-sizing: border-box;
-  background: var(--tv-white);
+.tv-apps-section .section-header{
+margin-bottom: var(--space-sm);
 }
 
 

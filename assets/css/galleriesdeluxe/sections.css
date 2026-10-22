@@ -1,53 +1,85 @@
 
+/* =====================================
+   EDITORIAL SECTION HEADER
+===================================== */
 
-.section-header:has(.title-sm) {
-  gap: var(--space-sm);
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 64px);
+  width: 100%;
+  margin-bottom: var(--space-lg);
 }
-.section-header {  
-display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  }
 
 .section-header > div {
+  flex: 1 1 60%;
+  min-width: 0;
   margin: 0;
+}
+
+.section-header .text-label {
+  margin-bottom: var(--space-xs);
+  color: var(--tv-green-dark);
 }
 
 .section-header h2 {
+  max-width: 100%;
+  margin: 0 0 var(--space-xs);
+}
+
+.section-header .section-header-subtitle {
   margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--line-subheading);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-heading);
+  color: var(--tv-green-dark);
 }
 
 .section-header p {
-  margin: 0;
+  flex: 0 1 320px;
+  margin: 0 0 4px;
+  color: #6f6f6f;
 }
 
+/* Smaller heading variation */
+.section-header:has(.title-sm) {
+  gap: var(--space-sm);
+}
 
-
-
+/* Filter section divider */
 main > section.tv-filter-section > .section-header {
   padding-bottom: var(--space-md);
   border-bottom: 1px solid #d8d8d8;
 }
 
-@media (max-width: 650px) {
+/* =====================================
+   MOBILE
+===================================== */
 
+@media (max-width: 650px) {
   .section-header {
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
   }
 
   .section-header > div {
-    gap: 2px;
-  }
-
-  .section-header h2 {
-    margin: 0;
+    width: 100%;
   }
 
   .section-header p {
+    max-width: 42ch;
+    flex: none;
     margin: 0;
   }
 
+  .section-header:has(.title-sm) {
+    gap: 10px;
+  }
 }
 
 /* =========================================================
@@ -950,7 +982,15 @@ margin: 0 0 8px;
 /* Wider editorial layout */
 .tv-editorial--wide {
   max-width: 1400px;
+   --tv-section-width: 1400px;
 }
+
+.tv-editorial--extra-wide {
+  max-width: 1600px;
+    --tv-section-width: 1600px;
+}
+
+
 
 /* Header */
 
@@ -1136,20 +1176,6 @@ margin: 0 0 8px;
 
 
 
-
-
-main > section.tv-filter-section {
-  padding-inline: 0;
-}
-
-
-
-
-
-
-
-
-
 main > section.tv-filter-section > .section-header,
 main > section.tv-filter-section > .tv-filters,
 main > section.tv-filter-section > .tv-filter-count,
@@ -1181,15 +1207,6 @@ main > section.tv-filter-section {
 
 
 
-
-/* Optional width variants */
-.tv-filter-section--wide {
-  --tv-section-width: 1400px;
-}
-
-.tv-filter-section--extra-wide {
-  --tv-section-width: 1600px;
-}
 
 
 

@@ -654,17 +654,14 @@ height: 68px;
   width: 100%;
   max-width: 1600px;
   margin-inline: auto;
-  padding: var(--space-md);
+  padding-bottom: var(--space-lg);
 
   color: var(--tv-black);
   font-family: var(--font-sans);
 }
 
 
-.tv-editorial-hero--featured {
-  padding: 0;
 
-}
 
 .tv-editorial-hero--featured .tv-editorial-hero-content {
   padding-block: 0;
