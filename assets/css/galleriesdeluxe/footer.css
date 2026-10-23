@@ -4,8 +4,7 @@
 
 .tv-footer {
   width: 100%;
-  background: var(--tv-vanilla);
-  color: var(--tv-black);
+ 
   font-family: var(--font-sans);
 }
 

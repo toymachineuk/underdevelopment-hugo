@@ -15,14 +15,14 @@
   --white: #fff;
   --black: #000;
 
-  --color-primary: #3a98b9;
-  --color-secondary: #fff1dc;
+  --tv-page: #ffffff;
+  --tv-ivory: #f5f2ea;
+  --tv-brand-dark: #183d32;
+  --tv-brand-accent: #c66b49;
 
-  --color-text: #000;
-  --color-text-footer: #000;
-
-  --color-background: #fff;
-  --color-background-footer: #fff1dc;
+  --tv-text: #171717;
+  --tv-muted: #666666;
+  --tv-border: #e7e5df;
 
 
   /* Fonts */
@@ -153,6 +153,30 @@
 /* ---------------------------------
    BRAND BACKGROUND UTILITIES
 --------------------------------- */
+/* Backgrounds */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-page {
+  background-color: var(--tv-page);
+}
+
+.bg-ivory {
+  background-color: var(--tv-ivory);
+}
+
+.bg-brand {
+  background-color: var(--tv-brand-dark);
+}
+
+.bg-accent {
+  background-color: var(--tv-brand-accent);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
 
 .tv-bg-red {
   background-color: var(--tv-logo-red);
@@ -186,6 +210,10 @@
 
 .tv-bg-light {
   background-color: #F7F7F5;
+}
+
+.white {
+  color: #fff;
 }
 
 
