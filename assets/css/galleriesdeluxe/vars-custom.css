@@ -48,78 +48,61 @@
    TBILISI VISITS VARIABLES
 ===================================== */
 
+
 :root {
+  /* ---------------------------------
+     BRAND COLORS
+  --------------------------------- */
+
+  --tv-logo-red: #FCE8E5;
+  --tv-logo-orange: #FFF0DE;
+  --tv-logo-blue: #E7F1F9;
+  --tv-logo-teal: #E3EFED;
+  --tv-logo-lavender: #E9EAF8;
+  --tv-logo-rose: #F4E5E2;
 
   /* ---------------------------------
-     COLORS
+     BASE COLORS
   --------------------------------- */
 
   --tv-black: #151515;
-  --tv-white: #ffffff;
-  --tv-pink: #f4e3df;
-  --tv-blue: #d6e2f9;
-  --tv-vanilla: #f6f0e2;
-  --tv-pearl: #e6e6e8;
+  --tv-white: #FFFFFF;
 
-  --tv-green: #e2ece9;
-  --tv-green-dark: #5f8061;
-  --tv-green-border: #b8cbb9;
+  /* Borders and muted accents */
+  --tv-border: #E2E2E2;
+  --tv-text-muted: #666666;
 
+  /* Existing green accent */
+  --tv-green-dark: #5F8061;
+  --tv-green-border: #B8CBB9;
 
-
-  /* =========================================
-   QUICK LINKS — BACKGROUND COLORS
-========================================= */
-
-.tv-vanilla {
-  background-color: var(--tv-vanilla);
-}
-
-.tv-green {
-  background-color: var(--tv-green);
-}
-
-.tv-blue {
-  background-color: var(--tv-blue);
-}
-
-.tv-pink {
-  background-color: var(--tv-pink);
-}
   /* ---------------------------------
      TYPOGRAPHY
   --------------------------------- */
 
   --font-sans: "DM Sans", sans-serif;
 
-
-  /* Base */
-
+  /* Body text */
   --text-xs: 12px;
   --text-sm: 14px;
   --text-base: 16px;
   --text-md: 18px;
   --text-lg: 21px;
 
-
   /* Headings */
-
   --heading-sm: 24px;
   --heading-md: 32px;
   --heading-lg: 48px;
   --heading-xl: 64px;
   --heading-xxl: 88px;
 
-
   /* Font weights */
-
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
   --weight-heavy: 800;
   --weight-black: 900;
-
 
   /* ---------------------------------
      LINE HEIGHT
@@ -131,7 +114,6 @@
   --line-body: 1.55;
   --line-relaxed: 1.7;
 
-
   /* ---------------------------------
      LETTER SPACING
   --------------------------------- */
@@ -142,27 +124,68 @@
   --tracking-wide: 0.02em;
   --tracking-wider: 0.06em;
 
-
   /* ---------------------------------
      SPACING
   --------------------------------- */
 
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 72px;
+  --space-xxl: 96px;
 
---space-xs: 8px;
---space-sm: 16px;
---space-md: 24px;
---space-lg: 48px;
---space-xl: 72px;
---space-xxl: 96px;
+  /* Section rhythm */
+  --section-gap-sm: 32px;
+  --section-gap-md: 48px;
+  --section-gap-lg: 64px;
 
-/* Section rhythm */
---section-gap-sm: 32px;
---section-gap-md: 48px;
---section-gap-lg: 64px;
+  /* Content rhythm */
+  --content-gap: 24px;
+  --heading-gap: 20px;
+}
 
-/* Content rhythm */
---content-gap: 24px;
---heading-gap: 20px;
+
+
+
+
+
+/* ---------------------------------
+   BRAND BACKGROUND UTILITIES
+--------------------------------- */
+
+.tv-bg-red {
+  background-color: var(--tv-logo-red);
+}
+
+.tv-bg-orange {
+  background-color: var(--tv-logo-orange);
+}
+
+.tv-bg-blue {
+  background-color: var(--tv-logo-blue);
+}
+
+.tv-bg-teal {
+  background-color: var(--tv-logo-teal);
+}
+
+.tv-bg-lavender {
+  background-color: var(--tv-logo-lavender);
+}
+
+.tv-bg-rose {
+  background-color: var(--tv-logo-rose);
+}
+
+/* Neutral backgrounds */
+
+.tv-bg-white {
+  background-color: var(--tv-white);
+}
+
+.tv-bg-light {
+  background-color: #F7F7F5;
 }
 
 

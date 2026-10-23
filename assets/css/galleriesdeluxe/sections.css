@@ -1259,3 +1259,79 @@ main > section.tv-filter-section > .tv-grid--wrapper {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-brand-title {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  color: #111111;
+
+  padding: 12px 18px;
+  margin: 0 0 24px;
+  border-radius: 12px;
+}
+
+/* Soft gradient inspired by the tb logo */
+.tv-brand-title::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background: linear-gradient(
+    115deg,
+    rgba(213, 43, 53, 0.13) 0%,
+    rgba(242, 138, 36, 0.16) 42%,
+    rgba(8, 120, 190, 0.14) 100%
+  );
+
+  border-radius: inherit;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .tv-brand-title {
+   
+    padding: 10px 12px;
+  }
+}
+
+
+
+
+
+
+
+
