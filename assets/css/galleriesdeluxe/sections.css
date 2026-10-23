@@ -1,6 +1,6 @@
 
 /* =====================================
-   EDITORIAL SECTION HEADER
+   UNIVERSAL EDITORIAL SECTION HEADER
 ===================================== */
 
 .section-header {
@@ -12,13 +12,14 @@
   margin-bottom: var(--space-lg);
 }
 
-.section-header > div {
+.section-header-main {
   flex: 1 1 60%;
   min-width: 0;
   margin: 0;
 }
 
 .section-header .text-label {
+  display: block;
   margin-bottom: var(--space-xs);
   color: var(--tv-green-dark);
 }
@@ -38,28 +39,72 @@
   color: var(--tv-green-dark);
 }
 
-.section-header p {
+/* Optional descriptive text */
+
+.section-header-description,
+.section-header > p {
   flex: 0 1 320px;
+  min-width: 0;
   margin: 0 0 4px;
   color: #6f6f6f;
 }
 
-/* Smaller heading variation */
+/* Optional right-side content */
+
+.section-header-aside {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Optional smaller heading variation */
+
 .section-header:has(.title-sm) {
   gap: var(--space-sm);
 }
 
 /* Filter section divider */
+
 main > section.tv-filter-section > .section-header {
   padding-bottom: var(--space-md);
   border-bottom: 1px solid #d8d8d8;
 }
 
 /* =====================================
-   MOBILE
+   DISTRICT SELECTOR HEADER
 ===================================== */
 
-@media (max-width: 650px) {
+.tv-editorial--index-page .section-header {
+  align-items: start;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.tv-editorial--index-page .section-header-main {
+  flex: 1 1 0;
+  max-width: 520px;
+}
+
+.tv-editorial--index-page .section-header-description {
+  max-width: 390px;
+  margin-top: 16px;
+}
+
+
+
+.tv-editorial--index-page .tv-district-nav {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  max-width: 440px;
+  margin-left: auto;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
   .section-header {
     flex-direction: column;
     align-items: flex-start;
@@ -67,11 +112,14 @@ main > section.tv-filter-section > .section-header {
     margin-bottom: var(--space-md);
   }
 
-  .section-header > div {
+  .section-header-main,
+  .section-header-aside {
     width: 100%;
+    flex: none;
   }
 
-  .section-header p {
+  .section-header-description,
+  .section-header > p {
     max-width: 42ch;
     flex: none;
     margin: 0;
@@ -80,7 +128,15 @@ main > section.tv-filter-section > .section-header {
   .section-header:has(.title-sm) {
     gap: 10px;
   }
+
+
+
+  .tv-editorial--index-page .tv-district-nav {
+    margin-left: 0;
+    max-width: 440px;
+  }
 }
+
 
 /* =========================================================
    SEE & DO

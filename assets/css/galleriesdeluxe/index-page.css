@@ -1,56 +1,69 @@
 
-
 /* =====================================
    NEIGHBOURHOOD EDITORIAL — INDEX PAGE
 ===================================== */
 
 .tv-editorial--index-page {
   padding-block: clamp(40px, 5vw, 72px);
+  box-sizing: border-box;
 }
+
+
 
 /* =====================================
-   SECTION HEADER
-   Headline left, districts right
+   DESTINATION GALLERY
+   Full available section width
 ===================================== */
 
-.tv-editorial--index-page .tv-editorial-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(28px, 5vw, 72px);
-
-  margin-bottom: clamp(28px, 3vw, 44px);
-  padding: 0;
-}
-
-.tv-editorial--index-page .tv-editorial-heading {
-  max-width: 460px;
+.tv-editorial--index-page .tv-editorial-gallery {
+  width: 100%;
+  max-width: none;
   min-width: 0;
-}
-
-.tv-editorial--index-page .tv-editorial-heading .title-sm {
-  margin: 10px 0 16px;
-
-  font-size: clamp(36px, 4.2vw, 52px);
-  line-height: 1;
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-heading);
-}
-
-.tv-editorial--index-page .tv-editorial-heading .text-sm {
-  max-width: 360px;
   margin: 0;
-
-  font-size: 15px;
-  line-height: 1.65;
+  box-sizing: border-box;
 }
 
-/* =====================================
-   DISTRICT SELECTOR
-===================================== */
-
-.tv-editorial--index-page .tv-editorial-intro {
+.tv-editorial--index-page .tv-editorial-gallery
+.tv-destination-carousel {
+  width: 100%;
+  max-width: none;
   min-width: 0;
+  margin: 0;
+}
+
+/* Gallery spacing and horizontal scroll */
+
+.tv-editorial--index-page .tv-destination-track {
+  gap: 20px;
+ 
+  padding: 30px 48px;
+  scroll-padding-inline: 48px;
+
+    min-height: 495px;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+/* Editorial variation in card heights */
+
+.tv-editorial--index-page .tv-destination-card {
+  height: 365px;
+}
+
+.tv-editorial--index-page .tv-destination-card:nth-child(4n + 1) {
+  height: 330px;
+}
+
+.tv-editorial--index-page .tv-destination-card:nth-child(4n + 2) {
+  height: 385px;
+}
+
+.tv-editorial--index-page .tv-destination-card:nth-child(4n + 3) {
+  height: 435px;
+}
+
+.tv-editorial--index-page .tv-destination-card:nth-child(4n) {
+  height: 385px;
 }
 
 /* =====================================
@@ -75,15 +88,13 @@
   align-items: center;
   gap: clamp(24px, 4vw, 56px);
 
+  margin-top: clamp(32px, 4vw, 48px);
   padding: clamp(24px, 3.5vw, 48px);
 
   background: var(--tv-white);
   border-radius: 8px;
+  box-sizing: border-box;
 }
-
-/* =====================================
-   FEATURE COPY
-===================================== */
 
 .tv-editorial--index-page .tv-neighbourhood-copy {
   max-width: 390px;
@@ -112,17 +123,15 @@
 
 .tv-editorial--index-page .tv-neighbourhood-map {
   min-width: 0;
+  overflow: hidden;
 }
 
 .tv-editorial--index-page .tv-neighbourhood-map img {
   display: block;
-
   width: 100%;
   max-width: 600px;
   height: auto;
-
   margin-inline: auto;
-
   object-fit: contain;
 }
 
@@ -133,6 +142,26 @@
 @media (max-width: 900px) {
   .tv-editorial--index-page .tv-editorial-header {
     gap: 28px;
+  }
+
+  .tv-editorial--index-page .tv-destination-track {
+    gap: 16px;
+    min-height: 420px;
+    padding: 26px 38px;
+    scroll-padding-inline: 38px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 1) {
+    height: 295px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 2),
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n) {
+    height: 340px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 3) {
+    height: 380px;
   }
 
   .tv-editorial--index-page .tv-neighbourhood-feature {
@@ -154,7 +183,7 @@
   .tv-editorial--index-page .tv-editorial-header {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .tv-editorial--index-page .tv-editorial-heading .title-sm {
@@ -164,6 +193,38 @@
 
   .tv-editorial--index-page .tv-editorial-heading .text-sm {
     max-width: 100%;
+  }
+
+  .tv-editorial--index-page .tv-editorial-intro {
+    max-width: none;
+    padding-top: 0;
+  }
+
+  .tv-editorial--index-page .tv-destination-track {
+    gap: 14px;
+    min-height: 365px;
+    padding: 22px 20px 26px;
+    scroll-padding-inline: 20px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card,
+  .tv-editorial--index-page .tv-destination-card:nth-child(n) {
+    flex-basis: 235px;
+    width: 235px;
+    height: 315px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 1) {
+    height: 280px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 2),
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n) {
+    height: 315px;
+  }
+
+  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 3) {
+    height: 345px;
   }
 
   .tv-editorial--index-page .tv-neighbourhood-feature {
@@ -185,95 +246,9 @@
   }
 }
 
-
-```css
-/* =====================================
-   NEIGHBOURHOOD HEADER
-===================================== */
-
-.tv-editorial--index-page .tv-editorial-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(32px, 6vw, 80px);
-
-  margin-bottom: clamp(32px, 4vw, 48px);
-  padding: 0;
-}
-
-.tv-editorial--index-page .tv-editorial-heading {
-  max-width: 460px;
-  min-width: 0;
-}
-
-.tv-editorial--index-page .tv-editorial-heading .title-sm {
-  margin: 10px 0 16px;
-  font-size: clamp(36px, 4.2vw, 52px);
-  line-height: 1;
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-heading);
-}
-
-.tv-editorial--index-page .tv-editorial-heading .text-sm {
-  max-width: 360px;
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-/* District selector */
-
-.tv-editorial--index-page .tv-editorial-intro {
-  min-width: 0;
-  padding-top: 12px;
-}
-
-/* =====================================
-   DESTINATION GALLERY
-===================================== */
-
-.tv-editorial--index-page .tv-editorial-gallery {
-  width: 70%;
-  max-width: 1050px;
-  min-width: 0;
-  margin: 0;
-}
-
-.tv-editorial--index-page .tv-editorial-gallery
-.tv-destination-carousel {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-}
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 700px) {
-
-  .tv-editorial--index-page .tv-editorial-header {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-    margin-bottom: 28px;
-  }
-
-  .tv-editorial--index-page .tv-editorial-heading .title-sm {
-    max-width: 390px;
-    font-size: clamp(36px, 9vw, 44px);
-  }
-
-  .tv-editorial--index-page .tv-editorial-heading .text-sm {
-    max-width: 100%;
-  }
-
-  .tv-editorial--index-page .tv-editorial-intro {
-    padding-top: 0;
-  }
-
-  .tv-editorial--index-page .tv-editorial-gallery {
-    width: 100%;
-    max-width: none;
+@media (prefers-reduced-motion: reduce) {
+  .tv-editorial--index-page .tv-destination-card,
+  .tv-editorial--index-page .tv-destination-control {
+    transition: none;
   }
 }
-```

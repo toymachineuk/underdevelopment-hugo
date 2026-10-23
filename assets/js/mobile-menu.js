@@ -1,29 +1,52 @@
+
 (function () {
+  function initNavigation() {
+    const menuButton = document.querySelector(".nav > .menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const destinationButton = document.querySelector(
+      ".mobile-destinations__toggle"
+    );
+    const destinationList = document.getElementById(
+      "mobile-destinations-list"
+    );
 
-  const menuButton = document.querySelector(".menu");
-  const mobileMenu = document.querySelector("#mobile-menu");
+    // Prevent duplicate initialization
+    if (document.documentElement.dataset.navigationInitialized === "true") {
+      return;
+    }
 
-  if (!menuButton || !mobileMenu) {
-    return;
+    document.documentElement.dataset.navigationInitialized = "true";
+
+    // Mobile hamburger
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", function () {
+        const isOpen = !mobileMenu.classList.contains("is-open");
+
+        mobileMenu.classList.toggle("is-open", isOpen);
+        menuButton.classList.toggle("is-open", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen ? "Close menu" : "Open menu"
+        );
+      });
+    }
+
+    // Mobile destination accordion
+    if (destinationButton && destinationList) {
+      destinationButton.addEventListener("click", function () {
+        const isOpen =
+          destinationButton.getAttribute("aria-expanded") !== "true";
+
+        destinationButton.setAttribute("aria-expanded", String(isOpen));
+        destinationList.hidden = !isOpen;
+      });
+    }
   }
 
-  menuButton.addEventListener("click", function () {
-
-    mobileMenu.classList.toggle("is-open");
-    menuButton.classList.toggle("is-open");
-
-    const open = mobileMenu.classList.contains("is-open");
-
-    menuButton.setAttribute(
-      "aria-expanded",
-      open ? "true" : "false"
-    );
-
-    menuButton.setAttribute(
-      "aria-label",
-      open ? "Close menu" : "Open menu"
-    );
-
-  });
-
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initNavigation, { once: true });
+  } else {
+    initNavigation();
+  }
 })();
