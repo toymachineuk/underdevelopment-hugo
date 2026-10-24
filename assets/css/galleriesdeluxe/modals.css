@@ -77,13 +77,18 @@
 /* Tablet and mobile */
 
 @media (max-width: 700px) {
-  .tv-editorial--index-page .tv-editorial-intro {
-    justify-content: flex-start;
+ 
+
+   .tv-editorial--index-page .tv-editorial-intro {
+    justify-content: center;
+    text-align: center;
   }
 
-  .tv-editorial--index-page .tv-district-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+   .tv-editorial--index-page .tv-district-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: 420px;
+    width: 100%;
+    margin-inline: auto;
     gap: 8px;
   }
 

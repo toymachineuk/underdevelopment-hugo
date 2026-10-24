@@ -49,6 +49,15 @@
   color: #6f6f6f;
 }
 
+
+.section-header > strong {
+font-weight: 700;
+ 
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+
 /* Optional right-side content */
 
 .section-header-aside {
@@ -297,9 +306,6 @@ main > section.tv-filter-section > .section-header {
 
 
 
-.tv-chillout-grid {
-  background: var(--tv-pink);
-}
 
 
 /* Rectangle track */
