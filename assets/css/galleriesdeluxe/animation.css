@@ -1,223 +1,133 @@
-/* =========================================
-   MOVING LETTERS / EDITORIAL STATEMENT
-========================================= */
 
-.tv-moving-letter {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(24px, 4vw, 64px);
-
+/* HEADING + ANIMATION POSITION */
+.tv-hero-heading {
   position: relative;
-  width: 100%;
   min-width: 0;
-  max-width: 100%;
-  padding: 32px 0 48px;
-  box-sizing: border-box;
 }
 
-
-/* =========================================
-   TITLE
-========================================= */
-
-.tv-moving-letter .title-md {
-  max-width: 680px;
-  margin: 0;
-
-  font-family: var(--font-sans);
-  font-size: clamp(52px, 6vw, 88px);
-  font-weight: 900;
-  line-height: 0.86;
-  letter-spacing: -0.055em;
-}
-
-
-/* =========================================
-   TEXT / COPY
-========================================= */
-
-/* TEXT — LEFT COLUMN */
-
-.tv-moving-letter .tv-moving-text {
-  grid-column: 1;
+.tv-hero-heading-text {
   min-width: 0;
-  width: 100%;
 }
 
-.tv-moving-letter .tv-moving-description {
-  width: 100%;
-  max-width: none;
-  margin: 0;
+.tv-hero-heading .tv-editorial-hero-title {
+  padding-right: 100px;
 }
 
-/* =========================================
-   ANIMATION POSITION
-========================================= */
-
-.tv-moving-letter .tv-moving-animation {
+/* ANIMATED GREETING */
+.tv-hero-heading .tv-moving-animation {
   position: absolute;
-  right: 7vw;
-  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
   z-index: 3;
+  pointer-events: none;
 }
 
-
-/* =========================================
-   ANIMATED GREETING / ML8
-========================================= */
-
-.tv-moving-letter .ml8 {
+.tv-hero-heading .ml8 {
   position: relative;
-
   width: 3em;
   height: 3em;
   margin: 0;
-
-  font-size: 4em;
+  font-size: clamp(36px, 4.5vw, 56px);
   font-weight: 900;
   color: #fff;
 }
 
-.tv-moving-letter .ml8 .letters-container {
+/* LETTERS */
+.tv-hero-heading .ml8 .letters-container {
   position: absolute;
   inset: 0;
-
   height: 1em;
   margin: auto;
-
   text-align: center;
 }
 
-.tv-moving-letter .ml8 .letters {
+.tv-hero-heading .ml8 .letters {
   position: relative;
   z-index: 2;
-
   display: inline-block;
-
   line-height: 0.7em;
   right: -0.12em;
   top: -0.2em;
 }
 
-.tv-moving-letter .ml8 .bang {
+.tv-hero-heading .ml8 .bang {
   font-size: 1.4em;
   top: auto;
   left: -0.06em;
 }
 
-
-/* =========================================
-   CIRCLES
-========================================= */
-
-.tv-moving-letter .ml8 .circle {
+/* CIRCLES */
+.tv-hero-heading .ml8 .circle {
   position: absolute;
   inset: 0;
-
   margin: auto;
   border-radius: 50%;
 }
 
-
-/* Outer dashed circle */
-
-.tv-moving-letter .ml8 .circle-white {
+.tv-hero-heading .ml8 .circle-white {
   width: 2.35em;
   height: 2.35em;
-
-  border: 2px dashed #4f7b86;
+   border-color: #D96D12;
+  
 }
 
-
-/* Solid teal circle */
-
-.tv-moving-letter .ml8 .circle-dark {
+.tv-hero-heading .ml8 .circle-dark {
   width: 2.2em;
   height: 2.2em;
-
-  background-color: #4f7b86;
+   background-color: #F28C28;
   z-index: 1;
 }
 
 
-/* Inner dashed circle */
 
-.tv-moving-letter .ml8 .circle-container {
+
+
+
+.tv-hero-heading .ml8 .circle-container {
   position: absolute;
   inset: 0;
-
   margin: auto;
 }
 
-.tv-moving-letter .ml8 .circle-dark-dashed {
+.tv-hero-heading .ml8 .circle-dark-dashed {
   width: 2.3em;
   height: 2.3em;
-
-  border: 2px dashed #4f7b86;
+  border: 2px dashed #D96D12;
   background: transparent;
 }
 
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-
-/* =========================================
-   MOBILE — MOVING GREETING
-========================================= */
-
-@media (max-width: 600px) {
-
-  .tv-editorial-hero {
-    position: relative;
-    overflow: hidden;
+/* TABLET */
+@media (max-width: 900px) {
+  .tv-hero-heading .tv-editorial-hero-title {
+    padding-right: 75px;
   }
 
-  .tv-editorial-hero-content {
-    position: relative;
-    min-width: 0;
+  .tv-hero-heading .tv-moving-animation {
+    width: 110px;
+    height: 110px;
   }
 
-  .tv-moving-letter {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-    padding: 0 0 90px;
-    min-width: 0;
-    max-width: 100%;
+  .tv-hero-heading .ml8 {
+    font-size: 38px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .tv-hero-heading .tv-editorial-hero-title {
+    padding-right: 55px;
   }
 
-  .tv-moving-letter .tv-moving-text {
-    grid-column: 1;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .tv-moving-letter .tv-moving-description {
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-
-  .tv-moving-letter .tv-moving-animation {
-    position: absolute;
-    top: auto;
-    right: 0;
-    bottom: 0;
-    width: 120px;
-    height: 120px;
-    max-width: 100%;
-    pointer-events: none;
-  }
-
-  .tv-moving-letter .ml8 {
-    position: absolute;
+  .tv-hero-heading .tv-moving-animation {
     top: 0;
     right: 0;
-    width: 3em;
-    height: 3em;
-    margin: 0;
-    font-size: clamp(30px, 9vw, 40px);
+    width: 80px;
+    height: 80px;
+  }
+
+  .tv-hero-heading .ml8 {
+    font-size: 28px;
   }
 }

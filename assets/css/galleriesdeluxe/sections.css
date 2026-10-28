@@ -1309,22 +1309,7 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   border-radius: 12px;
 }
 
-/* Soft gradient inspired by the tb logo */
-.tv-brand-title::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
 
-  background: linear-gradient(
-    115deg,
-    rgba(213, 43, 53, 0.13) 0%,
-    rgba(242, 138, 36, 0.16) 42%,
-    rgba(8, 120, 190, 0.14) 100%
-  );
-
-  border-radius: inherit;
-}
 
 /* Mobile */
 @media (max-width: 600px) {
@@ -1333,6 +1318,39 @@ main > section.tv-filter-section > .tv-grid--wrapper {
     padding: 10px 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
