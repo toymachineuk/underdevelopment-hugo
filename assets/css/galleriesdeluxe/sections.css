@@ -21,12 +21,20 @@
 .section-header .text-label {
   display: block;
   margin-bottom: var(--space-xs);
-  color: var(--tv-green-dark);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--tv-brand-accent, #c66b49);
 }
 
 .section-header h2 {
   max-width: 100%;
-  margin: 0 0 var(--space-xs);
+  margin: 0 ;
 }
 
 .section-header .section-header-subtitle {
@@ -43,10 +51,15 @@
 
 .section-header-description,
 .section-header > p {
-  flex: 0 1 320px;
+  flex: 0 1 300px;
   min-width: 0;
   margin: 0 0 4px;
-  color: #6f6f6f;
+
+  color: var(--tv-muted, #666666);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--line-body);
+  font-weight: 400;
 }
 
 
@@ -150,13 +163,6 @@ main > section.tv-filter-section > .section-header {
 /* =========================================================
    SEE & DO
 ========================================================= */
-
-.tv-see-do {
-  width: 100%;
-  margin: 0;
-  background: #fff;
- 
-}
 
 
 /* =========================================================
@@ -1318,6 +1324,136 @@ main > section.tv-filter-section > .tv-grid--wrapper {
     padding: 10px 12px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   EDITORIAL SECTION NUMBER
+===================================== */
+
+
+
+/* Number block */
+
+.section-header-number {
+  --number-bg: var(--tv-section-soft, #f5f2ea);
+  --number-color: var(--tv-brand-accent, #c66b49);
+
+  flex: 0 0 auto;
+  width: clamp(68px, 8vw, 104px);
+  aspect-ratio: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--number-bg);
+  color: var(--number-color);
+  border-radius: 8px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+
+/* Optional color variations */
+.section-header-number--ivory {
+  --number-bg: #f5f2ea;
+  --number-color: #c66b49;
+}
+
+.section-header-number--terracotta {
+  --number-bg: #c66b49;
+  --number-color: #ffffff;
+}
+
+.section-header-number--stone {
+  --number-bg: #e8e5e0;
+  --number-color: #171717;
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   MOBILE SECTION HEADER
+===================================== */
+
+@media (max-width: 700px) {
+  .section-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    grid-template-areas:
+      "heading heading"
+      "description number";
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+  .section-header-main {
+    grid-area: heading;
+    width: 100%;
+  }
+
+  .section-header-description {
+    grid-area: description;
+    max-width: none;
+    margin: 0;
+  }
+
+  .section-header > p {
+    grid-area: description;
+    max-width: none;
+    margin: 0;
+  }
+
+  .section-header-number {
+    grid-area: number;
+    width: 48px;
+    min-width: 48px;
+    font-size: 23px;
+    border-radius: 6px;
+  }
+}
+
+
 
 
 

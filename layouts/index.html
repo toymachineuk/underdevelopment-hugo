@@ -241,9 +241,48 @@
 
 
 
-   
+   <section class="tv-editorial--index-page tv-editorial--wide tv-green section-lg">
 
-{{ partial "strips/strip--transport.html" . }}
+
+<div class="section-header section-header--districts">
+
+  <div class="section-header-main">
+    <span class="text-label">NAVIGARE</span>
+    <h2 class="title-lg">Maps and Districts</h2>
+
+    <div class="section-header-description-row">
+      <div class="text-md section-header-description">
+        Find your corner of Tbilisi. Explore the neighbourhoods
+        that make the city unique.
+      </div>
+
+      <div class="section-header-number" aria-label="Section 2">
+        02
+      </div>
+    </div>
+  </div>
+
+  <div class="tv-neighbourhood-map">
+    <img
+      src="/img/maps/tbilisi-map.jpg"
+      alt="Illustrated map of Tbilisi neighbourhoods"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="section-header-aside flex-center">
+    {{ partial "strips/tbilisi-districts.html" . }}
+  </div>
+
+</div>
+
+
+  <div class="tv-editorial-gallery">
+    {{ partial "carousels/tbilisi-gallery.html" . }}
+  </div>
+
+</section>
+
 
 
  
@@ -252,13 +291,21 @@
 
 <div class="section-header section-header--districts">
   <div class="section-header-main">
-    <span class="text-label">Travel essentials · 02</span>
-    <h2 class="title-lg">A city worth getting lost in.</h2>
+    <span class="text-label">NAVIGARE</span>
+    <h2 class="title-lg">Maps and Districts</h2>
     <div class="text-md section-header-description">
       Find your corner of Tbilisi. Explore the neighbourhoods
       that make the city unique.
     </div>
   </div>
+
+     <div class="tv-neighbourhood-map">
+      <img
+        src="/img/maps/tbilisi-map.jpg"
+        alt="Illustrated map of Tbilisi neighbourhoods"
+        loading="lazy"
+      >
+    </div>
 
   <div class="section-header-aside flex-center">
     {{ partial "strips/tbilisi-districts.html" . }}
@@ -314,6 +361,7 @@
 
 
 
+{{ partial "strips/strip--transport.html" . }}
  
 
 

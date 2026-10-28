@@ -490,15 +490,8 @@ max-width: 480px;
 .section-header {
   margin-bottom: var(--heading-gap);
 }
-
-.section-header .title-sm {
-  margin-bottom: 0;
-}
-
-.section-header .title-md {
-  margin-bottom: 0;
-}
-
+.section-header .title-sm,
+.section-header .title-md,
 .section-header .title-lg {
   margin-bottom: 0;
 }
