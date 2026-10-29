@@ -250,16 +250,7 @@
     <span class="text-label">NAVIGARE</span>
     <h2 class="title-lg">Maps and Districts</h2>
 
-    <div class="section-header-description-row">
-      <div class="text-md section-header-description">
-        Find your corner of Tbilisi. Explore the neighbourhoods
-        that make the city unique.
-      </div>
-
-      <div class="section-header-number" aria-label="Section 2">
-        02
-      </div>
-    </div>
+    {{ partial "strips/tbilisi-districts.html" . }}
   </div>
 
   <div class="tv-neighbourhood-map">
@@ -271,7 +262,18 @@
   </div>
 
   <div class="section-header-aside flex-center">
-    {{ partial "strips/tbilisi-districts.html" . }}
+    <div class="section-header-description-row">
+      <div class="text-md section-header-description">
+        Find your corner of Tbilisi. Explore the neighbourhoods
+        that make the city unique.
+      </div>
+
+      <div class="section-header-number" aria-label="Section 2">
+        02
+      </div>
+    </div>
+    
+
   </div>
 
 </div>
@@ -285,77 +287,6 @@
 
 
 
- 
-<section class=" tv-editorial--index-page  tv-editorial--wide tv-green section-lg">
-
-
-<div class="section-header section-header--districts">
-  <div class="section-header-main">
-    <span class="text-label">NAVIGARE</span>
-    <h2 class="title-lg">Maps and Districts</h2>
-    <div class="text-md section-header-description">
-      Find your corner of Tbilisi. Explore the neighbourhoods
-      that make the city unique.
-    </div>
-  </div>
-
-     <div class="tv-neighbourhood-map">
-      <img
-        src="/img/maps/tbilisi-map.jpg"
-        alt="Illustrated map of Tbilisi neighbourhoods"
-        loading="lazy"
-      >
-    </div>
-
-  <div class="section-header-aside flex-center">
-    {{ partial "strips/tbilisi-districts.html" . }}
-  </div>
-</div>
-
-
-
-
-<!-- CAROUSEL: SEPARATE FROM THE HEADER -->
-<div class="tv-editorial-gallery">
-  {{ partial "carousels/tbilisi-gallery.html" . }}
-</div>
-
-
-
-
-  <article class="tv-neighbourhood-feature">
-
-    <div class="tv-neighbourhood-copy">
-
-      <span class="text-label">YOUR NEIGHBOURHOOD GUIDE</span>
-
-      <h3 class="title-xxs">
-        One city. Many different worlds.
-      </h3>
-
-      <p class="text-sm">
-        From leafy streets and independent cafés to historic
-        balconies and lively local markets, every neighbourhood
-        offers a different way to experience Tbilisi.
-      </p>
-
-      <a class="tv-button-link" href="/districts/">
-        Explore the districts →
-      </a>
-
-    </div>
-
-    <div class="tv-neighbourhood-map">
-      <img
-        src="/img/maps/tbilisi-map.jpg"
-        alt="Illustrated map of Tbilisi neighbourhoods"
-        loading="lazy"
-      >
-    </div>
-
-  </article>
-
-</section>
 
 
 
@@ -378,7 +309,7 @@
 {{ partial "strips/strip-food--apps.html" . }}
 {{ partial "carousels/foodcourts.html" . }}
 
-{{ partial "chillout.html" . }}
+{{ partial "carousels/chillout.html" . }}
 
 
 
