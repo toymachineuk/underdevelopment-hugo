@@ -1629,15 +1629,28 @@ padding-right:5px;
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =====================================
    PARTNER LOGO STRIP
 ===================================== */
 
 .tv-partners {
   width: 100%;
-
   margin: 0 auto;
- 
   box-sizing: border-box;
 }
 
@@ -1645,9 +1658,11 @@ padding-right:5px;
   margin: 0 0 24px;
   text-align: center;
   font-size: 10px;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   color: #777;
 }
+
+/* Desktop track */
 
 .tv-partners-track {
   display: flex;
@@ -1657,7 +1672,9 @@ padding-right:5px;
   width: 100%;
 }
 
-.tv-partner-logo {
+/* Individual partner */
+
+.tv-partners .tv-partner-logo {
   display: flex;
   flex: 1 1 0;
   align-items: center;
@@ -1666,76 +1683,30 @@ padding-right:5px;
   max-width: 180px;
   min-height: 42px;
   text-decoration: none;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 }
 
-.tv-partner-logo img {
+.tv-partners .tv-partner-logo img {
   display: block;
   width: auto;
-  max-width: 100%;
-  max-height: 32px;
+  height: auto;
+  max-width: 150px;
+  max-height: 44px;
   object-fit: contain;
 }
 
-.tv-partner-logo:hover {
-  opacity: .7;
+.tv-partners .tv-partner-logo:hover {
+  opacity: 0.7;
 }
 
-/* Mobile */
+/* =====================================
+   MOBILE — HORIZONTAL SCROLL
+===================================== */
+
 @media (max-width: 650px) {
   .tv-partners {
     padding: 16px 0 24px;
     overflow: hidden;
-  }
-
-  .tv-partners .text-label {
-    margin-bottom: 12px;
-  }
-
-  .tv-partners-track {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 32px;
-
-    width: 100%;
-    padding: 12px 24px;
-    box-sizing: border-box;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .tv-partners-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tv-partners-logo {
-    flex: 0 0 140px;
-    width: 140px;
-    max-width: none;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .tv-partners-logo img {
-    display: block;
-    width: auto;
-    max-width: 140px;
-    max-height: 44px;
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 650px) {
-  .tv-partners {
-    padding: 16px 0 24px;
   }
 
   .tv-partners-label {
@@ -1746,52 +1717,35 @@ padding-right:5px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 36px;
+    align-items: center;
+    
+    width: 100%;
+        gap: 14px;
+    padding: 12px 16px;
+    box-sizing: border-box;
 
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 12px 20px;
-    box-sizing: border-box;
-
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tv-partners .tv-partners-track::-webkit-scrollbar {
+    display: none;
   }
 
   .tv-partners .tv-partner-logo {
-    flex: 0 0 140px;
-    width: 140px;
+      flex: 0 0 120px;
+    width: 120px;
+    min-width: 120px;
     max-width: none;
-    min-height: 60px;
+   
+    min-height: 58px;
   }
 
   .tv-partners .tv-partner-logo img {
-    width: auto;
-    max-width: 140px;
-    max-height: 50px;
-    object-fit: contain;
+    max-width: 130px;
+    max-height: 44px;
   }
-
-  .tv-partners-track::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-
-.tv-partners .tv-partner-logo {
-  flex: 0 0 160px;
-  width: 160px;
-  max-width: none;
-  min-height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tv-partners .tv-partner-logo img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 150px;
-  max-height: 44px;
-  object-fit: contain;
 }
