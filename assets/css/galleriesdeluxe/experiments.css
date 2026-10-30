@@ -1,7 +1,4 @@
 
-
-
-
 /* =====================================
    FEATURE SECTION
    Header left · content right
@@ -14,9 +11,7 @@
 
 .tv-feature-layout {
   display: grid;
-  grid-template-columns:
-    minmax(220px, 0.7fr)
-    minmax(0, 1.8fr);
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.8fr);
   gap: clamp(28px, 4vw, 64px);
   align-items: start;
 }
@@ -49,7 +44,7 @@
   min-width: 0;
 }
 
-/* Optional horizontal carousel */
+/* Horizontal carousel */
 
 .tv-horizontal-carousel {
   display: flex;
@@ -57,7 +52,6 @@
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 12px;
-
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -73,9 +67,181 @@
   scroll-snap-align: start;
 }
 
-/* Mobile */
+.tv-feature-content .tv-destination-carousel {
+  width: 100%;
+}
 
-@media (max-width: 760px) {
+/* =====================================
+   FEATURE HEADER
+   Title + section number
+===================================== */
+
+.tv-feature-header .section-header-description-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.tv-feature-header .section-header-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tv-feature-header .section-header-number {
+  display: flex;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Description */
+
+.tv-feature-header .section-header-description {
+  max-width: 350px;
+  margin-top: 16px;
+}
+
+/* =====================================
+   HEADER RIGHT
+   Content left · header right
+===================================== */
+
+.tv-feature-layout--header-right {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.tv-feature-layout--header-right > .tv-feature-content {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.tv-feature-layout--header-right > .tv-feature-header {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+/* =====================================
+   MAPS & DISTRICTS
+   Editorial introduction
+===================================== */
+
+.section-header--districts {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-template-areas:
+    "main map"
+    "aside map";
+  align-items: start;
+  column-gap: clamp(32px, 6vw, 88px);
+  row-gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.section-header--districts .section-header-main {
+  grid-area: main;
+  min-width: 0;
+}
+
+.section-header--districts .section-header-main > .text-label {
+  display: block;
+  margin-bottom: 14px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  color: var(--tv-brand-accent, #c66b49);
+}
+
+.section-header--districts .title-md {
+  max-width: 520px;
+  margin: 0 0 26px;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: var(--tv-text, #292521);
+}
+
+/* Map */
+
+.tv-neighbourhood-map {
+  grid-area: map;
+  align-self: stretch;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--tv-section-soft, #f5f2ea);
+  border-radius: 14px;
+  padding: clamp(12px, 2vw, 24px);
+}
+
+.section-header--districts .tv-neighbourhood-map img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 460px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Description */
+
+.section-header--districts .section-header-aside {
+  grid-area: aside;
+  min-width: 0;
+  align-self: end;
+  display: block;
+  padding-top: 8px;
+}
+
+.section-header--districts .section-header-description-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.section-header--districts .section-header-description {
+  max-width: 350px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--tv-muted, #6b6762);
+}
+
+/* Gallery */
+
+.tv-editorial--index-page .tv-editorial-gallery {
+  width: 100%;
+  margin-top: clamp(40px, 6vw, 76px);
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+  .tv-feature-layout.tv-feature-layout--header-right {
+    grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
   .tv-feature-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
@@ -92,230 +258,40 @@
   .tv-horizontal-carousel > * {
     flex-basis: 220px;
   }
-}
 
+  .tv-feature-layout.tv-feature-layout--header-right {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
 
+  .tv-feature-layout--header-right > .tv-feature-header,
+  .tv-feature-layout--header-right > .tv-feature-content {
+    grid-column: 1;
+    grid-row: auto;
+  }
 
+  .tv-feature-layout--header-right > .tv-feature-header {
+    order: 1;
+  }
 
+  .tv-feature-layout--header-right > .tv-feature-content {
+    order: 2;
+  }
 
+  .tv-feature-header .section-header-description-row {
+    gap: 10px;
+  }
 
+  .tv-feature-header .section-header-number {
+    flex: 0 0 auto;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   MAPS & DISTRICTS — EDITORIAL INTRO
-========================================= */
-
-.section-header--districts {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 0.95fr)
-    minmax(0, 1.05fr);
-
-  grid-template-areas:
-    "main map"
-    "aside map";
-
-  align-items: start;
-  column-gap: clamp(32px, 6vw, 88px);
-  row-gap: 24px;
-
-  width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
-}
-
-/* Heading and district navigation */
-
-.section-header--districts .section-header-main {
-  grid-area: main;
-  min-width: 0;
-}
-
-.section-header--districts .section-header-main > .text-label {
-  display: block;
-  margin-bottom: 14px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0.12em;
-  color: var(--tv-brand-accent, #c66b49);
-}
-
-/* Main heading */
-
-.section-header--districts .title-md {
-  max-width: 520px;
-  margin: 0 0 26px;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: clamp(38px, 4.2vw, 58px);
-  font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-  color: var(--tv-text, #292521);
-}
-
-/* Illustrated map */
-
-.tv-neighbourhood-map {
-  grid-area: map;
-  align-self: stretch;
-  min-width: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-  background: var(--tv-section-soft, #f5f2ea);
-  border-radius: 14px;
-  padding: clamp(12px, 2vw, 24px);
-}
-
-.section-header--districts .tv-neighbourhood-map img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 460px;
-
-  object-fit: contain;
-  object-position: center;
-}
-
-/* Description and section number */
-
-.section-header--districts .section-header-aside {
-  grid-area: aside;
-  min-width: 0;
-  align-self: end;
-
-  display: block;
-  padding-top: 8px;
-}
-
-.section-header--districts .section-header-description-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.section-header--districts .section-header-description {
-  max-width: 350px;
-
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--tv-muted, #6b6762);
-}
-
-/* Smaller, quieter section number */
-
-.section-header--districts .section-header-number {
-  flex: 0 0 54px;
-  width: 54px;
-  height: 54px;
-  aspect-ratio: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--tv-section-soft, #f5f2ea);
-  color: var(--tv-brand-accent, #c66b49);
-  border-radius: 50%;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-/* Gallery follows the introduction */
-
-.tv-editorial--index-page .tv-editorial-gallery {
-  width: 100%;
-  margin-top: clamp(40px, 6vw, 76px);
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
   .section-header--districts {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "main"
       "map"
       "aside";
-
     row-gap: 22px;
     column-gap: 0;
   }
@@ -349,13 +325,6 @@
     line-height: 1.6;
   }
 
-  .section-header--districts .section-header-number {
-    flex-basis: 44px;
-    width: 44px;
-    height: 44px;
-    font-size: 14px;
-  }
-
   .tv-editorial--index-page .tv-editorial-gallery {
     margin-top: 36px;
   }
@@ -375,135 +344,45 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tv-feature-content .tv-destination-carousel {
-  width: 100%;
-  
-}
-
-
-
-
-/* Header RIGHT — content left, header right */
-.tv-feature-layout--header-right {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
-  gap: clamp(32px, 5vw, 80px);
-  align-items: center;
-}
-
-/* Explicit placement */
-.tv-feature-layout--header-right > .tv-feature-content {
+/* =========================================
+   SUPER NARROW FEATURE LAYOUT
+========================================= */
+
+.tv-super-narrow .tv-feature-header {
   grid-column: 1;
-  grid-row: 1;
   min-width: 0;
 }
 
-.tv-feature-layout--header-right > .tv-feature-header {
+.tv-super-narrow .tv-feature-content {
   grid-column: 2;
-  grid-row: 1;
   min-width: 0;
 }
 
-/* Tablet */
-@media (max-width: 900px) {
-  .tv-feature-layout.tv-feature-layout--header-right {
-    grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
-    gap: 28px;
-  }
+.tv-super-narrow .tv-carousel-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .tv-feature-layout.tv-feature-layout--header-right {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+.tv-super-narrow .tv-carousel {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .tv-super-narrow .tv-feature-layout {
+    grid-template-columns: 1fr;
   }
 
-  .tv-feature-layout--header-right > .tv-feature-header,
-  .tv-feature-layout--header-right > .tv-feature-content {
+  .tv-super-narrow .tv-feature-header,
+  .tv-super-narrow .tv-feature-content {
     grid-column: 1;
-    grid-row: auto;
   }
 
-  .tv-feature-layout--header-right > .tv-feature-header {
-    order: 1;
-  }
-
-  .tv-feature-layout--header-right > .tv-feature-content {
-    order: 2;
-  }
 }

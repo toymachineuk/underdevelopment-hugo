@@ -1749,3 +1749,87 @@ padding-right:5px;
     max-height: 44px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   SUPER NARROW FEATURE LAYOUT
+========================================= */
+
+.tv-super-narrow .tv-feature-header {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.tv-super-narrow .tv-feature-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.tv-super-narrow .tv-carousel-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.tv-super-narrow .tv-carousel {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .tv-super-narrow .tv-feature-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tv-super-narrow .tv-feature-header,
+  .tv-super-narrow .tv-feature-content {
+    grid-column: 1;
+  }
+
+}
