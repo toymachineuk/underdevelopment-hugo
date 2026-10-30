@@ -229,67 +229,11 @@
 
 
   
+ {{ partial "carousels/see-do.html" . }}
 
+{{ partial "strips/strip-transport--apps.html" . }}
 
-
-
-
-
-
-{{ partial "carousels/see-do.html" . }}
-
-
-
-
-   <section class="tv-editorial--index-page tv-editorial--wide tv-green section-lg">
-
-
-<div class="section-header section-header--districts">
-
-  <div class="section-header-main">
-    <span class="text-label">NAVIGARE</span>
-    <h2 class="title-lg">Maps and Districts</h2>
-
-    {{ partial "strips/tbilisi-districts.html" . }}
-  </div>
-
-  <div class="tv-neighbourhood-map">
-    <img
-      src="/img/maps/tbilisi-map.jpg"
-      alt="Illustrated map of Tbilisi neighbourhoods"
-      loading="lazy"
-    >
-  </div>
-
-  <div class="section-header-aside flex-center">
-    <div class="section-header-description-row">
-      <div class="text-md section-header-description">
-        Find your corner of Tbilisi. Explore the neighbourhoods
-        that make the city unique.
-      </div>
-
-      <div class="section-header-number" aria-label="Section 2">
-        02
-      </div>
-    </div>
-    
-
-  </div>
-
-</div>
-
-
-  <div class="tv-editorial-gallery">
-    {{ partial "carousels/tbilisi-gallery.html" . }}
-  </div>
-
-</section>
-
-
-
-
-
-
+{{ partial "sections/tv-editorial.html" . }}
 
 
 {{ partial "strips/strip--transport.html" . }}

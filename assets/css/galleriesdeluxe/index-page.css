@@ -1,9 +1,7 @@
+
 /* =========================================================
-   TBILISI VISITS — INDEX PAGE EDITORIAL
-   Consolidated stylesheet
-   - Duplicate district-header rules merged
-   - Responsive breakpoints consolidated
-   - Existing class names and design intent preserved
+   TBILISI VISITS — INDEX PAGE
+   Simplified stylesheet
 ========================================================= */
 
 
@@ -11,91 +9,16 @@
    1. SECTION BASE
 ========================================================= */
 
-.tv-editorial--index-page {
+.tv-editorial {
   box-sizing: border-box;
-  padding-block: clamp(40px, 5vw, 72px);
 }
 
 
 /* =========================================================
-   2. DISTRICT HEADER — DESKTOP
-   Layout: heading + map + description
+   2. DESTINATION GALLERY
 ========================================================= */
 
-.tv-editorial--index-page .section-header--districts {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1.1fr)
-    minmax(0, 0.9fr);
-  align-items: center;
-  gap: clamp(24px, 3vw, 48px);
-  width: 100%;
-}
-
-.tv-editorial--index-page .section-header--districts .section-header-main {
-  width: 100%;
-  min-width: 0;
-  max-width: 420px;
-}
-
-.tv-editorial--index-page .section-header--districts .tv-district-nav {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  width: 100%;
-  max-width: 360px;
-  margin: 24px 0 0;
-}
-
-.tv-editorial--index-page .section-header--districts .tv-neighbourhood-map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-width: 0;
-}
-
-.tv-editorial--index-page .section-header--districts .tv-neighbourhood-map img {
-  display: block;
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-  margin-inline: auto;
-  object-fit: contain;
-}
-
-.tv-editorial--index-page .section-header--districts .section-header-aside {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  min-width: 0;
-}
-
-.tv-editorial--index-page .section-header--districts .section-header-description-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  max-width: 440px;
-  margin: 0;
-}
-
-.tv-editorial--index-page .section-header--districts .section-header-description {
-  flex: 1 1 auto;
-  min-width: 0;
-  max-width: none;
-  margin: 0;
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   3. DESTINATION GALLERY
-========================================================= */
-
-.tv-editorial--index-page .tv-editorial-gallery {
+.tv-editorial-gallery {
   box-sizing: border-box;
   width: 100%;
   max-width: none;
@@ -103,14 +26,14 @@
   margin: 0;
 }
 
-.tv-editorial--index-page .tv-editorial-gallery .tv-destination-carousel {
+.tv-editorial-gallery .tv-destination-carousel {
   width: 100%;
   max-width: none;
   min-width: 0;
   margin: 0;
 }
 
-.tv-editorial--index-page .tv-destination-track {
+.tv-destination-track {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -121,44 +44,44 @@
   box-sizing: border-box;
 }
 
-/* Staggered editorial card heights */
+/* Staggered card heights */
 
-.tv-editorial--index-page .tv-destination-card {
+.tv-destination-card {
   height: 365px;
 }
 
-.tv-editorial--index-page .tv-destination-card:nth-child(4n + 1) {
+.tv-destination-card:nth-child(4n + 1) {
   height: 330px;
 }
 
-.tv-editorial--index-page .tv-destination-card:nth-child(4n + 2),
-.tv-editorial--index-page .tv-destination-card:nth-child(4n) {
+.tv-destination-card:nth-child(4n + 2),
+.tv-destination-card:nth-child(4n) {
   height: 385px;
 }
 
-.tv-editorial--index-page .tv-destination-card:nth-child(4n + 3) {
+.tv-destination-card:nth-child(4n + 3) {
   height: 435px;
 }
 
 
 /* =========================================================
-   4. EDITORIAL LIST
+   3. EDITORIAL LIST
 ========================================================= */
 
-.tv-editorial--index-page .tv-editorial-list {
+.tv-editorial-list {
   margin-top: 0;
 }
 
-.tv-editorial--index-page .tv-editorial-row {
+.tv-editorial-row {
   padding: var(--space-xs) 0 var(--space-sm);
 }
 
 
 /* =========================================================
-   5. NEIGHBOURHOOD FEATURE PANEL
+   4. NEIGHBOURHOOD FEATURE
 ========================================================= */
 
-.tv-editorial--index-page .tv-neighbourhood-feature {
+.tv-neighbourhood-feature {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   align-items: center;
@@ -170,12 +93,12 @@
   box-sizing: border-box;
 }
 
-.tv-editorial--index-page .tv-neighbourhood-copy {
+.tv-neighbourhood-copy {
   max-width: 390px;
   min-width: 0;
 }
 
-.tv-editorial--index-page .tv-neighbourhood-copy .title-xxs {
+.tv-neighbourhood-copy .title-xxs {
   margin: 0 0 16px;
   font-size: clamp(25px, 2.5vw, 32px);
   line-height: 1.1;
@@ -183,20 +106,18 @@
   letter-spacing: var(--tracking-heading);
 }
 
-.tv-editorial--index-page .tv-neighbourhood-copy .text-sm {
+.tv-neighbourhood-copy .text-sm {
   margin: 0 0 24px;
   font-size: 14px;
   line-height: 1.7;
 }
 
-/* Shared map styling */
-
-.tv-editorial--index-page .tv-neighbourhood-map {
+.tv-neighbourhood-map {
   min-width: 0;
   overflow: hidden;
 }
 
-.tv-editorial--index-page .tv-neighbourhood-map img {
+.tv-neighbourhood-map img {
   display: block;
   width: 100%;
   max-width: 450px;
@@ -206,84 +127,102 @@
 }
 
 
+
+
+  .tv-district-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 360px;
+    margin: 24px 0 0;
+}
 /* =========================================================
-   6. TABLET — UP TO 1000px
+   5. TABLET — UP TO 1000px
 ========================================================= */
 
 @media (max-width: 1000px) {
-  .tv-editorial--index-page .section-header--districts {
+
+  .section-header--districts {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 32px;
   }
 
-  .tv-editorial--index-page .section-header--districts .section-header-main {
+  .section-header--districts .section-header-main {
     max-width: none;
   }
 
-  .tv-editorial--index-page .section-header--districts .tv-neighbourhood-map {
+  .section-header--districts .tv-neighbourhood-map {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .tv-editorial--index-page .section-header--districts .section-header-aside {
+  .section-header--districts .section-header-aside {
     grid-column: 1 / -1;
   }
 
-  .tv-editorial--index-page .section-header--districts .section-header-description-row {
+  .section-header--districts .section-header-description-row {
     max-width: 440px;
   }
+
 }
 
 
 /* =========================================================
-   7. TABLET — UP TO 900px
+   6. TABLET — UP TO 900px
 ========================================================= */
 
 @media (max-width: 900px) {
-  .tv-editorial--index-page .tv-editorial-header {
+
+  .tv-editorial-header {
     gap: 28px;
   }
 
-  .tv-editorial--index-page .tv-destination-track {
+  .tv-destination-track {
     gap: 16px;
     min-height: 420px;
     padding: 26px 38px;
     scroll-padding-inline: 38px;
   }
 
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 1) {
+  .tv-destination-card:nth-child(4n + 1) {
     height: 295px;
   }
 
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 2),
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n) {
+  .tv-destination-card:nth-child(4n + 2),
+  .tv-destination-card:nth-child(4n) {
     height: 340px;
   }
 
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 3) {
+  .tv-destination-card:nth-child(4n + 3) {
     height: 380px;
   }
 
-  .tv-editorial--index-page .tv-neighbourhood-feature {
+  .tv-neighbourhood-feature {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 24px;
     padding: 28px;
   }
+
 }
 
 
 /* =========================================================
-   8. MOBILE — UP TO 700px
+   7. MOBILE — UP TO 700px
 ========================================================= */
 
 @media (max-width: 700px) {
-  .tv-editorial--index-page {
+
+  /* Section */
+
+  .tv-editorial {
     padding-block: 40px;
   }
 
-  /* District header stacks vertically */
 
-  .tv-editorial--index-page .section-header--districts {
+  /* District header */
+
+  .section-header--districts {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -292,14 +231,14 @@
     margin-bottom: 28px;
   }
 
-  .tv-editorial--index-page .section-header--districts .section-header-main {
+  .section-header--districts .section-header-main {
     flex: none;
     width: 100%;
     max-width: none;
     min-width: 0;
   }
 
-  .tv-editorial--index-page .section-header--districts h2 {
+  .section-header--districts h2 {
     max-width: 100%;
     margin-top: 0;
     overflow-wrap: normal;
@@ -307,124 +246,137 @@
     line-height: 1;
   }
 
-  /* Description and number stay side by side */
 
-  .tv-editorial--index-page .section-header--districts .section-header-description-row {
+  /* Description */
+
+  .section-header--districts .section-header-description-row {
     gap: 12px;
     margin-top: 12px;
     max-width: 440px;
   }
 
-  .tv-editorial--index-page .section-header--districts .section-header-description {
+  .section-header--districts .section-header-description {
     font-size: 14px;
     line-height: 1.5;
   }
 
+
   /* District navigation */
 
-  .tv-editorial--index-page .section-header--districts .tv-district-nav {
+  .tv-district-nav {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
     margin-inline: auto;
+    box-sizing: border-box;
   }
 
-  .tv-editorial--index-page .section-header--districts .tv-district-nav > * {
+
+
+  .tv-district-nav > * {
     min-width: 0;
     box-sizing: border-box;
   }
 
+
   /* Editorial header */
 
-  .tv-editorial--index-page .tv-editorial-header {
+  .tv-editorial-header {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
     margin-bottom: 24px;
   }
 
-  .tv-editorial--index-page .tv-editorial-heading .title-sm {
+  .tv-editorial-heading .title-sm {
     max-width: 390px;
     font-size: clamp(36px, 9vw, 44px);
   }
 
-  .tv-editorial--index-page .tv-editorial-heading .text-sm {
+  .tv-editorial-heading .text-sm {
     max-width: 100%;
   }
 
-  .tv-editorial--index-page .tv-editorial-intro {
+  .tv-editorial-intro {
     max-width: none;
     padding-top: 0;
   }
 
+
   /* Destination gallery */
 
-  .tv-editorial--index-page .tv-destination-track {
+  .tv-destination-track {
     gap: 14px;
     min-height: 365px;
     padding: 22px 20px 26px;
     scroll-padding-inline: 20px;
   }
 
-  .tv-editorial--index-page .tv-destination-card,
-  .tv-editorial--index-page .tv-destination-card:nth-child(n) {
+  .tv-destination-card,
+  .tv-destination-card:nth-child(n) {
     flex-basis: 235px;
     width: 235px;
     height: 315px;
   }
 
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 1) {
+  .tv-destination-card:nth-child(4n + 1) {
     height: 280px;
   }
 
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 2),
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n) {
+  .tv-destination-card:nth-child(4n + 2),
+  .tv-destination-card:nth-child(4n) {
     height: 315px;
   }
 
-  .tv-editorial--index-page .tv-destination-card:nth-child(4n + 3) {
+  .tv-destination-card:nth-child(4n + 3) {
     height: 345px;
   }
 
-  /* Feature panel */
 
-  .tv-editorial--index-page .tv-neighbourhood-feature {
+  /* Neighbourhood feature */
+
+  .tv-neighbourhood-feature {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
     padding: 22px;
   }
 
-  .tv-editorial--index-page .tv-neighbourhood-copy {
+  .tv-neighbourhood-copy {
     max-width: none;
   }
 
-  .tv-editorial--index-page .tv-neighbourhood-feature .tv-neighbourhood-map {
+  .tv-neighbourhood-feature .tv-neighbourhood-map {
     grid-row: 1;
   }
 
-  .tv-editorial--index-page .tv-neighbourhood-feature .tv-neighbourhood-map img {
+  .tv-neighbourhood-feature .tv-neighbourhood-map img {
     max-width: 100%;
   }
 
-  /* Map in the district header */
 
-  .tv-editorial--index-page .section-header--districts .tv-neighbourhood-map {
+  /* District header map */
+
+  .section-header--districts .tv-neighbourhood-map {
     width: 100%;
   }
 
-  .tv-editorial--index-page .section-header--districts .tv-neighbourhood-map img {
+  .section-header--districts .tv-neighbourhood-map img {
     max-width: 450px;
   }
+
 }
 
 
 /* =========================================================
-   9. ACCESSIBILITY
+   8. ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .tv-editorial--index-page .tv-destination-card,
-  .tv-editorial--index-page .tv-destination-control {
+
+  .tv-destination-card,
+  .tv-destination-control {
     transition: none;
   }
+
 }

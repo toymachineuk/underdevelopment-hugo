@@ -10,20 +10,11 @@
   min-width: 0;
 }
 
-.tv-editorial--index-page .tv-district-nav {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-content: start;
-  align-items: stretch;
-  gap: 8px;
-  width: 100%;
-  max-width: 440px;
-  min-width: 0;
-}
+
 
 /* District buttons */
 
-.tv-editorial--index-page .tv-district-btn {
+ .tv-district-btn {
   appearance: none;
   -webkit-appearance: none;
   display: inline-flex;
@@ -59,9 +50,9 @@
 
 /* Hover and selected state */
 
-.tv-editorial--index-page .tv-district-btn:hover,
-.tv-editorial--index-page .tv-district-btn.is-active,
-.tv-editorial--index-page .tv-district-btn[aria-pressed="true"] {
+.tv-district-btn:hover,
+.tv-district-btn.is-active,
+.tv-district-btn[aria-pressed="true"] {
   background: var(--tv-green-dark);
   border-color: var(--tv-green-dark);
   color: var(--tv-white);
@@ -84,13 +75,7 @@
     text-align: center;
   }
 
-   .tv-editorial--index-page .tv-district-nav {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    max-width: 420px;
-    width: 100%;
-    margin-inline: auto;
-    gap: 8px;
-  }
+  
 
   .tv-editorial--index-page .tv-district-btn {
     min-height: 40px;
