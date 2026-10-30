@@ -208,17 +208,43 @@
 .tv-bg-rose {
   background-color: var(--tv-logo-rose);
 }
+/* =====================================
+   SECTION BACKGROUNDS
+===================================== */
 
-/* Neutral backgrounds */
-
-.tv-bg-white {
-  background-color: var(--tv-white);
+/* Pure white */
+.tv-section-white {
+  background-color: #ffffff;
+  color: #171717;
 }
 
-.tv-bg-light {
-  background-color: #F7F7F5;
+/* Soft warm ivory */
+.tv-section-ivory {
+  background-color: #f5f2ea;
+  color: #171717;
 }
 
+/* Deeper warm ivory */
+.tv-section-warm {
+  background-color: #eee8de;
+  color: #171717;
+}
+
+/* Dark warm charcoal */
+.tv-section-dark {
+  background-color: #292521;
+  color: #ffffff;
+}
+
+/* Terracotta accent */
+.tv-accent {
+  color: #c66b49;
+}
+
+/* Subtle section separator */
+.tv-section-divider {
+  border-top: 1px solid #e7e5df;
+}
 .white {
   color: #fff;
 }
