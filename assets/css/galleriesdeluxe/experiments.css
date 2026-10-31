@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 16px;
 }
 
 .tv-feature-header h2 {
@@ -29,7 +30,7 @@
 
 .tv-feature-description {
   max-width: 360px;
-  margin-top: 16px;
+  margin: 0;
   font-family: var(--font-family-base);
 }
 
@@ -37,14 +38,16 @@
   margin-top: 24px;
   font-size: clamp(32px, 4vw, 56px);
   line-height: 1;
-  color: var(--color-primary);
+  color: var(--tv-brand-accent, #c66b49);
 }
 
 .tv-feature-content {
   min-width: 0;
 }
 
-/* Horizontal carousel */
+/* =====================================
+   HORIZONTAL CAROUSEL
+===================================== */
 
 .tv-horizontal-carousel {
   display: flex;
@@ -99,11 +102,9 @@
   text-align: center;
 }
 
-/* Description */
-
 .tv-feature-header .section-header-description {
   max-width: 350px;
-  margin-top: 16px;
+  margin: 0;
 }
 
 /* =====================================
@@ -112,7 +113,6 @@
 ===================================== */
 
 .tv-feature-layout--header-right {
-  display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
   gap: clamp(32px, 5vw, 80px);
 }
@@ -120,12 +120,35 @@
 .tv-feature-layout--header-right > .tv-feature-content {
   grid-column: 1;
   grid-row: 1;
-  min-width: 0;
 }
 
 .tv-feature-layout--header-right > .tv-feature-header {
   grid-column: 2;
   grid-row: 1;
+}
+
+/* =====================================
+   SUPER NARROW FEATURE LAYOUT
+===================================== */
+
+.tv-super-narrow .tv-feature-header {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.tv-super-narrow .tv-feature-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.tv-super-narrow .tv-carousel-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.tv-super-narrow .tv-carousel {
+  width: 100%;
   min-width: 0;
 }
 
@@ -141,12 +164,14 @@
     "main map"
     "aside map";
   align-items: start;
-  column-gap: clamp(32px, 6vw, 88px);
-  row-gap: 24px;
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
 }
+
+/* Main heading */
 
 .section-header--districts .section-header-main {
   grid-area: main;
@@ -155,7 +180,7 @@
 
 .section-header--districts .section-header-main > .text-label {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 600;
@@ -166,7 +191,7 @@
 
 .section-header--districts .title-md {
   max-width: 520px;
-  margin: 0 0 26px;
+  margin: 0 0 20px;
   font-family: "DM Sans", sans-serif;
   font-size: clamp(38px, 4.2vw, 58px);
   font-weight: 800;
@@ -185,9 +210,9 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: clamp(16px, 2vw, 24px);
   background: var(--tv-section-soft, #f5f2ea);
   border-radius: 14px;
-  padding: clamp(12px, 2vw, 24px);
 }
 
 .section-header--districts .tv-neighbourhood-map img {
@@ -205,8 +230,6 @@
   grid-area: aside;
   min-width: 0;
   align-self: end;
-  display: block;
-  padding-top: 8px;
 }
 
 .section-header--districts .section-header-description-row {
@@ -218,6 +241,7 @@
 
 .section-header--districts .section-header-description {
   max-width: 350px;
+  margin: 0;
   font-size: 15px;
   line-height: 1.65;
   color: var(--tv-muted, #6b6762);
@@ -227,7 +251,7 @@
 
 .tv-editorial--index-page .tv-editorial-gallery {
   width: 100%;
-  margin-top: clamp(40px, 6vw, 76px);
+  margin-top: clamp(48px, 5vw, 64px);
 }
 
 /* =====================================
@@ -235,13 +259,22 @@
 ===================================== */
 
 @media (max-width: 900px) {
-  .tv-feature-layout.tv-feature-layout--header-right {
+
+  .tv-feature-layout--header-right {
     grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
     gap: 28px;
   }
+
 }
 
+/* =====================================
+   MOBILE
+===================================== */
+
 @media (max-width: 768px) {
+
+  /* Feature layout */
+
   .tv-feature-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
@@ -255,11 +288,15 @@
     margin-top: 16px;
   }
 
+  /* Carousel */
+
   .tv-horizontal-carousel > * {
     flex-basis: 220px;
   }
 
-  .tv-feature-layout.tv-feature-layout--header-right {
+  /* Header right variant */
+
+  .tv-feature-layout--header-right {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
@@ -278,13 +315,28 @@
     order: 2;
   }
 
+  /* Feature header */
+
   .tv-feature-header .section-header-description-row {
     gap: 10px;
   }
 
   .tv-feature-header .section-header-number {
-    flex: 0 0 auto;
+    flex-basis: auto;
   }
+
+  /* Super narrow layout */
+
+  .tv-super-narrow .tv-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tv-super-narrow .tv-feature-header,
+  .tv-super-narrow .tv-feature-content {
+    grid-column: 1;
+  }
+
+  /* Maps & Districts */
 
   .section-header--districts {
     grid-template-columns: minmax(0, 1fr);
@@ -292,14 +344,14 @@
       "main"
       "map"
       "aside";
-    row-gap: 22px;
+    row-gap: 18px;
     column-gap: 0;
   }
 
   .section-header--districts .title-md {
     font-size: clamp(36px, 9vw, 48px);
     line-height: 1;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
   .section-header--districts .tv-neighbourhood-map {
@@ -325,9 +377,12 @@
     line-height: 1.6;
   }
 
+  /* Gallery */
+
   .tv-editorial--index-page .tv-editorial-gallery {
     margin-top: 36px;
   }
+
 }
 
 
@@ -342,47 +397,225 @@
 
 
 
+/* =====================================
+   FEATURE SECTION
+   Full-width background
+===================================== */
 
-
-/* =========================================
-   SUPER NARROW FEATURE LAYOUT
-========================================= */
-
-.tv-super-narrow .tv-feature-header {
-  grid-column: 1;
-  min-width: 0;
-}
-
-.tv-super-narrow .tv-feature-content {
-  grid-column: 2;
-  min-width: 0;
-}
-
-.tv-super-narrow .tv-carousel-toolbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 16px;
-}
-
-.tv-super-narrow .tv-carousel {
+.tv-feature-section {
   width: 100%;
+  box-sizing: border-box;
+}
+
+/* Background belongs to the section */
+.tv-section-ivory {
+  background-color: #f5f2ea;
+}
+
+/* Inner content container */
+.tv-feature-inner {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 64px);
+  box-sizing: border-box;
+}
+
+/* =====================================
+   FEATURE LAYOUT
+===================================== */
+
+.tv-apps-section .tv-feature-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.8fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+
+.tv-apps-section .tv-feature-header,
+.tv-apps-section .tv-feature-content {
   min-width: 0;
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
+/* =====================================
+   RESPONSIVE
+===================================== */
 
 @media (max-width: 768px) {
 
-  .tv-super-narrow .tv-feature-layout {
-    grid-template-columns: 1fr;
+  .tv-feature-inner {
+    padding-inline: 20px;
   }
 
-  .tv-super-narrow .tv-feature-header,
-  .tv-super-narrow .tv-feature-content {
-    grid-column: 1;
+  .tv-apps-section .tv-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 
 }
+
+
+
+
+
+/* =====================================
+   FEATURE TOOLBAR
+   Outside the colored section
+===================================== */
+
+.tv-feature-toolbar {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: 0 clamp(20px, 4vw, 64px) 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+/* =====================================
+   WARM FEATURE SECTION
+===================================== */
+
+.tv-section-warm {
+  background-color: #eee8de;
+}
+
+.tv-feature-inner {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 64px);
+  box-sizing: border-box;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .tv-feature-toolbar {
+    padding-inline: 20px;
+    padding-bottom: 16px;
+    justify-content: flex-start;
+  }
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   FEATURE INTRO
+   Description left · Metro Map button right
+===================================== */
+
+.tv-feature-intro {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+
+  padding-bottom: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  box-sizing: border-box;
+}
+
+/* Description */
+
+.tv-feature-intro-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 620px;
+}
+
+.tv-feature-intro-text p {
+  margin: 0;
+  color: var(--tv-text, #171717);
+  line-height: 1.55;
+}
+
+/* Button wrapper */
+
+.tv-feature-intro-action {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .tv-feature-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding-inline: 20px;
+  }
+
+  .tv-feature-intro-text {
+    max-width: 100%;
+  }
+
+  .tv-feature-intro-action {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+  .tv-feature-intro {
+    padding-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

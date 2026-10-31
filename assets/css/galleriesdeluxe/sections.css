@@ -1341,7 +1341,7 @@ main > section.tv-filter-section > .tv-grid--wrapper {
 
   width: 100%;
   max-width: 440px;
-  margin-top: 16px;
+
   box-sizing: border-box;
 }
 
@@ -1474,6 +1474,29 @@ main > section.tv-filter-section > .tv-grid--wrapper {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tv-coming-soon-label {
+  display: inline-block;
+  margin-top: 12px;
+  color: #9A7656;
+  letter-spacing: 0.08em;
+}
 
 
 
