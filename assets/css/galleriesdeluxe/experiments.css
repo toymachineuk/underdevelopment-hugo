@@ -16,6 +16,8 @@
   align-items: start;
 }
 
+
+
 .tv-feature-header {
   min-width: 0;
   display: flex;
@@ -151,6 +153,106 @@
   width: 100%;
   min-width: 0;
 }
+
+
+
+
+
+
+
+
+
+/* =========================================
+   CAROUSEL LEFT — HEADER RIGHT
+========================================= */
+
+.feature-layout--carousel-left {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(200px, 0.7fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+}
+
+.feature-layout--carousel-left .tv-feature-content {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.feature-layout--carousel-left .tv-feature-header {
+  grid-column: 2;
+  min-width: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .feature-layout--carousel-left {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-layout--carousel-left .tv-feature-header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature-layout--carousel-left .tv-feature-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+}/* =========================================
+   CAROUSEL LEFT — HEADER RIGHT
+========================================= */
+
+.feature-layout--carousel-left {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(200px, 0.7fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+}
+
+.feature-layout--carousel-left .tv-feature-content {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.feature-layout--carousel-left .tv-feature-header {
+  grid-column: 2;
+  min-width: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .feature-layout--carousel-left {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-layout--carousel-left .tv-feature-header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature-layout--carousel-left .tv-feature-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* =====================================
    MAPS & DISTRICTS
@@ -539,11 +641,7 @@
   max-width: 620px;
 }
 
-.tv-feature-intro-text p {
-  margin: 0;
-  color: var(--tv-text, #171717);
-  line-height: 1.55;
-}
+
 
 /* Button wrapper */
 

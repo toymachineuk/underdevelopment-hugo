@@ -1,7 +1,7 @@
 
 /* =========================================================
    TBILISI VISITS — INDEX PAGE
-   Simplified stylesheet
+   Clean, consolidated stylesheet
 ========================================================= */
 
 
@@ -18,33 +18,29 @@
    2. DESTINATION GALLERY
 ========================================================= */
 
-.tv-editorial-gallery {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  margin: 0;
-}
-
+.tv-editorial-gallery,
 .tv-editorial-gallery .tv-destination-carousel {
   width: 100%;
   max-width: none;
   min-width: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .tv-destination-track {
   display: flex;
   align-items: center;
   gap: 20px;
+
   min-height: 495px;
   padding: 30px 48px;
+
+  box-sizing: border-box;
   overflow-y: hidden;
   scroll-padding-inline: 48px;
-  box-sizing: border-box;
 }
 
-/* Staggered card heights */
+/* Card heights */
 
 .tv-destination-card {
   height: 365px;
@@ -78,7 +74,22 @@
 
 
 /* =========================================================
-   4. NEIGHBOURHOOD FEATURE
+   4. DISTRICT NAVIGATION
+========================================================= */
+
+.tv-district-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+
+  width: 100%;
+  max-width: 360px;
+  margin: 24px 0 0;
+}
+
+
+/* =========================================================
+   5. NEIGHBOURHOOD FEATURE
 ========================================================= */
 
 .tv-neighbourhood-feature {
@@ -86,8 +97,10 @@
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   align-items: center;
   gap: clamp(24px, 4vw, 56px);
+
   margin-top: clamp(32px, 4vw, 48px);
   padding: clamp(24px, 3.5vw, 48px);
+
   background: var(--tv-white, #fff);
   border-radius: 8px;
   box-sizing: border-box;
@@ -127,24 +140,14 @@
 }
 
 
-
-
-  .tv-district-nav {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    width: 100%;
-    max-width: 360px;
-    margin: 24px 0 0;
-}
 /* =========================================================
-   5. TABLET — UP TO 1000px
+   6. TABLET — UP TO 1000px
 ========================================================= */
 
 @media (max-width: 1000px) {
 
   .section-header--districts {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px;
   }
 
@@ -169,19 +172,24 @@
 
 
 /* =========================================================
-   6. TABLET — UP TO 900px
+   7. TABLET — UP TO 900px
 ========================================================= */
 
 @media (max-width: 900px) {
+
+  /* Editorial header */
 
   .tv-editorial-header {
     gap: 28px;
   }
 
+
+  /* Destination gallery */
+
   .tv-destination-track {
     gap: 16px;
     min-height: 420px;
-    padding: 26px 38px;
+    padding: 0;
     scroll-padding-inline: 38px;
   }
 
@@ -198,6 +206,9 @@
     height: 380px;
   }
 
+
+  /* Neighbourhood feature */
+
   .tv-neighbourhood-feature {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 24px;
@@ -208,7 +219,7 @@
 
 
 /* =========================================================
-   7. MOBILE — UP TO 700px
+   8. MOBILE — UP TO 700px
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -227,6 +238,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 24px;
+
     width: 100%;
     margin-bottom: 28px;
   }
@@ -247,7 +259,7 @@
   }
 
 
-  /* Description */
+  /* District description */
 
   .section-header--districts .section-header-description-row {
     gap: 12px;
@@ -264,16 +276,10 @@
   /* District navigation */
 
   .tv-district-nav {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    width: 100%;
     max-width: 440px;
     margin-inline: auto;
     box-sizing: border-box;
   }
-
-
 
   .tv-district-nav > * {
     min-width: 0;
@@ -309,7 +315,7 @@
   .tv-destination-track {
     gap: 14px;
     min-height: 365px;
-    padding: 22px 20px 26px;
+    padding: 0;
     scroll-padding-inline: 20px;
   }
 
@@ -369,7 +375,7 @@
 
 
 /* =========================================================
-   8. ACCESSIBILITY
+   9. ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {

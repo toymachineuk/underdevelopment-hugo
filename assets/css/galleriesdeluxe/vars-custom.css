@@ -388,47 +388,51 @@ max-width: 480px;
 /* =========================================
    MOBILE TYPOGRAPHY
 ========================================= */
-
 @media (max-width: 650px) {
 
   .title-xl {
     font-size: 44px;
     line-height: 0.98;
     letter-spacing: -0.045em;
+    margin-bottom: 20px;
   }
 
   .title-lg {
     font-size: 34px;
     line-height: 1.02;
     letter-spacing: -0.035em;
+    margin-bottom: 18px;
   }
 
   .title-md {
     font-size: 28px;
     line-height: 1.08;
     letter-spacing: -0.03em;
+    margin-bottom: 16px;
   }
 
   .title-sm {
     font-size: 23px;
     line-height: 1.14;
     letter-spacing: -0.025em;
+    margin-bottom: 14px;
   }
 
   .title-xs {
     font-size: 19px;
     line-height: 1.2;
     letter-spacing: -0.015em;
+    margin-bottom: 12px;
   }
 
   .title-xxs {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: -0.01em;
+    margin-bottom: 10px;
   }
 
 }
-
 /* =====================================
    BODY TEXT
 ===================================== */
@@ -509,6 +513,45 @@ max-width: 480px;
   letter-spacing: 0;
 
   font-weight: 400;
+
+}
+
+
+
+/* =====================================
+   MOBILE TYPOGRAPHY
+===================================== */
+
+@media (max-width: 768px) {
+
+  .text-lg {
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -.005em;
+    max-width: 100%;
+  }
+
+  .text-md {
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 100%;
+  }
+
+  .text-sm {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .text-xs {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .text-xxs {
+    font-size: 11px;
+    line-height: 1.4;
+  }
 
 }
 
@@ -742,7 +785,9 @@ max-width: 480px;
 
 
 
-```css
+.text-align-right {
+  text-align: right;
+}
 /* =========================================
    FLEX ALIGNMENT
 ========================================= */
