@@ -1356,7 +1356,36 @@ main > section.tv-filter-section > .tv-grid--wrapper {
 
 /* Consistent section number */
 
+/* =====================================
+   SECTION NUMBERING
+===================================== */
 
+/* Major sections */
+
+
+
+/* Small editorial sections */
+
+.section-number-sm {
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: #EAF2F5;
+  border-radius: 8px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  color: #3A7893;
+  font-variant-numeric: tabular-nums;
+}
 
 /* Mobile */
 
@@ -1464,13 +1493,7 @@ main > section.tv-filter-section > .tv-grid--wrapper {
     margin: 0;
   }
 
-  .section-header-number {
-    grid-area: number;
-    width: 48px;
-    min-width: 48px;
-    font-size: 23px;
-    border-radius: 6px;
-  }
+
 }
 
 
