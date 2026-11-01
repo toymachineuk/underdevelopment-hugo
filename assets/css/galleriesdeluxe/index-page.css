@@ -84,7 +84,7 @@
 
   width: 100%;
   max-width: 360px;
-  margin: 24px 0 0;
+  margin: var(--space-sm) 0 0;
 }
 
 

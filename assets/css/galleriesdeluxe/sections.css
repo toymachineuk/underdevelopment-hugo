@@ -145,7 +145,7 @@ main > section.tv-filter-section > .section-header {
 .tv-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 8px;
  
   margin-top: var(--space-lg);
   margin-bottom: var(--space-md);
@@ -858,7 +858,7 @@ margin: 0 0 8px;
   .tv-grid {
     grid-auto-columns: 76%;
     gap: 12px;
-    padding: var(--space-md);
+    padding: var(--space-xs);
  
   }
 
@@ -877,7 +877,7 @@ margin: 0 0 8px;
   .tv-square-grid {
     grid-auto-columns: 76%;
     gap: 12px;
-    padding: var(--space-md);
+  
   }
 
   .tv-square-card {

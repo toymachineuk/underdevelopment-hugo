@@ -16,14 +16,12 @@
   align-items: start;
 }
 
-
-
 .tv-feature-header {
   min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(--space-xs);
 }
 
 .tv-feature-header h2 {
@@ -46,6 +44,7 @@
 .tv-feature-content {
   min-width: 0;
 }
+
 
 /* =====================================
    HORIZONTAL CAROUSEL
@@ -76,6 +75,7 @@
   width: 100%;
 }
 
+
 /* =====================================
    FEATURE HEADER
    Title + section number
@@ -85,7 +85,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--space-xs);
   width: 100%;
 }
 
@@ -109,6 +109,7 @@
   margin: 0;
 }
 
+
 /* =====================================
    HEADER RIGHT
    Content left · header right
@@ -128,6 +129,7 @@
   grid-column: 2;
   grid-row: 1;
 }
+
 
 /* =====================================
    SUPER NARROW FEATURE LAYOUT
@@ -155,20 +157,13 @@
 }
 
 
-
-
-
-
-
-
-
-/* =========================================
+/* =====================================
    CAROUSEL LEFT — HEADER RIGHT
-========================================= */
+===================================== */
 
 .feature-layout--carousel-left {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(200px, 0.7fr);
+  grid-template-columns: minmax(0, 1.8fr) minmax(150px, 0.5fr);
   gap: clamp(28px, 4vw, 64px);
   align-items: start;
 }
@@ -181,77 +176,9 @@
 .feature-layout--carousel-left .tv-feature-header {
   grid-column: 2;
   min-width: 0;
+  text-align: right;
+  justify-self: end;
 }
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-
-  .feature-layout--carousel-left {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .feature-layout--carousel-left .tv-feature-header {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .feature-layout--carousel-left .tv-feature-content {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-}/* =========================================
-   CAROUSEL LEFT — HEADER RIGHT
-========================================= */
-
-.feature-layout--carousel-left {
-  display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(200px, 0.7fr);
-  gap: clamp(28px, 4vw, 64px);
-  align-items: start;
-}
-
-.feature-layout--carousel-left .tv-feature-content {
-  grid-column: 1;
-  min-width: 0;
-}
-
-.feature-layout--carousel-left .tv-feature-header {
-  grid-column: 2;
-  min-width: 0;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-
-  .feature-layout--carousel-left {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .feature-layout--carousel-left .tv-feature-header {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .feature-layout--carousel-left .tv-feature-content {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-}
-
-
-
-
-
-
-
-
-
 
 
 /* =====================================
@@ -272,6 +199,7 @@
   max-width: 1200px;
   margin-inline: auto;
 }
+
 
 /* Main heading */
 
@@ -302,6 +230,7 @@
   color: var(--tv-text, #292521);
 }
 
+
 /* Map */
 
 .tv-neighbourhood-map {
@@ -326,6 +255,7 @@
   object-position: center;
 }
 
+
 /* Description */
 
 .section-header--districts .section-header-aside {
@@ -349,6 +279,7 @@
   color: var(--tv-muted, #6b6762);
 }
 
+
 /* Gallery */
 
 .tv-editorial--index-page .tv-editorial-gallery {
@@ -356,8 +287,98 @@
   margin-top: clamp(48px, 5vw, 64px);
 }
 
+
 /* =====================================
-   RESPONSIVE
+   FEATURE INNER
+===================================== */
+
+.tv-feature-inner {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+  box-sizing: border-box;
+}
+
+
+/* =====================================
+   SECTION BACKGROUNDS
+===================================== */
+
+.tv-section-ivory {
+  background-color: #f5f2ea;
+}
+
+.tv-section-warm {
+  background-color: #eee8de;
+}
+
+
+/* =====================================
+   APPS SECTION
+===================================== */
+
+.tv-apps-section .tv-feature-layout {
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.8fr);
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.tv-apps-section .tv-feature-header,
+.tv-apps-section .tv-feature-content {
+  min-width: 0;
+}
+
+
+/* =====================================
+   FEATURE TOOLBAR
+   Outside the colored section
+===================================== */
+
+.tv-feature-toolbar {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: 0 clamp(20px, 4vw, 64px) 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+
+/* =====================================
+   FEATURE INTRO
+   Description left · Metro Map button right
+===================================== */
+
+.tv-feature-intro {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.tv-feature-intro-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 620px;
+}
+
+.tv-feature-intro-action {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/* =====================================
+   TABLET
 ===================================== */
 
 @media (max-width: 900px) {
@@ -367,7 +388,23 @@
     gap: 28px;
   }
 
+  .feature-layout--carousel-left {
+    grid-template-columns: 1fr;
+    gap: var(--space-xxs);
+  }
+
+  .feature-layout--carousel-left .tv-feature-header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .feature-layout--carousel-left .tv-feature-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
 }
+
 
 /* =====================================
    MOBILE
@@ -379,7 +416,7 @@
 
   .tv-feature-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    gap: var(--space-xs);
   }
 
   .tv-feature-description {
@@ -390,11 +427,13 @@
     margin-top: 16px;
   }
 
+
   /* Carousel */
 
   .tv-horizontal-carousel > * {
     flex-basis: 220px;
   }
+
 
   /* Header right variant */
 
@@ -417,15 +456,17 @@
     order: 2;
   }
 
+
   /* Feature header */
 
   .tv-feature-header .section-header-description-row {
-    gap: 10px;
+    gap: var(--space-md);
   }
 
   .tv-feature-header .section-header-number {
     flex-basis: auto;
   }
+
 
   /* Super narrow layout */
 
@@ -437,6 +478,48 @@
   .tv-super-narrow .tv-feature-content {
     grid-column: 1;
   }
+
+
+  /* Apps */
+
+  .tv-feature-inner {
+    padding-inline: 0;
+  }
+
+  .tv-apps-section .tv-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-sm);
+  }
+
+
+  /* Toolbar */
+
+  .tv-feature-toolbar {
+    padding-inline: 20px;
+    padding-bottom: 16px;
+    justify-content: flex-start;
+  }
+
+
+  /* Feature intro */
+
+  .tv-feature-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding-inline: 16px;
+    padding-bottom: var(--space-sm);
+  }
+
+  .tv-feature-intro-text {
+    max-width: 100%;
+  }
+
+  .tv-feature-intro-action {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
 
   /* Maps & Districts */
 
@@ -479,6 +562,7 @@
     line-height: 1.6;
   }
 
+
   /* Gallery */
 
   .tv-editorial--index-page .tv-editorial-gallery {
@@ -486,234 +570,3 @@
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   FEATURE SECTION
-   Full-width background
-===================================== */
-
-.tv-feature-section {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Background belongs to the section */
-.tv-section-ivory {
-  background-color: #f5f2ea;
-}
-
-/* Inner content container */
-.tv-feature-inner {
-  width: 100%;
-  max-width: 1600px;
-  margin-inline: auto;
-  padding-inline: clamp(20px, 4vw, 64px);
-  box-sizing: border-box;
-}
-
-/* =====================================
-   FEATURE LAYOUT
-===================================== */
-
-.tv-apps-section .tv-feature-layout {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.8fr);
-  gap: clamp(32px, 5vw, 80px);
-  align-items: start;
-}
-
-.tv-apps-section .tv-feature-header,
-.tv-apps-section .tv-feature-content {
-  min-width: 0;
-}
-
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-@media (max-width: 768px) {
-
-  .tv-feature-inner {
-    padding-inline: 20px;
-  }
-
-  .tv-apps-section .tv-feature-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-  }
-
-}
-
-
-
-
-
-/* =====================================
-   FEATURE TOOLBAR
-   Outside the colored section
-===================================== */
-
-.tv-feature-toolbar {
-  width: 100%;
-  max-width: 1600px;
-  margin-inline: auto;
-  padding: 0 clamp(20px, 4vw, 64px) 20px;
-  box-sizing: border-box;
-
-  display: flex;
-  justify-content: flex-end;
-  background: transparent;
-}
-
-/* =====================================
-   WARM FEATURE SECTION
-===================================== */
-
-.tv-section-warm {
-  background-color: #eee8de;
-}
-
-.tv-feature-inner {
-  width: 100%;
-  max-width: 1600px;
-  margin-inline: auto;
-  padding-inline: clamp(20px, 4vw, 64px);
-  box-sizing: border-box;
-}
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 768px) {
-
-  .tv-feature-toolbar {
-    padding-inline: 20px;
-    padding-bottom: 16px;
-    justify-content: flex-start;
-  }
-
-}
-
-
-
-
-
-
-
-/* =====================================
-   FEATURE INTRO
-   Description left · Metro Map button right
-===================================== */
-
-.tv-feature-intro {
-  width: 100%;
-  max-width: 1600px;
-  margin-inline: auto;
-
-  padding-bottom: 28px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-
-  box-sizing: border-box;
-}
-
-/* Description */
-
-.tv-feature-intro-text {
-  flex: 1 1 auto;
-  min-width: 0;
-  max-width: 620px;
-}
-
-
-
-/* Button wrapper */
-
-.tv-feature-intro-action {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 768px) {
-
-  .tv-feature-intro {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-
-    padding-inline: 20px;
-  }
-
-  .tv-feature-intro-text {
-    max-width: 100%;
-  }
-
-  .tv-feature-intro-action {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-}
-
-
-
-
-@media (max-width: 768px) {
-  .tv-feature-intro {
-    padding-bottom: 20px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -113,6 +113,9 @@
 @media (max-width: 600px) {
   .tv-green-btn {
     min-width: 0;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
   }
 }
 
