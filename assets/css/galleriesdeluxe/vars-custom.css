@@ -208,6 +208,10 @@
 .tv-bg-rose {
   background-color: var(--tv-logo-rose);
 }
+
+
+
+
 /* =====================================
    SECTION BACKGROUNDS
 ===================================== */
@@ -235,6 +239,69 @@
   background-color: #292521;
   color: #ffffff;
 }
+
+
+
+/* =====================================
+   BLUE SECTION PALETTE
+===================================== */
+
+/* Very light blue */
+.tv-section-blue-light {
+  background-color: #eaf4f7;
+  color: #171717;
+}
+
+/* Soft blue */
+.tv-section-blue {
+  background-color: #d7eaf0;
+  color: #171717;
+}
+
+/* Primary brand blue */
+.tv-section-blue-primary {
+  background-color: #3a98b9;
+  color: #ffffff;
+}
+
+/* Deep blue */
+.tv-section-blue-dark {
+  background-color: #24647d;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Terracotta accent */
 .tv-accent {
