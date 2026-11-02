@@ -24,6 +24,15 @@
   gap: var(--space-xs);
 }
 
+
+.tv-feature-header--row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0;
+  padding-top: var(--space-lg);
+}
+
 .tv-feature-header h2 {
   margin-top: 8px;
 }

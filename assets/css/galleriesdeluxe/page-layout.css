@@ -13,6 +13,9 @@
   align-items: center;
   gap: clamp(40px, 5vw, 72px);
 
+  padding: var(--space-lg) 0 var(--space-sm);
+
+
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -205,23 +208,16 @@
 
 
 
-.tv-editorial-row--map > img {
-  width: 130%;
+
+
+
+
+
+.page-layout .layout-left .tv-editorial-intro {
   max-width: none;
-  justify-self: center;
-}
-
-.tv-editorial--index-page .tv-editorial-row > img {
-  display: block;
-  
   min-width: 0;
-  aspect-ratio: auto;
-  object-fit: contain;
+  margin-left: auto;
 }
-
-
-
-
 
 
 
