@@ -1529,6 +1529,7 @@ padding-right:5px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: var(--space-md);
+    padding-inline:16px;
   }
 
   .tv-info-item {
@@ -1544,90 +1545,6 @@ padding-right:5px;
     border-left: 1px solid var(--color-border);
   }
 }
-
-/* =====================================
-   NARROW INFORMATION STRIP
-===================================== */
-
-.tv-info-strip--narrow {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 25px;
-  padding: 0;
-  border-top: none;
-  border-bottom: none;
-}
-
-/* Individual items */
-.tv-info-strip--narrow .tv-info-item {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  padding: 0 12px;
-  line-height: 1;
-  flex-direction: row;
-}
-
-/* First item */
-.tv-info-strip--narrow .tv-info-item:first-child {
-  padding-left: 0;
-}
-
-/* Logo or image */
-.tv-info-strip--narrow .tv-info-item img {
-  display: block;
-  flex-shrink: 0;
-  width: auto;
-  max-width: 80px;
-  max-height: 25px;
-  object-fit: contain;
-}
-
-/* Text wrapper */
-.tv-info-strip--narrow .tv-info-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-/* Label */
-.tv-info-strip--narrow .tv-info-label {
-  font-size: 10px;
-  line-height: 1.1;
-}
-
-/* Value */
-.tv-info-strip--narrow .tv-info-value {
-  font-size: 12px;
-  line-height: 1.1;
-}
-
-/* Mobile: allow the strip to scroll without widening the page */
-@media (max-width: 650px) {
-  .tv-info-strip--narrow {
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .tv-info-strip--narrow::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-
-
-
-
-
-
-
 
 
 

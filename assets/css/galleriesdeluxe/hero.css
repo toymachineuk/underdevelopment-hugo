@@ -1,0 +1,559 @@
+
+/* =========================================
+   EDITORIAL HERO
+========================================= */
+
+/* -----------------------------------------
+   01. BASE LAYOUT
+----------------------------------------- */
+
+.tv-editorial-hero {
+  --hero-gap: clamp(28px, 4vw, 64px);
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+  gap: var(--hero-gap);
+
+  width: 100%;
+  max-width: 1600px;
+
+  margin-inline: auto;
+  padding-bottom: var(--space-lg);
+
+  color: var(--tv-black);
+  font-family: var(--font-sans);
+}
+
+
+/* -----------------------------------------
+   02. FEATURED VARIANT
+----------------------------------------- */
+
+.tv-editorial-hero--featured .tv-editorial-hero-content {
+  min-width: 0;
+  max-width: 680px;
+  padding-block: 0;
+}
+
+.tv-editorial-hero--featured .tv-editorial-hero-media {
+  aspect-ratio: 1 / 1;
+}
+
+
+/* -----------------------------------------
+   03. IMAGE
+----------------------------------------- */
+
+.tv-editorial-hero-media {
+  width: 100%;
+  min-width: 0;
+
+  aspect-ratio: 1.05 / 1;
+
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.tv-editorial-hero-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* -----------------------------------------
+   04. CONTENT
+----------------------------------------- */
+
+.tv-editorial-hero-content {
+  min-width: 0;
+  padding-block: var(--space-md);
+}
+
+.tv-editorial-hero-content .text-label {
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+
+/* -----------------------------------------
+   05. MAIN HEADLINE
+----------------------------------------- */
+
+.tv-editorial-hero-title {
+  max-width: 700px;
+
+  margin: 0 0 28px;
+
+  font-size: clamp(40px, 4.2vw, 58px);
+  line-height: 1.08;
+
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+
+/* Headline main line */
+
+.tv-hero-title-main {
+  display: block;
+
+  font-size: 1em;
+  line-height: 1.08;
+
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+
+/* Headline secondary line */
+
+.tv-hero-title-secondary {
+  display: block;
+
+  max-width: 580px;
+  margin-top: 14px;
+
+  font-size: 0.68em;
+  line-height: 1.4;
+
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-heading);
+}
+
+
+/* -----------------------------------------
+   06. ANIMATED HEADING
+----------------------------------------- */
+
+.tv-hero-heading {
+  position: relative;
+  min-width: 0;
+}
+
+.tv-hero-heading-text {
+  min-width: 0;
+}
+
+.tv-hero-heading .tv-editorial-hero-title {
+  padding-right: 100px;
+}
+
+.tv-hero-heading .tv-moving-animation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+
+  width: 150px;
+  height: 150px;
+
+  pointer-events: none;
+}
+
+
+/* Animated HI! */
+
+.tv-hero-heading .ml8 {
+  position: relative;
+
+  width: 3em;
+  height: 3em;
+  margin: 0;
+
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 900;
+
+  color: #fff;
+}
+
+.tv-hero-heading .ml8 .letters-container {
+  position: absolute;
+  inset: 0;
+
+  height: 1em;
+  margin: auto;
+
+  text-align: center;
+}
+
+.tv-hero-heading .ml8 .letters {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+
+  top: -0.2em;
+  right: -0.12em;
+
+  line-height: 0.7em;
+}
+
+.tv-hero-heading .ml8 .bang {
+  top: auto;
+  left: -0.06em;
+
+  font-size: 1.4em;
+}
+
+.tv-hero-heading .ml8 .circle {
+  position: absolute;
+  inset: 0;
+
+  margin: auto;
+  border-radius: 50%;
+}
+
+.tv-hero-heading .ml8 .circle-white {
+  width: 2.35em;
+  height: 2.35em;
+
+  border-color: #D96D12;
+}
+
+.tv-hero-heading .ml8 .circle-dark {
+  z-index: 1;
+
+  width: 2.2em;
+  height: 2.2em;
+
+  background-color: #F28C28;
+}
+
+.tv-hero-heading .ml8 .circle-container {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.tv-hero-heading .ml8 .circle-dark-dashed {
+  width: 2.3em;
+  height: 2.3em;
+
+  border: 2px dashed #D96D12;
+  background: transparent;
+}
+
+
+/* -----------------------------------------
+   07. GENERAL DESCRIPTION
+----------------------------------------- */
+
+.tv-editorial-hero-description {
+  max-width: 40ch;
+
+  margin-block: var(--space-md) var(--space-lg);
+}
+
+
+/* -----------------------------------------
+   08. INLINE GREETING VARIANT
+----------------------------------------- */
+
+.tv-editorial-hero--featured .tv-moving-letter {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+  margin-top: 0;
+}
+
+.tv-editorial-hero--featured .tv-moving-letter > .tv-moving-animation {
+  flex: 0 0 64px;
+
+  width: 64px;
+  min-width: 0;
+
+  margin-top: 2px;
+}
+
+.tv-editorial-hero--featured .tv-moving-letter .tv-moving-animation h2 {
+  margin: 0;
+}
+
+
+/* Introductory text */
+
+.tv-editorial-hero--featured .tv-moving-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.tv-editorial-hero--featured .tv-moving-description {
+  max-width: 46ch;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.75;
+
+  font-weight: var(--weight-regular, 400);
+}
+
+.tv-editorial-hero--featured .tv-moving-description strong {
+  font-weight: var(--weight-semibold, 600);
+}
+
+.tv-editorial-hero--featured .tv-moving-description--last {
+  margin-top: 12px;
+}
+
+
+/* -----------------------------------------
+   09. TEXT LINK
+----------------------------------------- */
+
+.tv-editorial-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid var(--tv-black);
+
+  color: inherit;
+
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+
+  text-decoration: none;
+}
+
+.tv-editorial-hero-link span {
+  transition: transform 180ms ease;
+}
+
+.tv-editorial-hero-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+.tv-editorial-hero-link:focus-visible {
+  outline: 2px solid var(--tv-green-dark);
+  outline-offset: 5px;
+}
+
+
+/* =========================================
+   10. TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .tv-editorial-hero {
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+
+    gap: var(--space-md);
+  }
+
+  .tv-editorial-hero--featured .tv-editorial-hero-media {
+    aspect-ratio: 0.9 / 1;
+  }
+
+  .tv-editorial-hero-title {
+    margin-bottom: 22px;
+
+    font-size: clamp(32px, 4.2vw, 40px);
+    line-height: 1.08;
+  }
+
+  .tv-hero-title-main {
+    line-height: 1.08;
+  }
+
+  .tv-hero-title-secondary {
+    margin-top: 12px;
+
+    font-size: 0.72em;
+    line-height: 1.35;
+  }
+
+  /* Animated heading */
+
+  .tv-hero-heading .tv-editorial-hero-title {
+    padding-right: 75px;
+  }
+
+  .tv-hero-heading .tv-moving-animation {
+    width: 110px;
+    height: 110px;
+  }
+
+  .tv-hero-heading .ml8 {
+    font-size: 38px;
+  }
+
+  /* Inline greeting */
+
+  .tv-editorial-hero--featured .tv-moving-letter {
+    gap: 10px;
+  }
+
+  .tv-editorial-hero--featured .tv-moving-letter > .tv-moving-animation {
+    flex-basis: 48px;
+    width: 48px;
+  }
+
+  .tv-editorial-hero--featured .tv-moving-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .tv-editorial-hero-description {
+    margin-block: var(--space-sm) var(--space-md);
+  }
+}
+
+
+/* =========================================
+   11. MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .tv-editorial-hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--space-sm);
+  }
+
+  /* Image */
+
+  .tv-editorial-hero--featured .tv-editorial-hero-media {
+    aspect-ratio: 5 / 4;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+  }
+
+  /* Content */
+
+  .tv-editorial-hero-content {
+    padding-block: 0 var(--space-sm);
+  }
+
+  .tv-editorial-hero-content .text-label {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  /* Main headline */
+
+  .tv-editorial-hero-title {
+    margin-bottom: 20px;
+
+    font-size: clamp(32px, 8vw, 38px);
+    line-height: 1.04;
+  }
+
+  .tv-hero-title-main {
+    line-height: 1.04;
+  }
+
+  /* Secondary headline */
+
+  .tv-hero-title-secondary {
+    max-width: 100%;
+    margin-top: 12px;
+
+    font-size: 0.76em;
+    line-height: 1.28;
+
+    letter-spacing: normal;
+    font-weight: var(--weight-medium);
+  }
+
+  /* Animated heading */
+
+  .tv-hero-heading .tv-editorial-hero-title {
+    padding-right: 48px;
+  }
+
+  .tv-hero-heading .tv-moving-animation {
+    top: 6px;
+    right: 0;
+
+    width: 68px;
+    height: 68px;
+  }
+
+  .tv-hero-heading .ml8 {
+    font-size: 25px;
+  }
+
+  /* Introduction */
+
+  .tv-editorial-hero--featured .tv-moving-text {
+    margin-top: 0;
+  }
+
+  .tv-editorial-hero--featured .tv-moving-description {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .tv-editorial-hero--featured .tv-moving-description--last {
+    margin-top: 10px;
+  }
+
+  .tv-editorial-hero-description {
+    font-size: var(--text-base);
+    margin-block: var(--space-sm) var(--space-md);
+  }
+
+  /* Inline greeting */
+
+  .tv-editorial-hero--featured .tv-moving-letter {
+    gap: 12px;
+  }
+
+  .tv-editorial-hero--featured .tv-moving-letter > .tv-moving-animation {
+    flex-basis: 42px;
+    width: 42px;
+  }
+}
+
+
+/* =========================================
+   12. GRADIENT TEXT
+========================================= */
+
+.tv-gradient-text {
+  display: inline;
+
+  background: linear-gradient(
+    100deg,
+    #E87524 0%,
+    #E65C59 45%,
+    #3989C9 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   13. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tv-editorial-hero-link span {
+    transition: none;
+  }
+}

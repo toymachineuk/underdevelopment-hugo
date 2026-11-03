@@ -6,7 +6,10 @@
 @import "page-header.css";
 @import "sections.css";
 @import "maps.css";
-@import "navbar-hero.css";
+@import "navbar.css";
+@import "hero.css";
+@import "quick-links.css";
+@import "nav-intro.css";
 @import "animation.css";
 @import "map-page.css";
 @import "buttons.css";
