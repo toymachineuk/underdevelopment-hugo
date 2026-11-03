@@ -183,6 +183,13 @@
     padding: 32px 0 36px 0;
   }
 
+
+  .page-layout .tv-editorial-row {
+   
+    padding: 0 0 36px 0;
+  }
+
+
   .tv-editorial-copy {
     grid-row: 2;
   }
@@ -383,7 +390,11 @@ padding: 0 var(--space-md);
 }
 
 
-
+@media (max-width: 650px) {
+  .no-bg .tv-feature-header {
+    padding: 0;
+  }
+}
 
 
 
@@ -396,6 +407,8 @@ padding: 0 var(--space-md);
   align-items: center;
   gap: 10px;
   margin-bottom: 12px;
+  width: 100%;
+
 }
 
 .tv-tip-icon {
@@ -432,6 +445,10 @@ padding: 0 var(--space-md);
   min-width: 0;
 }
 
+
+.tv-editorial-header .tv-feature-header {
+  padding: 0;
+}
 /* Practical tip */
 .tv-feature-intro-action {
   width: 100%;

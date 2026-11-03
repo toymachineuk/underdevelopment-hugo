@@ -92,7 +92,7 @@
 .tv-editorial-hero-title {
   max-width: 700px;
 
-  margin: 0 0 28px;
+  margin: 0 0 20px;
 
   font-size: clamp(40px, 4.2vw, 58px);
   line-height: 1.08;
@@ -121,7 +121,7 @@
   display: block;
 
   max-width: 580px;
-  margin-top: 14px;
+  margin-top: 10px;
 
   font-size: 0.68em;
   line-height: 1.4;

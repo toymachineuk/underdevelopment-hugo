@@ -1137,6 +1137,10 @@ margin: 0 0 8px;
   .tv-editorial-row {
     grid-template-columns: 150px minmax(0, 1fr);
   }
+
+  .tv-editorial-content {
+  order:1;
+}
 }
 
 
@@ -1170,6 +1174,7 @@ margin: 0 0 8px;
 
   .tv-editorial-row > img {
     aspect-ratio: 16 / 9;
+    order:2;
   }
 }
 
@@ -1429,6 +1434,11 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   --number-color: #c66b49;
 }
 
+
+.section-header-number--blue {
+ background-color: #3a98b9;
+  color: #ffffff;
+}
 .section-header-number--terracotta {
   --number-bg: #c66b49;
   --number-color: #ffffff;

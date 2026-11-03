@@ -149,7 +149,7 @@
 }
 
 .tv-quick-links--compact .tv-quick-link {
-  min-height: 125px;
+  min-height: 100px;
   padding: 18px;
 
   gap: 9px;

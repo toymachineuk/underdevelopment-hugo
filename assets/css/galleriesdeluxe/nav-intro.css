@@ -8,7 +8,7 @@
 ----------------------------------------- */
 
 .tv-nav-intro {
-  padding: var(--space-lg) var(--space-md);
+  padding:  var(--space-md);
   margin-bottom: 28px;
 
   background: var(--color-primary, #3a98b9);
@@ -42,15 +42,15 @@
 
 .tv-nav-intro-title {
   max-width: 420px;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
 
   color: #fff;
-
   font-family: var(--font-sans);
-  font-size: clamp(26px, 3vw, 38px);
+
+  font-size: clamp(25px, 2.5vw, 34px);
   font-weight: var(--weight-bold);
 
-  line-height: var(--line-heading);
+  line-height: 1.08;
   letter-spacing: var(--tracking-heading);
 }
 

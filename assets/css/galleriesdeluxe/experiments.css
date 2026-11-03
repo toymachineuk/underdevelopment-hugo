@@ -516,8 +516,8 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
-    padding-inline: 16px;
-    padding-bottom: var(--space-sm);
+    padding-inline: 0;
+    padding-bottom: 0;
   }
 
   .tv-feature-intro-text {
