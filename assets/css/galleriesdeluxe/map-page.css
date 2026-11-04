@@ -228,34 +228,12 @@ text-align: left;
 
 
 
-.tv-region-filter,
-.tv-region-filter-initial {
-  width: 100%;
-  height: 80px;
-
-  box-sizing: border-box;
-
-  border: 0;
-  padding: 0;
-  margin: 0;
-
-  background: none;
-  text-align: left;
-
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
 .tv-region-filter {
   display: none;
 }
 
-.tv-region-filter.is-visible,
-.tv-region-filter-initial {
-  display: flex;
-}
+
 
 
 
@@ -271,14 +249,7 @@ text-align: left;
   box-sizing: border-box;
   overflow: visible;
 }
-/* =========================================
-   SHOW SELECTED REGION
-========================================= */
 
-.tv-region-filter.is-visible {
-  display: flex !important;
-  
-}
 
 
 
@@ -439,15 +410,7 @@ text-align: left;
 
 @media (max-width: 700px) {
 
-  /* Selected region panel */
-  .tv-region-filter.is-visible {
-    height: auto;
-    min-height: 149px;
-    margin: 0 !important;
-    padding: 16px !important;
-    box-sizing: border-box;
-    scroll-snap-align: start;
-  }
+ 
 
   /* Let the content determine the panel height */
   .tv-region-filter.is-visible > * {
@@ -848,6 +811,10 @@ text-align: left;
 
 .region-tbilisi {
   --region-color: #f1b3d2;
+}
+
+.vertical-badge.tv-region-filter {
+  background: var(--region-color);
 }
 
 .region-badge {

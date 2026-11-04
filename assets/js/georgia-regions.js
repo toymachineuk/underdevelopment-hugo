@@ -1,9 +1,4 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-
-  /* =========================================
-     ELEMENTS
-  ========================================= */
 
   const mapRegions = document.querySelectorAll(
     ".tv-map-region[data-region]"
@@ -33,20 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
     ".tv-region-filter-initial"
   );
 
-  /* Region panel destination */
+  /* Region panel destinations */
   const regionPanelTarget = document.querySelector(
     ".tv-region-panel-target"
+  );
+
+  const regionInfoTarget = document.querySelector(
+    ".tv-region-info-target"
   );
 
   /* Caves carousel */
   const cavesCarousel = document.querySelector(
     ".caves-strip .tv-carousel"
   );
-
-
-  /* =========================================
-     DEBUG
-  ========================================= */
 
   console.log("Region filter loaded");
   console.log("Map regions:", mapRegions.length);
@@ -55,396 +49,240 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Destination cards:", cards.length);
   console.log("Grid:", grid);
   console.log("Region panel target:", regionPanelTarget);
+  console.log("Region info target:", regionInfoTarget);
   console.log("Caves carousel:", cavesCarousel);
 
 
-  /* =========================================
-     INITIAL STATE
-  ========================================= */
-
-  /* Hide all region filters */
+  /* Initial state */
 
   filters.forEach(function (filter) {
-
-    filter.classList.remove(
-      "is-visible",
-      "active"
-    );
-
+    filter.classList.remove("is-visible", "active");
   });
-
-
-  /* Set initial region index state */
 
   regionIndexItems.forEach(function (item) {
-
     item.classList.remove("active");
-
   });
-
-
-  /* Show initial Georgia text */
 
   if (initialText) {
-
     initialText.style.display = "grid";
-
   }
-
-
-  /* Show all destination cards */
 
   cards.forEach(function (card) {
-
     card.style.display = "";
-
     card.classList.remove("is-region-first");
-
   });
 
-
-  /* Remove any region class from grid */
-
   if (grid) {
-
     grid.className = "tv-grid";
-
   }
-
-
-  /* Show total destination count */
 
   if (count) {
-
-    count.textContent =
-      "Showing " + cards.length + " destinations";
-
+    count.textContent = "Showing " + cards.length + " destinations";
   }
 
 
-  /* =========================================
-     SCROLL REGIONAL CAROUSEL
-  ========================================= */
+  /* Move Caves carousel to selected region */
 
   function scrollCarouselToRegion(region) {
-
-    if (!cavesCarousel) {
-      return;
-    }
-
+    if (!cavesCarousel) return;
 
     const targetCard = cavesCarousel.querySelector(
       '.tv-carousel-card[data-region="' + region + '"]'
     );
 
-
-    /* No card for this region */
-
     if (!targetCard) {
-
-      console.log(
-        "No Caves card found for region:",
-        region
-      );
-
+      console.log("No Caves card found for region:", region);
       return;
-
     }
-
-
-    /* Calculate position relative to carousel */
 
     const targetLeft =
       targetCard.getBoundingClientRect().left -
       cavesCarousel.getBoundingClientRect().left +
       cavesCarousel.scrollLeft;
 
-
-    /* Scroll carousel */
-
     cavesCarousel.scrollTo({
-
       left: targetLeft,
-
       behavior: "smooth"
-
     });
 
-
-    console.log(
-      "Caves carousel moved to:",
-      region
-    );
-
+    console.log("Caves carousel moved to:", region);
   }
 
 
-  /* =========================================
-     SHOW REGION
-  ========================================= */
+  /* Show selected region */
 
   function showRegion(region) {
-
     console.log("Selected region:", region);
 
-
-    /* -----------------------------------------
-       Update grid background class
-    ----------------------------------------- */
-
     if (grid) {
-
       grid.className = "tv-grid";
-
-      grid.classList.add(
-        "region-" + region
-      );
-
+      grid.classList.add("region-" + region);
     }
 
 
-    /* -----------------------------------------
-       Reset map regions
-    ----------------------------------------- */
+    /* Update map */
 
     mapRegions.forEach(function (mapRegion) {
-
       mapRegion.classList.remove("active");
-
     });
-
-
-    /* -----------------------------------------
-       Highlight selected map region
-    ----------------------------------------- */
 
     const selectedMapRegion = document.querySelector(
       '.tv-map-region[data-region="' + region + '"]'
     );
 
     if (selectedMapRegion) {
-
       selectedMapRegion.classList.add("active");
-
     }
 
 
-    /* -----------------------------------------
-       Hide initial Georgia text
-    ----------------------------------------- */
+    /* Hide initial text */
 
     if (initialText) {
-
       initialText.style.display = "none";
-
     }
 
 
-    /* -----------------------------------------
-       Hide all region filters
-    ----------------------------------------- */
+    /* Reset region filters and index */
 
     filters.forEach(function (filter) {
-
-      filter.classList.remove(
-        "is-visible",
-        "active"
-      );
-
+      filter.classList.remove("is-visible", "active");
     });
-
-
-    /* -----------------------------------------
-       Reset region index buttons
-    ----------------------------------------- */
 
     regionIndexItems.forEach(function (item) {
-
       item.classList.remove("active");
-
     });
-
-
-    /* -----------------------------------------
-       Activate selected region index button
-    ----------------------------------------- */
 
     const selectedIndexItem = document.querySelector(
       '.tv-region-index-item[data-region="' + region + '"]'
     );
 
     if (selectedIndexItem) {
-
       selectedIndexItem.classList.add("active");
-
     }
 
 
-    /* -----------------------------------------
-       Hide all destination cards
-       + remove previous first-card class
-    ----------------------------------------- */
+    /* Hide all destination cards */
 
     cards.forEach(function (card) {
-
       card.style.display = "none";
-
-      card.classList.remove(
-        "is-region-first"
-      );
-
+      card.classList.remove("is-region-first");
     });
 
 
-    /* -----------------------------------------
-       Move selected region panel
-       beneath "Where to go?" description
-    ----------------------------------------- */
+/* Move selected region panel and details */
 
-    const selectedFilter = document.querySelector(
-      '.tv-region-filter[data-region="' + region + '"]'
+const selectedFilter = document.querySelector(
+  '.tv-region-filter[data-region="' + region + '"]'
+);
+
+if (selectedFilter) {
+
+  /* Keep title and description in the header */
+
+  if (regionPanelTarget) {
+    regionPanelTarget.appendChild(selectedFilter);
+  }
+
+  /* Find the selected region's details */
+
+  let selectedDetails = selectedFilter.querySelector(
+    ".tv-region-details"
+  );
+
+  /* If already moved, find it in the details target */
+
+  if (!selectedDetails && regionInfoTarget) {
+    selectedDetails = regionInfoTarget.querySelector(
+      '.tv-region-details[data-region="' + region + '"]'
     );
+  }
 
-    if (selectedFilter) {
+  /* Move details below the grid */
 
-      if (regionPanelTarget) {
+  if (selectedDetails && regionInfoTarget) {
 
-        regionPanelTarget.appendChild(
-          selectedFilter
-        );
+    regionInfoTarget
+      .querySelectorAll(".tv-region-details")
+      .forEach(function (details) {
+        details.classList.remove("is-region-info-active");
+      });
 
-      }
+    selectedDetails.dataset.region = region;
 
-      selectedFilter.classList.add(
-        "is-visible",
-        "active"
-      );
+    regionInfoTarget.appendChild(selectedDetails);
 
-    }
+    selectedDetails.classList.add(
+      "is-region-info-active"
+    );
+  }
 
+  selectedFilter.classList.add(
+    "is-visible",
+    "active"
+  );
+}
 
-    /* -----------------------------------------
-       Show selected destination cards
-       + identify first card
-    ----------------------------------------- */
+    /* Show destination cards for selected region */
 
     let visibleCards = 0;
     let firstVisibleCard = null;
 
     cards.forEach(function (card) {
-
       if (card.dataset.region === region) {
-
         card.style.display = "";
 
         if (!firstVisibleCard) {
-
           firstVisibleCard = card;
-
         }
 
         visibleCards++;
-
       }
-
     });
 
-
-    /* -----------------------------------------
-       Add first-card class
-    ----------------------------------------- */
-
     if (firstVisibleCard) {
-
-      firstVisibleCard.classList.add(
-        "is-region-first"
-      );
-
+      firstVisibleCard.classList.add("is-region-first");
     }
 
 
-    /* -----------------------------------------
-       Update destination count
-    ----------------------------------------- */
+    /* Update destination count */
 
     if (count) {
-
-      count.textContent =
-        "Showing " + visibleCards + " destinations";
-
+      count.textContent = "Showing " + visibleCards + " destinations";
     }
 
 
-    /* -----------------------------------------
-       Move Caves carousel to region
-    ----------------------------------------- */
+    /* Update Caves carousel */
 
     scrollCarouselToRegion(region);
-
   }
 
 
-  /* =========================================
-     MAP CLICK
-  ========================================= */
+  /* Map clicks */
 
   mapRegions.forEach(function (mapRegion) {
-
-    mapRegion.addEventListener(
-      "click",
-      function (event) {
-
-        event.preventDefault();
-
-        showRegion(
-          this.dataset.region
-        );
-
-      }
-    );
-
+    mapRegion.addEventListener("click", function (event) {
+      event.preventDefault();
+      showRegion(this.dataset.region);
+    });
   });
 
 
-  /* =========================================
-     REGION FILTER CLICK
-  ========================================= */
+  /* Region filter clicks */
 
   filters.forEach(function (filter) {
-
-    filter.addEventListener(
-      "click",
-      function () {
-
-        showRegion(
-          this.dataset.region
-        );
-
-      }
-    );
-
+    filter.addEventListener("click", function () {
+      showRegion(this.dataset.region);
+    });
   });
 
 
-  /* =========================================
-     REGION INDEX CLICK
-  ========================================= */
+  /* Region index clicks */
 
   regionIndexItems.forEach(function (item) {
-
-    item.addEventListener(
-      "click",
-      function (event) {
-
-        event.preventDefault();
-
-        showRegion(
-          this.dataset.region
-        );
-
-      }
-    );
-
+    item.addEventListener("click", function (event) {
+      event.preventDefault();
+      showRegion(this.dataset.region);
+    });
   });
 
 });

@@ -158,39 +158,53 @@
     <header class="tv-feature-header">
 
       <div class="section-header-description-row">
-
-        <div class="section-header-number" aria-hidden="true">
-          01
-        </div>
-
         <div class="section-header-main">
-          <span class="text-label">Explore the city</span>
-          <h2 class="title-md">Where to go?</h2>
+        <!-- Default welcome state -->
+<div class="tv-region-filter-initial">
+
+  <span class="text-label">Discover Georgia</span>
+
+  <h3 class="title-sm">Welcome to Georgia</h3>
+
+  <p class="text-md">
+    From the Black Sea coast and the vineyards of Kakheti
+    to the mountains of the Caucasus, explore Georgia
+    region by region and find the places you want to visit.
+  </p>
+
+  <p class="text-sm">
+    Select a region on the map or explore the regions below.
+  </p>
+
+</div>
+
+
+<!-- Selected region title and description -->
+<div class="tv-region-panel-target"></div>
         </div>
-
       </div>
-
-      <p class="text-md section-header-description">
-        Find neighborhoods, experiences and places worth
-        discovering during your stay.
-      </p>
 
     
 
-    </header>
 
+
+
+
+
+      <!-- Region title and description -->
+      <div class="tv-region-panel-target"></div>
+
+    </header>
 
     <!-- REGION CAROUSEL -->
     <div class="tv-feature-content">
-
       {{ partial "carousels/georgia-regions--car.html" . }}
-
     </div>
 
-
-      <!-- Selected region panel -->
-      <div class="tv-region-panel-target"></div>
   </div>
+
+  <!-- Selected region information strip -->
+  <div class="tv-region-info-target"></div>
 
 </section>
 

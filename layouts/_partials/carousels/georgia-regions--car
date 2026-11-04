@@ -23,42 +23,43 @@
         alt="Alaverdi Monastery in Kakheti"
         loading="lazy">
 
-      <div class="tv-rectangle-card-content">
+        <div class="vertical-badge no-icon tv-region-filter region-kakheti ">
+    <span>Kakheti</span>
+  </div>
 
-        <h3>Alaverdi Monastery</h3>
 
-        <div class="tv-info">
 
-          <div class="tv-info-row tv-info-row--location">
-            <img
-              src="/icons/direction.svg"
-              width="16"
-              height="16"
-              alt=""
-              aria-hidden="true">
+<div class="tv-rectangle-card-content">
+    <h3>Alaverdi Monastery</h3>
 
-            <a
+    <div class="tv-info">
+
+   
+
+      <div class="tv-card-details">
+          <p>
+ One of Kakheti's great landmarks. The enormous 11th-century cathedral stands in the Alazani Valley with the Caucasus mountains behind it. 
+</p>
+
+      
+      </div>
+
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-location-icon" src="/icons/map-pin.svg" width="16" height="16" alt="" aria-hidden="true">
+      
+
+
+         <a class="tv-card-link tv-district-card-link"
               href="https://maps.app.goo.gl/KxyAAZxfiXMumvTL7?g_st=ac"
               target="_blank"
               rel="noopener noreferrer">
-              29 Atoneli St
+            Near Sighnaghi 
+                <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            architecture, history
-          </div>
-
-          <div class="tv-info-row">
-            One of Kakheti's great landmarks. The enormous
-            11th-century cathedral stands in the Alazani Valley
-            with the Caucasus mountains behind it.
-          </div>
-
-        </div>
-
       </div>
 
+    </div>
+  </div>
     </article>
 
 
@@ -74,6 +75,10 @@
         alt="Sighnaghi old town in Kakheti"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Sighnaghi</h3>
@@ -82,22 +87,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Sighnaghi+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Sighnaghi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            town, views, history
           </div>
 
           <div class="tv-info-row">
@@ -124,6 +128,10 @@
         alt="Bodbe Monastery near Sighnaghi"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Bodbe Monastery</h3>
@@ -132,22 +140,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Bodbe+Monastery+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Near Sighnaghi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            history, architecture
           </div>
 
           <div class="tv-info-row">
@@ -174,6 +181,10 @@
         alt="Telavi town in Kakheti"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Telavi</h3>
@@ -182,22 +193,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Telavi+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Telavi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            town, history, local life
           </div>
 
           <div class="tv-info-row">
@@ -224,6 +234,10 @@
         alt="Tsinandali Estate in Kakheti"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Tsinandali Estate</h3>
@@ -232,22 +246,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Tsinandali+Estate+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Tsinandali
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            wine, gardens, history
           </div>
 
           <div class="tv-info-row">
@@ -275,6 +288,10 @@
         alt="Gremi fortress and church in Kakheti"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Gremi</h3>
@@ -283,22 +300,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Gremi+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Gremi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            architecture, history
           </div>
 
           <div class="tv-info-row">
@@ -325,6 +341,10 @@
         alt="Nekresi Monastery overlooking the Alazani Valley"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Nekresi Monastery</h3>
@@ -333,22 +353,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Nekresi+Monastery+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Kvareli
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            history, architecture, views
           </div>
 
           <div class="tv-info-row">
@@ -375,6 +394,10 @@
         alt="Old Shuamta Monastery in Kakheti"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Shuamta Monasteries</h3>
@@ -383,22 +406,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Shuamta+Monastery+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Near Telavi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            architecture, nature
           </div>
 
           <div class="tv-info-row">
@@ -425,6 +447,10 @@
         alt="David Gareja monastery in the Georgian semi-desert"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>David Gareja</h3>
@@ -433,22 +459,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=David+Gareja+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Gareja
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            history, landscape, hiking
           </div>
 
           <div class="tv-info-row">
@@ -475,6 +500,10 @@
         alt="Black Rock Lake in Lagodekhi, Georgia"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Black Rock Lake</h3>
@@ -483,22 +512,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Black+Rock+Lake+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Lagodekhi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            hiking, mountains, nature
           </div>
 
           <div class="tv-info-row">
@@ -525,6 +553,10 @@
         alt="Vashlovani National Park landscape in Georgia"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Vashlovani National Park</h3>
@@ -533,22 +565,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Vashlovani+National+Park+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Dedoplistskaro
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            landscapes, wildlife, hiking
           </div>
 
           <div class="tv-info-row">
@@ -575,6 +606,10 @@
         alt="Lagodekhi Waterfall in Georgia"
         loading="lazy">
 
+      <div class="vertical-badge no-icon tv-region-filter region-kakheti">
+        <span>Kakheti</span>
+      </div>
+
       <div class="tv-rectangle-card-content">
 
         <h3>Lagodekhi Waterfall</h3>
@@ -583,22 +618,21 @@
 
           <div class="tv-info-row tv-info-row--location">
             <img
-              src="/icons/direction.svg"
+              class="tv-location-icon"
+              src="/icons/map-pin.svg"
               width="16"
               height="16"
               alt=""
               aria-hidden="true">
 
             <a
+              class="tv-card-link tv-district-card-link"
               href="https://maps.google.com/?q=Lagodekhi+Waterfall+Georgia"
               target="_blank"
               rel="noopener noreferrer">
               Lagodekhi
+              <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            hiking, forest, waterfall
           </div>
 
           <div class="tv-info-row">
@@ -611,63 +645,50 @@
       </div>
 
     </article>
+<article
+  class="tv-rectangle-card"
+  data-region="shida-kartli">
 
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/shida-kartli/uplistsikhe.jpg"
+    alt="Uplistsikhe cave town in Shida Kartli"
+    loading="lazy">
 
-    <!-- =====================================
-         SHIDA KARTLI
-    ====================================== -->
+  <div class="vertical-badge no-icon tv-region-filter region-shida-kartli">
+    <span>Shida Kartli</span>
+  </div>
 
-    <article
-      class="tv-rectangle-card"
-      data-region="shida-kartli">
+  <div class="tv-rectangle-card-content">
 
-      <img
-        class="tv-rectangle-image"
-        src="/img/georgia-regions/shida-kartli/uplistsikhe.jpg"
-        alt="Uplistsikhe cave town in Shida Kartli"
-        loading="lazy">
+    <h3>Uplistsikhe Cave Town</h3>
 
-      <div class="tv-rectangle-card-content">
+    <div class="tv-info">
 
-        <h3>Uplistsikhe Cave Town</h3>
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          class="tv-location-icon"
+          src="/icons/map-pin.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
 
-        <div class="tv-info">
-
-          <div class="tv-info-row tv-info-row--location">
-            <img
-              src="/icons/direction.svg"
-              width="16"
-              height="16"
-              alt=""
-              aria-hidden="true">
-
-            <a
-              href="https://maps.google.com/?q=Uplistsikhe+Georgia"
-              target="_blank"
-              rel="noopener noreferrer">
-              Near Gori
-            </a>
-          </div>
-
-          <div class="tv-info-row tv-info-desription">
-            history, archaeology, views
-          </div>
-
-          <div class="tv-info-row">
-            An ancient town carved into the cliffs above the
-            Mtkvari River, with caves, streets, halls and tunnels.
-          </div>
-
-        </div>
-
+        <a
+          class="tv-card-link tv-district-card-link"
+          href="https://maps.google.com/?q=Uplistsikhe+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Gori
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
 
-    </article>
+    </div>
 
+  </div>
 
-    <!-- =========================================
-     KVEMO KARTLI — 1
-========================================= -->
+</article>
 
 <article
   class="tv-rectangle-card"
@@ -679,6 +700,10 @@
     alt="Dmanisi Archaeological Site"
     loading="lazy">
 
+  <div class="vertical-badge no-icon tv-region-filter region-kvemo-kartli">
+    <span>Kvemo Kartli</span>
+  </div>
+
   <div class="tv-rectangle-card-content">
 
     <h3>Dmanisi Archaeological Site</h3>
@@ -687,27 +712,21 @@
 
       <div class="tv-info-row tv-info-row--location">
         <img
-          src="/icons/direction.svg"
+          class="tv-location-icon"
+          src="/icons/map-pin.svg"
           width="16"
           height="16"
           alt=""
           aria-hidden="true">
 
         <a
+          class="tv-card-link tv-district-card-link"
           href="https://maps.google.com/?q=Dmanisi+Archaeological+Site+Georgia"
           target="_blank"
           rel="noopener noreferrer">
           Near Dmanisi
+          <span aria-hidden="true">↗</span>
         </a>
-      </div>
-
-      <div class="tv-info-row tv-info-desription">
-        archaeology, ancient history
-      </div>
-
-      <div class="tv-info-row">
-        A remarkable archaeological site where 1.8-million-year-old
-        human remains were discovered, alongside the ruins of a medieval settlement.
       </div>
 
     </div>
@@ -715,11 +734,6 @@
   </div>
 
 </article>
-
-
-<!-- =========================================
-     KVEMO KARTLI — 2
-========================================= -->
 
 <article
   class="tv-rectangle-card"
@@ -731,6 +745,10 @@
     alt="Bolnisi Sioni Cathedral"
     loading="lazy">
 
+  <div class="vertical-badge no-icon tv-region-filter region-kvemo-kartli">
+    <span>Kvemo Kartli</span>
+  </div>
+
   <div class="tv-rectangle-card-content">
 
     <h3>Bolnisi Sioni</h3>
@@ -739,28 +757,21 @@
 
       <div class="tv-info-row tv-info-row--location">
         <img
-          src="/icons/direction.svg"
+          class="tv-location-icon"
+          src="/icons/map-pin.svg"
           width="16"
           height="16"
           alt=""
           aria-hidden="true">
 
         <a
+          class="tv-card-link tv-district-card-link"
           href="https://maps.google.com/?q=Bolnisi+Sioni+Georgia"
           target="_blank"
           rel="noopener noreferrer">
           Near Bolnisi
+          <span aria-hidden="true">↗</span>
         </a>
-      </div>
-
-      <div class="tv-info-row tv-info-desription">
-        early Christian architecture, inscriptions
-      </div>
-
-      <div class="tv-info-row">
-        One of Georgia's oldest surviving churches, built in the
-        5th century and known for its early Georgian inscriptions
-        and distinctive Bolnisi cross.
       </div>
 
     </div>
@@ -768,11 +779,6 @@
   </div>
 
 </article>
-
-
-<!-- =========================================
-     KVEMO KARTLI — 3
-========================================= -->
 
 <article
   class="tv-rectangle-card"
@@ -784,6 +790,10 @@
     alt="Dashbashi Canyon"
     loading="lazy">
 
+  <div class="vertical-badge no-icon tv-region-filter region-kvemo-kartli">
+    <span>Kvemo Kartli</span>
+  </div>
+
   <div class="tv-rectangle-card-content">
 
     <h3>Dashbashi Canyon</h3>
@@ -792,27 +802,21 @@
 
       <div class="tv-info-row tv-info-row--location">
         <img
-          src="/icons/direction.svg"
+          class="tv-location-icon"
+          src="/icons/map-pin.svg"
           width="16"
           height="16"
           alt=""
           aria-hidden="true">
 
         <a
+          class="tv-card-link tv-district-card-link"
           href="https://maps.google.com/?q=Dashbashi+Canyon+Georgia"
           target="_blank"
           rel="noopener noreferrer">
           Near Tsalka
+          <span aria-hidden="true">↗</span>
         </a>
-      </div>
-
-      <div class="tv-info-row tv-info-desription">
-        canyon, waterfalls, landscape
-      </div>
-
-      <div class="tv-info-row">
-        A dramatic green canyon cut into the Tsalka plateau,
-        known for waterfalls, cliffs and the surrounding highland landscape.
       </div>
 
     </div>
