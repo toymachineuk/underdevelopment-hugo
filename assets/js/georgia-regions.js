@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
   /* =========================================
@@ -32,8 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ".tv-region-filter-initial"
   );
 
-  /* Caves carousel */
+  /* Region panel destination */
+  const regionPanelTarget = document.querySelector(
+    ".tv-region-panel-target"
+  );
 
+  /* Caves carousel */
   const cavesCarousel = document.querySelector(
     ".caves-strip .tv-carousel"
   );
@@ -49,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Region index items:", regionIndexItems.length);
   console.log("Destination cards:", cards.length);
   console.log("Grid:", grid);
+  console.log("Region panel target:", regionPanelTarget);
   console.log("Caves carousel:", cavesCarousel);
 
 
@@ -91,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
   cards.forEach(function (card) {
 
     card.style.display = "";
+
     card.classList.remove("is-region-first");
 
   });
@@ -187,11 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (grid) {
 
-      /* Remove previous region classes */
-
       grid.className = "tv-grid";
-
-      /* Add selected region class */
 
       grid.classList.add(
         "region-" + region
@@ -294,7 +297,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* -----------------------------------------
-       Show selected region filter
+       Move selected region panel
+       beneath "Where to go?" description
     ----------------------------------------- */
 
     const selectedFilter = document.querySelector(
@@ -302,6 +306,14 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     if (selectedFilter) {
+
+      if (regionPanelTarget) {
+
+        regionPanelTarget.appendChild(
+          selectedFilter
+        );
+
+      }
 
       selectedFilter.classList.add(
         "is-visible",
@@ -324,8 +336,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (card.dataset.region === region) {
 
         card.style.display = "";
-
-        /* Store the first matching card */
 
         if (!firstVisibleCard) {
 

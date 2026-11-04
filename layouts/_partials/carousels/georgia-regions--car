@@ -1,0 +1,3937 @@
+<section class="tv-georgia-destinations   ">
+
+  <div class="tv-filter-count">
+    <strong>Showing 0 destinations</strong>
+  </div>
+
+
+
+  <div class="tv-grid georgia-regions--carousel">
+
+
+    <!-- =====================================
+         KAKHETI
+    ====================================== -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/alaverdi.jpg"
+        alt="Alaverdi Monastery in Kakheti"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Alaverdi Monastery</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.app.goo.gl/KxyAAZxfiXMumvTL7?g_st=ac"
+              target="_blank"
+              rel="noopener noreferrer">
+              29 Atoneli St
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            architecture, history
+          </div>
+
+          <div class="tv-info-row">
+            One of Kakheti's great landmarks. The enormous
+            11th-century cathedral stands in the Alazani Valley
+            with the Caucasus mountains behind it.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- SIGHNAGHI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/sighnaghi.jpg"
+        alt="Sighnaghi old town in Kakheti"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Sighnaghi</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Sighnaghi+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Sighnaghi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            town, views, history
+          </div>
+
+          <div class="tv-info-row">
+            A hilltop town of cobbled streets, colourful balconies
+            and spectacular views across the Alazani Valley.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- BODBE MONASTERY -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/bodbe.jpg"
+        alt="Bodbe Monastery near Sighnaghi"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Bodbe Monastery</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Bodbe+Monastery+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Near Sighnaghi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            history, architecture
+          </div>
+
+          <div class="tv-info-row">
+            A historic monastery surrounded by gardens and overlooking
+            the Alazani Valley, closely associated with Saint Nino.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- TELAVI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/telavi.jpg"
+        alt="Telavi town in Kakheti"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Telavi</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Telavi+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Telavi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            town, history, local life
+          </div>
+
+          <div class="tv-info-row">
+            Kakheti's main town, with royal history, lively markets
+            and views towards the vineyards and mountains.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- TSINANDALI ESTATE -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/tsinandali.jpg"
+        alt="Tsinandali Estate in Kakheti"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Tsinandali Estate</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Tsinandali+Estate+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Tsinandali
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            wine, gardens, history
+          </div>
+
+          <div class="tv-info-row">
+            A historic estate combining a beautiful garden,
+            elegant house museum and one of Kakheti's best-known
+            wine traditions.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- GREMI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/gremi.jpg"
+        alt="Gremi fortress and church in Kakheti"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Gremi</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Gremi+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Gremi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            architecture, history
+          </div>
+
+          <div class="tv-info-row">
+            The remains of a medieval royal city, centred around
+            a striking church, palace and fortified bell tower.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- NEKRESI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/nekresi.jpg"
+        alt="Nekresi Monastery overlooking the Alazani Valley"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Nekresi Monastery</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Nekresi+Monastery+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Kvareli
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            history, architecture, views
+          </div>
+
+          <div class="tv-info-row">
+            A historic monastery high above the Alazani Valley,
+            with ancient buildings and sweeping views over Kakheti.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- SHUAMTA -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/shuamta.jpg"
+        alt="Old Shuamta Monastery in Kakheti"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Shuamta Monasteries</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Shuamta+Monastery+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Near Telavi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            architecture, nature
+          </div>
+
+          <div class="tv-info-row">
+            Two atmospheric monastery complexes hidden among the
+            forests, offering a quieter side of Kakheti.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- DAVID GAREJA -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/david-gareja.jpg"
+        alt="David Gareja monastery in the Georgian semi-desert"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>David Gareja</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=David+Gareja+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Gareja
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            history, landscape, hiking
+          </div>
+
+          <div class="tv-info-row">
+            A remarkable monastery complex carved into the rocky
+            landscape of Georgia's semi-desert.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- BLACK ROCK LAKE -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/black-rock-lake.jpg"
+        alt="Black Rock Lake in Lagodekhi, Georgia"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Black Rock Lake</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Black+Rock+Lake+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Lagodekhi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            hiking, mountains, nature
+          </div>
+
+          <div class="tv-info-row">
+            A remote mountain lake reached by a challenging hike
+            through forests and alpine landscapes.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- VASHLOVANI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/vashlovani.jpg"
+        alt="Vashlovani National Park landscape in Georgia"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Vashlovani National Park</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Vashlovani+National+Park+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Dedoplistskaro
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            landscapes, wildlife, hiking
+          </div>
+
+          <div class="tv-info-row">
+            A wild landscape of badlands, canyons and semi-desert
+            plains unlike anywhere else in Georgia.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- LAGODEKHI WATERFALL -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kakheti">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/kakheti/lagodekhi-waterfall.jpg"
+        alt="Lagodekhi Waterfall in Georgia"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Lagodekhi Waterfall</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Lagodekhi+Waterfall+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Lagodekhi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            hiking, forest, waterfall
+          </div>
+
+          <div class="tv-info-row">
+            A beautiful forest trail leading through the Lagodekhi
+            Protected Areas to a dramatic waterfall.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================
+         SHIDA KARTLI
+    ====================================== -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/uplistsikhe.jpg"
+        alt="Uplistsikhe cave town in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Uplistsikhe Cave Town</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Uplistsikhe+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Near Gori
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            history, archaeology, views
+          </div>
+
+          <div class="tv-info-row">
+            An ancient town carved into the cliffs above the
+            Mtkvari River, with caves, streets, halls and tunnels.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================================
+     KVEMO KARTLI — 1
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/dmanisi.jpg"
+    alt="Dmanisi Archaeological Site"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Dmanisi Archaeological Site</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Dmanisi+Archaeological+Site+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Dmanisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        archaeology, ancient history
+      </div>
+
+      <div class="tv-info-row">
+        A remarkable archaeological site where 1.8-million-year-old
+        human remains were discovered, alongside the ruins of a medieval settlement.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 2
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/bolnisi-sioni.jpg"
+    alt="Bolnisi Sioni Cathedral"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Bolnisi Sioni</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Bolnisi+Sioni+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Bolnisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        early Christian architecture, inscriptions
+      </div>
+
+      <div class="tv-info-row">
+        One of Georgia's oldest surviving churches, built in the
+        5th century and known for its early Georgian inscriptions
+        and distinctive Bolnisi cross.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 3
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/dashbashi.jpg"
+    alt="Dashbashi Canyon"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Dashbashi Canyon</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Dashbashi+Canyon+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Tsalka
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        canyon, waterfalls, landscape
+      </div>
+
+      <div class="tv-info-row">
+        A dramatic green canyon cut into the Tsalka plateau,
+        known for waterfalls, cliffs and the surrounding highland landscape.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 4
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/birtvisi.jpg"
+    alt="Birtvisi Fortress and rocky canyon"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Birtvisi Fortress</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Birtvisi+Fortress+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Manglisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        fortress, hiking, rock formations
+      </div>
+
+      <div class="tv-info-row">
+        A medieval fortress hidden among dramatic limestone towers,
+        narrow gorges and rocky ridges in the Algeti landscape.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 5
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/samshvilde.webp"
+    alt="Samshvilde Fortress and archaeological site"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Samshvilde Fortress</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Samshvilde+Fortress+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Tetritskaro
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        fortress city, archaeology, canyon
+      </div>
+
+      <div class="tv-info-row">
+        The remains of an ancient fortress-city spread across a rocky
+        promontory above the Khrami River canyon.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 6
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/pitareti.webp"
+    alt="Pitareti Monastery"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Pitareti Monastery</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Pitareti+Monastery+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Tetritskaro
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        medieval architecture, monastery
+      </div>
+
+      <div class="tv-info-row">
+        A secluded medieval monastery surrounded by forest,
+        known for its stone architecture and peaceful setting.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 7
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/manglisi-sioni.webp"
+    alt="Manglisi Sioni Cathedral"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Manglisi Sioni</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Manglisi+Sioni+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Manglisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        cathedral, early Christianity, architecture
+      </div>
+
+      <div class="tv-info-row">
+        An ancient cathedral in the forested Manglisi hills,
+        with origins reaching back to the early Christian period in Georgia.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 8
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/gudarekhi.jpg"
+    alt="Gudarekhi Monastery"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Gudarekhi Monastery</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Gudarekhi+Monastery+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Tetritskaro
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        medieval monastery, architecture
+      </div>
+
+      <div class="tv-info-row">
+        A historic monastery complex set in a wooded valley,
+        with a distinctive medieval church and bell tower.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KVEMO KARTLI — 9
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="kvemo-kartli">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kvemo-kartli/algeti-national-park.webp"
+    alt="Algeti National Park"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Algeti National Park</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Algeti+National+Park+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Manglisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        forest, hiking, mountains
+      </div>
+
+      <div class="tv-info-row">
+        A forested protected area along the Trialeti Range,
+        offering mountain landscapes, walking routes and views around the Algeti valley.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+    <!-- GORI FORTRESS -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/gori-fortress.jpg"
+        alt="Gori Fortress in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Gori Fortress</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Gori+Fortress+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Gori
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            history, fortress, views
+          </div>
+
+          <div class="tv-info-row">
+            A historic fortress rising above the centre of Gori,
+            with panoramic views over the city.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ATENI SIONI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/ateni-sioni.jpg"
+        alt="Ateni Sioni Church in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Ateni Sioni</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Ateni+Sioni+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Ateni Valley
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            architecture, frescoes, history
+          </div>
+
+          <div class="tv-info-row">
+            A beautiful 7th-century church surrounded by the green
+            hills of Ateni Valley.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ATENI VALLEY -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/ateni-valley.jpg"
+        alt="Ateni Valley in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Ateni Valley</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Ateni+Valley+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Near Gori
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            nature, hiking, villages
+          </div>
+
+          <div class="tv-info-row">
+            A peaceful valley of green hills, forests and the
+            Tana River, with hiking trails and historic sites.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- KINTSVISI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/kintsvisi.jpg"
+        alt="Kintsvisi Monastery in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Kintsvisi Monastery</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Kintsvisi+Monastery+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Dzama Valley
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            architecture, frescoes, nature
+          </div>
+
+          <div class="tv-info-row">
+            A peaceful medieval monastery surrounded by greenery,
+            famous for its remarkable medieval frescoes.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- SAMTAVISI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/samtavisi.jpg"
+        alt="Samtavisi Cathedral in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Samtavisi Cathedral</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Samtavisi+Cathedral+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Samtavisi
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            architecture, history, culture
+          </div>
+
+          <div class="tv-info-row">
+            An elegant 11th-century cathedral known for its richly
+            decorated facade and medieval architecture.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- BATETI LAKE -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/bateti-lake.jpg"
+        alt="Bateti Lake surrounded by forest in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Bateti Lake</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Bateti+Lake+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Kareli
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            nature, hiking, lake
+          </div>
+
+          <div class="tv-info-row">
+            A small mountain lake hidden among dense forest,
+            offering a peaceful escape into nature.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- BIISI WATERFALL -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/biisi-waterfall.jpg"
+        alt="Biisi Waterfall in Ateni Valley"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Biisi Waterfall</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Biisi+Waterfall+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Ateni Valley
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            hiking, waterfall, nature
+          </div>
+
+          <div class="tv-info-row">
+            A scenic waterfall reached by a short forest hike
+            through the beautiful Ateni Valley.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- DZAMA VALLEY -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/dzama-valley.jpg"
+        alt="Dzama Valley landscape in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Dzama Valley</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Dzama+Valley+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Kareli
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            nature, monasteries, hiking
+          </div>
+
+          <div class="tv-info-row">
+            A forested mountain valley filled with monasteries,
+            fortresses, waterfalls and quiet trails.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- SURAMI -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="shida-kartli">
+
+      <img
+        class="tv-rectangle-image"
+        src="/img/georgia-regions/shida-kartli/surami.jpg"
+        alt="Surami town and fortress in Shida Kartli"
+        loading="lazy">
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Surami</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <a
+              href="https://maps.google.com/?q=Surami+Georgia"
+              target="_blank"
+              rel="noopener noreferrer">
+              Surami
+            </a>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            town, fortress, food
+          </div>
+
+          <div class="tv-info-row">
+            A small historic town surrounded by forested hills,
+            known for its fortress and nazuki bread.
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================
+         TBILISI
+    ====================================== -->
+
+    <article
+      class="tv-rectangle-card"
+      data-region="tbilisi">
+
+      <a
+        href="/tbilisi/underground-printing-house/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/see-do/underground.jpg"
+          alt="Underground Printing House Museum"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Underground Printing House Museum</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Avlabari</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            UNDERGROUND · SECRET HISTORY
+          </div>
+
+          <div class="tv-info-row">
+            <img
+              src="/icons/ticket.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Paid entry</span>
+            <strong>≈ ₾5</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="tv-rectangle-card"
+      data-region="tbilisi">
+
+      <a
+        href="/tbilisi/open-air-museum-of-ethnography/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/see-do/ethnography.jpg"
+          alt="Open Air Museum of Ethnography"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Open Air Museum of Ethnography</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Vake · Turtle Lake</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            OPEN AIR MUSEUM
+          </div>
+
+          <div class="tv-info-row">
+
+            <img
+              src="/icons/ticket.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Paid entry</span>
+            <strong>≈ ₾20</strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="tv-rectangle-card"
+      data-region="tbilisi">
+
+      <a
+        href="/tbilisi/karvasla/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/see-do/karvasla.jpg"
+          alt="Tbilisi History Museum — Karvasla"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Tbilisi History Museum — Karvasla</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Old Tbilisi</span>
+          </div>
+
+          <div class="tv-info-row tv-info-row--metro">
+            <img
+              src="/icons/metro.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Avlabari</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            OLD TBILISI · CARAVANSERAI
+          </div>
+
+          <div class="tv-info-row">
+
+            <img
+              src="/icons/ticket.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Paid entry</span>
+            <strong>≈ ₾5</strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- =====================================
+         REGION PLACEHOLDERS
+    ====================================== -->
+
+
+
+    <article
+      class="tv-rectangle-card"
+      data-region="guria">
+
+      <a
+        href="/regions/guria/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/regions/guria.jpg"
+          alt="Guria"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Guria</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Ozurgeti</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            COAST · TEA · GREEN HILLS
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+
+    <article
+      class="tv-rectangle-card"
+      data-region="kvemo-kartli">
+
+      <a
+        href="/regions/kvemo-kartli/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/regions/kvemo-kartli.jpg"
+          alt="Kvemo Kartli"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Kvemo Kartli</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Rustavi</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            HISTORY · LANDSCAPES · CULTURE
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+<!-- =========================================
+     DADIANI PALACE
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+        src="/img/georgia-regions/svaneti/dadiani-palace.jpg"
+      alt="Dadiani Palace in Zugdidi"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Dadiani Palace</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Zugdidi</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        HISTORY · PALACES · CULTURE
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     MARTVILI CANYON
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/martvili-canyon.jpg"
+      alt="Martvili Canyon in Samegrelo"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Martvili Canyon</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Martvili</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        NATURE · CANYONS · BOAT TRIPS
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     Nokalakevi
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/nokalakevi.jpg"
+      alt="Nokalakevi Archaeopolis in Samegrelo"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Nokalakevi</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Senaki</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        HISTORY · ARCHAEOLOGY · FORTRESS
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     MESTIA
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/mestia.jpg"
+      alt="Mestia in Svaneti"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Mestia</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Mestia</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        MOUNTAINS · SVAN TOWERS · CULTURE
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     USHGULI
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/ushguli.jpg"
+      alt="Ushguli village in Svaneti"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Ushguli</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Ushguli</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        MOUNTAINS · VILLAGES · SVAN TOWERS
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     ENGURI DAM
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/enguri-dam.jpg"
+      alt="Enguri Dam in Georgia"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Enguri Dam</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Enguri Valley</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        LANDSCAPES · ENGINEERING · MOUNTAINS
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KOLKHETI NATIONAL PARK
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/kolkheti-national-park.jpg"
+      alt="Kolkheti National Park in western Georgia"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Kolkheti National Park</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Poti</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        WETLANDS · WILDLIFE · BOAT TRIPS
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     RUKHI FORTRESS
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/rukhi.jpg"
+      alt="Rukhi Fortress in Samegrelo"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Rukhi Fortress</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Rukhi</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        HISTORY · FORTRESS · VIEWS
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     BALDA CANYON
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/balda-canyon.jpg"
+      alt="Balda Canyon in Samegrelo"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Balda Canyon</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Martvili</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        NATURE · CANYONS · HIKING
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     ANAKLIA
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="samegrelo-zemo-svaneti">
+
+  <a
+    href="/regions/samegrelo-zemo-svaneti/"
+    class="tv-rectangle-image">
+
+    <img
+      src="/img/georgia-regions/svaneti/anaklia.jpg"
+      alt="Anaklia on the Black Sea coast"
+      loading="lazy">
+
+  </a>
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Anaklia</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <span>Anaklia</span>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        BLACK SEA · BEACHES · COAST
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+    <article
+      class="tv-rectangle-card"
+      data-region="mtskheta-mtianeti">
+
+      <a
+        href="/georgia-regions/mtskheta-mtianeti/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/georgia-regions/mtskheta-mtianeti.jpg"
+          alt="Mtskheta-Mtianeti"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Mtskheta-Mtianeti</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Mtskheta</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            MOUNTAINS · HISTORY · NATURE
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  
+
+    <article
+      class="tv-rectangle-card"
+      data-region="samegrelo-zemo-svaneti">
+
+      <a
+        href="/regions/samegrelo-zemo-svaneti/"
+        class="tv-rectangle-image">
+
+        <img
+          src="/img/georgia-regions/svaneti/poti.jpg"
+          alt="Samegrelo-Zemo Svaneti"
+          loading="lazy">
+
+      </a>
+
+      <div class="tv-rectangle-card-content">
+
+        <h3>Samegrelo-Zemo Svaneti</h3>
+
+        <div class="tv-info">
+
+          <div class="tv-info-row tv-info-row--location">
+            <img
+              src="/icons/direction.svg"
+              width="16"
+              height="16"
+              alt=""
+              aria-hidden="true">
+
+            <span>Poti</span>
+          </div>
+
+          <div class="tv-info-row tv-info-desription">
+            MOUNTAINS · COAST · SVANETI
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+ 
+
+    <!-- =========================================
+     KUTAISI
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/kutaisi.jpg"
+    alt="Kutaisi city in Imereti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Kutaisi</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Kutaisi+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Kutaisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        city, history, culture
+      </div>
+
+      <div class="tv-info-row">
+        One of Georgia's oldest cities, built around the Rioni River and filled with historic churches, leafy streets, markets and cafés.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     BAGRATI CATHEDRAL
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/bagrati.jpg"
+    alt="Bagrati Cathedral in Kutaisi"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Bagrati Cathedral</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Bagrati+Cathedral+Kutaisi"
+          target="_blank"
+          rel="noopener noreferrer">
+          Kutaisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        architecture, history, views
+      </div>
+
+      <div class="tv-info-row">
+        An 11th-century cathedral overlooking Kutaisi and the Rioni River, with one of the city's best views.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     GELATI MONASTERY
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/gelati.jpg"
+    alt="Gelati Monastery near Kutaisi"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Gelati Monastery</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Gelati+Monastery+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Kutaisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        architecture, frescoes, history
+      </div>
+
+      <div class="tv-info-row">
+        A medieval monastery founded in 1106, famous for its architecture, mosaics and frescoes.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     MOTSAMETA MONASTERY
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/motsameta.jpg"
+    alt="Motsameta Monastery in Imereti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Motsameta Monastery</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Motsameta+Monastery+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Kutaisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        architecture, nature, history
+      </div>
+
+      <div class="tv-info-row">
+        A beautiful monastery perched above the Tskaltsitela River, surrounded by forested hills and dramatic scenery.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     PROMETHEUS CAVE
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/prometheus-cave.jpg"
+    alt="Prometheus Cave in Imereti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Prometheus Cave</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Prometheus+Cave+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Tskaltubo
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        nature, caves, adventure
+      </div>
+
+      <div class="tv-info-row">
+        A spectacular underground world of stalactites, stalagmites and enormous chambers, explored along a lit walkway.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     SATAPLIA NATURE RESERVE
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/sataplia.jpg"
+    alt="Sataplia Nature Reserve in Imereti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Sataplia Nature Reserve</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Sataplia+Nature+Reserve+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Kutaisi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        nature, dinosaurs, views
+      </div>
+
+      <div class="tv-info-row">
+        A forested reserve with dinosaur footprints, a karst cave and a glass viewing platform overlooking the green landscape.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     OKATSE CANYON
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/okatse-canyon.jpg"
+    alt="Okatse Canyon in Imereti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Okatse Canyon</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Okatse+Canyon+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Khoni
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        canyon, hiking, nature
+      </div>
+
+      <div class="tv-info-row">
+        A dramatic limestone canyon with a suspended walkway clinging to the cliffs high above the river.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KATSKHI PILLAR
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="imereti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/imereti/katskhi-pillar.jpg"
+    alt="Katskhi Pillar in Imereti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Katskhi Pillar</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Katskhi+Pillar+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Katskhi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        nature, architecture, history
+      </div>
+
+      <div class="tv-info-row">
+        A striking limestone monolith rising from the forest, topped by a small medieval church and monastery.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+
+<!-- =========================================
+     BATUMI
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/batumi.jpg"
+    alt="Batumi city on the Black Sea coast"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Batumi</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Batumi+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Batumi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        city, coast, architecture
+      </div>
+
+      <div class="tv-info-row">
+        Georgia's seaside city, known for its Black Sea boulevard, modern architecture, old town and lively atmosphere.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     GONIO FORTRESS
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/gonio-fortress.jpg"
+    alt="Gonio Fortress near Batumi"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Gonio Fortress</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Gonio+Fortress+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Gonio
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        history, archaeology, fortress
+      </div>
+
+      <div class="tv-info-row">
+        An ancient Roman fortress near the Black Sea, surrounded by massive stone walls and archaeological remains.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     BOTANICAL GARDEN
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/batumi-botanical-garden.jpg"
+    alt="Batumi Botanical Garden overlooking the Black Sea"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Batumi Botanical Garden</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Batumi+Botanical+Garden+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Mtsvane Kontskhi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        nature, gardens, views
+      </div>
+
+      <div class="tv-info-row">
+        A lush botanical garden spread across the hills above the Black Sea, with forest paths and coastal views.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     MTIRALA NATIONAL PARK
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/mtirala.jpg"
+    alt="Mtirala National Park in Adjara"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Mtirala National Park</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Mtirala+National+Park+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Chakvi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        nature, hiking, waterfalls
+      </div>
+
+      <div class="tv-info-row">
+        A lush mountain park covered in subtropical forest, with hiking trails, streams and waterfalls.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     KHULO
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/khulo.jpg"
+    alt="Khulo in the mountains of Adjara"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Khulo</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Khulo+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Khulo
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        mountains, villages, local life
+      </div>
+
+      <div class="tv-info-row">
+        A mountain town surrounded by green valleys and traditional villages in the highlands of Adjara.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     GODERDZI
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/goderdzi.jpg"
+    alt="Goderdzi Pass in Adjara"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Goderdzi Pass</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Goderdzi+Pass+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Goderdzi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        mountains, landscapes, hiking
+      </div>
+
+      <div class="tv-info-row">
+        A spectacular mountain pass linking Adjara with southern Georgia, surrounded by forests, alpine meadows and high peaks.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     SARPI
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/sarpi.jpg"
+    alt="Sarpi beach on the Black Sea coast"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Sarpi</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Sarpi+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Sarpi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        coast, beaches, views
+      </div>
+
+      <div class="tv-info-row">
+        A small Black Sea coastal village on the Turkish border, known for its clear water and dramatic seaside setting.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<!-- =========================================
+     MACHakHELA
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="adjara">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/adjara/machakhela.jpg"
+    alt="Machakhela Valley in Adjara"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Machakhela Valley</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Machakhela+Valley+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Machakhela
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        nature, villages, culture
+      </div>
+
+      <div class="tv-info-row">
+        A green mountain valley of forests, rivers and traditional villages, offering a quieter side of Adjara.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+
+
+
+<!-- =========================================
+     RACHA-LECHKHUMI
+========================================= -->
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/nikortsminda.jpg"
+    alt="Nikortsminda Cathedral in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Nikortsminda Cathedral</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Nikortsminda+Cathedral+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Nikortsminda
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        architecture, frescoes, history
+      </div>
+
+      <div class="tv-info-row">
+        One of Georgia's finest medieval churches, famous for its richly carved stonework and beautiful interior.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/shovi.jpg"
+    alt="Mountain landscape around Shovi in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Shovi</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Shovi+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Shovi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        mountains, forests, hiking
+      </div>
+
+      <div class="tv-info-row">
+        A peaceful mountain resort surrounded by pine forests, alpine meadows and dramatic peaks.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/shao-ri.jpg"
+    alt="Shaori Lake surrounded by mountains in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Shaori Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Shaori+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Shaori
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        lake, mountains, nature
+      </div>
+
+      <div class="tv-info-row">
+        A large mountain reservoir surrounded by forests and rolling hills, especially beautiful in autumn.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/ambrolauri.jpg"
+    alt="Ambrolauri town in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Ambrolauri</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Ambrolauri+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Ambrolauri
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        town, wine, local life
+      </div>
+
+      <div class="tv-info-row">
+        The heart of Racha, surrounded by mountains and known for its local food, wine and relaxed atmosphere.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/khvanchkara.jpg"
+    alt="Khvanchkara wine region in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Khvanchkara</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Khvanchkara+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Khvanchkara
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        wine, vineyards, villages
+      </div>
+
+      <div class="tv-info-row">
+        A mountain wine area famous for its naturally sweet red wine and beautiful valleys around the Rioni River.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/tsesi.jpg"
+    alt="Barakoni Church near Tsesi in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Barakoni Church</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Barakoni+Church+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Tsesi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        architecture, mountains, history
+      </div>
+
+      <div class="tv-info-row">
+        A striking 18th-century church standing above the Rioni River, framed by the mountains of Racha.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="racha-lechkhumi-kvemo-svaneti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/racha-lechkhumi/khotevi.jpg"
+    alt="Khotevi village and fortress in Racha"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Khotevi</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Khotevi+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Khotevi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        village, history, mountains
+      </div>
+
+      <div class="tv-info-row">
+        A traditional mountain village with historic buildings and a quiet setting among the valleys of Racha.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+
+
+
+
+
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/tabatskuri.jpg"
+    alt="Tabatskuri Lake in Samtskhe-Javakheti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Tabatskuri Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Tabatskuri+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Bakuriani
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        alpine lake, wildlife
+      </div>
+
+      <div class="tv-info-row">
+        A high-altitude lake surrounded by mountains, with the village of Tabatskuri built along its shore.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/paravani.jpg"
+    alt="Paravani Lake in Javakheti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Paravani Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Paravani+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Poka
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        volcanic lake, winter landscape
+      </div>
+
+      <div class="tv-info-row">
+        Georgia's largest lake by surface area, surrounded by the stark volcanic landscape of the Javakheti plateau.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/madatapa.jpg"
+    alt="Madatapa Lake in Javakheti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Madatapa Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Madatapa+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Ninotsminda
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        wetland, birdwatching
+      </div>
+
+      <div class="tv-info-row">
+        A remote highland lake and internationally important wetland where migratory and nesting birds gather.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/bughdasheni.jpg"
+    alt="Bughdasheni Lake in Javakheti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Bughdasheni Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Bughdasheni+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Gorelovka
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        wetland, bird habitat
+      </div>
+
+      <div class="tv-info-row">
+        A shallow high-altitude wetland with a rocky island that provides an important habitat for waterfowl.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/khanchali.jpg"
+    alt="Khanchali Lake in Javakheti"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Khanchali Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Khanchali+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Ninotsminda
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        alpine meadow, birdwatching
+      </div>
+
+      <div class="tv-info-row">
+        A remarkably shallow lake surrounded by vast alpine meadows and visited by migratory water birds.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/kartsakhi.png"
+    alt="Kartsakhi Lake and protected reserve"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Kartsakhi Reserve</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Kartsakhi+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Kartsakhi
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        protected lake, pelicans
+      </div>
+
+      <div class="tv-info-row">
+        A protected transboundary lake known for rare birds, including colonies of Dalmatian pelicans.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+
+
+<article
+  class="tv-rectangle-card"
+  data-region="samtskhe-javakheti">
+
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/samtskhe-javakheti/jaji-lake.jpg"
+    alt="Jaji Lake in the Meskheti Ridge"
+    loading="lazy">
+
+  <div class="tv-rectangle-card-content">
+
+    <h3>Jaji Lake</h3>
+
+    <div class="tv-info">
+
+      <div class="tv-info-row tv-info-row--location">
+        <img
+          src="/icons/direction.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true">
+
+        <a
+          href="https://maps.google.com/?q=Jaji+Lake+Georgia"
+          target="_blank"
+          rel="noopener noreferrer">
+          Near Abastumani
+        </a>
+      </div>
+
+      <div class="tv-info-row tv-info-desription">
+        mountain lake, trekking
+      </div>
+
+      <div class="tv-info-row">
+        A tiny high-altitude lake at 2,655 metres, surrounded by open mountain ridges and wide panoramic views.
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+</section>

@@ -63,15 +63,7 @@ text-align: left;
   display: block;
 }
 
-/* =========================================
-   GEORGIA DESTINATIONS
-========================================= */
 
-.tv-georgia-destinations {
-  width: 100%;
-  margin: 0;
-  padding: 0 5vw;
-}
 
 
 /* =========================================
@@ -265,6 +257,20 @@ text-align: left;
   display: flex;
 }
 
+
+
+/* Selected panel in its new location */
+.tv-region-panel-target .tv-region-filter.is-visible {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  height: auto;
+  margin: 24px 0 0;
+  box-sizing: border-box;
+  overflow: visible;
+}
 /* =========================================
    SHOW SELECTED REGION
 ========================================= */
@@ -853,3 +859,60 @@ text-align: left;
   background: var(--region-color);
   border-radius: 1px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -190,11 +190,7 @@
 
 @media (max-width: 900px) {
 
-  /* Editorial header */
-
-  .tv-editorial-header {
-    gap: 28px;
-  }
+  
 
 
   /* Destination gallery */
@@ -304,13 +300,7 @@
   }
 
 
-  /* Editorial header */
 
-  .tv-editorial-header {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-    margin-bottom: 24px;
-  }
 
   .tv-editorial-heading .title-sm {
     max-width: 390px;

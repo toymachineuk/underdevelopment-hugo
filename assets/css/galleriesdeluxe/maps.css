@@ -344,7 +344,7 @@
   width: 100%;
   min-width: 0;
   min-height: 48px;
-  padding: 10px 0;
+padding: 9px 10px;
 
   border: 0;
   border-radius: 0;
@@ -360,6 +360,9 @@
 
   cursor: pointer;
   transition: opacity 180ms ease;
+
+  border: 1px solid rgb(0 0 0 / 18%);
+  border-radius: 7px;
 }
 
 .tv-region-filters .tv-region-index-item:hover {
@@ -950,3 +953,51 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-width selected region panel */
+
+.tv-region-panel-target {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.tv-region-panel-target .tv-region-filter.is-visible {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-region-info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 650px) {
+  .tv-region-info-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
