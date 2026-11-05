@@ -812,78 +812,6 @@ padding: 9px 10px;
 
 
 
-/* Two-column region details */
-.tv-region-details {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(20px, 3vw, 36px);
-
-  margin-top: 28px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(21, 21, 21, 0.16);
-}
-
-.tv-region-detail {
-  min-width: 0;
-}
-
-.tv-region-town-list,
-.tv-region-transport-list {
-  margin-top: 14px;
-}
-
-.tv-region-town-item,
-.tv-region-transport-item {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(21, 21, 21, 0.12);
-}
-
-.tv-region-town-item:first-child,
-.tv-region-transport-item:first-child {
-  padding-top: 0;
-}
-
-.tv-region-town-item:last-child,
-.tv-region-transport-item:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.tv-region-town-item h4 {
-  margin: 0 0 4px;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-@media (max-width: 700px) {
-  .tv-region-town-item h4 {
-    font-size: 13px;
-    margin-bottom: 3px;
-  }
-}
-
-.tv-region-town-item p,
-.tv-region-transport-item p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(21, 21, 21, 0.72);
-}
-
-.tv-region-transport-item .tv-info-value {
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* Mobile: stack the columns */
-@media (max-width: 600px) {
-  .tv-region-details {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-  }
-}
-
-
 
 @media (max-width: 700px) {
 
@@ -1025,3 +953,385 @@ padding: 9px 10px;
     gap: 16px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   REGION TOWN LIST — COLUMN STYLE
+===================================== */
+
+.tv-region-town-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Section heading */
+
+.tv-region-town-list > .tv-info-label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* Individual towns */
+
+.tv-region-town-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 12px 0;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.tv-region-town-item:first-of-type {
+  padding-top: 0;
+}
+
+.tv-region-town-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Descriptions */
+
+.tv-region-town-item p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--color-text-muted);
+}
+
+
+
+
+
+/* =========================================
+   TBILISI VISITS — REGIONAL PAGE
+   Based on existing design variables
+========================================= */
+
+
+/* =========================================
+   1. REGION HEADER
+========================================= */
+
+.tv-region-title {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.tv-region-title h3.title-sm {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+/* Region introduction */
+
+.tv-region-filter > p.text-md {
+  margin: 0;
+  color: var(--tv-text);
+}
+
+
+/* =========================================
+   2. REGION TOWNS
+========================================= */
+
+.tv-region-town-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  margin-top: var(--content-gap);
+}
+
+/* Section label */
+
+.tv-region-town-list > .tv-info-label {
+  display: block;
+  margin-bottom: var(--space-xs);
+
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: var(--line-subheading);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--tv-muted);
+}
+
+/* Individual towns */
+
+.tv-region-town-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-region-town-item:first-of-type {
+  padding-top: 0;
+}
+
+.tv-region-town-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Town names */
+
+.tv-region-town-item h4 {
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--line-subheading);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-normal);
+
+  color: var(--tv-text);
+}
+
+/* Town descriptions */
+
+.tv-region-town-item p {
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--line-body);
+  font-weight: var(--weight-regular);
+
+  color: var(--tv-muted);
+}
+
+
+/* =========================================
+   3. SHARED INFO STRIP TYPOGRAPHY
+========================================= */
+
+.tv-info-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: var(--line-subheading);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--tv-muted);
+}
+
+.tv-info-value {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--line-subheading);
+  font-weight: var(--weight-medium);
+  color: var(--tv-text);
+}
+
+
+/* =========================================
+   4. STANDARD INFO STRIP
+========================================= */
+
+.tv-info-strip {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: var(--space-md) 0;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
+
+  border-top: 1px solid var(--tv-border);
+  border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-info-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 5px;
+
+  padding: 0 var(--space-md);
+}
+
+.tv-info-item:first-child {
+  padding-left: 0;
+}
+
+.tv-info-item + .tv-info-item {
+  border-left: 1px solid var(--tv-border);
+}
+
+/* Optional descriptions */
+
+.tv-info-item p {
+  margin: 3px 0 0;
+
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--line-body);
+  font-weight: var(--weight-regular);
+
+  color: var(--tv-muted);
+}
+
+
+/* =========================================
+   5. REGION DETAILS — SCROLLABLE STRIP
+========================================= */
+
+.tv-info-strip.tv-region-details {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tv-region-details::-webkit-scrollbar {
+  display: none;
+}
+
+/* Detail items */
+
+.tv-region-details .tv-info-item {
+  flex: 0 0 clamp(220px, 25%, 300px);
+  min-width: 220px;
+  padding: 0 var(--space-md);
+}
+
+/* First item */
+
+.tv-region-details .tv-info-item:first-child {
+  padding-left: 0;
+}
+
+/* Vertical separators */
+
+.tv-region-details .tv-info-item + .tv-info-item {
+  border-left: 1px solid var(--tv-border);
+}
+
+/* Detail descriptions */
+
+.tv-region-details .tv-info-item p {
+  margin: 3px 0 0;
+  font-size: var(--text-sm);
+  line-height: var(--line-body);
+  font-weight: var(--weight-regular);
+  color: var(--tv-muted);
+}
+
+
+/* =========================================
+   6. MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* Region header */
+
+  .tv-region-title {
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Town list */
+
+  .tv-region-town-list {
+    margin-top: var(--content-gap);
+  }
+
+  .tv-region-town-item {
+    padding: var(--space-xs) 0;
+  }
+
+  /* Standard info strip: two columns */
+
+  .tv-info-strip:not(.tv-region-details) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-md);
+    padding-inline: var(--space-sm);
+  }
+
+  .tv-info-strip:not(.tv-region-details) .tv-info-item {
+    padding: 0 var(--space-xs);
+  }
+
+  .tv-info-strip:not(.tv-region-details) .tv-info-item:nth-child(odd) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .tv-info-strip:not(.tv-region-details) .tv-info-item:nth-child(even) {
+    border-left: 1px solid var(--tv-border);
+  }
+
+  /* Region details: horizontal scrolling */
+
+  .tv-info-strip.tv-region-details {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-inline: 0;
+  }
+
+  .tv-region-details .tv-info-item {
+    flex: 0 0 220px;
+    min-width: 220px;
+    padding: 0 var(--space-sm);
+  }
+
+  .tv-region-details .tv-info-item:first-child {
+    padding-left: 0;
+  }
+
+}
+
+
+
+
+
+
