@@ -63,6 +63,18 @@
 }
 
 
+/* Halite blue — white text */
+
+.tv-bg-halite-blue,
+.tv-bg-halite-blue .section-header-description,
+.tv-bg-halite-blue .section-header > p,
+.tv-bg-halite-blue .tv-feature-header h2,
+.tv-bg-halite-blue .tv-feature-header .section-header-main,
+.tv-bg-halite-blue .tv-editorial-content p,
+.tv-bg-halite-blue .tv-editorial-row {
+  color: #fff;
+}
+
 .tv-carousel-toolbar strong {
 font-weight: 700;
  

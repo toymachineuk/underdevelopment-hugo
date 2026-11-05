@@ -251,7 +251,13 @@ text-align: left;
 }
 
 
-
+@media (max-width: 600px) {
+  .tv-region-panel-target .tv-region-filter.is-visible {
+  
+    margin:  0;
+  
+  }
+}
 
 
 /* =========================================
@@ -416,8 +422,8 @@ text-align: left;
   .tv-region-filter.is-visible > * {
     height: auto;
     min-height: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+   
+   margin-bottom: var(--space-sm);
     box-sizing: border-box;
   }
 
@@ -623,7 +629,7 @@ text-align: left;
 /* Region badge colors */
 
 .tv-rectangle-card[data-region="kakheti"] .vertical-badge {
-  background-color: #fff39c;
+  background-color: #686F7C;
 }
 
 .tv-rectangle-card[data-region="adjara"] .vertical-badge {
