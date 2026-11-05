@@ -546,7 +546,7 @@ padding: 9px 10px;
   }
 
   .tv-region-filters .tv-region-index {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 16px;
     width: 100%;
   }
@@ -575,16 +575,16 @@ padding: 9px 10px;
   }
 
   .tv-region-filters .tv-region-index {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 8px;
     width: 100%;
      row-gap: 6px;
   }
 
    .tv-region-filters .tv-region-index-item {
     min-height: 28px;
-    gap: 8px;
-    padding: 4px 0;
+    gap: 4px;
+    padding: 4px 8px;
     line-height: 1.3;
   }
 
@@ -1202,9 +1202,21 @@ padding: 9px 10px;
   line-height: var(--line-body);
   font-weight: var(--weight-regular);
 
-  color: var(--tv-muted);
+ 
+}
+.tv-info-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+.tv-info-item li {
+  margin: 3px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+ 
+}
 
 /* =========================================
    5. REGION DETAILS — SCROLLABLE STRIP
@@ -1256,13 +1268,6 @@ padding: 9px 10px;
 
 /* Detail descriptions */
 
-.tv-region-details .tv-info-item p {
-  margin: 3px 0 0;
-  font-size: var(--text-sm);
-  line-height: var(--line-body);
-  font-weight: var(--weight-regular);
-  color: var(--tv-muted);
-}
 
 
 /* =========================================

@@ -1872,6 +1872,42 @@ padding-right:5px;
 }
 
 
+
+
+
+/* Info item with two columns */
+
+.tv-region-details .tv-info-item--2col {
+  flex: 0 0 640px;
+  min-width: 0;
+}
+
+.tv-info-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tv-info-detail + .tv-info-detail {
+  border-left: 1px solid #e5e5e5;
+  padding-left: 16px;
+}
+
+.tv-info-detail p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 600px) {
+  .tv-region-details .tv-info-item--2col {
+    flex: 0 0 380px;
+    min-width: 380px;
+  }
+}
+
 /* =========================================
    4. MOBILE
 ========================================= */

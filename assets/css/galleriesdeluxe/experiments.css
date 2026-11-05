@@ -448,7 +448,7 @@
 
   .tv-feature-layout--header-right {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+  
   }
 
   .tv-feature-layout--header-right > .tv-feature-header,
