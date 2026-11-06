@@ -799,11 +799,29 @@ max-width: 480px;
 }
 
 
+
+@media (max-width: 600px) {
+  .tv--mobile-full {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+  }
+}
+
+
+
+
 .px-md {
 
   padding-inline: var(--space-md);
 
 }
+
+.px-sm {
+
+  padding-inline: var(--space-sm);
+
+}
+
 
 
 .px-lg {
@@ -863,9 +881,18 @@ max-width: 480px;
 }
 
 
+.tv-text-white {
+  color: #fff;
+}
+
 
 .text-align-right {
   text-align: right;
+}
+
+.tv-text-white .section-header-description,
+.tv-text-white .section-header > p {
+  color: #fff;
 }
 /* =========================================
    FLEX ALIGNMENT
