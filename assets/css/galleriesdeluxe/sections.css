@@ -159,7 +159,7 @@ main > section.tv-filter-section > .section-header {
   flex-wrap: wrap;
   gap: 8px;
  
-  margin-top: var(--space-lg);
+  margin-top: var(--space-sm);
   margin-bottom: var(--space-md);
 }
 
