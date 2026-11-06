@@ -19,7 +19,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/alaverdi.jpg"
+        src="/img/georgia-regions/kakheti/alaverdi.jpg"
         alt="Alaverdi Monastery in Kakheti"
         loading="lazy">
 
@@ -71,7 +71,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/sighnaghi.jpg"
+        src="/img/georgia-regions/kakheti/sighnaghi.jpg"
         alt="Sighnaghi old town in Kakheti"
         loading="lazy">
 
@@ -124,7 +124,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/bodbe.jpg"
+        src="/img/georgia-regions/kakheti/bodbe.jpg"
         alt="Bodbe Monastery near Sighnaghi"
         loading="lazy">
 
@@ -177,7 +177,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/telavi.jpg"
+        src="/img/georgia-regions/kakheti/telavi.jpg"
         alt="Telavi town in Kakheti"
         loading="lazy">
 
@@ -230,7 +230,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/tsinandali.jpg"
+        src="/img/georgia-regions/kakheti/tsinandali.jpg"
         alt="Tsinandali Estate in Kakheti"
         loading="lazy">
 
@@ -284,7 +284,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/gremi.jpg"
+        src="/img/georgia-regions/kakheti/gremi.jpg"
         alt="Gremi fortress and church in Kakheti"
         loading="lazy">
 
@@ -337,7 +337,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/nekresi.jpg"
+        src="/img/georgia-regions/kakheti/nekresi.jpg"
         alt="Nekresi Monastery overlooking the Alazani Valley"
         loading="lazy">
 
@@ -390,7 +390,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/shuamta.jpg"
+        src="/img/georgia-regions/kakheti/shuamta.jpg"
         alt="Old Shuamta Monastery in Kakheti"
         loading="lazy">
 
@@ -443,7 +443,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/david-gareja.jpg"
+        src="/img/georgia-regions/kakheti/david-gareja.jpg"
         alt="David Gareja monastery in the Georgian semi-desert"
         loading="lazy">
 
@@ -496,7 +496,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/black-rock-lake.jpg"
+        src="/img/georgia-regions/kakheti/black-rock-lake.jpg"
         alt="Black Rock Lake in Lagodekhi, Georgia"
         loading="lazy">
 
@@ -549,7 +549,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/vashlovani.jpg"
+        src="/img/georgia-regions/kakheti/vashlovani.jpg"
         alt="Vashlovani National Park landscape in Georgia"
         loading="lazy">
 
@@ -602,7 +602,7 @@
 
       <img
         class="tv-rectangle-image"
-        src="img/georgia-regions/kakheti/lagodekhi-waterfall.jpg"
+        src="/img/georgia-regions/kakheti/lagodekhi-waterfall.jpg"
         alt="Lagodekhi Waterfall in Georgia"
         loading="lazy">
 
@@ -645,10 +645,6 @@
       </div>
 
     </article>
-
-
-
-    
 <article
   class="tv-rectangle-card"
   data-region="shida-kartli">
