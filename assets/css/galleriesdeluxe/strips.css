@@ -1812,7 +1812,7 @@ padding-right:5px;
 }
 
 .tv-info-row--divided > * + * {
-  border-left: 1px solid #e5e5e5;
+ 
   padding-left: 16px;
 }
 
@@ -1857,27 +1857,25 @@ padding-right:5px;
   display: none;
 }
 
+/* Standard information items */
+
 .tv-region-details > .tv-info-item {
   flex: 0 0 240px;
-  width: 240px;
-  min-width: 240px;
+  min-width: 0;
   box-sizing: border-box;
 }
 
-.tv-region-details > .tv-info-item:first-child {
-  padding-left: 0;
-}
+/* Item dividers */
 
 .tv-region-details > .tv-info-item + .tv-info-item {
   border-left: 1px solid #b8b8b8;
 }
 
-/* Wider travel information item */
+/* Wider information item */
 
 .tv-region-details > .tv-info-item--2col {
-  flex: 0 0 640px;
-  width: 640px;
-  min-width: 640px;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 
@@ -1910,36 +1908,26 @@ padding-right:5px;
   }
 
 
-  /* Region details — preserve horizontal scrolling */
+  /* Region details — horizontal scrolling */
 
   .tv-info-strip.tv-region-details {
     padding-inline: 0;
   }
 
   .tv-region-details > .tv-info-item {
-    flex: 0 0 220px;
-    width: 220px;
-    min-width: 220px;
-  }
-
-  /* Preserve wider item on mobile */
-
-  .tv-region-details > .tv-info-item--2col {
-    flex: 0 0 640px;
-    width: 640px;
-    min-width: 640px;
+    flex-basis: 220px;
   }
 
 
-  /* Keep divided details side by side */
+  /* Divided information rows */
 
   .tv-info-row--divided {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tv-info-row--divided > * + * {
-    border-left: 1px solid #e5e5e5;
     border-top: none;
     padding: 0 0 0 16px;
   }
+
 }

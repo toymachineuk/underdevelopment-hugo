@@ -913,12 +913,7 @@ padding: 9px 10px;
   min-width: 0;
 }
 
-.tv-region-panel-target .tv-region-filter.is-visible {
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  box-sizing: border-box;
-}
+
 
 
 /* =====================================
@@ -1226,6 +1221,21 @@ padding: 9px 10px;
  
 }
 
+
+.tv-info-strip .tv-info-row {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  gap: 8px;
+}
+
+.tv-info-strip .tv-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
 /* =========================================
    5. REGION DETAILS — SCROLLABLE STRIP
 ========================================= */
