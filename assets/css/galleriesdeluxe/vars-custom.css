@@ -778,6 +778,14 @@ max-width: 480px;
    PADDING
 ===================================== */
 
+.p-lg-sm {
+
+  padding: var(--space-lg) var(--space-sm);
+
+}
+
+
+
 .p-sm {
 
   padding: var(--space-sm);

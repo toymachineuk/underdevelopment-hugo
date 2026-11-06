@@ -185,7 +185,7 @@
 .feature-layout--carousel-left .tv-feature-header {
   grid-column: 2;
   min-width: 0;
-  text-align: right;
+  
   justify-self: end;
 }
 
@@ -350,17 +350,7 @@
    Description left · Metro Map button right
 ===================================== */
 
-.tv-feature-intro {
-  width: 100%;
-  
-  margin-inline: auto;
-  padding-bottom: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  box-sizing: border-box;
-}
+
 
 .tv-feature-intro-text {
   flex: 1 1 auto;
@@ -500,15 +490,7 @@
   }
 
 
-  /* Feature intro */
-
-  .tv-feature-intro {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    padding-inline: 0;
-    padding-bottom: 0;
-  }
+ 
 
   .tv-feature-intro-text {
     max-width: 100%;
