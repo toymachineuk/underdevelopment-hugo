@@ -1177,6 +1177,13 @@ padding: 9px 10px;
   border-bottom: 1px solid var(--tv-border);
 }
 
+.tv-info-strip.tv-info-strip--three-columns {
+  grid-template-columns: repeat(3, minmax(150px, auto));
+}
+
+
+
+
 .tv-info-item {
   display: flex;
   flex: 1;
