@@ -1,7 +1,8 @@
 
 /* =========================================
-   NAVBAR
+   TBILISI VISITS — NAVBAR
 ========================================= */
+
 
 /* -----------------------------------------
    01. HEADER
@@ -45,17 +46,17 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 
 /* -----------------------------------------
-   03. DESKTOP LINKS
+   03. DESKTOP NAVIGATION
 ----------------------------------------- */
 
 .nav-links {
   display: flex;
   align-items: center;
-
   gap: clamp(20px, 2.5vw, 42px);
 
   margin-left: auto;
@@ -68,7 +69,6 @@
   gap: 5px;
 
   color: #111827;
-
   font-size: 15px;
   font-weight: 500;
   line-height: 1;
@@ -91,7 +91,7 @@
 
 
 /* -----------------------------------------
-   04. DESKTOP ACTIONS
+   04. HEADER ACTIONS
 ----------------------------------------- */
 
 .nav .nav-actions,
@@ -99,8 +99,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  gap: 5px;
 
   flex: 0 0 auto;
   min-width: 0;
@@ -110,7 +108,7 @@
 
 
 /* -----------------------------------------
-   05. NAVIGATION BUTTONS
+   05. NAVIGATION BUTTON
 ----------------------------------------- */
 
 .nav-button {
@@ -123,11 +121,20 @@
   height: 32px;
   padding: 0 11px;
 
-  border: 1px solid #d5d5d5;
+  border: 1px dashed transparent;
   border-radius: 6px;
 
-  background: #fff;
-  color: #111827;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(
+      110deg,
+      #E64423,
+      #EB8D1C,
+      #4BB7B8,
+      #E64423
+    ) border-box;
+
+  color: #212A29;
 
   font: inherit;
   font-size: 14px;
@@ -136,14 +143,19 @@
   white-space: nowrap;
   cursor: pointer;
 
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease;
+  transition: background 180ms ease;
 }
 
 .nav-button:hover {
-  background: #f5f5f5;
-  border-color: #bdbdbd;
+  background:
+    linear-gradient(#f5f5f5, #f5f5f5) padding-box,
+    linear-gradient(
+      110deg,
+      #E64423,
+      #EB8D1C,
+      #4BB7B8,
+      #E64423
+    ) border-box;
 }
 
 
@@ -155,7 +167,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   line-height: 1;
 }
 
@@ -165,8 +176,12 @@
 
 
 /* -----------------------------------------
-   07. DESKTOP DROPDOWN
+   07. DESTINATIONS DROPDOWN
 ----------------------------------------- */
+
+/* =========================================
+   DESTINATIONS DROPDOWN
+========================================= */
 
 .nav-dropdown {
   position: relative;
@@ -174,24 +189,27 @@
 
 .nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 12px);
   right: 0;
   z-index: 110;
 
   box-sizing: border-box;
-  width: 190px;
-  padding: 6px;
+  width: 215px;
+  padding: 10px;
 
   background: #fff;
-  border-radius: 10px;
+  border: 1px solid #eeeae3;
+  border-radius: 14px;
 
-  box-shadow: 0 12px 35px rgb(0 0 0 / 12%);
+  box-shadow:
+    0 15px 40px rgb(0 0 0 / 9%),
+    0 3px 10px rgb(0 0 0 / 3%);
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 
-  transform: translateY(-6px);
+  transform: translateY(8px);
 
   transition:
     opacity 180ms ease,
@@ -199,25 +217,54 @@
     visibility 180ms ease;
 }
 
-.nav-dropdown__menu a {
-  display: block;
-  padding: 10px;
 
-  color: #111827;
+/* Dropdown links */
+
+.nav-dropdown__menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 10px 11px;
+
+  color: #171717;
 
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 550;
   line-height: 1.2;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 
   text-align: left;
   text-decoration: none;
   white-space: nowrap;
 
+  border-radius: 7px;
+
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+
+/* Map — featured item */
+
+.nav-dropdown__menu a:first-child {
+  min-height: 46px;
+  margin-bottom: 7px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #e7e5df;
   border-radius: 5px;
 
-  transition: background-color 150ms ease;
+  font-size: 15px;
+  font-weight: 700;
 }
+
+
+/* Map label and icon */
 
 .nav-dropdown__menu strong {
   display: flex;
@@ -226,18 +273,27 @@
   gap: 8px;
 
   font-size: inherit;
-  font-weight: 600;
+  font-weight: inherit;
 }
 
 .nav-dropdown__menu strong svg {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   flex: 0 0 auto;
+
+  color: #C66B49;
 }
 
+
+/* Hover */
+
 .nav-dropdown__menu a:hover {
-  background: #f3f3f3;
+  background: #f5f2ea;
+  color: #C66B49;
 }
+
+
+/* Show dropdown */
 
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu {
@@ -245,6 +301,45 @@
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+
+/* Mobile positioning */
+
+@media (max-width: 900px) {
+
+  .nav-dropdown__menu {
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+
+    width: 215px;
+  }
+}
+
+
+/* Destination hover arrows */
+
+.nav-dropdown__menu a:not(:first-child)::after {
+  content: "↗";
+
+  display: block;
+  color: #C66B49;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translate(-4px, 4px);
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.nav-dropdown__menu a:not(:first-child):hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 
@@ -257,7 +352,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   gap: 5px;
 
   flex: 0 0 auto;
@@ -272,10 +366,8 @@
 
 .menu span {
   display: block;
-
   width: 20px;
   height: 2px;
-  margin: 0;
 
   background: currentColor;
 
@@ -294,7 +386,7 @@
 
 
 /* -----------------------------------------
-   09. MOBILE MENU — BASE
+   09. MOBILE MENU
 ----------------------------------------- */
 
 .mobile-menu {
@@ -308,44 +400,112 @@
 
 @media (max-width: 900px) {
 
-  /* Header */
-
   .nav {
     height: 64px;
-    padding: 0 16px;
-    justify-content: space-between;
-    gap: 0;
+    padding: 0 12px;
+    gap: 12px;
+    justify-content: flex-start;
   }
 
-  /* Hamburger */
+
+  /* Hamburger — LEFT */
 
   .nav > .menu {
     display: flex;
+    order: 1;
+    margin-right: auto;
   }
 
-  /* Logo */
+
+  /* Hide desktop navigation */
+
+  .nav .nav-links {
+    display: none;
+  }
+
+
+  /* Beyond Tbilisi — RIGHT */
+
+  .nav .nav-actions,
+  .nav .hero-header-aside {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    order: 2;
+    flex: 0 0 auto;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  /* Mobile button */
+
+ .nav .nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  height: 34px;
+  padding: 0 9px;
+
+  border: 0;
+  border-top: 1px dashed #E64423;
+  border-bottom: 1px dashed #E64423;
+  border-left: 1px dashed #E64423;
+
+  border-radius: 6px 0 0 6px;
+
+  background: #FFFAF6;
+  color: #212A29;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+
+  white-space: nowrap;
+}
+
+.nav-button__icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: #C66B49;
+}
+
+  /* Logo — NEXT TO BUTTON */
 
   .nav .logo {
-    width: auto;
-    margin-left: auto;
+    order: 3;
+    flex: 0 0 auto;
+
+    width: 45px;
+    margin-left: 0;
   }
 
   .nav .logo img {
     width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 42px;
+    height: 36px;
+    max-width: 135px;
   }
 
-  /* Hide desktop navigation */
 
-  .nav-links,
-  .nav .nav-actions,
-  .nav .hero-header-aside {
-    display: none !important;
+  /* Dropdown */
+
+  .nav-dropdown {
+    position: relative;
   }
 
-  /* Mobile panel */
+  .nav-dropdown__menu {
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+  }
+
+
+  /* Mobile menu panel */
 
   .mobile-menu {
     position: fixed;
@@ -385,7 +545,8 @@
     transform: translateY(0);
   }
 
-  /* Main links */
+
+  /* Mobile links */
 
   .mobile-menu__nav {
     display: flex;
@@ -400,7 +561,6 @@
     border-bottom: 1px solid #ddd;
 
     color: #111827;
-
     font-size: 28px;
     font-weight: 700;
     line-height: 0.95;
@@ -416,103 +576,6 @@
   .mobile-menu__nav a:hover {
     opacity: 0.6;
   }
-
-  /* Beyond Tbilisi */
-
-  .mobile-destinations {
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .mobile-destinations__toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-
-    width: auto;
-    max-width: 100%;
-    height: 32px;
-
-    margin: 16px 0 0;
-    padding: 0 11px;
-
-    border: 1px solid #d5d5d5;
-    border-radius: 6px;
-
-    background: #fff;
-    color: #111827;
-
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: normal;
-
-    text-align: left;
-    white-space: nowrap;
-
-    cursor: pointer;
-  }
-
-  .mobile-destinations__toggle:hover {
-    background: #f5f5f5;
-    border-color: #bdbdbd;
-  }
-
-  .mobile-destinations__chevron {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    flex: 0 0 auto;
-
-    transition: transform 200ms ease;
-  }
-
-  .mobile-destinations__toggle[aria-expanded="true"]
-  .mobile-destinations__chevron {
-    transform: rotate(180deg);
-  }
-
-  /* Destination links */
-
-  .mobile-destinations__list {
-    padding: 0 0 12px;
-  }
-
-  .mobile-destinations__list[hidden] {
-    display: none;
-  }
-
-  .mobile-destinations__list a {
-    display: block;
-    padding: 12px 0 12px 14px;
-
-    border: 0;
-
-    color: #555;
-
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-
-    text-decoration: none;
-  }
-
-  .mobile-destinations__list a:hover {
-    color: #111827;
-    opacity: 0.65;
-  }
-
-  /* Mobile button size */
-
-  .nav-button {
-    padding: 0 8px;
-    font-size: 13px;
-    gap: 5px;
-  }
 }
 
 
@@ -523,11 +586,21 @@
 @media (max-width: 480px) {
 
   .nav {
-    padding: 0 14px;
+    padding-inline: 8px;
+    gap: 8px;
   }
 
   .nav > .menu {
     padding: 6px;
+  }
+
+  .nav .nav-button {
+    padding-inline: 8px;
+    font-size: 11px;
+  }
+
+  .nav .logo {
+    width: 45px;
   }
 
   .mobile-menu {
@@ -539,26 +612,6 @@
     padding: 17px 0;
     font-size: 26px;
   }
-
-  .mobile-destinations__toggle {
-    padding: 0 7px;
-    font-size: 12px;
-  }
-
-  .mobile-destinations__list a {
-    font-size: 17px;
-  }
-
-  .nav-button {
-    padding: 0 7px;
-    font-size: 12px;
-    gap: 4px;
-  }
-
-  .nav-button .chevron svg {
-    width: 14px;
-    height: 14px;
-  }
 }
 
 
@@ -567,9 +620,8 @@
 ========================================= */
 
 .nav-button:focus-visible,
-.menu:focus-visible,
-.mobile-destinations__toggle:focus-visible {
-  outline: 2px solid var(--tv-green-dark);
+.menu:focus-visible {
+  outline: 2px solid var(--tv-logo-blue);
   outline-offset: 3px;
 }
 
@@ -581,8 +633,7 @@
 @media (prefers-reduced-motion: reduce) {
 
   .nav *,
-  .mobile-menu,
-  .mobile-destinations__chevron {
+  .mobile-menu {
     transition: none !important;
   }
 }
