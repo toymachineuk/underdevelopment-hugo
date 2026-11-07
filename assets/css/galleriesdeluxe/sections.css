@@ -16,6 +16,16 @@
   flex: 1 1 60%;
   min-width: 0;
   margin: 0;
+
+    display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.section-header-label-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
 }
 
 .section-header .text-label {
@@ -265,7 +275,7 @@ main > section.tv-filter-section > .section-header {
 .tv-filter-count {
   width: 100%;
   margin: 0;
-  padding: 8px 0;
+   margin: 0 0 8px;
   
   font-family: var(--font-sans);
   font-size: 12px;
@@ -387,7 +397,7 @@ border-radius: 14px;
 }
 
 .tv-rectangle-card h3 {
-margin: 0 0 8px;
+  margin: 0 0 16px;
   font-size: 17px;
   font-weight: 600;
   line-height: 1.25;
@@ -399,7 +409,9 @@ margin: 0 0 8px;
   text-decoration: none;
 }
 
-
+.tv-rectangle-card-content p {
+  margin: 0 0 12px;
+}
 /* =========================================================
    SHARED CARD INFORMATION
 ========================================================= */
@@ -1012,16 +1024,6 @@ margin: 0 0 8px;
   box-sizing: border-box;
 }
 
-/* Wider editorial layout */
-.tv-editorial--wide {
-  max-width: 1400px;
-   --tv-section-width: 1400px;
-}
-
-.tv-editorial--extra-wide {
-  max-width: 1600px;
-    --tv-section-width: 1600px;
-}
 
 
 
