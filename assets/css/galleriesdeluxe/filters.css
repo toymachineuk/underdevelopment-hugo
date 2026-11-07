@@ -155,7 +155,9 @@ width: 24px;
    ----------------------------------------- */
 
 .tv-rectangle-card {
-  --category-accent: var(--tv-black);
+  -height: 100%;
+  max-height: 420px;
+
 }
 
 .tv-rectangle-card[data-category="tbilisi"] {

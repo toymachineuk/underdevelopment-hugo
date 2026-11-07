@@ -699,7 +699,15 @@ max-width: 480px;
   padding-block: var(--space-xl);
 }
 
+.section-lg-0 {
+  padding-top: var(--section-gap-lg);
+  padding-bottom: 0;
+}
 
+.section-md-0 {
+  padding-top: var(--section-gap-md);
+  padding-bottom: 0;
+}
 /* =====================================
    MARGIN
 ===================================== */

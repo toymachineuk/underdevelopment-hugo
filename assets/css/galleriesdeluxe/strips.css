@@ -1762,3 +1762,87 @@ border-radius: 14px;
   .tv-apps-carousel { scroll-behavior: auto; }
   .tv-app-item { transition: none; }
 }
+
+
+
+
+
+/* =====================================
+   UNIVERSAL STRIP INTRO
+   Description + optional action
+===================================== */
+
+.tv-strip-intro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex: 0 1 560px;
+  min-width: 0;
+
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.tv-strip-intro p {
+  flex: 1 1 260px;
+  min-width: 0;
+
+  max-width: 340px;
+  margin: 0;
+
+  color: var(--tv-muted, #666666);
+}
+
+.tv-strip-intro .tv-green-btn {
+  flex: 0 0 auto;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .tv-strip-header {
+    align-items: flex-start;
+  }
+
+  .tv-strip-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    flex: 0 1 360px;
+    gap: 16px;
+  }
+
+  .tv-strip-intro p {
+    flex: 0 1 auto;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 650px) {
+
+  .tv-strip-intro {
+    width: 100%;
+    flex: 0 1 auto;
+
+    gap: 16px;
+  }
+
+  .tv-strip-intro p {
+    max-width: 100%;
+  }
+
+  .tv-strip-intro .tv-green-btn {
+    align-self: flex-start;
+  }
+
+}

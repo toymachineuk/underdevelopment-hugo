@@ -25,6 +25,19 @@
   border-radius: 14px;
 }
 
+/* =====================================
+   FEATURE HEADER — MOBILE
+===================================== */
+
+@media (max-width: 650px) {
+
+  .tv-feature-header {
+   gap: var(--space-xs);
+    border-radius: 0;
+  }
+
+}
+
 
 .tv-feature-header--row {
   display: flex;
