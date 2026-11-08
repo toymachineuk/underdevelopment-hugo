@@ -809,3 +809,11 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   letter-spacing: 0.08em;
 }
 
+
+
+
+@media (max-width: 650px) {
+.accommodation--cars{
+    padding-inline: 16px;
+  }
+}
