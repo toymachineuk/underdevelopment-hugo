@@ -7,15 +7,23 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
   gap: clamp(24px, 5vw, 64px);
+
   width: 100%;
   margin-bottom: var(--space-lg);
 }
+
+
+/* =====================================
+   HEADER MAIN
+===================================== */
 
 .section-header-main {
   flex: 1 1 60%;
   min-width: 0;
   margin: 0;
+
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -27,36 +35,370 @@
   gap: var(--space-sm);
 }
 
+
+/* =====================================
+   HEADER LABEL
+===================================== */
+
 .section-header .text-label {
   display: block;
-  margin-bottom: var(--space-xs);
+  margin: 0;
 
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
+  font-family: var(--font-sans);
+  font-size: 11px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.4;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
   color: var(--tv-brand-accent, #c66b49);
 }
 
+.tv-info-row--location > img.tv-two-icons {
+  width: 42px;
+  height: 22px;
+  flex: 0 0 42px;
+  display: block;
+  margin-top: 0;
+  opacity: 1;
+  object-fit: contain;;
+}
+
+
+
+/* =========================================
+   ACCOMMODATION CARDS — POLISHED
+========================================= */
+
+
+/* -----------------------------------------
+   01. CARD
+----------------------------------------- */
+
+.accommodation--cars .tv-rectangle-card {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  min-width: 0;
+  height: 100%;
+
+  background: var(--tv-page, #fff);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+
+/* -----------------------------------------
+   02. IMAGE
+----------------------------------------- */
+
+.accommodation--cars .tv-rectangle-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.65 / 1;
+
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* -----------------------------------------
+   03. CARD CONTENT
+----------------------------------------- */
+
+.accommodation--cars .tv-rectangle-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 18px 20px 20px;
+  box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+   04. HOTEL TITLE
+----------------------------------------- */
+
+.accommodation--cars .tv-rectangle-card-content h3 {
+  margin: 0 0 12px;
+
+  font-family: var(--font-sans);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+
+  color: var(--tv-text, #171717);
+}
+
+
+/* -----------------------------------------
+   05. INFO CONTAINER
+----------------------------------------- */
+
+.accommodation--cars .tv-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* -----------------------------------------
+   06. UNIVERSAL INFO ROWS
+----------------------------------------- */
+
+.accommodation--cars .tv-info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: var(--tv-text, #171717);
+}
+
+
+/* -----------------------------------------
+   07. STANDARD ICONS
+----------------------------------------- */
+
+.accommodation--cars .tv-info-row > img:not(.tv-two-icons) {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+
+  margin: 0;
+  opacity: 0.85;
+  object-fit: contain;
+}
+
+
+/* -----------------------------------------
+   08. BOOKING ROW
+----------------------------------------- */
+
+.accommodation--cars .tv-info-row--booking {
+  gap: 9px;
+  min-height: 22px;
+}
+
+.accommodation--cars .tv-info-row--booking > img {
+  opacity: 1;
+}
+
+.accommodation--cars .tv-info-row--booking .tv-card-link {
+  font-weight: 600;
+}
+
+
+/* -----------------------------------------
+   09. DIVIDER
+----------------------------------------- */
+
+.accommodation--cars .tv-card-divider {
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  margin: 15px 0;
+  padding: 0;
+
+  border: 0;
+  background: var(--tv-border, #e7e5df);
+}
+
+
+/* -----------------------------------------
+   10. DETAILS
+----------------------------------------- */
+
+.accommodation--cars .tv-card-details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* -----------------------------------------
+   11. REVIEWS
+----------------------------------------- */
+
+.accommodation--cars .tv-info-row--reviews {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tv-muted, #666);
+}
+
+
+/* -----------------------------------------
+   12. DESCRIPTION
+----------------------------------------- */
+
+.accommodation--cars .tv-info-row--description {
+  align-items: flex-start;
+
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--tv-muted, #666);
+}
+
+.accommodation--cars .tv-info-row--description strong {
+  font-weight: 600;
+  color: var(--tv-text, #171717);
+}
+
+
+/* -----------------------------------------
+   13. LOCATION / METRO
+----------------------------------------- */
+
+.accommodation--cars .tv-info-row--location {
+  margin-top: auto;
+  padding-top: 15px;
+
+  gap: 10px;
+  align-items: center;
+}
+
+.accommodation--cars
+.tv-info-row--location > img.tv-two-icons {
+  display: block;
+
+  width: 40px;
+  height: 22px;
+  flex: 0 0 40px;
+
+  margin: 0;
+  opacity: 1;
+  object-fit: contain;
+}
+
+
+/* -----------------------------------------
+   14. CARD LINKS
+----------------------------------------- */
+
+.accommodation--cars .tv-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  min-width: 0;
+
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: var(--tv-text, #171717);
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.accommodation--cars .tv-card-link:hover {
+  color: var(--tv-logo-blue);
+}
+
+
+/* -----------------------------------------
+   15. LINK ARROWS
+----------------------------------------- */
+
+.accommodation--cars
+.tv-card-link img.tv-link-arrow {
+  display: block;
+
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+
+  margin: 0;
+  opacity: 0.7;
+
+  transition: transform 0.2s ease;
+}
+
+.accommodation--cars
+.tv-card-link:hover img.tv-link-arrow {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+
+
+/* -----------------------------------------
+   16. MOBILE
+----------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .accommodation--cars .tv-rectangle-card-content {
+    padding: 16px;
+  }
+
+  .accommodation--cars .tv-rectangle-card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .accommodation--cars .tv-card-details {
+    gap: 10px;
+  }
+
+  .accommodation--cars .tv-card-divider {
+    margin: 13px 0;
+  }
+
+  .accommodation--cars .tv-info-row--location {
+    padding-top: 13px;
+  }
+
+}
+
+
+/* =====================================
+   HEADER TITLE
+===================================== */
+
 .section-header h2 {
   max-width: 100%;
-  margin: 0 ;
+  margin: 0;
 }
 
 .section-header .section-header-subtitle {
   margin: 0;
+
   font-family: var(--font-sans);
   font-size: var(--text-md);
   line-height: var(--line-subheading);
   font-weight: var(--weight-medium);
   letter-spacing: var(--tracking-heading);
-  color: var(--tv-green-dark);
+
+  color: var(--tv-text, #171717);
 }
 
-/* Optional descriptive text */
+
+/* =====================================
+   HEADER DESCRIPTION
+===================================== */
 
 .section-header-description,
 .section-header > p {
@@ -65,6 +407,7 @@
   margin: 0 0 4px;
 
   color: var(--tv-muted, #666666);
+
   font-family: var(--font-sans);
   font-size: var(--text-md);
   line-height: var(--line-body);
@@ -72,7 +415,9 @@
 }
 
 
-/* Halite blue — white text */
+/* =====================================
+   HALITE BLUE — WHITE TEXT
+===================================== */
 
 .tv-bg-halite-blue,
 .tv-bg-halite-blue .section-header-description,
@@ -84,15 +429,21 @@
   color: #fff;
 }
 
+
+/* =====================================
+   CAROUSEL TOOLBAR
+===================================== */
+
 .tv-carousel-toolbar strong {
-font-weight: 700;
- 
   font-size: 12px;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 
-/* Optional right-side content */
+/* =====================================
+   HEADER ASIDE
+===================================== */
 
 .section-header-aside {
   flex: 0 1 auto;
@@ -100,30 +451,82 @@ font-weight: 700;
   margin: 0;
 }
 
-/* Optional smaller heading variation */
+
+/* =====================================
+   SMALL HEADER VARIATION
+===================================== */
 
 .section-header:has(.title-sm) {
   gap: var(--space-sm);
 }
 
-/* Filter section divider */
+
+/* =====================================
+   FILTER SECTION DIVIDER
+===================================== */
+
+/* Direct sections inside main */
 
 main > section.tv-filter-section > .section-header {
   padding-bottom: var(--space-md);
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
 }
 
 
+/* =====================================
+   ACCOMMODATION — SECTION HEADERS
+===================================== */
+
+/* Applies to Luxury, Value and Budget */
+
+.accommodation--cars .section-header {
+  align-items: flex-end;
+
+  gap: clamp(24px, 4vw, 48px);
+
+  margin-bottom: var(--space-md);
+}
+
+/* Header title container */
+
+.accommodation--cars .section-header > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Description on the right */
+
+.accommodation--cars .section-header > p {
+  flex: 0 1 360px;
+  max-width: 360px;
+  margin: 0;
+}
+
+/* Keep spacing consistent for small titles */
+
+.accommodation--cars .section-header:has(.title-sm) {
+  gap: clamp(24px, 4vw, 48px);
+}
+
+/* Divider for wrapped accommodation sections */
+
+.accommodation--cars
+.tv-filter-section > .section-header {
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
+}
 
 
 /* =====================================
-   RESPONSIVE
+   RESPONSIVE — UNIVERSAL
 ===================================== */
 
 @media (max-width: 700px) {
+
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+
     gap: var(--space-sm);
     margin-bottom: var(--space-md);
   }
@@ -145,14 +548,171 @@ main > section.tv-filter-section > .section-header {
     gap: 10px;
   }
 
-
-
   .tv-district-nav {
     margin-left: 0;
-
   }
+
 }
 
+
+/* =====================================
+   RESPONSIVE — ACCOMMODATION
+===================================== */
+
+@media (max-width: 700px) {
+
+  .accommodation--cars .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .accommodation--cars
+  .section-header:has(.title-sm) {
+    gap: 12px;
+  }
+
+  .accommodation--cars
+  .section-header > div:first-child {
+    width: 100%;
+    flex: none;
+  }
+
+  .accommodation--cars
+  .section-header > p {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    margin: 0;
+  }
+
+}
+
+
+/* =====================================
+   ACCOMMODATION — SECTION HEADER
+===================================== */
+
+.accommodation--cars .section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 64px);
+}
+
+/* LEFT — TITLE & DESCRIPTION */
+
+.accommodation--cars .section-header-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 680px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.accommodation--cars .section-header-main .text-label {
+  margin: 0;
+}
+
+.accommodation--cars .section-header-main h3 {
+  margin: 0;
+}
+
+.accommodation--cars .section-header-description {
+  flex: none;
+  max-width: 520px;
+  margin: 4px 0 0;
+  color: var(--tv-muted);
+}
+
+/* RIGHT — PRICE */
+
+.accommodation--cars .section-header-aside {
+  flex: 0 0 auto;
+}
+
+.accommodation--cars .stay-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  border: 1px solid var(--tv-border);
+  border-radius: 10px;
+
+  background: var(--tv-section-soft);
+}
+
+.accommodation--cars .stay-price .tv-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.accommodation--cars .stay-price-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.accommodation--cars .stay-price-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tv-muted);
+}
+
+.accommodation--cars .stay-price-value {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--tv-text);
+}
+
+.accommodation--cars .stay-price-value small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--tv-muted);
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .accommodation--cars .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .accommodation--cars .section-header-main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .accommodation--cars .section-header-description {
+    max-width: 100%;
+  }
+
+  .accommodation--cars .section-header-aside {
+    width: auto;
+    flex: none;
+  }
+
+  .accommodation--cars .stay-price {
+    padding: 10px 14px;
+  }
+
+  .accommodation--cars .stay-price-value {
+    font-size: 18px;
+  }
+
+}
 
 /* =========================================================
    SEE & DO

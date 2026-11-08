@@ -1,0 +1,117 @@
+/* =========================================
+   TBILISI VISITS — CAROUSELS
+   Tracks, scrolling and navigation only.
+   Card styling: cards.css
+   Filters: filters.css
+   Section headers: section.css
+========================================= */
+
+/* 01. CAROUSEL WRAPPER */
+.tv-see-do-carousel {
+  position: relative;
+  width: 100%;
+}
+
+/* 02. RECTANGLE CAROUSEL TRACK */
+.tv-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 var(--space-sm);
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.tv-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* 03. SQUARE CAROUSEL TRACK */
+.tv-square-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 230px;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.tv-square-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* 04. CAROUSEL NAVIGATION */
+.tv-see-prev,
+.tv-see-next {
+  position: absolute;
+  z-index: 20;
+  top: 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--tv-black);
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.tv-see-prev { left: 18px; }
+.tv-see-next { right: 18px; }
+
+.tv-see-prev:hover,
+.tv-see-next:hover {
+  transform: scale(1.08);
+}
+
+.tv-see-prev:disabled,
+.tv-see-next:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 05. CAROUSEL TOOLBAR */
+.tv-carousel-toolbar strong {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* 06. TABLET AND MOBILE */
+@media (max-width: 768px) {
+  .tv-grid {
+    grid-auto-columns: 76%;
+    gap: 12px;
+    padding: var(--space-xs);
+  }
+
+  .tv-square-grid {
+    grid-auto-columns: 76%;
+    gap: 12px;
+  }
+
+  .tv-see-prev,
+  .tv-see-next {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+}

@@ -1,3 +1,168 @@
+/* TBILISI VISITS — FILTERS.CSS
+   Extracted from supplied stylesheet; original declarations preserved.
+*/
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.tv-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+ 
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.tv-filter {
+  display: inline-flex;
+  align-items: center;
+
+  height: 32px;
+  padding: 0 12px;
+
+  border-radius: 4px;
+  background: #fff;
+  color: var(--tv-black);
+  border: 1px solid #d5d5d5;
+
+  position: relative;
+  overflow: hidden;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+
+.tv-filter-icon-wrap {
+  width: 30px;
+  height: 32px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.tv-filter-icon {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  fill: #252525;
+  stroke: none;
+
+  z-index: 2;
+}
+
+.vertical-badge.solo .tv-filter-icon {
+
+
+  fill: white;
+
+}
+
+.tv-filter-label {
+  margin-left: 15px;
+}
+
+.tv-filter:hover,
+.tv-filter.active {
+  background: var(--tv-black);
+  color: #fff;
+}
+
+.tv-filter:hover .tv-filter-icon{
+  fill: #fff;
+  stroke: #fff;
+}
+
+
+.tv-filter.active .tv-filter-icon {
+  fill: #252525;
+  stroke: #252525;
+}
+
+
+.tv-luxury .tv-filter.active {
+  background: #252525;
+  border-color: #252525;
+  color: white;
+}
+
+ .tv-filter.active .tv-filter-icon {
+  fill: white;
+  stroke: white;
+}
+
+/* =========================================================
+   FILTER COUNT
+========================================================= */
+
+.tv-filter-count {
+  width: 100%;
+  margin: 0;
+   margin: 0 0 8px;
+  
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  
+}
+
+.tv-filter-count strong {
+  font-weight: 700;
+}
+
+
+
+@media (max-width: 650px) {
+
+  .tv-filters {
+    gap: 6px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tv-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tv-filter {
+    flex: 0 0 auto;
+
+    font-size: 14px;
+    padding: 8px 13px;
+  }
+}
+
+
+
+
+
+
 .vertical-badge {
   position: absolute;
   right: 0;
@@ -154,11 +319,7 @@ width: 24px;
    CARD CATEGORY COLOURS
    ----------------------------------------- */
 
-.tv-rectangle-card {
-  -height: 100%;
-  max-height: 420px;
 
-}
 
 .tv-rectangle-card[data-category="tbilisi"] {
   --category-accent: #5F8061;

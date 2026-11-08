@@ -1,34 +1,31 @@
-
 /* =========================================
-   EDITORIAL FEATURE ROWS
+   TBILISI VISITS — EDITORIAL COMPONENTS
+   01. Rows & content
+   02. Links & buttons
+   03. Images
+   04. Information strips
+   05. Feature headings & practical tips
+   06. Arrival hero
+   07. Travel insurance
+   08. Responsive rules
 ========================================= */
 
+/* -----------------------------------------
+   01. EDITORIAL ROWS & CONTENT
+----------------------------------------- */
 .tv-editorial-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-
   gap: clamp(40px, 5vw, 72px);
-
   width: 100%;
   margin: 0 auto;
   padding: var(--space-lg) 0 var(--space-xl);
-
   box-sizing: border-box;
 }
 
-.tv-editorial-row--tinted {
-  background: var(--tv-green);
-}
-
-.tv-editorial-row.no-bg {
-  padding: 0;
-}
-
-
-/* =========================================
-   EDITORIAL COPY
-========================================= */
+.tv-editorial-row--tinted { background: var(--tv-green); }
+.tv-editorial-row.no-bg { padding: 0; }
 
 .tv-editorial-copy {
   max-width: none;
@@ -36,17 +33,11 @@
   justify-self: stretch;
 }
 
-.tv-editorial-copy .text-label {
-  color: var(--tv-green-dark);
-}
-
-
-/* SMALL HEADINGS */
+.tv-editorial-copy .text-label { color: var(--tv-green-dark); }
 
 .tv-editorial-copy .title-xs {
   max-width: 360px;
   margin: 0 0 12px;
-
   font-size: clamp(22px, 1.8vw, 26px);
   line-height: 1.15;
   font-weight: var(--weight-bold);
@@ -56,7 +47,6 @@
 .tv-editorial-copy .title-sm {
   max-width: 420px;
   margin: 0 0 14px;
-
   font-size: clamp(26px, 2.35vw, 32px);
   line-height: 1.1;
   font-weight: var(--weight-bold);
@@ -66,32 +56,22 @@
 .tv-editorial-copy .title-md {
   max-width: 560px;
   margin: 0 0 16px;
-
   font-size: clamp(32px, 3.2vw, 42px);
   line-height: 1.05;
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-heading);
 }
 
-
-/* BODY TEXT */
-
 .tv-editorial-copy .text-md {
   max-width: none;
   margin: 0 0 28px;
-
   font-size: 16px;
   line-height: 1.55;
   letter-spacing: -0.01em;
   font-weight: var(--weight-regular);
 }
 
-.tv-editorial-copy .text-md:last-child {
-  margin-bottom: 0;
-}
-
-
-/* NARROW EDITORIAL CONTENT */
+.tv-editorial-copy .text-md:last-child { margin-bottom: 0; }
 
 .tv-editorial .tv-super-narrow {
   max-width: 1200px;
@@ -99,31 +79,32 @@
   margin-inline: auto;
 }
 
+.page-layout .tv-editorial-content { min-width: 0; }
 
-/* =========================================
-   EDITORIAL LINK
-========================================= */
+.page-layout .tv-editorial-content p {
+  max-width: 480px;
+  margin-bottom: 0;
+}
 
+.page-layout .tv-editorial-content p + p { margin-top: 14px; }
+
+/* -----------------------------------------
+   02. EDITORIAL LINKS & BUTTONS
+----------------------------------------- */
 .tv-editorial-link {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-
   padding: 10px 13px;
   border-radius: 2px;
-
   background: var(--tv-green-dark);
   color: var(--tv-white, #fff);
-
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: var(--weight-semibold);
   line-height: 1.2;
   text-decoration: none;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .tv-editorial-link:hover {
@@ -131,22 +112,62 @@
   transform: translateY(-1px);
 }
 
-.tv-editorial-link span {
-  font-size: 15px;
-  line-height: 1;
+.tv-editorial-link span { font-size: 15px; line-height: 1; }
+
+.page-layout .tv-button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: fit-content;
+  min-height: 44px;
+  padding: 12px 18px;
+  background: #fff;
+  color: #171717;
+  border: 1px solid #d8dee3;
+  border-radius: 5px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
+.page-layout .tv-button-link svg {
+  display: block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #3a98b9;
+  transition: transform 0.2s ease;
+}
 
-/* =========================================
-   EDITORIAL IMAGE
-========================================= */
+.page-layout .tv-button-link:hover {
+  background: #f5f2ea;
+  border-color: #3a98b9;
+}
 
+.page-layout .tv-button-link:hover svg { transform: translate(2px, -2px); }
+
+.page-layout .tv-button-link:focus-visible {
+  outline: 2px solid #3a98b9;
+  outline-offset: 3px;
+}
+
+.page-layout .tv-editorial-content .tv-button-link,
+.page-layout .tv-feature-intro-action .tv-button-link { margin-top: 20px; }
+
+/* -----------------------------------------
+   03. EDITORIAL IMAGES
+----------------------------------------- */
 .tv-editorial-media {
   width: calc(100% - 16px);
   min-width: 0;
-
   aspect-ratio: 1.45 / 1;
-
   overflow: hidden;
   border-radius: 5px;
 }
@@ -155,20 +176,35 @@
   display: block;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 }
 
-
-/* =========================================
-   INFORMATION STRIP — BASE
-========================================= */
-
-.tv-info-item {
-  display: flex;
+/* For editorial rows using direct <img> children */
+.tv-editorial-row > img {
+  display: block;
+  width: 100%;
   min-width: 0;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
 }
+
+/* -----------------------------------------
+   04. INFORMATION STRIPS
+----------------------------------------- */
+.tv-info-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: center;
+  gap: clamp(32px, 5vw, 80px);
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.tv-info-item { display: flex; min-width: 0; }
+.tv-info-strip .tv-info-item { flex-direction: column; gap: 6px; }
 
 .tv-info-label {
   font-size: 11px;
@@ -177,43 +213,11 @@
   letter-spacing: 0.06em;
 }
 
-.tv-info-value {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-
-/* =========================================
-   STANDARD INFORMATION STRIP
-========================================= */
-
-.tv-info-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  justify-content: center;
-
-  gap: clamp(32px, 5vw, 80px);
-
-  width: 100%;
-  margin-inline: auto;
-
-  box-sizing: border-box;
-}
-
-.tv-info-strip .tv-info-item {
-  flex-direction: column;
-  gap: 6px;
-}
-
-
-/* =========================================
-   THREE-COLUMN INFORMATION STRIP
-========================================= */
+.tv-info-value { font-size: 16px; font-weight: 500; }
 
 .tv-info-strip--three-columns {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: stretch;
-
   gap: clamp(24px, 3vw, 48px);
 }
 
@@ -223,15 +227,20 @@
   line-height: 1.6;
 }
 
+.tv-info-strip--three-columns .tv-info-item {
+  align-items: flex-start;
+  gap: 8px;
+}
 
-/* =========================================
-   NARROW INFORMATION STRIP
-========================================= */
+.tv-info-strip--three-columns .tv-info-item p {
+  max-width: 340px;
+  margin: 4px 0 0;
+  line-height: 1.6;
+}
 
 .tv-info-strip--narrow {
   display: flex;
   align-items: center;
-
   width: 100%;
   min-height: 25px;
   padding: 0;
@@ -241,105 +250,75 @@
   flex: 0 0 auto;
   flex-direction: row;
   align-items: center;
-
   gap: 8px;
   width: fit-content;
   padding: 0 12px;
-
   line-height: 1;
 }
 
-.tv-info-strip--narrow .tv-info-item:first-child {
-  padding-left: 0;
-}
+.tv-info-strip--narrow .tv-info-item:first-child { padding-left: 0; }
 
 .tv-info-strip--narrow .tv-info-item img {
   display: block;
   flex-shrink: 0;
-
   width: auto;
   max-width: 80px;
   max-height: 25px;
-
   object-fit: contain;
 }
 
 .tv-info-strip--narrow .tv-info-text {
   display: flex;
   flex-direction: column;
-
   gap: 2px;
   min-width: 0;
 }
 
-.tv-info-strip--narrow .tv-info-label {
-  font-size: 10px;
-  line-height: 1.1;
+.tv-info-strip--narrow .tv-info-label { font-size: 10px; line-height: 1.1; }
+.tv-info-strip--narrow .tv-info-value { font-size: 12px; line-height: 1.1; }
+
+.page-layout .tv-editorial-list + .tv-info-strip {
+  margin-top: clamp(48px, 6vw, 80px);
 }
 
-.tv-info-strip--narrow .tv-info-value {
-  font-size: 12px;
-  line-height: 1.1;
-}
-
-
-/* =========================================
-   FEATURE HEADER
-========================================= */
-
-.page-layout .tv-feature-header
-.section-header-description-row {
+/* -----------------------------------------
+   05. FEATURE HEADER & PRACTICAL TIP
+----------------------------------------- */
+.page-layout .tv-feature-header .section-header-description-row {
   width: 100%;
   max-width: none;
   min-width: 0;
   justify-self: stretch;
 }
 
-.page-layout .tv-feature-header {
-  padding: 0 0 0 var(--space-lg);
+.page-layout .tv-feature-header { padding: 0 0 0 var(--space-lg); }
+.page-layout .section-header-main { gap: 0; }
+.no-bg .tv-feature-header { padding: 0; }
+
+.page-layout .tv-feature-header .section-header-description {
+  max-width: 520px;
+  margin: 0;
 }
-
-.page-layout .section-header-main {
-  gap: 0;
-}
-
-.no-bg .tv-feature-header {
-  padding: 0;
-}
-
-
-/* =========================================
-   FEATURE INTRO
-========================================= */
 
 .tv-feature-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   align-items: start;
-
   gap: clamp(32px, 5vw, 80px);
-
   margin-inline: auto;
   margin-bottom: 64px;
 }
 
-.tv-editorial-header {
-  min-width: 0;
+.page-layout .tv-feature-intro {
+  margin-bottom: clamp(48px, 6vw, 80px);
 }
 
-.tv-editorial-header .tv-feature-header {
-  padding: 0;
-}
-
-
-/* =========================================
-   PRACTICAL TIP
-========================================= */
+.tv-editorial-header { min-width: 0; }
+.tv-editorial-header .tv-feature-header { padding: 0; }
 
 .tv-tip-heading {
   display: flex;
   align-items: center;
-
   gap: 10px;
   width: 100%;
   margin-bottom: 12px;
@@ -347,53 +326,64 @@
 
 .tv-tip-icon {
   flex-shrink: 0;
-
   width: 23px;
   height: 23px;
-
   color: var(--color-primary);
 }
 
-.tv-tip-heading h3 {
-  margin: 0;
-}
+.tv-tip-heading h3 { margin: 0; }
 
 .tv-feature-intro-action {
   width: 100%;
   max-width: 460px;
   justify-self: end;
-
-  padding: 24px;
-
+  padding: var(--space-md);
   background: #fff;
   border-radius: 8px;
-
   box-sizing: border-box;
 }
 
-.tv-feature-intro > .tv-feature-intro-action {
-  padding: var(--space-md);
-}
-
 .page-layout .tv-feature-intro-action {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  align-self: start;
+  width: 100%;
+  max-width: 600px;
+  justify-self: end;
+  padding: 28px 32px;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-.tv-feature-intro-action h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
+.page-layout .tv-feature-intro-action .tv-tip-heading {
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
-.tv-feature-intro-action p {
-  margin-bottom: 0;
-  line-height: 1.65;
+.tv-feature-intro-action h3 { margin-top: 0; margin-bottom: 12px; }
+.tv-feature-intro-action p { margin-bottom: 0; line-height: 1.65; }
+
+.page-layout .tv-feature-intro-action p {
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
+.page-layout .tv-feature-intro-action p + p { margin-top: 14px; }
 
-/* =========================================
-   JUST LANDED — HERO
-========================================= */
+/* White header / colored editorial content pattern */
+.tv-editorial > .tv-section-white .tv-feature-intro { margin-bottom: 0; }
 
+.tv-editorial > .tv-section-white .tv-feature-intro-action {
+  background: #f5f2ea;
+  border: 1px solid #e7e5df;
+}
+
+/* -----------------------------------------
+   06. JUST LANDED HERO
+----------------------------------------- */
 .tv-editorial-hero--arrival .tv-editorial-hero-title {
   max-width: 700px;
   margin-bottom: 24px;
@@ -404,269 +394,62 @@
   margin-bottom: 22px;
 }
 
-.tv-editorial-hero--arrival .tv-nav-intro-links {
-  gap: 12px;
-}
+.tv-editorial-hero--arrival .tv-nav-intro-links { gap: 12px; }
 
-
-/* =========================================
-   TRAVEL INSURANCE
-========================================= */
-
+/* -----------------------------------------
+   07. TRAVEL INSURANCE
+----------------------------------------- */
 .tv-insurance-row {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
-
   gap: clamp(40px, 6vw, 96px);
-
   width: 100%;
   max-width: 1400px;
-
   margin: 0 auto;
   padding: 0;
 }
 
-
-/* INSURANCE HEADING */
-
-.page-layout .tv-insurance-row .tv-feature-header {
-  padding: 0;
-}
-
-
-/* INSURANCE DESCRIPTION */
+.page-layout .tv-insurance-row .tv-feature-header { padding: 0; }
 
 .tv-insurance-row .tv-editorial-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   gap: 16px;
 }
 
 .tv-insurance-row .tv-editorial-copy p {
   max-width: 520px;
   margin: 0;
-
   font-size: 16px;
   line-height: 1.55;
 }
-
-
-/* INSURANCE IMAGE */
 
 .tv-insurance-row .tv-editorial-media {
   width: 100%;
   min-width: 0;
   margin: 0;
-
   aspect-ratio: 3 / 2;
-
   overflow: hidden;
   border-radius: 8px;
 }
 
 .tv-insurance-row .tv-editorial-media img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
-
-/* INSURANCE INFO STRIP */
-
-.tv-insurance-info {
-  margin: clamp(48px, 6vw, 88px) auto;
-}
-
-
-/* =========================================
-   TABLET — 900px
-========================================= */
-
-@media (max-width: 900px) {
-
-  .tv-editorial-row {
-    gap: 36px;
-    padding-inline: 4vw;
-  }
-
-  .tv-insurance-row {
-    gap: 32px;
-    padding: 0;
-  }
-
-  .tv-info-strip {
-    gap: 28px;
-  }
-
-  .tv-info-strip--three-columns {
-    gap: 24px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE — 650px
-========================================= */
-
-@media (max-width: 650px) {
-
-  /* EDITORIAL ROWS */
-
-  .tv-editorial-row {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-
-    padding: 32px 0 36px;
-  }
-
-  .page-layout .tv-editorial-row {
-    padding: 0 0 36px;
-  }
-
-  .tv-editorial-copy {
-    grid-row: 2;
-  }
-
-  .tv-editorial-media {
-    grid-row: 1;
-
-    width: calc(100% - 32px);
-    margin-inline: auto;
-
-    aspect-ratio: 1.35 / 1;
-  }
-
-  .tv-editorial-copy .title-xs,
-  .tv-editorial-copy .title-sm {
-    font-size: 26px;
-  }
-
-  .tv-editorial-copy .text-md {
-    margin-bottom: 20px;
-  }
-
-
-  /* INFORMATION STRIP */
-
-  .tv-info-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 20px;
-
-    padding-inline: 32px;
-  }
-
-  .tv-info-strip--three-columns {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding-inline: 0;
-  }
-
-  .tv-info-strip--narrow {
-    max-width: 100%;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .tv-info-strip--narrow::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  /* FEATURE HEADER */
-
-  .page-layout .tv-feature-header {
-    padding: 0 var(--space-md);
-  }
-
-  .no-bg .tv-feature-header {
-    padding: 0;
-  }
-
-
-  /* FEATURE INTRO */
-
-  .tv-feature-intro {
-    grid-template-columns: 1fr;
-    gap: 28px;
-
-    margin-bottom: 40px;
-  }
-
-  .tv-feature-intro-action {
-    max-width: none;
-    justify-self: stretch;
-  }
-
-
-  /* ARRIVAL HERO */
-
-  .tv-editorial-hero--arrival .tv-editorial-hero-title {
-    margin-bottom: 20px;
-  }
-
-  .tv-editorial-hero--arrival .tv-nav-intro-title {
-    margin-bottom: 18px;
-  }
-
-
-  /* TRAVEL INSURANCE */
-
-  .page-layout .tv-insurance-row {
-    grid-template-columns: 1fr;
-    gap: 28px;
-
-    padding: 0;
-  }
-
-  .page-layout .tv-insurance-row .tv-feature-header {
-    grid-row: 1;
-    padding: 0;
-  }
-
-  .tv-insurance-row .tv-editorial-media {
-    grid-row: 2;
-
-    width: 100%;
-    margin: 0;
-
-    aspect-ratio: 4 / 3;
-  }
-
-  .tv-insurance-row .tv-editorial-copy p {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .tv-insurance-info {
-    margin-top: 40px;
-  }
-
-}
-
-
-/* =========================================
-   INSURANCE — QUICK FACTS
-========================================= */
-
 .tv-insurance-info {
   gap: clamp(24px, 3vw, 48px);
+  margin: clamp(48px, 6vw, 88px) auto;
 }
 
 .tv-insurance-info .tv-info-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   gap: 8px;
 }
 
@@ -687,296 +470,126 @@
 .tv-insurance-info .text-sm {
   max-width: 340px;
   margin: 4px 0 0;
-
   font-size: 14px;
   line-height: 1.6;
 }
 
+/* -----------------------------------------
+   08. TABLET — UP TO 900px
+----------------------------------------- */
+@media (max-width: 900px) {
+  .tv-editorial-row {
+    gap: 36px;
+    padding-inline: 4vw;
+  }
 
-/* MOBILE */
+  .tv-insurance-row { gap: 32px; padding: 0; }
+  .tv-info-strip { gap: 28px; }
+  .tv-info-strip--three-columns { gap: 24px; }
+}
 
+/* -----------------------------------------
+   09. MOBILE — UP TO 650px
+----------------------------------------- */
 @media (max-width: 650px) {
+  .tv-editorial-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 32px 0 36px;
+  }
 
-  .tv-insurance-info {
+  .page-layout .tv-editorial-row { padding: 0 0 36px; }
+  .tv-editorial-copy { grid-row: 2; }
+
+  .tv-editorial-media {
+    grid-row: 1;
+    width: calc(100% - 32px);
+    margin-inline: auto;
+    aspect-ratio: 1.35 / 1;
+  }
+
+  .tv-editorial-copy .title-xs,
+  .tv-editorial-copy .title-sm { font-size: 26px; }
+
+  .tv-editorial-copy .text-md { margin-bottom: 20px; }
+
+  .tv-info-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 20px;
+    padding-inline: 32px;
+  }
+
+  .tv-info-strip--three-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-inline: 0;
+  }
+
+  .tv-info-strip--three-columns .tv-info-item p { max-width: 100%; }
+
+  .tv-info-strip--narrow {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tv-info-strip--narrow::-webkit-scrollbar { display: none; }
+
+  .page-layout .tv-feature-header { padding: 0 var(--space-md); }
+  .no-bg .tv-feature-header { padding: 0; }
+
+  .page-layout .tv-feature-header .section-header-description { max-width: 100%; }
+
+  .tv-feature-intro {
     grid-template-columns: 1fr;
     gap: 28px;
-  }
-
-  .tv-insurance-info .text-sm {
-    max-width: 100%;
-  }
-
-}
-
-
-
-/* =========================================
-   PAGE LAYOUT — EDITORIAL REFINEMENTS
-========================================= */
-
-/* SECTION INTRO */
-
-.page-layout .tv-feature-intro {
-  margin-bottom: clamp(48px, 6vw, 80px);
-}
-
-
-/* PRACTICAL TIP */
-
-.page-layout .tv-feature-intro-action {
-  align-self: start;
-}
-
-.page-layout .tv-feature-intro-action p + p {
-  margin-top: 14px;
-}
-
-
-/* EDITORIAL CONTENT */
-
-.page-layout .tv-editorial-content {
-  min-width: 0;
-}
-
-.page-layout .tv-editorial-content p {
-  max-width: 480px;
-}
-
-.page-layout .tv-editorial-content p + p {
-  margin-top: 12px;
-}
-
-
-/* EDITORIAL BUTTON */
-
-.page-layout .tv-editorial-content .tv-button-link {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 650px) {
-
-  .page-layout .tv-feature-intro {
     margin-bottom: 40px;
   }
 
-  .page-layout .tv-editorial-content p {
-    max-width: 100%;
-  }
+  .page-layout .tv-feature-intro { margin-bottom: 40px; }
+  .tv-editorial > .tv-section-white .tv-feature-intro { margin-bottom: 0; }
 
-}
+  .tv-feature-intro-action { max-width: none; justify-self: stretch; }
 
-
-/* =========================================
-   PAGE LAYOUT — PRACTICAL TIP
-========================================= */
-
-.page-layout .tv-feature-intro-action {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 100%;
-  max-width: 600px;
-  justify-self: end;
-
-  padding: 28px 32px;
-
-  background: #fff;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.page-layout .tv-feature-intro-action .tv-tip-heading {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-.page-layout .tv-feature-intro-action p {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-}
-
-.page-layout .tv-feature-intro-action p + p {
-  margin-top: 14px;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 650px) {
   .page-layout .tv-feature-intro-action {
     max-width: none;
     justify-self: stretch;
     padding: 24px;
   }
-}
 
-.page-layout .tv-feature-header .section-header-description {
-  max-width: 520px;
-  margin: 0;
-}
+  .page-layout .tv-editorial-content p { max-width: 100%; }
 
-@media (max-width: 650px) {
-  .page-layout .tv-feature-header .section-header-description {
-    max-width: 100%;
+  .page-layout .tv-button-link { padding: 12px 16px; font-size: 13px; }
+
+  .tv-editorial-hero--arrival .tv-editorial-hero-title { margin-bottom: 20px; }
+  .tv-editorial-hero--arrival .tv-nav-intro-title { margin-bottom: 18px; }
+
+  .page-layout .tv-insurance-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0;
   }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   PAGE LAYOUT — EDITORIAL BUTTON
-========================================= */
-
-.page-layout .tv-button-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-
-  width: fit-content;
-  min-height: 44px;
-  padding: 12px 18px;
-
-  background: #fff;
-  color: #171717;
-  border: 1px solid #d8dee3;
-  border-radius: 5px;
-
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: var(--weight-semibold);
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
-
-  box-sizing: border-box;
-  cursor: pointer;
-
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-/* ICON */
-
-.page-layout .tv-button-link svg {
-  display: block;
-  flex-shrink: 0;
-
-  width: 18px;
-  height: 18px;
-
-  color: #3a98b9;
-
-  transition: transform 0.2s ease;
-}
-
-/* HOVER */
-
-.page-layout .tv-button-link:hover {
-  background: #f5f2ea;
-  border-color: #3a98b9;
-}
-
-.page-layout .tv-button-link:hover svg {
-  transform: translate(2px, -2px);
-}
-
-/* KEYBOARD FOCUS */
-
-.page-layout .tv-button-link:focus-visible {
-  outline: 2px solid #3a98b9;
-  outline-offset: 3px;
-}
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-  .page-layout .tv-button-link {
-    padding: 12px 16px;
-    font-size: 13px;
+  .page-layout .tv-insurance-row .tv-feature-header {
+    grid-row: 1;
+    padding: 0;
   }
+
+  .tv-insurance-row .tv-editorial-media {
+    grid-row: 2;
+    width: 100%;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .tv-insurance-row .tv-editorial-copy p { max-width: 100%; margin: 0; }
+  .tv-insurance-info { grid-template-columns: 1fr; gap: 28px; margin-top: 40px; }
+  .tv-insurance-info .text-sm { max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .page-layout .tv-button-link,
-  .page-layout .tv-button-link svg {
-    transition: none;
-  }
-}
-
-
-
-
-/* =========================================
-   PAGE LAYOUT — EDITORIAL PARAGRAPHS
-========================================= */
-
-.page-layout .tv-editorial-content p {
-  max-width: 480px;
-  margin-bottom: 0;
-}
-
-.page-layout .tv-editorial-content p + p {
-  margin-top: 14px;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 650px) {
-  .page-layout .tv-editorial-content p {
-    max-width: 100%;
-  }
-}
-
-
-
-
-/* =========================================
-   EDITORIAL — SEPARATE HEADER BACKGROUND
-========================================= */
-
-.tv-editorial > .tv-section-white .tv-feature-intro {
-  margin-bottom: 0;
-}
-
-/* PRACTICAL TIP ON WHITE BACKGROUND */
-
-.tv-editorial > .tv-section-white .tv-feature-intro-action {
-  background: #f5f2ea;
-  border: 1px solid #e7e5df;
+  .page-layout .tv-button-link svg { transition: none; }
 }

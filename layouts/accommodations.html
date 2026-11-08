@@ -1,38 +1,85 @@
 {{ define "main" }}
 
 
-<section class="narrow-hero">
+<!-- =========================================
+     JUST LANDED — HERO
+========================================= -->
 
-  <img
-    class="narrow-hero-bg"
-    src="/img/maps/hero-georgia-map.jpg"
-    alt=""
-    aria-hidden="true"
-  >
+<section class="tv-editorial-hero page-layout tv-editorial-hero--default">
 
-  <div class="narrow-hero-overlay"></div>
+  <!-- HERO IMAGE -->
 
-  <div class="narrow-hero-content">
-    <span class="text-label">DISCOVER GEORGIA</span>
-
-    <h1>Georgia, where to stay.</h1>
-
-    <p>
-      Explore the landscapes, towns and hidden places
-      that make every region unique.
-    </p>
+  <div class="tv-editorial-hero-media">
+    <img
+      src="/img/pages/iamintbilisi/hero.jpg"
+      alt="Arriving in Tbilisi, Georgia"
+      fetchpriority="high"
+    >
   </div>
 
-  <img
-    class="narrow-hero-map"
-    src="/img/maps/hero-georgia-map.jpg"
-    alt="Map of Georgia's regions"
-  >
+
+  <!-- HERO CONTENT -->
+
+  <div class="tv-editorial-hero-content">
+
+    <span class="text-label">
+      YOUR FIRST HOURS IN GEORGIA
+    </span>
+
+    <h1 class="title-lg tv-editorial-hero-title">
+
+      <span class="tv-hero-title-main">
+        Just landed?
+      </span>
+
+      <span class="tv-hero-title-secondary">
+        Let's get you
+        <span class="tv-gradient-text">settled.</span>
+      </span>
+
+    </h1>
+
+
+    <!-- HERO NAVIGATION -->
+
+    <div class="tv-nav-intro" style="background:#fb5d5d">
+
+      <span class="tv-nav-intro-label">
+        I AM IN TBILISI
+      </span>
+
+      <h2 class="tv-nav-intro-title">
+        Everything you need for a smooth arrival.
+      </h2>
+
+      <nav class="tv-nav-intro-links" aria-label="Page sections">
+
+        <a class="tv-nav-intro-link" href="#insurance">
+          <span class="tv-nav-intro-icon" aria-hidden="true">✈</span>
+          <span>Essentials</span>
+        </a>
+
+        <a class="tv-nav-intro-link" href="#airport-transfer">
+          <span class="tv-nav-intro-icon" aria-hidden="true">↗</span>
+          <span>Transport</span>
+        </a>
+
+        <a class="tv-nav-intro-link" href="#internet">
+          <span class="tv-nav-intro-icon" aria-hidden="true">⌁</span>
+          <span>Internet</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
 
 </section>
 
 
 
+<div class="accommodation--cars">  
 
 
 {{ partial "carousels/accommodation/luxury.html" . }}
@@ -40,5 +87,7 @@
 {{ partial "carousels/accommodation/value.html" . }}
 
 {{ partial "carousels/accommodation/budget.html" . }}
+
+</div>
 
 {{end}}
