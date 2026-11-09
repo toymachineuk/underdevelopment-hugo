@@ -817,3 +817,217 @@ main > section.tv-filter-section > .tv-grid--wrapper {
     padding-inline: 16px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   CARD SECTION — STYLE TWO
+   No border · Price aligned right
+========================================= */
+
+.accommodation--cars .tv-filter-section.tv-card-section--style-two > .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0;
+  border: 0;
+}
+
+.accommodation--cars .tv-filter-section.tv-card-section--style-two > .section-header .section-header-aside {
+  width: auto;
+  margin-left: auto;
+}
+
+
+/* =========================================
+   CARD SECTION — STYLE TWO
+   Compact price box aligned right
+========================================= */
+
+.accommodation--cars .tv-card-section--style-two .stay-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+  max-width: 100%;
+  flex: 0 0 auto;
+
+  padding: 14px 18px;
+  border: 1px solid var(--tv-border);
+  border-radius: 10px;
+  background: var(--tv-section-soft);
+}
+
+.accommodation--cars .tv-card-section--style-two .section-header-aside {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: auto;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+
+/* =========================================
+   STYLE TWO — RESPONSIVE PRICE POSITION
+========================================= */
+
+/* Desktop */
+.accommodation--cars .tv-card-section--style-two .stay-price-mobile {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  /* Hide desktop price box/header */
+  .accommodation--cars
+  .tv-card-section--style-two > .section-header {
+    display: none;
+  }
+
+  /* Show price below Value stays */
+  .accommodation--cars
+  .tv-card-section--style-two .stay-price-mobile {
+    display: block;
+  
+  }
+
+  /* Keep price box compact */
+  .accommodation--cars
+  .tv-card-section--style-two .stay-price-mobile .stay-price {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    margin-top:16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Hide the original top price box */
+  .accommodation--cars
+  .tv-filter-section.tv-card-section--style-two > .section-header {
+    display: none;
+  }
+
+  /* Show price below Value stays */
+  .accommodation--cars
+  .tv-card-section--style-two .stay-price-mobile {
+    display: block;
+  
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   ACCOMMODATION STORY — 3 COLUMNS
+===================================== */
+
+.tv-accommodation-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 56px);
+  align-items: start;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .tv-accommodation-story-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .tv-accommodation-story-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}

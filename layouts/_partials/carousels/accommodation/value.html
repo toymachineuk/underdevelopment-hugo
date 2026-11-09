@@ -1,129 +1,235 @@
-<section class="tv-filter-section tv-food width-1400 section-lg tv-feature-section">
-<div class="section-header mb-md">
-
-  <div class="section-header-main">
 
 
+<section class="tv-filter-section tv-card-section--style-two  width-1400 section-lg tv-feature-section">
 
-  </div>
+  <!-- =====================================
+       TOP HEADER / PRICE INDICATOR
+  ====================================== -->
 
-  <div class="section-header-aside">
+  <div class="section-header mb-md">
 
-    <div class="stay-price">
+    <div class="section-header-aside">
 
-      <img src="/icons/ticket.svg" class="tv-icon" width="18" height="18" alt="" aria-hidden="true">
+      <div class="stay-price">
 
-      <div class="stay-price-content">
-        <span class="stay-price-label">
-          Starting from
-        </span>
+        <img
+          class="tv-icon"
+          src="/icons/ticket.svg"
+          width="18"
+          height="18"
+          alt=""
+          aria-hidden="true"
+        >
 
-        <span class="stay-price-value">
-            $25–$99<small>/ night</small>
+        <div class="stay-price-content">
 
-         
-        </span>
+          <span class="stay-price-label">
+            Typical budget
+          </span>
+
+          <span class="stay-price-value">
+            $25–$99
+            <small>/ night</small>
+          </span>
+
+        </div>
+
       </div>
 
     </div>
 
   </div>
 
-</div>
+
+  <!-- =====================================
+       FEATURE LAYOUT
+       INTRO LEFT / CONTENT RIGHT
+  ====================================== -->
+
   <div class="tv-feature-layout">
 
 
-<div class="tv-feature-header p-lg-sm  tv--mobile-full  ">
- <div class="section-header-description-row">
+    <!-- ===================================
+         LEFT — SECTION INTRODUCTION
+    ==================================== -->
 
-  <div class="section-header-main">
+    <div class="tv-feature-header p-lg-sm tv--mobile-full">
 
-    <div class="section-header-label-row">
+      <div class="section-header-description-row">
 
-      <div class="section-header-number" aria-hidden="true">
-        03
+        <div class="section-header-main">
+
+          <div class="section-header-label-row">
+
+            <div
+              class="section-header-number"
+              aria-hidden="true"
+            >
+              03
+            </div>
+
+            <span class="text-label">
+              Explore the city
+            </span>
+
+          </div>
+
+          <h2 class="title-md">
+            Value stays
+          </h2>
+
+
+
+        </div>
+
       </div>
 
-      <span class="text-label">Explore the city</span>
+
+      <!-- DESCRIPTION -->
+      <div class="section-header-description-row flex-column">
+
+        <p class="text-md section-header-description">
+          Discover comfortable, well-located places
+          to stay in Tbilisi without overspending.
+          Explore affordable hotels, charming
+          guesthouses and private apartments
+          for every kind of trip.
+        </p>
+
+      </div>
+
+                <div class="stay-price-mobile">
+  <div class="stay-price">
+    <img class="tv-icon" src="/icons/ticket.svg"
+         width="18" height="18" alt="" aria-hidden="true">
+
+    <div class="stay-price-content">
+      <span class="stay-price-label">Typical budget</span>
+      <span class="stay-price-value">
+        $35–$99 <small>/ night</small>
+      </span>
+    </div>
+  </div>
+</div>
 
     </div>
 
-    <h2 class="title-md">Value stays</h2>
 
-  </div>
+    <!-- ===================================
+         RIGHT — FILTERS & ACCOMMODATION
+    ==================================== -->
 
-</div>
-
-  <div class="section-header-description-row flex-column"> 
-  <p class="text-md section-header-description">
-        
-  Discover where to eat in Tbilisi, from traditional Georgian cooking to contemporary restaurants, specialty coffee and natural wine.
-
-  </p>
+    <div class="tv-feature-content">
 
 
+      <!-- =================================
+           ACCOMMODATION FILTERS
+      ================================== -->
+
+      <div class="tv-filters" role="group" aria-label="Filter accommodation by type">
 
 
-  </div>
-</div>
+        <!-- ALL -->
+        <button
+          class="tv-filter tv-filter-all active"
+          type="button"
+          data-filter="all"
+          aria-pressed="true"
+        >
+          <span class="tv-filter-label">
+            All
+          </span>
+        </button>
+
+
+        <!-- HOTELS -->
+        <button
+          class="tv-filter tv-filter-hotels-value"
+          type="button"
+          data-filter="hotels-value"
+          aria-pressed="false"
+        >
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="tv-filter-icon"
+            width="24"
+            height="24"
+            viewBox="0 -960 960 960"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M40-200v-600h80v400h320v-320h320q66 0 113 47t47 113v360h-80v-120H120v120H40Zm155-275q-35-35-35-85t35-85q35-35 85-35t85 35q35 35 35 85t-35 85q-35 35-85 35t-85-35Zm325 75h320v-160q0-33-23.5-56.5T760-640H520v240ZM308.5-531.5Q320-543 320-560t-11.5-28.5Q297-600 280-600t-28.5 11.5Q240-577 240-560t11.5 28.5Q263-520 280-520t28.5-11.5ZM280-560Zm240-80v240-240Z"/>
+          </svg>
+
+          <span class="tv-filter-label">
+            Hotels
+          </span>
+
+        </button>
+
+
+        <!-- BOUTIQUE & GUESTHOUSES -->
+        <button
+          class="tv-filter tv-filter-boutique"
+          type="button"
+          data-filter="boutique-value"
+          aria-pressed="false"
+        >
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="tv-filter-icon"
+            width="24"
+            height="24"
+            viewBox="0 -960 960 960"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M120-120v-520l520-200v360h40q0-33 23.5-56.5T760-560q33 0 56.5 23.5T840-480v360H120Zm80-80h160v-280h200v-244L200-585v385Zm240 0h120v-120h80v120h120v-200H440v200ZM280-560Zm320 360Zm0-20Z"/>
+          </svg>
+
+          <span class="tv-filter-label">
+            Boutique &amp; Guesthouses
+          </span>
+
+        </button>
+
+
+        <!-- APARTMENTS -->
+        <button
+          class="tv-filter tv-filter-apartments"
+          type="button"
+          data-filter="apartments-value"
+          aria-pressed="false"
+        >
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="tv-filter-icon"
+            width="24"
+            height="24"
+            viewBox="0 -960 960 960"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/>
+          </svg>
+
+          <span class="tv-filter-label">
+            Apartments
+          </span>
+
+        </button>
 
 
 
+      </div>
 
 
-
-
-
-  <div class="tv-feature-content">
-
-
-
-  
-
-   <div class="tv-filters">
-    <button class="tv-filter tv-filter-all active" type="button" data-filter="all">
-      All
-    </button>
-    <button class="tv-filter tv-filter-modern" type="button" data-filter="hotels">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="tv-filter-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M40-200v-600h80v400h320v-320h320q66 0 113 47t47 113v360h-80v-120H120v120H40Zm155-275q-35-35-35-85t35-85q35-35 85-35t85 35q35 35 35 85t-35 85q-35 35-85 35t-85-35Zm325 75h320v-160q0-33-23.5-56.5T760-640H520v240ZM308.5-531.5Q320-543 320-560t-11.5-28.5Q297-600 280-600t-28.5 11.5Q240-577 240-560t11.5 28.5Q263-520 280-520t28.5-11.5ZM280-560Zm240-80v240-240Z"/></svg>
-   <span class="tv-filter-label">
-  Hotels
-  </span>
-  
- 
-    </button>
-
-
-
-
-
-
-
-<button class="tv-filter tv-filter-historic" type="button" data-filter="boutique">
- 
-  <svg xmlns="http://www.w3.org/2000/svg" class="tv-filter-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-520l520-200v360h40q0-33 23.5-56.5T760-560q33 0 56.5 23.5T840-480v360H120Zm80-80h160v-280h200v-244L200-585v385Zm240 0h120v-120h80v120h120v-200H440v200ZM280-560Zm320 360Zm0-20Z"/></svg>
-
- <span class="tv-filter-label">
- Boutique & Guesthouses
-  </span>
-
-</button>
-
-
-<button class="tv-filter tv-filter-apartments" type="button" data-filter="apartments">
-<svg xmlns="http://www.w3.org/2000/svg" class="tv-filter-icon"  height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/></svg>
-
-
-
-  <span class="tv-filter-label">
-  Apartments
-  </span>
-
-</button>
-  </div>
-
-
+      <!-- =================================
+           ACCOMMODATION CAROUSEL
+      ================================== -->
   
   <div class="tv-grid--wrapper">
     
@@ -145,17 +251,623 @@
 
 
 
-<!-- =========================================
-     Boutique HOTELS
-========================================= -->
+<!-- Tbilisi Visits: value hotels. Prices are editorial estimates, not live quotes. Walking times approximate. Replace image paths with actual local images. -->
 
-<!-- =========================================
-     BOUTIQUE HOTELS
-========================================= -->
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/ibis-budget-tbilisi-center.jpg" alt="ibis budget Tbilisi Center in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>8.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>ibis budget Tbilisi Center</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/ibis-budget-tbilisi-center.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $40–65 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Free Wi-Fi, garden and breakfast options</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A practical, modern budget hotel near Rustaveli Avenue, with easy access to restaurants, nightlife and public transport.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=ibis+budget+Tbilisi+Center+Tbilisi&amp;destination=Rustaveli+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Rustaveli · approx. 7–10 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/galaktioni-22.jpg" alt="Galaktioni 22 in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>8.7/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Galaktioni 22</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/tabidze-22.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $45–75 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>City-view rooms, free Wi-Fi and shared kitchen</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.7/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A good-value central stay in Sololaki, within easy reach of Freedom Square and the atmospheric streets of Old Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Galaktioni+22+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · approx. 5–8 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/hotel-flower.jpg" alt="Hotel Flower in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>8.6/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Hotel Flower</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/flower-t-39-bilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $55–95 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Panoramic terrace, breakfast and private parking</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.6/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A comfortable hotel with memorable city views and a convenient location for exploring Tbilisi’s historic centre.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Flower+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · approx. 10–15 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/hotel-zerta-old-tbilisi.jpg" alt="Hotel Zerta Old Tbilisi in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>8.3/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Hotel Zerta Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/zerta.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $50–85 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Garden, terrace and breakfast options</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.3/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A centrally located hotel near Meidan and the sulfur baths, ideal for discovering the Old Town on foot.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Zerta+Old+Tbilisi+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 12–17 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/hotel-address-9d.jpg" alt="Hotel Address 9D in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>8.9/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Hotel Address 9D</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/address-9d-t-39-bilisi1.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $45–85 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, bar and breakfast options</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.9/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A comfortable hotel with contemporary rooms and a quieter setting above the historic district, close to the Peace Bridge area.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Address+9D+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 12–18 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/hotel-passport-tbilisi.jpg" alt="Hotel Passport Tbilisi in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Hotel Passport Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/passport-tbilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $65–100 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>City views, breakfast and free Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> An appealing boutique-style stay on the Avlabari side of the city, offering comfortable rooms and access to Old Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Passport+Tbilisi+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 10–15 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/heritage-hotel-and-suites.jpg" alt="Heritage Hotel and Suites in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Heritage Hotel and Suites</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/heritage.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $70–100 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Suites, balconies and free Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> An elegant, highly rated option in Chugureti, convenient for the cafés and restored streets around Aghmashenebeli Avenue.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heritage+Hotel+and+Suites+Tbilisi&amp;destination=Marjanishvili+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Marjanishvili · approx. 5–10 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/hotel-monday-by-dnt-group.jpg" alt="Hotel Monday by DNT Group in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.7/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Hotel Monday by DNT Group</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/monday.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $75–100 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Sun terrace, bar and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.7/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A standout for guest satisfaction, with modern rooms and attentive service in a convenient Chugureti location.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Monday+by+DNT+Group+Tbilisi&amp;destination=Marjanishvili+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Marjanishvili · approx. 10–15 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/nobo-hotel-old-tbilisi.jpg" alt="NOBO - Hotel in old Tbilisi in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.3/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>NOBO - Hotel in old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/zeg.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $85–100 / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Buffet breakfast, family rooms and free Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.3/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A polished stay on lively Kote Afkhazi Street, placing the Old Town’s restaurants, historic buildings and attractions on your doorstep.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=NOBO+-+Hotel+in+old+Tbilisi+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · approx. 7–10 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: upload the corresponding photo to this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/graf-hotel.jpg" alt="Graf Hotel in Tbilisi" loading="lazy">
+  <!-- BOOKING SCORE (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.1/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Graf Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/graf.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>Approx. $85–100+ / night</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Breakfast, concierge and soundproofed rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.1/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A refined central hotel just minutes from Freedom Square, ideal for sightseeing without relying on taxis.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Graf+Hotel+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · approx. 3–5 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+<!-- TBILISI VISITS — VALUE HOTELS / SECOND SET OF 10 -->
+
+<!-- Editorial USD prices are approximate, not live quotes. Ratings are Booking.com scores. -->
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/graphica-tbilisi.jpg" alt="Graphica Tbilisi Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.6★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Graphica Tbilisi Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/graphica-tbilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$50–80 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Restaurant, garden, terrace and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.8/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A modern, comfortable hotel near Sameba Cathedral, with welcoming public spaces and a quieter setting than the busiest Old Town streets.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Graphica+Tbilisi+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 15–20 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/iris.jpg" alt="Iris Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.6★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Iris Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/iris.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$65–95 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, city views and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.1/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A stylish hotel with well-equipped rooms, a terrace and attractive city views, well suited to visitors who prefer a peaceful base in Avlabari.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Iris+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 10–15 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/margot-old-tbilisi.jpg" alt="Margot Old Tbilisi in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.4★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Margot Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/margot-tbilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–90 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Restaurant, breakfast and river-view rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.7/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A comfortable hotel on Ketevan Tsamebuli Avenue, offering modern rooms and convenient access to Avlabari and the historic centre.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Margot+Old+Tbilisi+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 5–10 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/hotel-kopala.jpg" alt="Hotel Kopala in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Hotel Kopala</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/kopala.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–90 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Rooftop terrace, restaurant and city views</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.9/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A longstanding Tbilisi favourite above the Mtkvari River, appreciated for its panoramic terrace and proximity to Metekhi and the Old Town.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel+Kopala+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 7–10 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/king-gorgasali.jpg" alt="King Gorgasali in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.6★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>King Gorgasali</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/king-gorgasali.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$75–100 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, restaurant and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.1/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> An atmospheric Old Town hotel near Shardeni Street, with individually decorated rooms and easy walking access to the sulphur baths and Narikala area.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=King+Gorgasali+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 12–18 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/kmm-hotel.jpg" alt="KMM Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.3★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>KMM Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/hotel-kmm-tbilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–85 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Breakfast terrace, Wi-Fi and city views</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.5/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A practical hotel close to Avlabari Metro, with bright rooms and a terrace overlooking the historic centre.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=KMM+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 4–6 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/metekhi-boutique.jpg" alt="Metekhi Boutique Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Metekhi Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/sollo.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–85 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, breakfast and family rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A welcoming boutique hotel on a quiet Avlabari street, with comfortable rooms and convenient access to Metekhi Church and Old Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Metekhi+Boutique+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 10–15 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/sandali-metekhi.jpg" alt="Sandali Metekhi Boutique Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.7★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Sandali Metekhi Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/sandali-metekhi-boutique.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$80–100+ / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, breakfast and family rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.3/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A polished boutique stay overlooking the Mtkvari River, combining thoughtful service with easy access to Metekhi and Rike Park.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Sandali+Metekhi+Boutique+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · approx. 12–18 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/fabrika.jpg" alt="Fabrika Hostel &amp; Suites in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.2★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Fabrika Hostel &amp; Suites</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/fabrika-hostel.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$50–90 (private room) / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Courtyard cafés, restaurants and co-working</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.2/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A lively former sewing factory turned creative hub, with industrial-style private rooms and a sociable courtyard in Chugureti.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Fabrika+Hostel+%26+Suites+Tbilisi&amp;destination=Marjanishvili+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Marjanishvili · approx. 8–10 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="hotels-value">
+  <!-- IMAGE: add your own licensed hotel photo at this path -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/mukhrantubani.jpg" alt="Mukhrantubani Boutique Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>4.6★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Mukhrantubani Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/mukhrantubani.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$85–100+ / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Restaurant, breakfast and central location</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.2/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> An elegant boutique hotel on Baratashvili Street, ideal for exploring Freedom Square, the Old Town and the riverside on foot.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Mukhrantubani+Boutique+Hotel+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · approx. 10–12 min walk</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- 1. PURIS MOEDANI BOUTIQUE HOTEL -->
-<article class="tv-rectangle-card" data-category="boutique">
+<article class="tv-rectangle-card" data-category="hotels-value">
 
   <!-- IMAGE -->
   <img
@@ -291,8 +1003,658 @@
 </article>
 
 
+
+
+<!-- TBILISI VISITS — BOUTIQUE HOTELS & GUESTHOUSES -->
+
+<!-- Prices are indicative estimates, not verified live Booking.com rates. -->
+
+<!-- Image paths are placeholders; add your own licensed hotel images. -->
+
+<!-- Boutique-value cards: indicative prices, verify live rates and walking times before publication. -->
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/eleon-boutique.jpg" alt="Eleon Boutique Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.3/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Eleon Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/eleon-boutique-tbilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–85 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Sun terrace, breakfast and family rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.3/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A comfortable small hotel in Avlabari with a terrace, practical amenities and easy access to historic Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=8+Avlabari+Street+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/sanuela-guest-house.jpg" alt="Sanuela Guest House in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>8.9/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Sanuela Guest House</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/sanuela-boutique-bilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Garden, sun terrace and family rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.9/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A welcoming guesthouse on historic Betlemi Street, well placed for exploring Old Tbilisi on foot.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=17+Betlemi+Street+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/guest-house-in-old-tbilisi.jpg" alt="Guest House in Old Tbilisi in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.3/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Guest House in Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/guest-house-in-old-tbilisi-t-39-bilisi2.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–60 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenettes, family rooms and parking</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.3/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A homely Chugureti guesthouse with kitchen facilities and friendly hosting, ideal for a longer city stay.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=5+Maksim+Gorki+Street+Tbilisi&amp;destination=Marjanishvili+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Marjanishvili · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/guest-house-lusia.jpg" alt="Guest house Lusia in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Guest house Lusia</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/guest-house-tbilisi12345.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Air conditioning, Wi-Fi and seating area</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A compact guesthouse-style stay in a historic building, with characterful interiors and convenient central sightseeing.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Guest+house+Lusia+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/tbilisi-downtown-guest-house.jpg" alt="Tbilisi Downtown Guest House in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Tbilisi Downtown Guest House</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/kipianis-11.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Shared kitchen, Wi-Fi and quiet setting</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A small Mtatsminda guesthouse on Kipiani Street, offering a relaxed base near the city centre.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=11+Dimitri+Kipiani+Street+Tbilisi&amp;destination=Rustaveli+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Rustaveli · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/guest-house-goari.jpg" alt="Guest House Goari in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Guest House Goari</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/guest-house-goari.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–75 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Breakfast, city views and Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> An intimate four-room guesthouse on Betlemi Street with welcoming hosts and views over the historic quarter.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=17+Betlemi+Street+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/gis-guest-house.jpg" alt="Gis Guest House in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Gis Guest House</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/gis.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Shared kitchen, breakfast options and bar</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A friendly guesthouse with practical shared facilities and comfortable rooms for a budget-conscious visit.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Gis+Guest+House+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/guest-house-nise.jpg" alt="Guest House Nise in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Guest House Nise</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/guest-house-nise.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenettes, coffee shop and outdoor seating</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A convenient guesthouse near Avlabari with kitchenette-equipped rooms and easy access to the Old Town.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Guest+House+Nise+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/amante-narikala.jpg" alt="Amante Narikala Boutique Hotel in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.2/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Amante Narikala Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/amante.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$70–99 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Panoramic terrace, garden and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.2/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A stylish hillside boutique hotel close to Narikala, prized for sweeping city views and atmospheric Old Town surroundings.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=1+Gomi+Street+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Liberty Square · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE: add your own licensed hotel photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/old-city-house.jpg" alt="Old city house in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.5/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Old city house</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/guest-house-tbilisi123456789101112131415161718192021222324252627282930313233.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–80 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, balcony and city views</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.5/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A characterful historic-house stay on Akhundov Street, offering a home-like setting close to the sulfur baths.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=9+Akhundov+Street+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer"><span>Avlabari · see walking route</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/boutique-stay.jpg" alt="Boutique Stay in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.9★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Boutique Stay</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/boutique-stay.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–85 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Garden, terrace and personalised hospitality</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.8/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A welcoming boutique guesthouse in Mtatsminda, with comfortable rooms, a quiet garden and attentive hosts.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Boutique+Stay+26+Dzmebi+Kakabadzeebi+Tbilisi&amp;destination=Rustaveli+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Rustaveli Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/casa-saburtalo.jpg" alt="Casa Saburtalo Boutique in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.9★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Casa Saburtalo Boutique</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/casa-saburtalo-boutique.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Garden, terrace and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.8/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A highly rated small guesthouse in Saburtalo with modern rooms, a garden and a relaxed residential atmosphere.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Casa+Saburtalo+Boutique+Tbilisi&amp;destination=Medical+University+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Medical University Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/townhouse-tbilisi.jpg" alt="TownHouse Tbilisi Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>TownHouse Tbilisi Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/townhouse-tbilisi-boutique.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$50–90 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, breakfast and coffee shop</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.9/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A compact boutique stay with comfortable rooms and a convenient base for exploring central Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=TownHouse+Tbilisi+Boutique+Hotel&amp;destination=Marjanishvili+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Marjanishvili Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/taberne-boutique.jpg" alt="Taberne Boutique Hotel Tbilisi in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Taberne Boutique Hotel Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/taberne-boutique-tbilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$60–99 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Breakfast, soundproofed rooms and Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A polished central boutique hotel near the historic streets and cultural sights of Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Taberne+Boutique+Hotel+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/falcon-boutique.jpg" alt="Falcon Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.8★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Falcon Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/rean-boutique-t-39-bilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–85 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Modern rooms, Wi-Fi and city views</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.6/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> An intimate, well-reviewed boutique property with contemporary accommodation close to Old Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Falcon+Boutique+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Avlabari Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/folk-boutique.jpg" alt="Folk Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Folk Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/folk-tbilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–95 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, bar and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A stylish boutique hotel near the sulphur baths, well placed for exploring the atmospheric streets of Old Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Folk+Boutique+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Avlabari Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/strofi-boutique.jpg" alt="STROFI Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.6★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>STROFI Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/strofi-by-tbilisi-luxury-boutique-hotels-tbilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$65–99 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Garden, terrace and hot tub</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.2/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A characterful boutique hotel in the historic centre, combining a central location with contemporary comforts.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=STROFI+Boutique+Hotel+Tbilisi&amp;destination=Liberty+Square+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/tbili-boutique.jpg" alt="TBILI Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.7★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>TBILI Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/t-i-f-l-i-s.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–80 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Garden, breakfast and family rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A friendly smaller property with spacious room options and a convenient setting for discovering the city.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=TBILI+Boutique+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Avlabari Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/boutique-hotel.jpg" alt="Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/boutique.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–85 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, city views and breakfast</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A small hotel with scenic views, welcoming rooms and convenient access to Old Tbilisi landmarks.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Boutique+Hotel+Tbilisi+Georgia&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Avlabari Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="boutique-value">
+  <!-- IMAGE -->
+  <img class="tv-rectangle-image" src="/img/accommodation/hotels/address-boutique.jpg" alt="Address Boutique Hotel in Tbilisi" loading="lazy">
+  <!-- RATING BADGE: visual approximation of Booking.com score -->
+  <div class="vertical-badge rating"><span>4.5★</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Address Boutique Hotel</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/address-boutique.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$50–90 / night (estimated)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Breakfast, Wi-Fi and comfortable rooms</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.9/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A cosy boutique-style base on the Avlabari side of the river, within reach of the historic centre.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Address+Boutique+Hotel+Tbilisi&amp;destination=Avlabari+Metro+Station+Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Avlabari Metro · view walking route</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- 2. FAMILY HOTEL KOLORIT OLD TBILISI -->
-<article class="tv-rectangle-card" data-category="boutique">
+<article class="tv-rectangle-card" data-category="boutique-value">
 
   <!-- IMAGE -->
   <img
@@ -429,7 +1791,7 @@
 
 
 <!-- 3. OLD TOWN MTATSMINDA -->
-<article class="tv-rectangle-card" data-category="boutique">
+<article class="tv-rectangle-card" data-category="boutique-value">
 
   <!-- IMAGE -->
   <img
@@ -566,7 +1928,7 @@
 
 
 <!-- 4. CITADEL NARIKALA HOTEL -->
-<article class="tv-rectangle-card" data-category="boutique">
+<article class="tv-rectangle-card" data-category="boutique-value">
 
   <!-- IMAGE -->
   <img
@@ -703,7 +2065,7 @@
 
 
 <!-- 5. OLD SIDE BOUTIQUE HOTEL -->
-<article class="tv-rectangle-card" data-category="boutique">
+<article class="tv-rectangle-card" data-category="boutique-value">
 
   <!-- IMAGE -->
   <img
@@ -1332,14 +2694,806 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- TBILISI VISITS — APARTMENTS VALUE -->
+
+<!-- Prices are illustrative editorial estimates, NOT checked live Booking.com rates. -->
+
+<!-- Verify each price, metro walking time, and photo before publishing. -->
+
+
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/modern-apartament-in-old-tbilisi.jpg" alt="The Modern Apartment in Old Tbilisi in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>The Modern Apartment in Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/modern-apartament-in-old-tbilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–70 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, Wi-Fi and washing machine</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A compact, convenient private apartment within walking distance of Freedom Square, ideal for independent sightseeing.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=The%20Modern%20Apartment%20in%20Old%20Tbilisi%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · 7–12 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/old-tbilisi-apartments-t-39-bilisi.jpg" alt="OLD TBILISI APARTMENTS in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>OLD TBILISI APARTMENTS</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/old-tbilisi-apartments-t-39-bilisi.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–80 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchen, washing machine and air conditioning</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A comfortable one-bedroom base in the historic centre, with practical self-catering facilities and a highly rated location.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=OLD%20TBILISI%20APARTMENTS%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · Approx. 10–20 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/old-tbilisi-apartment-t-39-bilisi1.jpg" alt="Apartment Elizabeth in Old Tbilisi in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Apartment Elizabeth in Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/old-tbilisi-apartment-t-39-bilisi1.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$50–90 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Two bedrooms, kitchenette and washing machine</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A two-bedroom apartment suited to families or friends wanting more room and a home-style stay in Old Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Apartment%20Elizabeth%20in%20Old%20Tbilisi%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · Walking time to verify</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/u-amp-o-apartment-liberty-square.jpg" alt="U&amp;O Apartment, Liberty Square in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.6/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>U&amp;O Apartment, Liberty Square</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/u-amp-o-apartment-liberty-square.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$60–99 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Two bedrooms, terrace and full kitchen</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.6/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A quiet courtyard apartment only a short stroll from Freedom Square, combining central access with extra living space.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=U%26O%20Apartment%2C%20Liberty%20Square%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · 3–7 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/new-apartment-in-the-historic-district-of-tbilisi.jpg" alt="Charming Apartment in the Historic District in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.3/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Charming Apartment in the Historic District</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/new-apartment-in-the-historic-district-of-tbilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–85 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Equipped kitchen and central location</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.3/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A well-reviewed apartment near Liberty Square, ideal for travellers who want to explore the historic streets on foot.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Charming%20Apartment%20in%20the%20Historic%20District%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · 3–8 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/heart-of-the-old-tbilisi.jpg" alt="Heart Of The Old Tbilisi in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Heart Of The Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/heart-of-the-old-tbilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–95 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Balcony, kitchen and Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A spacious apartment with a balcony and a strong Old Town location, useful for longer stays and relaxed evenings in.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Heart%20Of%20The%20Old%20Tbilisi%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · Walking time to verify</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/tamaras-apartment-t-39-bilisi.jpg" alt="Tamaras Apartment in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Tamaras Apartment</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/tamaras-apartment-t-39-bilisi.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–75 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Balcony, kitchenette and washing machine</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A centrally located apartment near Freedom Square, offering everyday conveniences and an inviting terrace area.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Tamaras%20Apartment%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · 4–8 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/griboedov-apartment.jpg" alt="Griboedov Apartment in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Griboedov Apartment</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/griboedov-apartment.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchen, balcony and washing machine</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A compact, practical apartment near the Opera and Ballet Theatre, particularly convenient for Rustaveli Avenue.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Griboedov%20Apartment%20Tbilisi&amp;destination=Rustaveli%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Rustaveli · Approx. 10–15 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/apartment-in-tbilisi-center-on-vera.jpg" alt="Apartment in Tbilisi Center on Vera in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Apartment in Tbilisi Center on Vera</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/apartment-in-tbilisi-center-on-vera.en-gb.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–75 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, Wi-Fi and air conditioning</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A cosy apartment in the Vera neighbourhood, close to cafés and Tbilisi Concert Hall, with useful facilities for longer visits.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Apartment%20in%20Tbilisi%20Center%20on%20Vera%20Tbilisi&amp;destination=Rustaveli%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Rustaveli · Approx. 10–20 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: add your own licensed photograph -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/apartments-dat-exx-on-freedom-square.jpg" alt="Dat Exx Apartments On Liberty Square in Tbilisi" loading="lazy">
+  <!-- BOOKING.COM RATING (OUT OF 10) -->
+  <div class="vertical-badge rating"><span>8.9/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Dat Exx Apartments On Liberty Square</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/apartments-dat-exx-on-freedom-square.html" target="_blank" rel="noopener noreferrer">
+          <span>Book on Booking.com</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$65–99 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Equipped kitchen and spacious interiors</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.9/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A centrally located apartment option with convenient access to Freedom Square, museums and the Old Town.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Dat%20Exx%20Apartments%20On%20Liberty%20Square%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer">
+          <span>Liberty Square · 2–6 min walk</span>
+          <img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+<!-- Tbilisi Visits: 15 additional apartment cards. Prices are illustrative estimates, not live verified rates. Image files must be supplied. Walking times intentionally omitted until verified. -->
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/old-gold-anteon.jpg" alt="Old Gold Anteon in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.1/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Old Gold Anteon</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/old-gold-anteon.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–85 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, balconies and garden</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.1/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A central Old Town apartment with practical self-catering facilities and a peaceful setting.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Old%20Gold%20Anteon%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/ortachala-romantic-apartments.jpg" alt="Ortachala Romantic Apartments in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.2/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Ortachala Romantic Apartments</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/romantic-ortachala-apartment.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$35–65 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, balcony and restaurant</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.2/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A cozy self-catering option in Ortachala with a balcony and good value for longer stays.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ortachala%20Romantic%20Apartments%20Tbilisi&amp;destination=300%20Aragveli%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to 300 Aragveli Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/brothers-apartments-with-terrace-in-old-tbilisi.jpg" alt="BROTHERS APARTMENTS WITH TERRACE IN OLD TBILISI in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.5/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>BROTHERS APARTMENTS WITH TERRACE IN OLD TBILISI</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/brothers-apartments-with-terrace-in-old-tbilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$60–95 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Terrace, kitchen and city views</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.5/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> Modern apartments with elevated city views and a terrace near the historic centre.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=14%20Borbalo%20Street%20Tbilisi&amp;destination=Rustaveli%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Rustaveli Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/nova-city-center-apartments.jpg" alt="Nova city center apartments in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.6/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Nova city center apartments</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/italian-garden.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–95 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchen facilities, courtyard and Wi-Fi</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.6/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A centrally situated apartment base near Liberty Square, convenient for sightseeing.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=7/2%20Giorgi%20Leonidze%20Street%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/luxury-duplex-studios-city-center.jpg" alt="Luxury Duplex Studios - City Center in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Luxury Duplex Studios - City Center</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/split-level-apartment-old-tbilisi-t-39-bilisi.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$70–99 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Duplex studios, kitchen and dining</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> Well-appointed split-level studios in the heart of Tbilisi, close to restaurants and sights.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=3/5%20Galaktion%20Tabidze%20Street%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/anbani-apartments-city-center.jpg" alt="Anbani Apartments - City Center in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>8.8/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Anbani Apartments - City Center</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/anbani-old-town.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$45–85 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Balcony, Wi-Fi and air conditioning</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.8/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> Apartment-style accommodation with useful amenities and access to central Tbilisi.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Anbani%20Apartments%20City%20Center%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/ana-s-apartment-in-old-tbilisi.jpg" alt="Ana&#x27;s Apartment in Old Tbilisi in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Ana&#x27;s Apartment in Old Tbilisi</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/ana-39-s-apartment-sololaki.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–75 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Private kitchen, balcony and parking</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A convenient Sololaki apartment for independent travellers exploring the Old Town.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ana%27s%20Apartment%20Sololaki%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/apart-hotel-shell.jpg" alt="Apart-Hotel Shell in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.6/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Apart-Hotel Shell</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/apart-shell.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–75 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchen facilities, Wi-Fi and parking</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.6/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A highly rated Chugureti apartment stay near the cafes of Aghmashenebeli Avenue.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=51%20Arnold%20Chikobava%20Street%20Tbilisi&amp;destination=Marjanishvili%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Marjanishvili Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/d-d-apartaments.jpg" alt="D&amp;D apartaments in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>D&amp;D apartaments</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/d-amp-d-apartaments.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$40–75 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, courtyard and washing machine</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A renovated central apartment with practical comforts and a historic-building atmosphere.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=D%26D%20apartaments%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/tbilapartments.jpg" alt="TbilApartments in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>10.0/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>TbilApartments</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/tbilapartments.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–95 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Private kitchen, terrace and parking</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 10.0/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A spacious apartment with mountain views and useful facilities for a longer visit.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=4%20Tabakhmela%20Street%20Tbilisi&amp;destination=Avlabari%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Avlabari Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/liberty-square-apartment-on-rustaveli.jpg" alt="Liberty Square Apartment On Rustaveli in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.4/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Liberty Square Apartment On Rustaveli</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/liberty-square-apartment-on-rustaveli.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$70–99 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Two bedrooms, kitchen and balcony</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.4/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A roomy central apartment ideal for families or friends wanting to stay near Rustaveli.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Liberty%20Square%20Apartment%20On%20Rustaveli%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/classic-apt-on-liberty-square.jpg" alt="Classic apt. on Liberty Square in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>8.2/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Classic apt. on Liberty Square</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/classic-apt-on-liberty-square.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$65–99 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Two bedrooms, terrace and kitchen</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.2/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A large apartment right by Freedom Square, particularly convenient for groups.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Classic%20apt%20on%20Liberty%20Square%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/apartment-on-liberty-square-with-2bd.jpg" alt="Apartment on Liberty Square with 2BD in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>8.8/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Apartment on Liberty Square with 2BD</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/apartment-on-liberty-square-with-2bd.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$70–99 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Two bathrooms, kitchen and terrace</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 8.8/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A spacious two-bedroom base steps from Freedom Square with plenty of living space.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Apartment%20on%20Liberty%20Square%20with%202BD%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/best-value-apartment-in-tbilisi-center.jpg" alt="Best Value Apartment in Tbilisi Center in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.7/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Best Value Apartment in Tbilisi Center</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/cozy-new-studio-in-tbilisi-center.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$55–90 / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Kitchenette, balcony and courtyard</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.7/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> A compact courtyard apartment on Aghmashenebeli Avenue with easy access to cafes.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=37%20Davit%20Aghmashenebeli%20Avenue%20Tbilisi&amp;destination=Marjanishvili%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Marjanishvili Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="tv-rectangle-card" data-category="apartments-value">
+  <!-- IMAGE: replace placeholder with your licensed photo -->
+  <img class="tv-rectangle-image" src="/img/accommodation/apartments/paskunji-residence.jpg" alt="Paskunji Residence in Tbilisi" loading="lazy">
+  <div class="vertical-badge rating"><span>9.5/10</span></div>
+  <div class="tv-rectangle-card-content">
+    <h3>Paskunji Residence</h3>
+    <div class="tv-info">
+      <div class="tv-info-row tv-info-row--booking">
+        <img src="/icons/booking-logo.webp" width="18" height="18" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.booking.com/hotel/ge/paskunji-residence.html" target="_blank" rel="noopener noreferrer"><span>Book on Booking.com</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+      <hr class="tv-card-divider">
+      <div class="tv-card-details">
+        <div class="tv-info-row"><img src="/icons/ticket.svg" width="18" height="18" alt="" aria-hidden="true"><span>$80–99+ / night (estimate)</span></div>
+        <div class="tv-info-row"><img src="/icons/spa.svg" width="18" height="18" alt="" aria-hidden="true"><span>Studios, Wi-Fi and terrace</span></div>
+        <div class="tv-info-row tv-info-row--reviews"><span>Booking 9.5/10</span></div>
+        <div class="tv-info-row tv-info-row--description"><span><strong>Why stay:</strong> Stylish apartment-style suites close to Freedom Square, with excellent guest feedback.</span></div>
+      </div>
+      <div class="tv-info-row tv-info-row--location">
+        <img class="tv-two-icons" src="/icons/map-pin-metro.svg" width="40" height="22" alt="" aria-hidden="true">
+        <a class="tv-card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=9%20Galaktion%20Tabidze%20Street%20Tbilisi&amp;destination=Liberty%20Square%20Metro%20Station%20Tbilisi" target="_blank" rel="noopener noreferrer"><span>Directions to Liberty Square Metro</span><img class="tv-link-arrow" src="/icons/link-arrow.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 
+    </div>
 
- </div>
- 
+  </div>
 
-</div></section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
