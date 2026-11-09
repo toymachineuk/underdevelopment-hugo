@@ -1,47 +1,37 @@
-
 /* =========================================
    TBILISI VISITS — NAVBAR
+   Clean desktop + editorial mobile navigation
 ========================================= */
 
-
-/* -----------------------------------------
-   01. HEADER
------------------------------------------ */
-
+/* 01. HEADER */
 .nav {
   position: relative;
   z-index: 100;
-
   display: flex;
   align-items: center;
-
-  box-sizing: border-box;
+  gap: clamp(18px, 2vw, 32px);
   width: 100%;
   height: 80px;
   padding: 0 3.2vw;
-
-  background: #fff;
-  color: #111827;
-
-  border-radius: 0 0 7px 7px;
+  box-sizing: border-box;
+  background: var(--tv-page, #fff);
+  color: var(--tv-text, #171717);
+  border: 0;
+  border-radius: 0;
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
 }
 
-
-/* -----------------------------------------
-   02. LOGO
------------------------------------------ */
-
+/* 02. LOGO */
 .nav .logo {
+  order: 1;
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-
   width: 75px;
-
-  color: inherit;
+  margin: 0;
   text-decoration: none;
+  color: inherit;
 }
-
 .nav .logo img {
   display: block;
   width: 100%;
@@ -49,591 +39,446 @@
   object-fit: contain;
 }
 
-
-/* -----------------------------------------
-   03. DESKTOP NAVIGATION
------------------------------------------ */
-
-.nav-links {
+/* 03. DESKTOP LINKS */
+.nav .nav-links {
+  order: 2;
   display: flex;
   align-items: center;
-  gap: clamp(20px, 2.5vw, 42px);
-
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  gap: clamp(16px, 2vw, 34px);
+  min-width: 0;
+  margin: 0 auto;
 }
-
-.nav-links a {
+.nav .nav-links a {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-
-  color: #111827;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.02em;
-
+  position: relative;
+  color: var(--tv-text, #171717);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
   text-decoration: none;
   white-space: nowrap;
-
-  transition: opacity 180ms ease;
+  transition: color 180ms ease;
 }
-
-.nav-links a:hover {
-  opacity: 0.65;
+.nav .nav-links a:hover,
+.nav .nav-links a[aria-current='page'],
+.nav .nav-links a.active {
+  color: var(--tv-brand-accent, #c66b49);
 }
-
-.nav-links a svg {
+.nav .nav-links a[aria-current='page'],
+.nav .nav-links a.active { font-weight: 700; }
+.nav .nav-links a[aria-current='page']::after,
+.nav .nav-links a.active::after {
+  content: '';
   display: block;
-  flex: 0 0 auto;
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tv-brand-accent, #c66b49);
 }
+.nav .nav-links a svg { display: block; flex: 0 0 auto; }
 
-
-/* -----------------------------------------
-   04. HEADER ACTIONS
------------------------------------------ */
-
+/* 04. RIGHT-SIDE ACTION */
 .nav .nav-actions,
 .nav .hero-header-aside {
+  order: 3;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   flex: 0 0 auto;
   min-width: 0;
-
-  margin-left: auto;
+  margin: 0;
 }
 
-
-/* -----------------------------------------
-   05. NAVIGATION BUTTON
------------------------------------------ */
-
+/* 05. COMPASS BUTTON — GRADIENT DASHED BORDER */
 .nav-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-
+  gap: 9px;
   box-sizing: border-box;
-  height: 32px;
-  padding: 0 11px;
-
+  min-height: 40px;
+  padding: 0 14px;
   border: 1px dashed transparent;
-  border-radius: 6px;
-
+  border-radius: 8px;
   background:
     linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(
-      110deg,
-      #E64423,
-      #EB8D1C,
-      #4BB7B8,
-      #E64423
-    ) border-box;
-
-  color: #212A29;
-
-  font: inherit;
-  font-size: 14px;
-  font-weight: 500;
-
+    linear-gradient(110deg, #e64423, #eb8d1c, #4bb7b8, #e64423) border-box;
+  color: var(--tv-text, #171717);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   white-space: nowrap;
   cursor: pointer;
-
-  transition: background 180ms ease;
+  transition: color 180ms ease, opacity 180ms ease;
 }
-
 .nav-button:hover {
   background:
-    linear-gradient(#f5f5f5, #f5f5f5) padding-box,
-    linear-gradient(
-      110deg,
-      #E64423,
-      #EB8D1C,
-      #4BB7B8,
-      #E64423
-    ) border-box;
+    linear-gradient(#fffaf6, #fffaf6) padding-box,
+    linear-gradient(110deg, #e64423, #eb8d1c, #4bb7b8, #e64423) border-box;
 }
-
-
-/* -----------------------------------------
-   06. CHEVRON
------------------------------------------ */
-
-.chevron {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-.chevron svg {
+.nav-button__icon {
   display: block;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  color: var(--tv-brand-accent, #c66b49);
 }
+.chevron { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+.chevron svg { display: block; width: 14px; height: 14px; transition: transform 180ms ease; }
+.nav-dropdown:focus-within .chevron svg,
+.nav-dropdown.is-open .chevron svg { transform: rotate(180deg); }
 
-
-/* -----------------------------------------
-   07. DESTINATIONS DROPDOWN
------------------------------------------ */
-
-/* =========================================
-   DESTINATIONS DROPDOWN
-========================================= */
-
-.nav-dropdown {
-  position: relative;
+/* 06. DESKTOP + MOBILE-HEADER DESTINATION DROPDOWN */
+.nav-dropdown { position: relative; }
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  height: 12px;
 }
-
 .nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 12px);
-  right: 0;
   z-index: 110;
-
+  top: calc(100% + 10px);
+  right: 0;
   box-sizing: border-box;
-  width: 215px;
-  padding: 10px;
-
-  background: #fff;
-  border: 1px solid #eeeae3;
-  border-radius: 14px;
-
-  box-shadow:
-    0 15px 40px rgb(0 0 0 / 9%),
-    0 3px 10px rgb(0 0 0 / 3%);
-
+  width: 232px;
+  padding: 8px;
+  background: var(--tv-page, #fff);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgb(0 0 0 / 9%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
-  transform: translateY(8px);
-
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease,
-    visibility 180ms ease;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
 }
-
-
-/* Dropdown links */
-
-.nav-dropdown__menu a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-
-  min-height: 42px;
-  box-sizing: border-box;
-  padding: 10px 11px;
-
-  color: #171717;
-
-  font-size: 14px;
-  font-weight: 550;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-
-  text-align: left;
-  text-decoration: none;
-  white-space: nowrap;
-
-  border-radius: 7px;
-
-  transition:
-    background-color 160ms ease,
-    color 160ms ease;
-}
-
-
-/* Map — featured item */
-
-.nav-dropdown__menu a:first-child {
-  min-height: 46px;
-  margin-bottom: 7px;
-  padding-bottom: 12px;
-
-  border-bottom: 1px solid #e7e5df;
-  border-radius: 5px;
-
-  font-size: 15px;
-  font-weight: 700;
-}
-
-
-/* Map label and icon */
-
-.nav-dropdown__menu strong {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-.nav-dropdown__menu strong svg {
-  width: 19px;
-  height: 19px;
-  flex: 0 0 auto;
-
-  color: #C66B49;
-}
-
-
-/* Hover */
-
-.nav-dropdown__menu a:hover {
-  background: #f5f2ea;
-  color: #C66B49;
-}
-
-
-/* Show dropdown */
-
-.nav-dropdown:hover .nav-dropdown__menu,
-.nav-dropdown:focus-within .nav-dropdown__menu {
+.nav-dropdown:focus-within .nav-dropdown__menu,
+.nav-dropdown.is-open .nav-dropdown__menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
 }
-
-
-/* Mobile positioning */
-
-@media (max-width: 900px) {
-
-  .nav-dropdown__menu {
-    top: calc(100% + 10px);
-    right: 0;
-    left: auto;
-
-    width: 215px;
-  }
-}
-
-
-/* Destination hover arrows */
-
-.nav-dropdown__menu a:not(:first-child)::after {
-  content: "↗";
-
-  display: block;
-  color: #C66B49;
-
-  font-size: 15px;
+.nav-dropdown__menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 9px 11px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: var(--tv-text, #171717);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: 14px;
   font-weight: 500;
-
-  opacity: 0;
-  transform: translate(-4px, 4px);
-
-  transition:
-    opacity 160ms ease,
-    transform 160ms ease;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, color 160ms ease;
 }
-
+.nav-dropdown__menu a:hover {
+  background: var(--tv-section-soft, #f5f2ea);
+  color: var(--tv-brand-accent, #c66b49);
+}
+.nav-dropdown__menu a:first-child {
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 0;
+  font-weight: 650;
+}
+.nav-dropdown__menu strong {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  font-weight: inherit;
+}
+.nav-dropdown__menu strong svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.nav-dropdown__menu a:not(:first-child)::after {
+  content: '↗';
+  color: var(--tv-brand-accent, #c66b49);
+  font-size: 15px;
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
 .nav-dropdown__menu a:not(:first-child):hover::after {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: none;
 }
 
-
-/* -----------------------------------------
-   08. HAMBURGER
------------------------------------------ */
-
+/* 07. HAMBURGER */
 .nav > .menu {
   display: none;
+  order: 4;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-
   flex: 0 0 auto;
   padding: 8px;
-
   border: 0;
   background: transparent;
-  color: #111827;
-
+  color: var(--tv-text, #171717);
   cursor: pointer;
 }
-
-.menu span {
+.nav > .menu span {
   display: block;
-  width: 20px;
+  width: 21px;
   height: 2px;
-
   background: currentColor;
-
-  transition:
-    transform 200ms ease,
-    opacity 200ms ease;
+  transition: transform 200ms ease;
 }
+.nav > .menu.is-open span:first-child { transform: translateY(3.5px) rotate(45deg); }
+.nav > .menu.is-open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
 
-.menu.is-open span:nth-child(1) {
-  transform: translateY(3.5px) rotate(45deg);
-}
-
-.menu.is-open span:nth-child(2) {
-  transform: translateY(-3.5px) rotate(-45deg);
-}
+/* 08. MOBILE MENU DEFAULT */
+.mobile-menu { display: none; }
 
 
-/* -----------------------------------------
-   09. MOBILE MENU
------------------------------------------ */
-
-.mobile-menu {
-  display: none;
-}
-
-
-/* =========================================
-   10. TABLET AND MOBILE
-========================================= */
-
-@media (max-width: 900px) {
-
-  .nav {
-    height: 64px;
-    padding: 0 12px;
-    gap: 12px;
-    justify-content: flex-start;
+/* Hover opening only on devices with a real pointer. */
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .nav-dropdown__menu {
+    opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
   }
+  .nav-dropdown:hover .chevron svg { transform: rotate(180deg); }
+}
 
-
-  /* Hamburger — LEFT */
-
-  .nav > .menu {
-    display: flex;
+/* 09. MOBILE HEADER AND MENU */
+@media (max-width: 900px) {
+  .nav {
+    height: 76px;
+    padding: 0 5vw;
+    gap: 12px;
+    justify-content: space-between;
+  }
+  .nav .logo {
+    position: relative;
+    z-index: 1;
     order: 1;
+    width: 58px;
     margin-right: auto;
   }
-
-
-  /* Hide desktop navigation */
-
-  .nav .nav-links {
-    display: none;
-  }
-
-
-  /* Beyond Tbilisi — RIGHT */
-
+  .nav .nav-links { display: none; }
   .nav .nav-actions,
   .nav .hero-header-aside {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    order: 2;
-    flex: 0 0 auto;
-
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-
-  /* Mobile button */
-
- .nav .nav-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-
-  height: 34px;
-  padding: 0 9px;
-
-  border: 0;
-  border-top: 1px dashed #E64423;
-  border-bottom: 1px dashed #E64423;
-  border-left: 1px dashed #E64423;
-
-  border-radius: 6px 0 0 6px;
-
-  background: #FFFAF6;
-  color: #212A29;
-
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-
-  white-space: nowrap;
-}
-
-.nav-button__icon {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-  color: #C66B49;
-}
-
-  /* Logo — NEXT TO BUTTON */
-
-  .nav .logo {
-    order: 3;
-    flex: 0 0 auto;
-
-    width: 45px;
-    margin-left: 0;
-  }
-
-  .nav .logo img {
-    width: auto;
-    height: 36px;
-    max-width: 135px;
-  }
-
-
-  /* Dropdown */
-
-  .nav-dropdown {
     position: relative;
+    z-index: 3;
+    order: 2;
+    display: flex;
+    margin: 0;
+  }
+  .nav > .menu {
+    position: relative;
+    z-index: 3;
+    order: 3;
+    display: flex;
+    margin: 0;
+  }
+  .nav .nav-button {
+    min-height: 38px;
+    padding: 0 12px;
+    gap: 7px;
+    font-size: 12px;
   }
 
-  .nav-dropdown__menu {
-    top: calc(100% + 8px);
+  /* Keep the dropdown anchored to its own button. */
+  .nav .nav-dropdown { position: relative; }
+  .nav .nav-dropdown__menu {
+    top: calc(100% + 10px);
     right: 0;
-    left: auto;
+    width: min(250px, 90vw);
   }
-
-
-  /* Mobile menu panel */
 
   .mobile-menu {
     position: fixed;
-    top: 64px;
-    right: 0;
-    bottom: 0;
-    left: 0;
     z-index: 90;
-
+    inset: 76px 0 0;
     display: block;
-
     box-sizing: border-box;
     width: 100%;
-    padding: 24px 5vw;
-
+    padding: 58px 9vw 36px;
     overflow-y: auto;
     overscroll-behavior: contain;
-
-    background: #fff;
-
+    background: var(--tv-page, #fff);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
-    transform: translateY(-10px);
-
-    transition:
-      opacity 200ms ease,
-      transform 200ms ease,
-      visibility 200ms ease;
+    transform: translateY(-8px);
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
   }
-
   .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: none;
   }
-
-
-  /* Mobile links */
-
   .mobile-menu__nav {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
     width: 100%;
   }
-
   .mobile-menu__nav a {
+    position: relative;
     display: block;
-    padding: 18px 0;
+    width: fit-content;
+    padding: 2px 0;
+    margin: 0;
+    border: 0;
+    color: var(--tv-text, #171717);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .mobile-menu__nav a:hover { color: var(--tv-brand-accent, #c66b49); }
+  .mobile-menu__nav a.active,
+  .mobile-menu__nav a[aria-current='page'] {
+    font-weight: 600;
+  }
+  .mobile-menu__nav a.active::before,
+  .mobile-menu__nav a[aria-current='page']::before {
+    content: '';
+    position: absolute;
+    left: -17px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tv-brand-accent, #c66b49);
+    transform: translateY(-50%);
+  }
 
-    border-bottom: 1px solid #ddd;
-
-    color: #111827;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-
+  /* Featured Georgia map */
+  .mobile-menu__featured-map {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    width: 100%;
+    min-height: 175px;
+    margin-top: 32px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid var(--tv-border, #e7e5df);
+    border-radius: 10px;
+    background: var(--tv-section-soft, #f5f2ea);
+    color: var(--tv-text, #171717);
     text-decoration: none;
   }
-
-  .mobile-menu__nav a:first-child {
-    border-top: 1px solid #ddd;
+  .mobile-menu__featured-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+    opacity: 1;
+    transition: transform 300ms ease;
   }
-
-  .mobile-menu__nav a:hover {
-    opacity: 0.6;
+  .mobile-menu__featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+      rgb(245 242 234 / 95%) 0%,
+      rgb(245 242 234 / 72%) 45%,
+      rgb(245 242 234 / 5%) 100%);
+  }
+  .mobile-menu__featured-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 24px 22px;
+  }
+  .mobile-menu__featured-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--tv-brand-accent, #c66b49);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+  }
+  .mobile-menu__featured-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+  .mobile-menu__featured-arrow {
+    flex: 0 0 auto;
+    color: var(--tv-brand-accent, #c66b49);
+    font-size: 25px;
+    font-weight: 400;
+    transition: transform 180ms ease;
+  }
+  .mobile-menu__featured-description {
+    max-width: 240px;
+    color: var(--tv-muted, #666666);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .mobile-menu__featured-map:hover .mobile-menu__featured-image {
+    transform: scale(1.05);
+  }
+  .mobile-menu__featured-map:hover .mobile-menu__featured-arrow {
+    transform: translate(3px, -3px);
   }
 }
 
-
-/* =========================================
-   11. SMALL PHONES
-========================================= */
-
+/* 10. SMALL PHONES */
 @media (max-width: 480px) {
-
-  .nav {
-    padding-inline: 8px;
-    gap: 8px;
-  }
-
-  .nav > .menu {
-    padding: 6px;
-  }
-
-  .nav .nav-button {
-    padding-inline: 8px;
-    font-size: 11px;
-  }
-
-  .nav .logo {
-    width: 45px;
-  }
-
-  .mobile-menu {
-    padding-right: 6vw;
-    padding-left: 6vw;
-  }
-
-  .mobile-menu__nav a {
-    padding: 17px 0;
-    font-size: 26px;
-  }
+  .nav { height: 72px; padding: 0 5vw; gap: 8px; }
+  .nav .logo { width: 48px; }
+  .nav .nav-button { min-height: 36px; padding: 0 8px; gap: 5px; font-size: 11px; }
+  .nav .nav-button__icon { width: 16px; height: 16px; }
+  .nav .chevron svg { width: 12px; height: 12px; }
+  .nav > .menu { padding: 6px; }
+  .mobile-menu { inset: 72px 0 0; padding: 52px 9vw 32px; }
+  .mobile-menu__nav { gap: 16px; }
+  .mobile-menu__nav a { font-size: 25px; }
 }
 
-
-/* =========================================
-   12. ACCESSIBILITY
-========================================= */
-
+/* 11. ACCESSIBILITY */
 .nav-button:focus-visible,
-.menu:focus-visible {
-  outline: 2px solid var(--tv-logo-blue);
-  outline-offset: 3px;
+.nav > .menu:focus-visible,
+.nav .nav-links a:focus-visible,
+.nav-dropdown__menu a:focus-visible,
+.mobile-menu__nav a:focus-visible,
+.mobile-menu__featured-map:focus-visible {
+  outline: 2px solid var(--tv-logo-blue, #3a98b9);
+  outline-offset: 4px;
 }
-
-
-/* =========================================
-   13. REDUCED MOTION
-========================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
-  .nav *,
-  .mobile-menu {
-    transition: none !important;
-  }
+  .nav *, .mobile-menu, .mobile-menu * { transition: none !important; }
 }
