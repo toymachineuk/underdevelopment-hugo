@@ -1,5 +1,183 @@
+
 {{ define "main" }}
-  <div class="markdown-body">
-    {{ .Content }}
+
+<div class="markdown-about--page">
+
+  <section class="tv-editorial-hero page-layout tv-editorial-hero--default">
+
+    <!-- HERO IMAGE -->
+
+    <div class="tv-editorial-hero-media">
+      <img
+        src="/img/pages/about/hero.jpg"
+        alt="A view of Tbilisi, Georgia"
+        fetchpriority="high"
+      >
+    </div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="tv-editorial-hero-content">
+
+      <span class="text-label">
+        ABOUT US / TBILISI VISITS
+      </span>
+
+      <h1 class="title-lg tv-editorial-hero-title">
+
+        <span class="tv-hero-title-main">
+          A Different Way
+        </span>
+
+        <span class="tv-hero-title-secondary">
+          to <span class="tv-gradient-text">Explore.</span>
+        </span>
+
+      </h1>
+
+
+      <div class="tv-about-intro">
+
+        <p>
+          We believe discovering a place shouldn't mean
+          getting lost in endless pages of information.
+          Sometimes, what matters isn't more words,
+          but a better way to present them.
+        </p>
+
+        <p>
+          Tbilisi Visits is an independent travel guide
+          built around that idea. We bring together
+          practical information, local discoveries
+          and visual tools to make exploring Tbilisi
+          and Georgia simpler, clearer and more enjoyable.
+        </p>
+
+ 
+
+
+        <p>
+          Whether you're visiting Tbilisi for the
+          first time or looking beyond the familiar,
+          we're here to help you discover more
+          with less effort.
+        </p>
+
+        <p>
+          Have an idea, a story worth sharing,
+          or an opportunity to collaborate?
+          We'd love to hear from you.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+<section class="tv-columns-story tv-columns-story--hero-extension page-layout">
+
+  <div class="tv-editorial tv-editorial--wide">
+
+    <!-- SECTION LABEL -->
+
+    <div class="tv-columns-story-header">
+
+      <span class="text-label">
+        ABOUT US / OUR PHILOSOPHY
+      </span>
+
+    </div>
+
+
+    <!-- THREE-COLUMN GRID -->
+
+    <div class="tv-columns-story-grid tv-columns-story-grid--3">
+
+      <!-- 01 / OUR IDEA -->
+
+      <article class="tv-columns-story-item">
+
+        <span class="text-label">
+          01 / OUR IDEA
+        </span>
+
+        <h3 class="title-xxs">
+          Less Noise, More Discovery
+        </h3>
+
+        <p class="text-md">
+          We believe discovering a place shouldn't mean
+          getting lost in endless pages of information.
+          Sometimes, what matters isn't more words,
+          but a better way to present them.
+        </p>
+
+      </article>
+
+
+      <!-- 02 / OUR APPROACH -->
+
+      <article class="tv-columns-story-item">
+
+        <span class="text-label">
+          02 / OUR APPROACH
+        </span>
+
+        <h3 class="title-xxs">
+          Designed to Be Explored
+        </h3>
+
+        <p class="text-md">
+          Think interactive maps that connect places,
+          curated collections that help you find what
+          interests you, and travel guides designed
+          to be explored rather than simply read.
+        </p>
+
+      </article>
+
+
+      <!-- 03 / OUR PHILOSOPHY -->
+
+      <article class="tv-columns-story-item">
+
+        <span class="text-label">
+          03 / OUR PHILOSOPHY
+        </span>
+
+        <h3 class="title-xxs">
+          Always Experimenting
+        </h3>
+
+        <p class="text-md">
+          We love experimenting with how travel information
+          can be organized, presented and experienced.
+          Our goal is to make planning simpler and
+          discovering somewhere new more intuitive.
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- CLOSING -->
+
+    <p class="tv-columns-story-closing text-md">
+      Have an idea, a story worth sharing,
+      or an opportunity to collaborate?
+      <strong>We'd love to hear from you.</strong>
+    </p>
+
   </div>
+
+</section>
+
+  {{ .Content }}
+
+</div>
+
 {{ end }}

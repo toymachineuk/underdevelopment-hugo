@@ -557,3 +557,130 @@
     transition: none;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   TBILISI VISITS — ABOUT INTRO
+========================================= */
+
+.tv-about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  max-width: 620px;
+
+  margin-top: 28px;
+
+  font-family: var(--font-sans);
+  color: var(--tv-text);
+}
+
+/* -----------------------------------------
+   PARAGRAPHS
+----------------------------------------- */
+
+.tv-about-intro p {
+  margin: 0;
+
+  font-size: clamp(15px, 1.1vw, 17px);
+  font-weight: 400;
+  line-height: 1.75;
+
+  color: var(--tv-muted);
+}
+
+/* -----------------------------------------
+   LEAD PARAGRAPH
+----------------------------------------- */
+
+.tv-about-intro p:first-child {
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 500;
+  line-height: 1.55;
+
+  color: var(--tv-text);
+}
+
+/* -----------------------------------------
+   FINAL PARAGRAPH
+----------------------------------------- */
+
+.tv-about-intro p:last-child {
+  padding-top: 20px;
+  margin-top: 8px;
+
+  border-top: 1px solid var(--tv-border);
+
+  color: var(--tv-text);
+  font-weight: 500;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .tv-about-intro {
+    max-width: 100%;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .tv-about-intro {
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .tv-about-intro p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .tv-about-intro p:first-child {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .tv-about-intro p:last-child {
+    padding-top: 16px;
+    margin-top: 6px;
+  }
+
+}

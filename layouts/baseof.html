@@ -147,11 +147,7 @@
   </head>
 <body class="{{ if eq .Layout "map-page" }}map-page{{ end }}">
 
-  {{ if and .IsPage (eq .Layout "map-page") }}
-    {{ partial "narrow-header.html" . }}
-  {{ else }}
-    {{ partial "header.html" . }}
-  {{ end }}
+ {{ partial "header.html" . }}
     <main>
       {{ block "main" . }}{{ end }}
     </main>
