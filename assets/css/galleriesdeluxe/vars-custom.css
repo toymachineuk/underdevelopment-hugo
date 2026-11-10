@@ -1023,3 +1023,59 @@ max-width: 480px;
   width: 100%;
   max-width: none;
 }
+
+
+
+
+
+
+:root {
+  /* TBILISI DISTRICT COLORS */
+
+  --tv-district-saburtalo: #477FA3;
+  --tv-district-vake: #8B719D;
+  --tv-district-chugureti: #C27B59;
+  --tv-district-vera: #B58B45;
+  --tv-district-mtatsminda: #416B87;
+  --tv-district-avlabari: #B56578;
+  --tv-district-sololaki: #A27656;
+  --tv-district-kala: #697C91;
+}
+
+
+
+/* =====================================
+   DISTRICT BADGE COLORS
+===================================== */
+
+.vertical-badge.solo[data-district="saburtalo"] {
+  background: var(--tv-district-saburtalo);
+}
+
+.vertical-badge.solo[data-district="vake"] {
+  background: var(--tv-district-vake);
+}
+
+.vertical-badge.solo[data-district="chugureti"] {
+  background: var(--tv-district-chugureti);
+}
+
+.vertical-badge.solo[data-district="vera"] {
+  background: var(--tv-district-vera);
+}
+
+.vertical-badge.solo[data-district="mtatsminda"] {
+  background: var(--tv-district-mtatsminda);
+}
+
+.vertical-badge.solo[data-district="avlabari"] {
+  background: var(--tv-district-avlabari);
+}
+
+.vertical-badge.solo[data-district="sololaki"] {
+  background: var(--tv-district-sololaki);
+}
+
+.vertical-badge.solo[data-district="kala"] {
+  background: var(--tv-district-kala);
+}
