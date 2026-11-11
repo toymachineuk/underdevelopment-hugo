@@ -130,6 +130,17 @@
 }
 
 
+.section-header-aside {
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 1 560px;
+  min-width: 0;
+  gap: clamp(20px, 3vw, 40px);
+}
+
+
 /* =====================================
    SMALL HEADER VARIATION
 ===================================== */
@@ -199,6 +210,112 @@ main > section.tv-filter-section > .section-header {
 /* =====================================
    RESPONSIVE — UNIVERSAL
 ===================================== */
+
+/* =====================================
+   SECTION HEADER — UNIVERSAL VARIANT
+===================================== */
+
+.section-header--universal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(32px, 5vw, 80px);
+  width: 100%;
+}
+
+/* LEFT — MAIN CONTENT */
+
+.section-header--universal .section-header-main {
+  display: flex;
+  flex: 1 1 55%;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  max-width: 700px;
+}
+
+.section-header--universal .section-header-description {
+  max-width: 620px;
+}
+
+/* RIGHT — DESCRIPTION & ACTION */
+
+.section-header--universal .section-header-aside {
+  display: flex;
+  flex: 1 1 45%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(20px, 2.5vw, 40px);
+  min-width: 0;
+}
+
+.section-header--universal .section-header-aside > p {
+  flex: 1 1 200px;
+  min-width: 0;
+  max-width: 340px;
+  margin: 0;
+}
+
+.section-header--universal .section-header-aside > a {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) {
+
+  .section-header--universal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .section-header--universal .section-header-main,
+  .section-header--universal .section-header-aside {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .section-header--universal .section-header-aside {
+    justify-content: flex-start;
+  }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .section-header--universal {
+    gap: 20px;
+  }
+
+  .section-header--universal .section-header-description {
+    max-width: 100%;
+  }
+
+  .section-header--universal .section-header-aside {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .section-header--universal .section-header-aside > p {
+    flex: none;
+    width: 100%;
+    max-width: 42ch;
+  }
+
+}
+
+
+
 
 @media (max-width: 700px) {
 
@@ -966,20 +1083,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

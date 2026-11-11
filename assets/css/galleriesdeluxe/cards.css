@@ -1,174 +1,227 @@
-/* TBILISI VISITS — CARD STYLES
-   Extracted from uploaded CSS. Existing values retained.
-   Carousel tracks, navigation and section headers excluded.
-   Note: contains existing overlapping card selectors; not yet refactored.
-*/
+/* =========================================
+   TBILISI VISITS — CARDS
+   Shared typography, rectangle, square,
+   accommodation and responsive styles
+========================================= */
 
-/* ===== RECTANGLE CARD ===== */
-/* Rectangle card */
-
-.tv-rectangle-card {
+/* 01 — SHARED CARD TYPOGRAPHY */
+:is(.tv-rectangle-card, .tv-square-card) {
+  --tv-card-title-size: 19px;
+  --tv-card-body-size: 14px;
+  --tv-card-info-size: 13px;
+  --tv-card-line-height: 1.5;
   position: relative;
-
-  width: 320px;
-  min-width: 320px;
-
-
-  
-  max-height: 520px;
-
-
   scroll-snap-align: start;
 }
 
-
-
-
-.tv-rectangle-card.is-hidden {
-  display: none;
+:is(.tv-rectangle-card, .tv-square-card) .tv-rectangle-card-content h3,
+:is(.tv-rectangle-card, .tv-square-card) .tv-square-card-content h3 {
+  margin: 0 0 12px;
+  font-family: var(--font-sans, "DM Sans", sans-serif);
+  font-size: var(--tv-card-title-size);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--tv-text, #171717);
 }
 
+:is(.tv-rectangle-card, .tv-square-card) h3 a {
+  color: inherit;
+  text-decoration: none;
+}
 
-/* Rectangle image */
+:is(.tv-rectangle-card, .tv-square-card) .tv-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans, "DM Sans", sans-serif);
+  font-size: var(--tv-card-body-size);
+  font-weight: 400;
+  line-height: var(--tv-card-line-height);
+  color: var(--tv-muted, #666);
+}
+
+:is(.tv-rectangle-card, .tv-square-card) .tv-card-details p {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+:is(.tv-rectangle-card, .tv-square-card) .tv-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 12px;
+  margin: 0;
+  max-width: 65ch;
+  font-family: var(--font-sans, "DM Sans", sans-serif);
+  font-size: var(--tv-card-info-size);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--tv-text, #171717);
+}
+
+:is(.tv-rectangle-card, .tv-square-card) .tv-info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 21px;
+  margin: 0;
+  font-size: var(--tv-card-info-size);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+:is(.tv-rectangle-card, .tv-square-card) .tv-info-row a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+:is(.tv-rectangle-card, .tv-square-card) .tv-info-row strong {
+  font-weight: 600;
+  color: var(--tv-text, #171717);
+}
+
+/* 02 — RECTANGLE CARD */
+.tv-rectangle-card {
+  width: 320px;
+  min-width: 320px;
+  max-height: 520px;
+}
+
+.tv-rectangle-card.is-hidden { display: none; }
 
 .tv-rectangle-image {
   position: relative;
   display: block;
-border-radius: 14px;
   width: 100%;
   aspect-ratio: 1.65 / 1;
-
   overflow: hidden;
-
+  border-radius: 14px;
   background: #eee;
- 
 }
 
 .tv-rectangle-image img {
   display: block;
-border-radius: 14px;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  transition:
-    transform .5s cubic-bezier(.2, .7, .2, 1);
+  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
 }
 
-.tv-rectangle-image:hover img {
-  transform: scale(1.035);
-}
+/* Supports rectangle cards using <img class="tv-rectangle-image"> directly */
+img.tv-rectangle-image { object-fit: cover; }
 
+.tv-rectangle-image:hover img { transform: scale(1.035); }
 .tv-grid .tv-rectangle-card.is-region-first .tv-rectangle-image {
   border-radius: 0 14px 14px 0;
 }
-/* Rectangle content */
 
-.tv-rectangle-card-content {
-    display: flex;
+.tv-rectangle-card .tv-rectangle-card-content {
+  display: flex;
   flex-direction: column;
   flex: 1;
-
-  padding: 18px 20px 20px;
+  min-width: 0;
   box-sizing: border-box;
+  padding: 18px 20px 20px;
 }
 
-.tv-rectangle-card h3 {
-  margin: 0 0 16px;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+.tv-rectangle-card .tv-card-details > .tv-info-row strong {
+  margin-left: auto;
+  white-space: nowrap;
 }
 
-.tv-rectangle-card h3 a {
-  color: var(--tv-black);
-  text-decoration: none;
+/* 03 — SQUARE CARD */
+.tv-square-card {
+  width: 230px;
+  min-width: 230px;
 }
 
-.tv-rectangle-card-content p {
-  margin: 0 0 12px;
+.tv-square-image {
+  position: relative;
+  display: block;
+  width: 230px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #eee;
 }
 
+.tv-square-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+}
 
-/* ===== SHARED CARD INFORMATION ===== */
-/* =========================================================
-   SHARED CARD INFORMATION
-========================================================= */
+img.tv-square-image { object-fit: cover; }
+.tv-square-image:hover img { transform: scale(1.035); }
 
+/* Supports both the existing rectangle-named wrapper and square-specific wrapper */
+.tv-square-card :is(.tv-rectangle-card-content, .tv-square-card-content) {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 11px 13px;
+}
+
+.tv-square-card :is(.tv-rectangle-card-content, .tv-square-card-content) .text-label {
+  margin-bottom: 8px;
+}
+
+.tv-square-card .tv-info { gap: 10px; }
+.tv-square-card .tv-info-row--site { margin-top: 2px; }
+.tv-square-card .tv-info-row a:hover { text-decoration: underline; }
+
+/* 04 — SHARED INFORMATION, ICONS AND LINKS */
 .tv-see-category {
-  --category-accent: var(--tv-black);
-
+  --category-accent: var(--tv-black, #171717);
   display: inline-flex;
   align-items: center;
   gap: 6px;
-
-  margin-top: 10px;
-  margin-bottom: 8px;
-
+  margin: 10px 0 8px;
   font-family: "DM Sans", sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: .08em;
   text-transform: uppercase;
-
-  color: var(--tv-black);
+  color: var(--tv-black, #171717);
 }
 
-.tv-info {
-  
-  display: flex;
-  flex-direction: column;
- font-weight: 500;
-  margin: 0 0 13px;
-  font-size: 13px;
-  line-height: 1.55;
-  color: rgb(0 0 0 / 72%);
-  max-width: 65ch;
-}
-
-.tv-info-row {
-  display: flex;
-  align-items: center;
-  min-height: 21px;
-  gap: 7px;
-  
-}
-
-
-
-.tv-info-row a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-
-/* Clickable links inside destination cards */
 .tv-card-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  min-width: 0;
   color: inherit;
   text-decoration: none;
   transition: color 180ms ease;
 }
 
-/* Subtle external-link indicator */
-.tv-link-arrow {
-  flex: 0 0 auto;
-  opacity: 0.55;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-
-/* Interaction */
 .tv-card-link:hover {
+  color: var(--tv-logo-blue, currentColor);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.tv-card-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.tv-link-arrow {
+  flex: 0 0 auto;
+  opacity: .55;
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .tv-card-link:hover .tv-link-arrow {
@@ -176,168 +229,75 @@ border-radius: 14px;
   transform: translate(2px, -2px);
 }
 
-/* Keyboard accessibility */
-.tv-card-link:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-
-.tv-info-row--site {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-
-.tv-info-row--location {
-  position: relative;
-  padding-bottom: 10px;
-  margin-bottom: 4px;
-
-  margin-top: auto;
-  padding-top: 15px;
-  gap: 10px;
-  align-items: center;
-}
-
-.tv-card-divider {
-  border: 0;
-  border-top: 1px solid #c9c9c9;
-  margin: 8px 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tv-info-row--location {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-
-.tv-info-row img {
+:is(.tv-rectangle-card, .tv-square-card) .tv-info-row > img:not(.tv-two-icons) {
+  display: block;
   width: 18px;
   height: 18px;
   flex: 0 0 18px;
-  margin-top: 1px;
-  opacity: .7;
-}
-.tv-location-icon,
-.tv-metro-icon {
-  width: 15px;
-  height: 15px;
-  flex: 0 0 15px;
-  opacity: none !Important;
+  margin: 0;
+  object-fit: contain;
+  opacity: .85;
 }
 
-.tv-info-row--location .tv-card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  color: black;
-  text-decoration: none;
+.tv-info-row--location {
+  position: relative;
+  margin-top: auto;
+  padding-top: 14px;
+  gap: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.tv-card-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-top: 8px;
-  padding-bottom: 13px;
-   color: #666;
+.tv-rectangle-card .tv-info-row--location {
+  border-top: 1px solid var(--tv-border, #e7e5df);
 }
 
-.tv-info-row--location > img {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
+.tv-info-row--location > img.tv-two-icons {
   display: block;
-  opacity:1;
+  width: 40px;
+  height: 22px;
+  flex: 0 0 40px;
+  margin: 0;
+  opacity: 1;
+  object-fit: contain;
 }
 
+/* =====================================
+   LOCATION ICON — SQUARE CARD
+===================================== */
 
+.tv-square-card .tv-info-row--location > img.tv-two-icons {
+  width: 32px;
+  height: 18px;
+  flex: 0 0 32px;
+}
 
-.tv-info-row--metro > img {
+.tv-info-row--metro > img,
+.tv-info-row > img.tv-location-icon,
+.tv-info-row > img.tv-metro-icon {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
-  display: block;
+  opacity: 1;
 }
 
-
-
-
-
-.tv-info-entry {
-  margin-top: 8px;
+.tv-card-divider {
+  width: 100%;
+  height: 1px;
+  padding: 0;
+  margin: 8px 0;
+  border: 0;
+  background: var(--tv-border, #e7e5df);
 }
 
+.tv-info-entry { margin-top: 8px; }
 .tv-info-icon {
-  width: 22px;
-  height: 22px;
-  flex: 0 0 22px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
   border: 1px solid #aaa;
   border-radius: 50%;
-
   font-size: 11px;
   line-height: 1;
   color: #666;
@@ -346,277 +306,59 @@ border-radius: 14px;
 .tv-info-accent {
   display: inline-block;
   padding: 4px 6px;
-
-  background: color-mix(
-    in srgb,
-    var(--category-accent) 18%,
-    white
-  );
-
-  color: var(--tv-black);
+  background: color-mix(in srgb, var(--category-accent, #171717) 18%, white);
+  color: var(--tv-black, #171717);
 }
 
+.tv-see-card-content { padding-top: 12px; }
+.tv-see-arrow { display: none; }
+.tv-see-location span { border-color: inherit; color: inherit; }
 
-/* ===== SQUARE CARD ===== */
-/* Square card */
-
-.tv-square-card {
-  position: relative;
-
-  width: 230px;
-  min-width: 230px;
-
-  scroll-snap-align: start;
-}
-
-.tv-square-card h3 {
-  margin: 0 0 6px;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -.01em;
-}
-
-
-/* Square image */
-
-.tv-square-image {
-  position: relative;
-  display: block;
-
-  width: 230px;
-  aspect-ratio: 1 / 1;
-
-  overflow: hidden;
-
-  background: #eee;
-  border-radius: 14px;
-}
-
-.tv-square-image img {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition:
-    transform .5s cubic-bezier(.2, .7, .2, 1);
-}
-
-.tv-square-image:hover img {
-  transform: scale(1.035);
-}
-
-
-/* Square content */
-
-.tv-square-card-content {
-  padding: 11px 13px;
-}
-
-.tv-square-card-content .text-label {
-  margin-bottom: 8px;
-}
-
-.tv-square-card-content p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.tv-square-card-content .tv-info-row--site {
-  margin-top: 2px;
-}
-
-.tv-square-card-content .tv-info-row a:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================================
-   GENERAL CARD CLEANUP
-========================================================= */
-
-.tv-see-card-content {
-  padding-top: 12px;
-}
-
-.tv-see-arrow {
-  display: none;
-}
-
-.tv-see-location span {
-  border-color: inherit;
-  color: inherit;
-}
-
-
-/* ===== ACCOMMODATION CARD OVERRIDES ===== */
-/* =========================================
-   ACCOMMODATION CARDS — POLISHED
-========================================= */
-
-
-/* -----------------------------------------
-   01. CARD
------------------------------------------ */
-
+/* 05 — ACCOMMODATION-SPECIFIC CARDS */
 .accommodation--cars .tv-rectangle-card {
   display: flex;
   flex-direction: column;
-
   box-sizing: border-box;
   min-width: 0;
   max-height: 580px;
-
   background: var(--tv-page, #fff);
   border: 1px solid var(--tv-border, #e7e5df);
   border-radius: 10px;
-
   overflow: hidden;
 }
 
-
-/* -----------------------------------------
-   02. IMAGE
------------------------------------------ */
-
 .accommodation--cars .tv-rectangle-image {
   display: block;
-
   width: 100%;
   height: auto;
   aspect-ratio: 1.65 / 1;
-
-  object-fit: cover;
   flex-shrink: 0;
+  border-radius: 0;
 }
-
-
-
-
-
-/* -----------------------------------------
-   04. HOTEL TITLE
------------------------------------------ */
 
 .accommodation--cars .tv-rectangle-card-content h3 {
-  margin: 0 0 12px;
-
-  font-family: var(--font-sans);
   font-size: 19px;
   font-weight: 700;
-  line-height: 1.3;
   letter-spacing: -0.025em;
-
-  color: var(--tv-text, #171717);
 }
-
-
-/* -----------------------------------------
-   05. INFO CONTAINER
------------------------------------------ */
 
 .accommodation--cars .tv-info {
-  display: flex;
-  flex-direction: column;
   flex: 1;
-  min-width: 0;
+  gap: 0;
 }
 
-
-/* -----------------------------------------
-   06. UNIVERSAL INFO ROWS
------------------------------------------ */
-
-.accommodation--cars .tv-info-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  min-width: 0;
-  margin: 0;
-
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-
-  color: var(--tv-text, #171717);
-}
-
-
-/* -----------------------------------------
-   07. STANDARD ICONS
------------------------------------------ */
-
-.accommodation--cars .tv-info-row > img:not(.tv-two-icons) {
-  display: block;
-
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-
-  margin: 0;
-  opacity: 0.85;
-  object-fit: contain;
-}
-
-
-/* -----------------------------------------
-   08. BOOKING ROW
------------------------------------------ */
+.accommodation--cars .tv-info-row { gap: 10px; }
 
 .accommodation--cars .tv-info-row--booking {
   gap: 9px;
   min-height: 22px;
 }
 
-.accommodation--cars .tv-info-row--booking > img {
-  opacity: 1;
-}
+.accommodation--cars .tv-info-row--booking > img { opacity: 1; }
+.accommodation--cars .tv-info-row--booking .tv-card-link { font-weight: 600; }
 
-.accommodation--cars .tv-info-row--booking .tv-card-link {
-  font-weight: 600;
-}
-
-
-/* -----------------------------------------
-   09. DIVIDER
------------------------------------------ */
-
-.accommodation--cars .tv-card-divider {
-  display: block;
-
-  width: 100%;
-  height: 1px;
-
-  margin: 15px 0;
-  padding: 0;
-
-  border: 0;
-  background: var(--tv-border, #e7e5df);
-}
-
-
-/* -----------------------------------------
-   10. DETAILS
------------------------------------------ */
-
-.accommodation--cars .tv-card-details {
-  display: flex;
-  flex-direction: column;
-
-  gap: 11px;
-  padding: 0;
-  margin: 0;
-}
-
-
-/* -----------------------------------------
-   11. REVIEWS
------------------------------------------ */
+.accommodation--cars .tv-card-divider { margin: 15px 0; }
+.accommodation--cars .tv-card-details { gap: 11px; }
 
 .accommodation--cars .tv-info-row--reviews {
   font-size: 12px;
@@ -624,261 +366,51 @@ border-radius: 14px;
   color: var(--tv-muted, #666);
 }
 
-
-/* -----------------------------------------
-   12. DESCRIPTION
------------------------------------------ */
-
 .accommodation--cars .tv-info-row--description {
   align-items: flex-start;
-
   font-size: 13px;
   line-height: 1.6;
   color: var(--tv-muted, #666);
 }
 
 .accommodation--cars .tv-info-row--description strong {
-  font-weight: 600;
   color: var(--tv-text, #171717);
 }
-
-
-/* -----------------------------------------
-   13. LOCATION / METRO
------------------------------------------ */
 
 .accommodation--cars .tv-info-row--location {
   margin-top: auto;
   padding-top: 15px;
-
-  gap: 10px;
-  align-items: center;
 }
-
-
-.tv-info-row--location > img.tv-two-icons {
-  display: block;
-
-  width: 40px;
-  height: 22px;
-  flex: 0 0 40px;
-
-  margin: 0;
-  opacity: 1;
-  object-fit: contain;
-}
-
-
-/* -----------------------------------------
-   14. CARD LINKS
------------------------------------------ */
 
 .accommodation--cars .tv-card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  min-width: 0;
-
   font-size: 13px;
-  font-weight: 500;
   line-height: 1.5;
-
   color: var(--tv-text, #171717);
-  text-decoration: none;
-
-  transition: color 0.2s ease;
 }
 
 .accommodation--cars .tv-card-link:hover {
-  color: var(--tv-logo-blue);
+  color: var(--tv-logo-blue, #171717);
 }
 
-
-/* -----------------------------------------
-   15. LINK ARROWS
------------------------------------------ */
-
-.accommodation--cars
-.tv-card-link img.tv-link-arrow {
+.accommodation--cars .tv-card-link img.tv-link-arrow {
   display: block;
-
   width: 14px;
   height: 14px;
   flex: 0 0 14px;
-
   margin: 0;
-  opacity: 0.7;
-
-  transition: transform 0.2s ease;
+  opacity: .7;
 }
 
-.accommodation--cars
-.tv-card-link:hover img.tv-link-arrow {
-  transform: translate(2px, -2px);
-  opacity: 1;
-}
-
-
-/* -----------------------------------------
-   16. MOBILE
------------------------------------------ */
-
+/* 06 — RESPONSIVE */
 @media (max-width: 768px) {
-
-  .accommodation--cars .tv-rectangle-card-content {
-    padding: 16px;
+  .tv-rectangle-card,
+  .tv-square-card {
+    width: 100%;
+    min-width: 0;
   }
 
-  .accommodation--cars .tv-rectangle-card-content h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .accommodation--cars .tv-card-details {
-    gap: 10px;
-  }
-
-  .accommodation--cars .tv-card-divider {
-    margin: 13px 0;
-  }
-
-  .accommodation--cars .tv-info-row--location {
-    padding-top: 13px;
-  }
-
-}
-
-
-
-/* ===== MOBILE CARD RULES ===== */
-@media (max-width: 768px) {
-  .tv-rectangle-card { width: 100%; min-width: 0; }
   .tv-rectangle-image { aspect-ratio: 1.55 / 1; }
-  .tv-square-card { width: 100%; min-width: 0; }
   .tv-square-image { width: 100%; }
-}
-
-
-
-
-
-/* =========================================
-   RECTANGLE CARD — REFINED CONTENT
-   Does not affect square cards or badges
-========================================= */
-
-/* CONTENT */
-
-.tv-rectangle-card .tv-rectangle-card-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0;
-
-  padding: 18px 20px 20px;
-}
-
-/* TITLE */
-
-.tv-rectangle-card .tv-rectangle-card-content h3 {
-  margin: 0 0 12px;
-
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-}
-
-/* INFORMATION */
-
-.tv-rectangle-card .tv-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 14px;
-
-  min-width: 0;
-  margin: 0;
-}
-
-/* DESCRIPTION */
-
-.tv-rectangle-card .tv-card-details {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-
-  padding: 0;
-  margin: 0;
-}
-
-.tv-rectangle-card .tv-card-details p {
-  margin: 0;
-  color: var(--tv-muted);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-/* INFORMATION ROWS */
-
-.tv-rectangle-card .tv-info-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  min-width: 0;
-  margin: 0;
-}
-
-.tv-rectangle-card .tv-card-details > .tv-info-row strong {
-  margin-left: auto;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* ICONS */
-
-.tv-rectangle-card .tv-info-row > img:not(.tv-two-icons) {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-
-  margin: 0;
-  object-fit: contain;
-}
-
-/* LOCATION */
-
-.tv-rectangle-card .tv-info-row--location {
-  margin-top: auto;
-  padding: 14px 0 0;
-
-  border-top: 1px solid var(--tv-border);
-}
-
-/* LINKS */
-
-.tv-rectangle-card .tv-card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  min-width: 0;
-
-  color: var(--tv-text);
-  font-size: 13px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.tv-rectangle-card .tv-card-link:hover {
-  color: var(--tv-logo-blue);
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
 
   .tv-rectangle-card .tv-rectangle-card-content {
     padding: 16px;
@@ -889,13 +421,21 @@ border-radius: 14px;
     margin-bottom: 10px;
   }
 
-  .tv-rectangle-card .tv-info {
-    gap: 12px;
+  .tv-square-card :is(.tv-rectangle-card-content, .tv-square-card-content) h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
   }
 
-  .tv-rectangle-card .tv-info-row--location {
-    padding-top: 12px;
+  .tv-rectangle-card .tv-info { gap: 12px; }
+  .tv-rectangle-card .tv-info-row--location { padding-top: 12px; }
+
+  .accommodation--cars .tv-rectangle-card-content h3 {
+    font-size: 18px;
   }
+
+  .accommodation--cars .tv-card-details { gap: 10px; }
+  .accommodation--cars .tv-card-divider { margin: 13px 0; }
+  .accommodation--cars .tv-info-row--location { padding-top: 13px; }
 }
 
 
@@ -909,3 +449,173 @@ border-radius: 14px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   CARD DETAILS — INFORMATION VALUES
+===================================== */
+
+.tv-rectangle-card
+.tv-card-details > .tv-info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.tv-rectangle-card
+.tv-card-details > .tv-info-row > strong {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--tv-text);
+  white-space: nowrap;
+}
+
+
+
+/* =====================================
+   SQUARE CARD — CONTENT REFINEMENT
+===================================== */
+
+.tv-square-card .tv-rectangle-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 0;
+  min-width: 0;
+}
+
+.tv-square-card .tv-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.tv-square-card .tv-card-details {
+  padding: 0;
+  margin: 0;
+}
+
+.tv-square-card .tv-info-row--location {
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--tv-border);
+}
+
+
+
+/* =====================================
+   CARD CONTENT — UNIVERSAL
+===================================== */
+
+.tv-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* RECTANGLE */
+
+.tv-rectangle-card .tv-card-content {
+  padding: 18px 20px 20px;
+}
+
+/* SQUARE */
+
+.tv-square-card .tv-card-content {
+  padding: 14px 0;
+}
+
+
+.tv-square-card .tv-card-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 14px 0;
+}
+
+/* =====================================
+   CARD TITLES — UNIVERSAL
+===================================== */
+
+:is(.tv-square-card, .tv-rectangle-card)
+.tv-card-content h3 {
+  margin: 0 0 12px;
+
+  font-family: var(--font-sans);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+
+  color: var(--tv-text);
+}
+
+/* SQUARE CARD */
+
+.tv-square-card .tv-card-content h3 {
+  margin-bottom: 8px;
+}
+
+/* ACCOMMODATION CARD */
+
+.accommodation--cars .tv-rectangle-card .tv-card-content h3 {
+  font-weight: 700;
+}
+
+
+
+.tv-square-card .tv-info-row--location {
+  gap: 7px;
+}
+
+/* =====================================
+   SQUARE CARD — LOCATION LINK
+===================================== */
+
+.tv-square-card .tv-info-row--location {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Allow text and arrow to flow together */
+
+.tv-square-card .tv-info-row--location .tv-card-link {
+  display: inline;
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+/* Arrow immediately after text */
+
+.tv-square-card .tv-info-row--location .tv-card-link > span:last-child {
+  display: inline;
+  margin-left: 3px;
+  white-space: nowrap;
+}

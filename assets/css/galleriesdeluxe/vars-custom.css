@@ -1048,34 +1048,34 @@ max-width: 480px;
    DISTRICT BADGE COLORS
 ===================================== */
 
-.vertical-badge.solo[data-district="saburtalo"] {
+.vertical-badge[data-district="saburtalo"] {
   background: var(--tv-district-saburtalo);
 }
 
-.vertical-badge.solo[data-district="vake"] {
+.vertical-badge[data-district="vake"] {
   background: var(--tv-district-vake);
 }
 
-.vertical-badge.solo[data-district="chugureti"] {
+.vertical-badge[data-district="chugureti"] {
   background: var(--tv-district-chugureti);
 }
 
-.vertical-badge.solo[data-district="vera"] {
+.vertical-badge[data-district="vera"] {
   background: var(--tv-district-vera);
 }
 
-.vertical-badge.solo[data-district="mtatsminda"] {
+.vertical-badge[data-district="mtatsminda"] {
   background: var(--tv-district-mtatsminda);
 }
 
-.vertical-badge.solo[data-district="avlabari"] {
+.vertical-badge[data-district="avlabari"] {
   background: var(--tv-district-avlabari);
 }
 
-.vertical-badge.solo[data-district="sololaki"] {
+.vertical-badge[data-district="sololaki"] {
   background: var(--tv-district-sololaki);
 }
 
-.vertical-badge.solo[data-district="kala"] {
+.vertical-badge[data-district="kala"] {
   background: var(--tv-district-kala);
 }
