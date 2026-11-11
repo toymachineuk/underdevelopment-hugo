@@ -384,6 +384,12 @@
   box-sizing: border-box;
 }
 
+
+#georgian-wine.tv-super-narrow .tv-carousel-image img {
+ 
+  transform: scale(3.55);
+}
+
 /* =====================================
    CONTENT
 ===================================== */
@@ -1192,111 +1198,306 @@ border-radius: 14px;
 }
 
 
+
+
 /* =====================================
-   PARTNER LOGO STRIP
+   PARTNERS — LOGO STRIP
 ===================================== */
 
 .tv-partners {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  padding: clamp(28px, 3vw, 48px) 0;
+  box-sizing: border-box;
+
+  background: var(--tv-section-soft, #f5f2ea);
+}
+
+
+/* =====================================
+   INNER CONTAINER
+===================================== */
+
+.tv-partners-inner {
+  box-sizing: border-box;
+
+  margin-inline: auto;
+
+  border-top: 1px solid var(--tv-border, #e7e5df);
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
+}
+
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.tv-partners-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+  padding: 22px 0 0;
+}
+
+.tv-partners-label,
+.tv-partners-caption {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--tv-muted, #666);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   PARTNERS — LOGO STRIP
+===================================== */
+
+/* -------------------------------------
+   01. SECTION
+------------------------------------- */
+
+.tv-partners {
+  width: 100%;
+  margin: 0;
+  padding: 16px 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.tv-partners-inner {
+  margin-inline: auto;
+  box-sizing: border-box;
+
+  border-block: 1px solid var(--tv-border, #e7e5df);
+}
+
+
+/* -------------------------------------
+   02. HEADER
+------------------------------------- */
+
+.tv-partners-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.tv-partners-label,
+.tv-partners-caption {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tv-muted, #666);
+}
+
+
+/* -------------------------------------
+   03. LOGO TRACK
+------------------------------------- */
+
+.tv-partners-track {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(12px, 2vw, 28px);
+
+  width: 100%;
+  padding: 12px 0 16px;
   box-sizing: border-box;
 }
 
-.tv-partners-label {
-  margin: 0 0 24px;
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: #777;
-}
 
-/* Desktop track */
-
-.tv-partners-track {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: clamp(24px, 5vw, 72px);
-  width: 100%;
-}
-
-/* Individual partner */
+/* -------------------------------------
+   04. LOGOS
+------------------------------------- */
 
 .tv-partners .tv-partner-logo {
   display: flex;
-  flex: 1 1 0;
   align-items: center;
   justify-content: center;
   min-width: 0;
-  max-width: 180px;
-  min-height: 42px;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
+  min-height: 38px;
 }
 
 .tv-partners .tv-partner-logo img {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 150px;
-  max-height: 44px;
+  width: 100%;
+  max-width: 110px;
+  height: 32px;
   object-fit: contain;
 }
 
-.tv-partners .tv-partner-logo:hover {
-  opacity: 0.7;
+
+/* -------------------------------------
+   05. LOGO SIZE BALANCING
+------------------------------------- */
+
+/* Bolt & VisitorsCoverage */
+
+.tv-partners .tv-partner-logo:nth-child(1) img,
+.tv-partners .tv-partner-logo:nth-child(4) img {
+  max-width: 85px;
 }
 
+/* Airalo */
+
+.tv-partners .tv-partner-logo:nth-child(2) img {
+  max-width: 80px;
+  height: 34px;
+}
+
+/* VisitorsCoverage */
+
+.tv-partners .tv-partner-logo:nth-child(4) img {
+  height: 34px;
+}
+
+/* Booking.com & Revolut */
+
+.tv-partners .tv-partner-logo:nth-child(3) img,
+.tv-partners .tv-partner-logo:nth-child(6) img {
+  max-width: 115px;
+}
+
+/* Kiwi.com */
+
+.tv-partners .tv-partner-logo:nth-child(5) img {
+  max-width: 100px;
+}
+
+/* Klook */
+
+.tv-partners .tv-partner-logo:nth-child(7) img {
+  max-width: 105px;
+}
+
+
 /* =====================================
-   MOBILE — HORIZONTAL SCROLL
+   RESPONSIVE — TABLET
 ===================================== */
 
-@media (max-width: 650px) {
-  .tv-partners {
-    padding: 16px 0 24px;
-    overflow: hidden;
-  }
+@media (max-width: 1000px) {
 
-  .tv-partners-label {
-    margin-bottom: 12px;
-  }
-
-  .tv-partners .tv-partners-track {
+  .tv-partners-track {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: center;
-    
-    width: 100%;
-        gap: 14px;
-    padding: 12px 16px;
-    box-sizing: border-box;
+    gap: 28px;
+
+    padding: 22px 0 28px;
 
     overflow-x: auto;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .tv-partners .tv-partners-track::-webkit-scrollbar {
+  .tv-partners-track::-webkit-scrollbar {
     display: none;
   }
 
   .tv-partners .tv-partner-logo {
-      flex: 0 0 120px;
-    width: 120px;
-    min-width: 120px;
-    max-width: none;
-   
-    min-height: 58px;
+    flex: 0 0 145px;
+    min-height: 60px;
+    scroll-snap-align: start;
+  }
+
+}
+
+
+/* =====================================
+   RESPONSIVE — MOBILE
+===================================== */
+
+@media (max-width: 650px) {
+
+  .tv-partners {
+    padding: 12px 0;
+  }
+
+  .tv-partners-inner {
+    width: calc(100% - 32px);
+  }
+
+  .tv-partners-label {
+    font-size: 9px;
+  }
+
+  .tv-partners-caption {
+    display: none;
+  }
+
+  .tv-partners-track {
+    gap: 16px;
+    padding: 10px 0 12px;
+  }
+
+  .tv-partners .tv-partner-logo {
+    flex-basis: 100px;
+    min-height: 36px;
   }
 
   .tv-partners .tv-partner-logo img {
-    max-width: 130px;
-    max-height: 44px;
+    max-width: 100px;
+    height: 30px;
   }
+
+  .tv-partners .tv-partner-logo:nth-child(2) img,
+  .tv-partners .tv-partner-logo:nth-child(4) img {
+    max-width: 85px;
+    height: 34px;
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* =========================================
