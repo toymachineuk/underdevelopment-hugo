@@ -1566,32 +1566,7 @@ border-radius: 14px;
 }
 
 
-/* =========================================
-   GEORGIAN FOOD — COMPACT EDITORIAL HEADING
-   Food cards reuse .tv-super-narrow carousel styles.
-========================================= */
-.tv-food-strip {
-  display: block;
-  width: 100%;
-  padding: 0 0 20px;
-  margin: 0 0 20px;
-  box-sizing: border-box;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--tv-border, #e7e5df);
-  border-radius: 0;
-}
-.tv-food-strip-heading { min-width: 0; padding: 0; border: 0; }
-.tv-food-strip-heading .text-label {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--tv-brand-accent, #c66b49);
-}
-.tv-food-strip-heading .title-sm { margin: 0; color: var(--tv-black, #151515); }
-@media (max-width: 650px) {
-  .tv-food-strip { padding-bottom: 16px; margin-bottom: 16px; }
-  .tv-food-strip-heading .text-label { margin-bottom: 6px; }
-}
+
 
 
 /* =========================================
