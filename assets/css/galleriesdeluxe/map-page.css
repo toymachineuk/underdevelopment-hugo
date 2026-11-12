@@ -1,791 +1,140 @@
+/* GEORGIA REGIONS — CONSOLIDATED CSS
+   Compatible with the working move-based regions-filters.js. */
 
-
+/* 01. DESTINATION COUNT */
 .tv-georgia-destinations .tv-filter-count {
-
-text-align: left;
+  text-align: left;
   padding: var(--space-sm) 0 var(--space-xs);
-
   border-bottom: 0;
-
 }
-/* =========================================
-   GEORGIA MAP INTRO
-========================================= */
 
+/* 02. MAP INTRO */
 .tv-map-intro {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  align-items: start;
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
   padding: 150px 0 0;
-
-  display: grid;
-  grid-template-columns: 22% 78%;
-  align-items: start;
 }
-
-
-/* =========================================
-   LABEL
-========================================= */
-
-.tv-map-intro-label {
-  padding-top: 12px;
-}
-
+.tv-map-intro-label { padding-top: 12px; }
 .tv-map-intro-label .text-label {
   display: inline-flex;
   align-items: center;
   gap: 7px;
 }
-
-
-/* =========================================
-   MAIN CONTENT
-========================================= */
-
-.tv-map-intro-content {
-  max-width: 900px;
-}
-
-
-
+.tv-map-intro-content { max-width: 900px; }
 .tv-map-intro p {
   width: min(100%, 390px);
   margin: 38px 0 0;
-
   font-size: 21px;
   line-height: 1.5;
 }
-
-.tv-georgia-flag {
-  width: 18px;
-  height: auto;
-  display: block;
-}
-
-
-
-
-/* =========================================
-   MAP INTRO — MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-  .tv-map-intro {
-    width: 100%;
-    margin: 0;
-    padding: 48px 20px 42px;
-
-    display: block;
-    box-sizing: border-box;
-  }
-
-  .tv-map-intro .text-label {
-    display: block;
-    margin-bottom: 14px;
-
-    font-size: 9px;
-    line-height: 1;
-    letter-spacing: .12em;
-  }
-
-  .tv-map-intro h1 {
-    margin: 0 0 18px;
-
-    font-family: "DM Sans", sans-serif;
-    font-size: clamp(48px, 14vw, 72px);
-    font-weight: 500;
-    line-height: .9;
-    letter-spacing: -.055em;
-  }
-
-  .tv-map-intro p {
-    max-width: 330px;
-    margin: 0;
-
-    font-size: 15px;
-    line-height: 1.4;
-    letter-spacing: -.015em;
-  }
-
-
-
-  .tv-georgia-destinations .tv-filter-count {
-
-
-  padding-left:  16px;
-
-
-
-}
-  .tv-georgia-destinations {
-
-  padding: 0;
-}
-
-
-}
-
-
-
-
-
-
-/* =========================================
-   GEORGIA REGION FILTER COLORS
-========================================= */
-
-.tv-region-filter[data-region="adjara"] {
-  --region-color: #b8d5d3;
-}
-
-.tv-region-filter[data-region="guria"] {
-  --region-color: #c8ddc1;
-}
-
-.tv-region-filter[data-region="imereti"] {
-  --region-color: #c4d8e3;
-}
-
-.tv-region-filter[data-region="kakheti"] {
-  --region-color: #e7d99c;
-}
-
-.tv-region-filter[data-region="mtskheta-mtianeti"] {
-  --region-color: #d5cddd;
-}
-
-.tv-region-filter[data-region="racha-lechkhumi-kvemo-svaneti"] {
-  --region-color: #cbd6e3;
-}
-
-.tv-region-filter[data-region="samegrelo-zemo-svaneti"] {
-  --region-color: #c6dcd2;
-}
-
-.tv-region-filter[data-region="samtskhe-javakheti"] {
-  --region-color: #dfc0b3;
-}
-
-.tv-region-filter[data-region="shida-kartli"] {
-  --region-color: #e5d19e;
-}
-
-.tv-region-filter[data-region="tbilisi"] {
-  --region-color: #d9b8c7;
-}
-
-
-/* =========================================
-   SCROLL CARD REGION COLORS
-========================================= */
-
-.tv-scroll-card[data-region="adjara"] {
-  --region-color: #b8d5d3;
-}
-
-.tv-scroll-card[data-region="guria"] {
-  --region-color: #c8ddc1;
-}
-
-.tv-scroll-card[data-region="imereti"] {
-  --region-color: #c4d8e3;
-}
-
-.tv-scroll-card[data-region="kakheti"] {
-  --region-color: #e7d99c;
-}
-
-.tv-scroll-card[data-region="mtskheta-mtianeti"] {
-  --region-color: #d5cddd;
-}
-
-.tv-scroll-card[data-region="racha-lechkhumi-kvemo-svaneti"] {
-  --region-color: #cbd6e3;
-}
-
-.tv-scroll-card[data-region="samegrelo-zemo-svaneti"] {
-  --region-color: #c6dcd2;
-}
-
-.tv-scroll-card[data-region="samtskhe-javakheti"] {
-  --region-color: #dfc0b3;
-}
-
-.tv-scroll-card[data-region="shida-kartli"] {
-  --region-color: #e5d19e;
-}
-
-.tv-scroll-card[data-region="tbilisi"] {
-  --region-color: #d9b8c7;
-}
-
-
-/* =========================================
-   REGION FILTER
-========================================= */
-
-
-
-
-.tv-region-filter {
-  display: none;
-}
-
-
-
-
-
-/* Selected panel in its new location */
-.tv-region-panel-target .tv-region-filter.is-visible {
-  display: block;
-  position: relative;
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  height: auto;
-  margin: 24px 0 0;
-  box-sizing: border-box;
-  overflow: visible;
-}
-
-
-@media (max-width: 600px) {
-  .tv-region-panel-target .tv-region-filter.is-visible {
-  
-    margin:  0;
-  
-  }
-}
-
-
-/* =========================================
-   COLUMNS
-========================================= */
-
-.tv-region-filter > * {
-  position: relative;
-  z-index: 1;
-
-  min-width: 0;
-}
-
-
-
-
-
-
-/* =========================================
-   REGION FILTERS WRAPPER
-========================================= */
-
-.tv-region-filters {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1px;
-  width: 100%;
-  position: relative;
-
-  margin-top: var(--space-xs);
-  padding: 0;
-}
-
-
-
-
-
-/* =========================================
-   GEORGIA MAP
-========================================= */
-
+.tv-georgia-flag { display: block; width: 18px; height: auto; }
+
+/* 03. REGION PANEL COLOR VARIABLES */
+.tv-region-filter[data-region="kvemo-kartli"] { --region-color: #dfc59f; }
+.tv-region-filter[data-region="adjara"] { --region-color: #b8d5d3; }
+.tv-region-filter[data-region="guria"] { --region-color: #c8ddc1; }
+.tv-region-filter[data-region="imereti"] { --region-color: #c4d8e3; }
+.tv-region-filter[data-region="kakheti"] { --region-color: #e7d99c; }
+.tv-region-filter[data-region="mtskheta-mtianeti"] { --region-color: #d5cddd; }
+.tv-region-filter[data-region="racha-lechkhumi-kvemo-svaneti"] { --region-color: #cbd6e3; }
+.tv-region-filter[data-region="samegrelo-zemo-svaneti"] { --region-color: #c6dcd2; }
+.tv-region-filter[data-region="samtskhe-javakheti"] { --region-color: #dfc0b3; }
+.tv-region-filter[data-region="shida-kartli"] { --region-color: #e5d19e; }
+.tv-region-filter[data-region="tbilisi"] { --region-color: #d9b8c7; }
+
+/* 04. SCROLL CARD COLOR VARIABLES */
+.tv-scroll-card[data-region="kvemo-kartli"] { --region-color: #dfc59f; }
+.tv-scroll-card[data-region="adjara"] { --region-color: #b8d5d3; }
+.tv-scroll-card[data-region="guria"] { --region-color: #c8ddc1; }
+.tv-scroll-card[data-region="imereti"] { --region-color: #c4d8e3; }
+.tv-scroll-card[data-region="kakheti"] { --region-color: #e7d99c; }
+.tv-scroll-card[data-region="mtskheta-mtianeti"] { --region-color: #d5cddd; }
+.tv-scroll-card[data-region="racha-lechkhumi-kvemo-svaneti"] { --region-color: #cbd6e3; }
+.tv-scroll-card[data-region="samegrelo-zemo-svaneti"] { --region-color: #c6dcd2; }
+.tv-scroll-card[data-region="samtskhe-javakheti"] { --region-color: #dfc0b3; }
+.tv-scroll-card[data-region="shida-kartli"] { --region-color: #e5d19e; }
+.tv-scroll-card[data-region="tbilisi"] { --region-color: #d9b8c7; }
+
+
+/* 05. INTERACTIVE MAP */
 .georgia-map .tv-map-region path {
   cursor: pointer;
-
-  transition:
-    opacity .25s ease,
-    filter .25s ease;
+  transition: opacity .25s ease, filter .25s ease;
 }
-
-
-/* =========================================
-   NORMAL REGIONS
-========================================= */
-
-.georgia-map .tv-map-region:not(.active) path {
-  opacity: .65;
-}
-
-
-/* =========================================
-   SELECTED REGION
-========================================= */
-
-.georgia-map .tv-map-region.active path {
-  opacity: 1 !important;
-
-  filter: brightness(1.25) !important;
-}
-
-
-/* =========================================
-   KEEP SELECTED REGION HIGHLIGHTED ON HOVER
-========================================= */
-
+.georgia-map .tv-map-region:not(.active) path { opacity: .65; }
+.georgia-map .tv-map-region.active path,
 .georgia-map .tv-map-region.active:hover path {
   opacity: 1 !important;
-
   filter: brightness(1.25) !important;
 }
-
-
-
-
-/* =========================================
-   META PANELS
-========================================= */
-
-.tv-region-filter.is-visible > .tv-region-meta {
-  min-height: 220px;
-}
-
-.tv-region-meta strong {
-  display: block;
-
-  margin-bottom: 0;
-
-  font-size: 17px;
-  line-height: 1.2;
-
-  font-weight: 700;
-  letter-spacing: -0.02em;
-
-  text-transform: none;
-}
-
-
-/* =========================================
-   RECTANGLE CARDS
-========================================= */
-
-
-
-.tv-rectangle-card[data-region="racha-lechkhumi"] {
-  background: #b8cfa8;
-}
-
-
-/* =========================================
-   MOBILE REGION FILTERS
-========================================= */
-
-@media (max-width: 700px) {
-
-  .tv-region-filter {
-  grid-template-columns: 110px 220px 220px 220px;
-    gap: 20px;
-    padding: 0;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-    .tv-region-meta ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 16px;
-    row-gap: 0;
-  }
-
-  .tv-region-meta li {
-    margin-bottom: 13px;
-  }
-
-
-
- 
-  .tv-region-meta,
-  .tv-region-description {
-    min-height: auto;
-  }
-
-
-}
-
-
-
-
-@media (max-width: 700px) {
-
- 
-
-  /* Let the content determine the panel height */
-  .tv-region-filter.is-visible > * {
-    height: auto;
-    min-height: 0;
-   
-   margin-bottom: var(--space-sm);
-    box-sizing: border-box;
-  }
-
-  /* Stack the two detail columns on mobile */
-  .tv-region-filter.is-visible .tv-region-details {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-  }
-}
-
-
-  /* -----------------------------------------
-     MOBILE REGION NAME
-  ----------------------------------------- */
-
-  .tv-region-name > span {
-    font-size: 18px;
-    line-height: .95;
-    letter-spacing: -.045em;
-    font-weight: 800;
-  }
-
-
-  /* -----------------------------------------
-     MOBILE META
-  ----------------------------------------- */
-
-  .tv-region-meta .two-columns {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .tv-region-meta li {
-    padding: 0;
-
-    font-size: 11px;
-    line-height: 1.25;
-  }
-
-  .tv-region-meta li:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
-
-  .tv-region-meta strong {
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-size: 9px;
-    line-height: 1;
-
-    font-weight: 800;
-    letter-spacing: .08em;
-
-    text-transform: uppercase;
-  }
-
-
-  /* -----------------------------------------
-     MOBILE ROUTE
-  ----------------------------------------- */
-
-  .tv-route {
-    margin-bottom: 8px;
-  }
-
-
-/* =========================================
-   FORCE REGION CARDS TO STAY TRANSPARENT
-========================================= */
-
-
-
-
-
-.tv-georgia-map {
-  display: block;
- 
-  width: 100%;
-  padding:0;
-}
-
-
-
-
-
-.tv-map-content {
-  min-width: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tv-region-heading {
+.tv-georgia-map { display: block; width: 100%; padding: 0; }
+.tv-map-content { min-width: 0; }
+
+/* 06. LEGACY REGION HEADING / ACCENT */
+.tv-region-heading:not(.section-header--universal) {
   width: 100%;
   margin: 0 auto;
   padding: 0 0 32px;
 }
-
-
-
-.tv-region-accent {
-  width: 10px;
-  height: 70px;
-  flex: 0 0 auto;
-
-  background: #9fd9d8; /* Adjara */
-  border-radius: 10px;
-}
-
 .tv-region-title {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-
 .tv-region-accent {
+  display: block;
+  flex: 0 0 10px;
   width: 10px;
   height: 42px;
-  flex: 0 0 auto;
-  border-radius: 10px;
   background: var(--region-color);
+  border-radius: 10px;
+}
+.tv-region-title .title-xxs { margin: 0; }
+
+/* 07. REGION META */
+.tv-region-meta { min-height: 0; }
+.tv-region-meta strong {
+  display: block;
+  margin-bottom: 0;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  text-transform: none;
 }
 
-.tv-region-title .title-xxs {
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.region-adjara {
-  --region-color: #a4dfdf;
-}
-
-.region-guria {
-  --region-color: #cdf5c2;
-}
-
-.region-imereti {
-  --region-color: #b5dbf1;
-}
-
-.region-kakheti {
-  --region-color: #fff39c;
-}
-
-.region-kvemo-kartli {
-  --region-color: #ffcc8a;
-}
-
-.region-mtskheta-mtianeti {
-  --region-color: #f4dfff;
-}
-
-.region-racha-lechkhumi-kvemo-svaneti {
-  --region-color: #dae6f9;
-}
-
-.region-samegrelo-zemo-svaneti {
-  --region-color: #d5e2dc;
-}
-
-.region-samtskhe-javakheti {
-  --region-color: #ffcbb3;
-}
-
-.region-shida-kartli {
-  --region-color: #ffe7a9;
-}
-
-.region-tbilisi {
-  --region-color: #f1b3d2;
-}
-
-
-
-
-/* Region badge colors */
-
-.tv-rectangle-card[data-region="kakheti"] .vertical-badge {
-  background-color: #686F7C;
-}
-
-.tv-rectangle-card[data-region="adjara"] .vertical-badge {
-  background-color: #a4dfdf;
-}
-
-.tv-rectangle-card[data-region="guria"] .vertical-badge {
-  background-color: #cdf5c2;
-}
-
-.tv-rectangle-card[data-region="imereti"] .vertical-badge {
-  background-color: #b5dbf1;
-}
-
-.tv-rectangle-card[data-region="kvemo-kartli"] .vertical-badge {
-  background-color: #ffcc8a;
-}
-
-.tv-rectangle-card[data-region="mtskheta-mtianeti"] .vertical-badge {
-  background-color: #f4dfff;
-}
-
-.tv-rectangle-card[data-region="racha-lechkhumi-kvemo-svaneti"] .vertical-badge {
-  background-color: #dae6f9;
-}
-
-.tv-rectangle-card[data-region="samegrelo-zemo-svaneti"] .vertical-badge {
-  background-color: #d5e2dc;
-}
-
-.tv-rectangle-card[data-region="samtskhe-javakheti"] .vertical-badge {
-  background-color: #ffcbb3;
-}
-
-.tv-rectangle-card[data-region="shida-kartli"] .vertical-badge {
-  background-color: #ffe7a9;
-}
-
-.tv-rectangle-card[data-region="tbilisi"] .vertical-badge {
-  background-color: #f1b3d2;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Region badge colors */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Action links */
-
+/* 08. BADGE COLOR VARIABLES */
+.region-adjara { --region-color: #a4dfdf; }
+.region-guria { --region-color: #cdf5c2; }
+.region-imereti { --region-color: #b5dbf1; }
+.region-kakheti { --region-color: #fff39c; }
+.region-kvemo-kartli { --region-color: #ffcc8a; }
+.region-mtskheta-mtianeti { --region-color: #f4dfff; }
+.region-racha-lechkhumi-kvemo-svaneti { --region-color: #dae6f9; }
+.region-samegrelo-zemo-svaneti { --region-color: #d5e2dc; }
+.region-samtskhe-javakheti { --region-color: #ffcbb3; }
+.region-shida-kartli { --region-color: #ffe7a9; }
+.region-tbilisi { --region-color: #f1b3d2; }
+
+/* 09. DESTINATION CARD BADGES */
+.tv-rectangle-card[data-region="kakheti"] .vertical-badge { background-color: #686f7c; }
+.tv-rectangle-card[data-region="adjara"] .vertical-badge { background-color: #a4dfdf; }
+.tv-rectangle-card[data-region="guria"] .vertical-badge { background-color: #cdf5c2; }
+.tv-rectangle-card[data-region="imereti"] .vertical-badge { background-color: #b5dbf1; }
+.tv-rectangle-card[data-region="kvemo-kartli"] .vertical-badge { background-color: #ffcc8a; }
+.tv-rectangle-card[data-region="mtskheta-mtianeti"] .vertical-badge { background-color: #f4dfff; }
+.tv-rectangle-card[data-region="racha-lechkhumi-kvemo-svaneti"] .vertical-badge { background-color: #dae6f9; }
+.tv-rectangle-card[data-region="samegrelo-zemo-svaneti"] .vertical-badge { background-color: #d5e2dc; }
+.tv-rectangle-card[data-region="samtskhe-javakheti"] .vertical-badge { background-color: #ffcbb3; }
+.tv-rectangle-card[data-region="shida-kartli"] .vertical-badge { background-color: #ffe7a9; }
+.tv-rectangle-card[data-region="tbilisi"] .vertical-badge { background-color: #f1b3d2; }
+.tv-rectangle-card[data-region="racha-lechkhumi"] { background: #b8cfa8; }
+
+/* 10. ACTION / SOCIAL LINKS */
 .tv-action-row {
   display: flex;
   align-items: center;
@@ -793,16 +142,12 @@ text-align: left;
   gap: 16px 28px;
   margin-top: 24px;
 }
-
-/* Social links */
-
 .tv-social-links {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px 24px;
 }
-
 .tv-social-link {
   display: inline-flex;
   align-items: center;
@@ -811,16 +156,8 @@ text-align: left;
   text-decoration: none;
   white-space: nowrap;
 }
-
-.tv-social-link:hover {
-  opacity: 0.7;
-}
-
-.tv-social-link .tv-link-arrow {
-  flex-shrink: 0;
-}
-
-
+.tv-social-link:hover { opacity: .7; }
+.tv-social-link .tv-link-arrow { flex-shrink: 0; }
 .tv-social-link img.tv-social-icon {
   display: inline-block;
   width: 18px;
@@ -831,10 +168,498 @@ text-align: left;
   visibility: visible;
   opacity: 1;
 }
-
 .tv-social-link img.tv-link-arrow {
   display: inline-block;
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+}
+
+/* 11. RESPONSIVE — MAP INTRO / REGION PANEL */
+@media (max-width: 700px) {
+  .tv-map-intro {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 48px 20px 42px;
+    box-sizing: border-box;
+  }
+  .tv-map-intro .text-label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: .12em;
+  }
+  .tv-map-intro h1 {
+    margin: 0 0 18px;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(48px, 14vw, 72px);
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+  .tv-map-intro p {
+    max-width: 330px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: -.015em;
+  }
+  .tv-georgia-destinations .tv-filter-count { padding-left: 16px; }
+  .tv-georgia-destinations { padding: 0; }
+
+  .tv-region-filter { padding: 0; }
+  .tv-region-meta ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 0;
+  }
+  .tv-region-meta li {
+    margin-bottom: 13px;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .tv-region-meta li:first-child { padding-top: 0; border-top: 0; }
+  .tv-region-meta,
+  .tv-region-description { min-height: auto; }
+
+  .tv-region-name > span {
+    font-size: 18px;
+    line-height: .95;
+    letter-spacing: -.045em;
+    font-weight: 800;
+  }
+  .tv-region-meta .two-columns { grid-template-columns: 1fr 1fr; }
+  .tv-region-meta strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .tv-route { margin-bottom: 8px; }
+
+}
+
+
+
+
+/* =========================================
+   12. REGION NAVIGATION — BUTTONS
+========================================= */
+.tv-region-navigation { min-width: 0; width: 100%; }
+.tv-region-navigation .tv-filter-table { width: 100%; min-width: 0; }
+.tv-region-navigation .title-md { margin: 8px 0 24px; }
+.tv-region-index { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; }
+.tv-region-index-item {
+  appearance: none; -webkit-appearance: none;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 11px 15px; min-height: 40px;
+  background: #fff; border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 6px; color: var(--tv-text, #171717);
+  font: 600 12px/1.25 "DM Sans", sans-serif;
+  cursor: pointer; text-align: left;
+  transition: border-color .2s, background-color .2s;
+}
+.tv-region-index-item:hover { background: var(--tv-section-soft, #f5f2ea); border-color: #aaa; }
+.tv-region-index-item.active { border-color: var(--tv-text, #171717); background: var(--tv-section-soft, #f5f2ea); }
+.tv-region-index-item:focus-visible { outline: 2px solid var(--tv-logo-blue, #287fa8); outline-offset: 3px; }
+.tv-region-dot { display: block; flex: 0 0 8px; width: 8px; height: 8px; border-radius: 50%; background: #c8c8c8; }
+.tv-region-index-item.active .tv-region-dot { background: var(--tv-logo-blue, #287fa8); }
+
+
+
+/* =========================================
+   13. SOURCE REGION ARTICLES
+   Navigation stays visible; only source articles hide.
+========================================= */
+.tv-filter-regions .tv-region-filters {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Keep this wrapper visible: it can contain navigation buttons. */
+
+/* =========================================
+   14. SELECTED REGION EXPLORER
+========================================= */
+.tv-georgia-explorer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-georgia-explorer-header,
+.tv-georgia-explorer-content,
+.tv-georgia-explorer .tv-region-panel-target,
+.tv-georgia-explorer .tv-region-details-target {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.tv-georgia-explorer-header { margin: 0 0 28px; }
+.tv-georgia-explorer .tv-region-panel-target { margin: 0; padding: 0; }
+.tv-georgia-explorer .tv-region-panel-target:empty { display: none; }
+.tv-georgia-explorer .tv-region-filter-initial[hidden] { display: none !important; }
+
+.tv-georgia-explorer .tv-region-heading {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.tv-georgia-explorer .tv-region-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 12px;
+}
+
+.tv-georgia-explorer .tv-region-accent {
+  display: block;
+  flex: 0 0 10px;
+  width: 10px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--region-color, #e7d99c);
+}
+
+.tv-georgia-explorer .tv-region-title .title-xxs { margin: 0 0 4px; }
+.tv-georgia-explorer .tv-region-eyebrow {
+  display: block;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--tv-muted, #666);
+}
+
+.tv-georgia-explorer .tv-region-description:not(.section-header-description) {
+  max-width: 760px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--tv-muted, #666);
+}
+
+/* The destination partial keeps its own grid/carousel display. */
+.tv-georgia-explorer-content,
+.tv-georgia-explorer-content .tv-georgia-destinations,
+.tv-georgia-explorer-content .georgia-regions--carousel {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.tv-georgia-explorer-content .tv-filter-count {
+  margin: 0 0 16px;
+  padding: 0;
+  text-align: left;
+}
+
+/* =========================================
+   15. INFORMATION BELOW THE CAROUSEL
+========================================= */
+.tv-georgia-explorer .tv-region-details-target {
+  margin: 36px 0 0;
+  padding: 0;
+}
+.tv-georgia-explorer .tv-region-details-target:empty { display: none; }
+
+/* Full information containers */
+.tv-region-details-target > .tv-region-details.is-region-info-active,
+.tv-region-details-target > .tv-info-strip,
+.tv-region-details-target > .tv-region-info-strip,
+.tv-region-details-target > .tv-region-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 235px), 1fr));
+  gap: 16px;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0 0 16px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+/* Cards: old and new markup, plus standalone 2-column items */
+.tv-region-details-target .tv-region-details > .tv-region-detail,
+.tv-region-details-target .tv-region-details > .tv-region-detail-card,
+.tv-region-details-target .tv-region-details > .tv-info-item,
+.tv-region-details-target .tv-info-strip > .tv-info-item,
+.tv-region-details-target .tv-region-info-strip > .tv-info-item,
+.tv-region-details-target .tv-region-info-grid > .tv-info-item,
+.tv-region-details-target > .tv-info-item {
+  display: flex;
+  flex-direction: column;
+  flex: initial;
+  gap: 14px;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  padding: 22px;
+  box-sizing: border-box;
+  background: var(--tv-page, #fff);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-top: 3px solid var(--region-color, #e7d99c);
+  border-radius: 8px;
+}
+
+.tv-region-details-target .tv-info-item + .tv-info-item { border-left: 1px solid var(--tv-border, #e7e5df); }
+.tv-region-details-target .tv-info-row,
+.tv-region-details-target .tv-region-detail-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tv-region-details-target .tv-info-row--divided {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.tv-region-details-target .tv-icon,
+.tv-region-details-target .tv-region-detail-card-header img {
+  display: block;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.tv-region-details-target .tv-info-label {
+  display: block;
+  margin: 0;
+  font: 700 10px/1.4 "DM Sans", sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--tv-text, #171717);
+  opacity: 1;
+}
+
+.tv-region-details-target .tv-region-detail > .tv-info-label,
+.tv-region-details-target .tv-region-detail-card-header,
+.tv-region-details-target .tv-info-item > .tv-info-row:first-child {
+  margin-bottom: 8px;
+}
+
+.tv-region-details-target .tv-region-town-list,
+.tv-region-details-target .tv-region-transport-list,
+.tv-region-details-target .tv-region-detail-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.tv-region-details-target .tv-region-town-item,
+.tv-region-details-target .tv-region-transport-item,
+.tv-region-details-target .tv-region-detail-entry,
+.tv-region-details-target .tv-info-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tv-region-details-target .tv-region-town-item h4:not(.title-xxs),
+.tv-region-details-target .tv-region-detail-entry h4:not(.title-xxs),
+.tv-region-details-target .tv-info-value {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--tv-text, #171717);
+}
+
+.tv-region-details-target p:not(.text-md) {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--tv-muted, #666);
+}
+
+.tv-region-details-target ul,
+.tv-region-details-target .tv-region-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tv-region-details-target li { margin: 0; padding: 0; font-size: 13px; line-height: 1.5; }
+
+/* =========================================
+   16. RESPONSIVE
+========================================= */
+@media (max-width: 1050px) {
+  .tv-region-details-target > .tv-region-details.is-region-info-active,
+  .tv-region-details-target > .tv-info-strip,
+  .tv-region-details-target > .tv-region-info-strip,
+  .tv-region-details-target > .tv-region-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .tv-region-navigation .title-md { margin-bottom: 18px; }
+  .tv-region-index { gap: 7px; }
+  .tv-region-index-item { min-height: 38px; padding: 9px 11px; font-size: 11px; }
+  .tv-georgia-explorer-header { margin-bottom: 24px; }
+  .tv-georgia-explorer .tv-region-details-target { margin-top: 28px; }
+  .tv-region-details-target > .tv-region-details.is-region-info-active,
+  .tv-region-details-target > .tv-info-strip,
+  .tv-region-details-target > .tv-region-info-strip,
+  .tv-region-details-target > .tv-region-info-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .tv-region-details-target .tv-region-details > .tv-region-detail,
+  .tv-region-details-target .tv-region-details > .tv-region-detail-card,
+  .tv-region-details-target .tv-region-details > .tv-info-item,
+  .tv-region-details-target .tv-info-strip > .tv-info-item,
+  .tv-region-details-target .tv-region-info-strip > .tv-info-item,
+  .tv-region-details-target .tv-region-info-grid > .tv-info-item { padding: 20px; }
+}
+
+
+/* =========================================
+   17. WORKING JS — VISIBILITY & FULL WIDTH
+   Source panels stay hidden until moved by JS.
+========================================= */
+
+.tv-filter-regions .tv-region-filter[data-region] {
+  display: none;
+}
+
+.tv-georgia-explorer {
+  align-items: stretch;
+}
+
+.tv-georgia-explorer .tv-georgia-explorer-header,
+.tv-georgia-explorer .tv-region-panel-target {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.tv-georgia-explorer .tv-region-panel-target > .tv-region-filter {
+  display: none;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tv-georgia-explorer .tv-region-panel-target > .tv-region-filter.is-visible {
+  display: block;
+}
+
+/* Only the selected details panel should appear. */
+.tv-georgia-explorer .tv-region-details-target > .tv-region-details:not(.is-region-info-active) {
+  display: none;
+}
+
+.tv-georgia-explorer .tv-rectangle-card[data-region][hidden] {
+  display: none !important;
+}
+
+/* =========================================
+   18. UNIVERSAL REGION HEADER
+========================================= */
+
+.tv-georgia-explorer .tv-region-heading.section-header--universal {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tv-georgia-explorer .tv-region-heading .section-header-main,
+.tv-georgia-explorer .tv-region-heading .section-header-aside {
+  min-width: 0;
+}
+
+.tv-georgia-explorer .tv-region-heading .tv-region-accent {
+  display: block;
+  flex: 0 0 8px;
+  width: 8px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--region-color, #e7d99c);
+}
+
+/* =========================================
+   19. REGION DETAILS — EDITORIAL SPACING
+========================================= */
+
+.tv-region-details-target .tv-region-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 0;
+}
+
+.tv-region-details-target .tv-region-detail > .text-label {
+  margin: 0;
+}
+
+.tv-region-details-target .tv-region-transport-list,
+.tv-region-details-target .tv-region-town-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.tv-region-details-target .tv-region-transport-item,
+.tv-region-details-target .tv-region-town-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tv-region-details-target .tv-region-transport-item .title-xxs,
+.tv-region-details-target .tv-region-town-item .title-xxs,
+.tv-region-details-target .tv-region-transport-item .text-md,
+.tv-region-details-target .tv-region-town-item .text-md {
+  margin: 0;
 }

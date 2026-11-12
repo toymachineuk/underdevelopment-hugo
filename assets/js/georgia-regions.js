@@ -1,4 +1,10 @@
+
 document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+
+  /* =========================================
+     01. ELEMENTS
+  ========================================= */
 
   const mapRegions = document.querySelectorAll(
     ".tv-map-region[data-region]"
@@ -21,53 +27,77 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   const count = document.querySelector(
-    ".tv-filter-count strong"
+    ".tv-georgia-destinations .tv-filter-count strong"
   );
 
   const initialText = document.querySelector(
-    ".tv-region-filter-initial"
+    ".tv-georgia-explorer .tv-region-filter-initial"
   );
 
-  /* Region panel destinations */
   const regionPanelTarget = document.querySelector(
-    ".tv-region-panel-target"
+    ".tv-georgia-explorer .tv-region-panel-target"
   );
 
   const regionInfoTarget = document.querySelector(
-    ".tv-region-info-target"
+    ".tv-georgia-explorer .tv-region-details-target"
   );
 
-  /* Caves carousel */
   const cavesCarousel = document.querySelector(
     ".caves-strip .tv-carousel"
   );
 
-  console.log("Region filter loaded");
-  console.log("Map regions:", mapRegions.length);
-  console.log("Region filters:", filters.length);
-  console.log("Region index items:", regionIndexItems.length);
-  console.log("Destination cards:", cards.length);
-  console.log("Grid:", grid);
-  console.log("Region panel target:", regionPanelTarget);
-  console.log("Region info target:", regionInfoTarget);
-  console.log("Caves carousel:", cavesCarousel);
+  /* =========================================
+     02. VALIDATION
+  ========================================= */
 
+  console.log("Georgia region filter loaded");
 
-  /* Initial state */
+  console.log({
+    mapRegions: mapRegions.length,
+    filters: filters.length,
+    regionIndexItems: regionIndexItems.length,
+    cards: cards.length,
+    grid: !!grid,
+    regionPanelTarget: !!regionPanelTarget,
+    regionInfoTarget: !!regionInfoTarget,
+    cavesCarousel: !!cavesCarousel
+  });
+
+  if (!regionPanelTarget || !regionInfoTarget) {
+    console.warn(
+      "Georgia Regions: panel or details target missing."
+    );
+    return;
+  }
+
+  /* =========================================
+     03. INITIAL STATE
+  ========================================= */
 
   filters.forEach(function (filter) {
-    filter.classList.remove("is-visible", "active");
+    filter.classList.remove(
+      "is-visible",
+      "active"
+    );
+    filter.style.display = "none";
   });
 
   regionIndexItems.forEach(function (item) {
     item.classList.remove("active");
+    item.setAttribute("aria-pressed", "false");
+  });
+
+  mapRegions.forEach(function (mapRegion) {
+    mapRegion.classList.remove("active");
   });
 
   if (initialText) {
-    initialText.style.display = "grid";
+    initialText.hidden = false;
+    initialText.style.display = "";
   }
 
   cards.forEach(function (card) {
+    card.hidden = false;
     card.style.display = "";
     card.classList.remove("is-region-first");
   });
@@ -77,23 +107,259 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (count) {
-    count.textContent = "Showing " + cards.length + " destinations";
+    count.textContent =
+      "Showing " + cards.length + " destinations";
   }
 
+  /* =========================================
+     04. REGION DETAILS
+  ========================================= */
 
-  /* Move Caves carousel to selected region */
+  function getRegionDetails(filter, region) {
 
-  function scrollCarouselToRegion(region) {
-    if (!cavesCarousel) return;
-
-    const targetCard = cavesCarousel.querySelector(
-      '.tv-carousel-card[data-region="' + region + '"]'
+    let details = filter.querySelector(
+      ".tv-region-details"
     );
 
-    if (!targetCard) {
-      console.log("No Caves card found for region:", region);
+    if (!details) {
+
+      details = Array.from(
+        regionInfoTarget.querySelectorAll(
+          ".tv-region-details[data-region]"
+        )
+      ).find(function (item) {
+        return item.dataset.region === region;
+      });
+
+    }
+
+    return details;
+  }
+
+  function updateRegionDetails(filter, region) {
+
+    /* Hide all previously selected details */
+
+    regionInfoTarget
+      .querySelectorAll(".tv-region-details")
+      .forEach(function (details) {
+
+        details.classList.remove(
+          "is-region-info-active"
+        );
+
+        details.style.display = "none";
+
+      });
+
+    /* Find selected region details */
+
+    const selectedDetails = getRegionDetails(
+      filter,
+      region
+    );
+
+    if (!selectedDetails) {
+
+      console.warn(
+        "No region details found for:",
+        region
+      );
+
       return;
     }
+
+    /* Move details below carousel */
+
+    selectedDetails.dataset.region = region;
+
+    regionInfoTarget.appendChild(
+      selectedDetails
+    );
+
+    /* Display selected information only */
+
+    selectedDetails.classList.add(
+      "is-region-info-active"
+    );
+
+    selectedDetails.style.display = "grid";
+  }
+
+  /* =========================================
+     05. REGION HEADING
+  ========================================= */
+
+  function updateRegionPanel(region) {
+
+    const selectedFilter = Array.from(
+      filters
+    ).find(function (filter) {
+      return filter.dataset.region === region;
+    });
+
+    if (!selectedFilter) {
+
+      console.warn(
+        "No region panel found for:",
+        region
+      );
+
+      return;
+    }
+
+    /* Hide every region panel */
+
+    filters.forEach(function (filter) {
+
+      filter.classList.remove(
+        "is-visible",
+        "active"
+      );
+
+      filter.style.display = "none";
+
+    });
+
+    /* Move selected region into heading target */
+
+    regionPanelTarget.appendChild(
+      selectedFilter
+    );
+
+    /* Move selected details below carousel */
+
+    updateRegionDetails(
+      selectedFilter,
+      region
+    );
+
+    /* Show selected heading and description */
+
+    selectedFilter.classList.add(
+      "is-visible",
+      "active"
+    );
+
+    selectedFilter.style.display = "block";
+  }
+
+  /* =========================================
+     06. DESTINATION FILTERING
+  ========================================= */
+
+  function filterDestinationCards(region) {
+
+    let visibleCards = 0;
+    let firstVisibleCard = null;
+
+    cards.forEach(function (card) {
+
+      const matches =
+        card.dataset.region === region;
+
+      card.hidden = !matches;
+
+      card.style.display =
+        matches ? "" : "none";
+
+      card.classList.remove(
+        "is-region-first"
+      );
+
+      if (matches) {
+
+        if (!firstVisibleCard) {
+          firstVisibleCard = card;
+        }
+
+        visibleCards++;
+      }
+
+    });
+
+    if (firstVisibleCard) {
+      firstVisibleCard.classList.add(
+        "is-region-first"
+      );
+    }
+
+    if (count) {
+
+      count.textContent =
+        "Showing " +
+        visibleCards +
+        (visibleCards === 1
+          ? " destination"
+          : " destinations");
+
+    }
+
+    if (grid) {
+
+      grid.className = "tv-grid";
+
+      grid.classList.add(
+        "region-" + region
+      );
+
+      grid.scrollLeft = 0;
+    }
+  }
+
+  /* =========================================
+     07. MAP AND NAVIGATION
+  ========================================= */
+
+  function updateNavigation(region) {
+
+    mapRegions.forEach(function (mapRegion) {
+
+      const active =
+        mapRegion.dataset.region === region;
+
+      mapRegion.classList.toggle(
+        "active",
+        active
+      );
+
+    });
+
+    regionIndexItems.forEach(function (item) {
+
+      const active =
+        item.dataset.region === region;
+
+      item.classList.toggle(
+        "active",
+        active
+      );
+
+      item.setAttribute(
+        "aria-pressed",
+        String(active)
+      );
+
+    });
+  }
+
+  /* =========================================
+     08. CAVES CAROUSEL
+  ========================================= */
+
+  function scrollCarouselToRegion(region) {
+
+    if (!cavesCarousel) return;
+
+    const targetCard = Array.from(
+      cavesCarousel.querySelectorAll(
+        ".tv-carousel-card[data-region]"
+      )
+    ).find(function (card) {
+      return card.dataset.region === region;
+    });
+
+    if (!targetCard) return;
 
     const targetLeft =
       targetCard.getBoundingClientRect().left -
@@ -104,185 +370,104 @@ document.addEventListener("DOMContentLoaded", function () {
       left: targetLeft,
       behavior: "smooth"
     });
-
-    console.log("Caves carousel moved to:", region);
   }
 
-
-  /* Show selected region */
+  /* =========================================
+     09. SELECT REGION
+  ========================================= */
 
   function showRegion(region) {
-    console.log("Selected region:", region);
 
-    if (grid) {
-      grid.className = "tv-grid";
-      grid.classList.add("region-" + region);
-    }
+    if (!region) return;
 
-
-    /* Update map */
-
-    mapRegions.forEach(function (mapRegion) {
-      mapRegion.classList.remove("active");
-    });
-
-    const selectedMapRegion = document.querySelector(
-      '.tv-map-region[data-region="' + region + '"]'
+    console.log(
+      "Selected Georgia region:",
+      region
     );
 
-    if (selectedMapRegion) {
-      selectedMapRegion.classList.add("active");
-    }
-
-
-    /* Hide initial text */
+    /* Hide welcome message */
 
     if (initialText) {
+      initialText.hidden = true;
       initialText.style.display = "none";
     }
 
+    /* Update region heading and information */
 
-    /* Reset region filters and index */
+    updateRegionPanel(region);
 
-    filters.forEach(function (filter) {
-      filter.classList.remove("is-visible", "active");
-    });
+    /* Update map and navigation buttons */
 
-    regionIndexItems.forEach(function (item) {
-      item.classList.remove("active");
-    });
+    updateNavigation(region);
 
-    const selectedIndexItem = document.querySelector(
-      '.tv-region-index-item[data-region="' + region + '"]'
-    );
+    /* Filter destination cards */
 
-    if (selectedIndexItem) {
-      selectedIndexItem.classList.add("active");
-    }
+    filterDestinationCards(region);
 
-
-    /* Hide all destination cards */
-
-    cards.forEach(function (card) {
-      card.style.display = "none";
-      card.classList.remove("is-region-first");
-    });
-
-
-/* Move selected region panel and details */
-
-const selectedFilter = document.querySelector(
-  '.tv-region-filter[data-region="' + region + '"]'
-);
-
-if (selectedFilter) {
-
-  /* Keep title and description in the header */
-
-  if (regionPanelTarget) {
-    regionPanelTarget.appendChild(selectedFilter);
-  }
-
-  /* Find the selected region's details */
-
-  let selectedDetails = selectedFilter.querySelector(
-    ".tv-region-details"
-  );
-
-  /* If already moved, find it in the details target */
-
-  if (!selectedDetails && regionInfoTarget) {
-    selectedDetails = regionInfoTarget.querySelector(
-      '.tv-region-details[data-region="' + region + '"]'
-    );
-  }
-
-  /* Move details below the grid */
-
-  if (selectedDetails && regionInfoTarget) {
-
-    regionInfoTarget
-      .querySelectorAll(".tv-region-details")
-      .forEach(function (details) {
-        details.classList.remove("is-region-info-active");
-      });
-
-    selectedDetails.dataset.region = region;
-
-    regionInfoTarget.appendChild(selectedDetails);
-
-    selectedDetails.classList.add(
-      "is-region-info-active"
-    );
-  }
-
-  selectedFilter.classList.add(
-    "is-visible",
-    "active"
-  );
-}
-
-    /* Show destination cards for selected region */
-
-    let visibleCards = 0;
-    let firstVisibleCard = null;
-
-    cards.forEach(function (card) {
-      if (card.dataset.region === region) {
-        card.style.display = "";
-
-        if (!firstVisibleCard) {
-          firstVisibleCard = card;
-        }
-
-        visibleCards++;
-      }
-    });
-
-    if (firstVisibleCard) {
-      firstVisibleCard.classList.add("is-region-first");
-    }
-
-
-    /* Update destination count */
-
-    if (count) {
-      count.textContent = "Showing " + visibleCards + " destinations";
-    }
-
-
-    /* Update Caves carousel */
+    /* Scroll caves carousel */
 
     scrollCarouselToRegion(region);
   }
 
-
-  /* Map clicks */
+  /* =========================================
+     10. MAP CLICKS
+  ========================================= */
 
   mapRegions.forEach(function (mapRegion) {
-    mapRegion.addEventListener("click", function (event) {
-      event.preventDefault();
-      showRegion(this.dataset.region);
-    });
+
+    mapRegion.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
+
+        showRegion(
+          this.dataset.region
+        );
+
+      }
+    );
+
   });
 
-
-  /* Region filter clicks */
-
-  filters.forEach(function (filter) {
-    filter.addEventListener("click", function () {
-      showRegion(this.dataset.region);
-    });
-  });
-
-
-  /* Region index clicks */
+  /* =========================================
+     11. REGION BUTTON CLICKS
+  ========================================= */
 
   regionIndexItems.forEach(function (item) {
-    item.addEventListener("click", function (event) {
-      event.preventDefault();
-      showRegion(this.dataset.region);
-    });
+
+    item.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
+
+        showRegion(
+          this.dataset.region
+        );
+
+      }
+    );
+
+  });
+
+  /* =========================================
+     12. REGION PANEL CLICKS
+  ========================================= */
+
+  filters.forEach(function (filter) {
+
+    filter.addEventListener(
+      "click",
+      function () {
+
+        showRegion(
+          this.dataset.region
+        );
+
+      }
+    );
+
   });
 
 });

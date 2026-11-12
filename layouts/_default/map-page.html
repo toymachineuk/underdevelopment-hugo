@@ -117,63 +117,73 @@
 
 
 
-<section class="tv-feature-section tv-filter-section section-md tv-see-do tv-editorial--wide">
 
-  <div class="tv-feature-layout">
+<!-- =========================================
+     GEORGIA — SELECTED REGION
+========================================= -->
 
-    <!-- HEADER -->
-    <header class="tv-feature-header">
+<section
+  class="tv-feature-section tv-filter-section section-md tv-see-do tv-editorial--wide tv-georgia-explorer"
+>
 
-      <div class="section-header-description-row">
-        <div class="section-header-main">
-        <!-- Default welcome state -->
-<div class="tv-region-filter-initial">
+  <!-- =====================================
+       01. REGION HEADER
+  ====================================== -->
 
-  <span class="text-label">Discover Georgia</span>
+  <header class="tv-georgia-explorer-header">
 
-  <h3 class="title-sm">Welcome to Georgia</h3>
+    <!-- DEFAULT WELCOME STATE -->
 
-  <p class="text-md">
-    From the Black Sea coast and the vineyards of Kakheti
-    to the mountains of the Caucasus, explore Georgia
-    region by region and find the places you want to visit.
-  </p>
+    <div class="tv-region-filter-initial">
 
-  <p class="text-sm">
-    Select a region on the map or explore the regions below.
-  </p>
+      <span class="text-label">
+        Discover Georgia
+      </span>
 
-</div>
+      <h3 class="title-sm">
+        Welcome to Georgia
+      </h3>
 
+      <p class="text-md">
+        From the Black Sea coast and the vineyards
+        of Kakheti to the mountains of the Caucasus,
+        explore Georgia region by region and find
+        the places you want to visit.
+      </p>
 
-<!-- Selected region title and description -->
-<div class="tv-region-panel-target"></div>
-        </div>
-      </div>
+      <p class="text-sm">
+        Select a region on the map or explore
+        the regions below.
+      </p>
 
-    
-
-
-
-
-
-
-      <!-- Region title and description -->
-      <div class="tv-region-panel-target"></div>
-
-    </header>
-
-    <!-- REGION CAROUSEL -->
-    <div class="tv-feature-content">
-      {{ partial "carousels/georgia-regions--car.html" . }}
     </div>
+
+    <!-- SELECTED REGION HEADING -->
+
+    <div class="tv-region-panel-target"></div>
+
+  </header>
+
+
+  <!-- =====================================
+       02. DESTINATION CAROUSEL
+  ====================================== -->
+
+  <div class="tv-georgia-explorer-content">
+
+    {{ partial "carousels/georgia-regions--car.html" . }}
 
   </div>
 
-  <!-- Selected region information strip -->
-  <div class="tv-region-info-target"></div>
+
+  <!-- =====================================
+       03. REGION INFORMATION CARDS
+  ====================================== -->
+
+  <div class="tv-region-details-target"></div>
 
 </section>
+
 
 
 
