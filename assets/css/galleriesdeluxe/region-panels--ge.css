@@ -83,7 +83,6 @@
   display: block;
   margin: 0 0 6px;
 
-  color: var(--tv-muted, #666);
 }
 
 .tv-region-details-heading .title-sm {
@@ -94,7 +93,7 @@
   line-height: 1.2;
   letter-spacing: -0.025em;
 
-  color: var(--tv-text, #171717);
+ 
 }
 
 
@@ -116,7 +115,7 @@
   font-weight: 600;
   line-height: 1.4;
 
-  color: var(--tv-muted, #666);
+
 }
 
 .tv-region-scroll-hint svg {
@@ -193,11 +192,7 @@
   padding-left: 0;
 }
 
-/* Subtle vertical separators */
 
-.tv-region-details-track > .tv-info-item + .tv-info-item {
-  border-left: 1px solid var(--tv-border, #e7e5df);
-}
 
 
 /* -----------------------------------------
@@ -229,7 +224,6 @@
   line-height: 1.4;
   letter-spacing: -0.02em;
 
-  color: var(--region-color, #ad8a3c);
 }
 
 .tv-region-details-track .tv-info-label {
@@ -243,7 +237,7 @@
   letter-spacing: 0.035em;
   text-transform: uppercase;
 
-  color: var(--tv-text, #171717);
+  
 }
 
 
@@ -292,18 +286,7 @@
    10. ENTRY TITLES
 ----------------------------------------- */
 
-.tv-region-details-track .tv-info-value,
-.tv-region-details-track .tv-region-town-item h4,
-.tv-region-details-track .tv-region-transport-item h4 {
-  display: block;
-  margin: 0;
 
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.45;
-
-  color: var(--tv-text, #171717);
-}
 
 
 /* -----------------------------------------
@@ -316,7 +299,6 @@
   font-size: 13px;
   line-height: 1.55;
 
-  color: var(--tv-muted, #666);
 }
 
 
@@ -343,7 +325,7 @@
   font-size: 13px;
   line-height: 1.55;
 
-  color: var(--tv-text, #171717);
+ 
 }
 
 
@@ -359,10 +341,9 @@
   row-gap: 24px;
   width: 100%; min-width: 0; min-height: 0;
   margin: 0;
-  padding: clamp(28px, 3vw, 48px) 32px;
-  background: var(--region-color, #ad8a3c);
-  color: #fff;
-  border-radius: 16px;
+ 
+
+ 
   box-sizing: border-box;
 }
 .tv-region-heading .tv-region-heading-label,
@@ -381,15 +362,15 @@
   display: flex; align-items: center; gap: 14px; margin: 0; padding: 0;
 }
 .tv-region-heading .section-header-number { flex: 0 0 auto; margin: 0; }
-.tv-region-heading .text-label { margin: 0; color: #fff; }
-.tv-region-heading .tv-region-name .title-md { margin: 0; color: #fff; }
+.tv-region-heading .text-label { margin: 0; color: black; }
+.tv-region-heading .tv-region-name .title-md { margin: 0; color: black; }
 .tv-region-heading .tv-region-eyebrow {
   display: block; margin: 0; font-size: 13px; line-height: 1.5;
-  color: rgba(255,255,255,.88);
+  color: black;
 }
 .tv-region-heading .section-header-description {
   width: 100%; max-width: none; margin: 0;
-  font-size: 18px; line-height: 1.55; text-align: left; color: #fff;
+  font-size: 18px; line-height: 1.55; text-align: left; color: black;
 }
 
 /* =========================================
@@ -443,7 +424,7 @@
     width: 100%;
     min-height: 0;
     margin: 0;
-    padding: 28px 24px 30px;
+    
     border-radius: 0;
   }
 
@@ -533,4 +514,12 @@
   .tv-region-details-track {
     scroll-behavior: auto;
   }
+}
+
+
+
+.tv-georgia-explorer
+.tv-region-details-target
+> .tv-region-details.is-region-info-active {
+  background: var(--region-color, #B08A38);
 }
