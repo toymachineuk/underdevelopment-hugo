@@ -111,80 +111,92 @@ document.addEventListener("DOMContentLoaded", function () {
       "Showing " + cards.length + " destinations";
   }
 
-  /* =========================================
-     04. REGION DETAILS
-  ========================================= */
+/* =========================================
+   04. REGION DETAILS
+========================================= */
 
-  function getRegionDetails(filter, region) {
+function getRegionDetails(filter, region) {
 
-    let details = filter.querySelector(
-      ".tv-region-details"
-    );
+  let details = filter.querySelector(
+    ".tv-region-details"
+  );
 
-    if (!details) {
+  if (!details) {
 
-      details = Array.from(
-        regionInfoTarget.querySelectorAll(
-          ".tv-region-details[data-region]"
-        )
-      ).find(function (item) {
-        return item.dataset.region === region;
-      });
+    details = Array.from(
+      regionInfoTarget.querySelectorAll(
+        ".tv-region-details[data-region]"
+      )
+    ).find(function (item) {
+      return item.dataset.region === region;
+    });
 
-    }
-
-    return details;
   }
 
-  function updateRegionDetails(filter, region) {
+  return details;
+}
 
-    /* Hide all previously selected details */
+function updateRegionDetails(filter, region) {
 
-    regionInfoTarget
-      .querySelectorAll(".tv-region-details")
-      .forEach(function (details) {
+  /* Hide previously selected details */
 
-        details.classList.remove(
-          "is-region-info-active"
-        );
+  regionInfoTarget
+    .querySelectorAll(".tv-region-details")
+    .forEach(function (details) {
 
-        details.style.display = "none";
+      details.classList.remove(
+        "is-region-info-active"
+      );
 
-      });
+      // Let CSS control display
+      details.style.removeProperty("display");
 
-    /* Find selected region details */
+    });
 
-    const selectedDetails = getRegionDetails(
-      filter,
+  /* Find selected region details */
+
+  const selectedDetails = getRegionDetails(
+    filter,
+    region
+  );
+
+  if (!selectedDetails) {
+
+    console.warn(
+      "No region details found for:",
       region
     );
 
-    if (!selectedDetails) {
-
-      console.warn(
-        "No region details found for:",
-        region
-      );
-
-      return;
-    }
-
-    /* Move details below carousel */
-
-    selectedDetails.dataset.region = region;
-
-    regionInfoTarget.appendChild(
-      selectedDetails
-    );
-
-    /* Display selected information only */
-
-    selectedDetails.classList.add(
-      "is-region-info-active"
-    );
-
-    selectedDetails.style.display = "grid";
+    return;
   }
+
+  /* Move details below carousel */
+
+  selectedDetails.dataset.region = region;
+
+  regionInfoTarget.appendChild(
+    selectedDetails
+  );
+
+  /* Activate selected details */
+
+  selectedDetails.classList.add(
+    "is-region-info-active"
+  );
+
+  selectedDetails.style.removeProperty("display");
+
+  /* Reset horizontal scroll when changing region */
+
+  const track = selectedDetails.querySelector(
+    ".tv-region-details-track"
+  );
+
+  if (track) {
+    track.scrollLeft = 0;
+  }
+
+}
 
   /* =========================================
      05. REGION HEADING

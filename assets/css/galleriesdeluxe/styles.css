@@ -23,6 +23,7 @@
 @import "page-layout.css";
 @import "modals.css";
 @import "index-page.css";
+@import "region-panels--ge.css";
 @import "experiments.css";
 
 
@@ -170,8 +171,6 @@ main {
 .mt {
   margin-top: 1rem;
 }
-
-
 
 
 

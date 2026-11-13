@@ -292,18 +292,7 @@
 .tv-region-index-item[data-region="shida-kartli"] .tv-region-dot { background:#e5d19e; }
 .tv-region-index-item[data-region="tbilisi"] .tv-region-dot { background:#d9b8c7; }
 
-/* Region-specific accents */
-.tv-region-filter[data-region="adjara"] { --region-color:#b8d5d3; }
-.tv-region-filter[data-region="guria"] { --region-color:#c8ddc1; }
-.tv-region-filter[data-region="imereti"] { --region-color:#c4d8e3; }
-.tv-region-filter[data-region="kakheti"] { --region-color:#e7d99c; }
-.tv-region-filter[data-region="kvemo-kartli"] { --region-color:#dfb992; }
-.tv-region-filter[data-region="mtskheta-mtianeti"] { --region-color:#d5cddd; }
-.tv-region-filter[data-region="racha-lechkhumi-kvemo-svaneti"] { --region-color:#cbd6e3; }
-.tv-region-filter[data-region="samegrelo-zemo-svaneti"] { --region-color:#c6dcd2; }
-.tv-region-filter[data-region="samtskhe-javakheti"] { --region-color:#dfc0b3; }
-.tv-region-filter[data-region="shida-kartli"] { --region-color:#e5d19e; }
-.tv-region-filter[data-region="tbilisi"] { --region-color:#d9b8c7; }
+
 
 /* Heading / carousel / details are vertically stacked */
 .tv-region-panel-target { display:flex; flex-direction:column; align-items:stretch; gap:0; width:100%; min-width:0; }

@@ -1079,3 +1079,89 @@ max-width: 480px;
 .vertical-badge[data-district="kala"] {
   background: var(--tv-district-kala);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   03. REGION PANEL COLOR VARIABLES
+   DEEPER EDITORIAL PALETTE
+===================================== */
+
+.tv-region-filter[data-region="kvemo-kartli"] {
+  --region-color: #B77F53;
+}
+
+.tv-region-filter[data-region="adjara"] {
+  --region-color: #477F83;
+}
+
+.tv-region-filter[data-region="guria"] {
+  --region-color: #668A63;
+}
+
+.tv-region-filter[data-region="imereti"] {
+  --region-color: #628CA3;
+}
+
+.tv-region-filter[data-region="kakheti"] {
+  --region-color: #B08A38;
+}
+
+.tv-region-filter[data-region="mtskheta-mtianeti"] {
+  --region-color: #82718F;
+}
+
+.tv-region-filter[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #7187A4;
+}
+
+.tv-region-filter[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #648F82;
+}
+
+.tv-region-filter[data-region="samtskhe-javakheti"] {
+  --region-color: #A77565;
+}
+
+.tv-region-filter[data-region="shida-kartli"] {
+  --region-color: #AD8744;
+}
+
+.tv-region-filter[data-region="tbilisi"] {
+  --region-color: #A66D88;
+}
