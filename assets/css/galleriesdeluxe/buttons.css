@@ -127,3 +127,416 @@
     transition: none;
 
   }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+/* =====================================
+   SPLIT LINK — SOCIAL + WEBSITE
+===================================== */
+
+/* -------------------------------------
+   01. CONTAINER
+------------------------------------- */
+
+.tv-split-link {
+  display: inline-flex;
+  align-items: center;
+
+  height: 44px;
+  max-width: 100%;
+
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  background: #fff;
+  color: #171717;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* -------------------------------------
+   02. INSTAGRAM LINK
+------------------------------------- */
+
+.tv-split-link-instagram {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* -------------------------------------
+   03. ICON SEGMENTS
+------------------------------------- */
+
+.tv-split-link-icon,
+.tv-split-link-website {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 54px;
+  width: 54px;
+  height: 44px;
+
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.tv-split-link-website {
+  border-radius: 0 10px 10px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* -------------------------------------
+   04. ICONS — DARK GREY
+------------------------------------- */
+
+.tv-split-link-icon img,
+.tv-split-link-website img {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+
+}
+
+
+/* -------------------------------------
+   05. CIRCULAR AVATAR
+------------------------------------- */
+
+.tv-split-link-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  background: #f5f2ea;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tv-split-link .tv-split-link-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  filter: saturate(0.8) brightness(0.96);
+
+  transition: filter 0.2s ease;
+}
+
+
+/* -------------------------------------
+   06. HOVER
+------------------------------------- */
+
+.tv-split-link-instagram:hover .tv-split-link-icon,
+.tv-split-link-website:hover {
+  background: #f1f1f1;
+}
+
+.tv-split-link-instagram:hover .tv-split-link-avatar {
+  filter: none;
+}
+
+.tv-split-link-instagram:hover .tv-split-link-icon img,
+.tv-split-link-website:hover img {
+  filter: grayscale(1) brightness(0) invert(0.12);
+  opacity: 1;
+}
+
+
+/* -------------------------------------
+   07. KEYBOARD FOCUS
+------------------------------------- */
+
+.tv-split-link a:focus-visible {
+  outline: 2px solid var(--tv-brand-accent, #c66b49);
+  outline-offset: 3px;
+  border-radius: 5px;
+}
+
+
+/* -------------------------------------
+   08. CAPTION
+------------------------------------- */
+
+.tv-split-link-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.tv-split-link-caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+
+  color: #fff;
+  text-align: center;
+}
+
+
+/* -------------------------------------
+   09. MOBILE
+------------------------------------- */
+
+@media (max-width: 700px) {
+
+  .tv-split-link {
+    height: 40px;
+  }
+
+  .tv-split-link-icon,
+  .tv-split-link-website {
+    flex-basis: 44px;
+    width: 44px;
+    height: 40px;
+  }
+
+  .tv-split-link-text {
+    flex-basis: 52px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .tv-split-link-icon img,
+  .tv-split-link-website img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tv-split-link-group {
+    gap: 14px;
+  }
+
+}
+
+/* ICONS — LARGER */
+
+.tv-split-link-icon img,
+.tv-split-link-website img {
+  display: block;
+  width: 22px;
+  height: 22px;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .tv-split-link-icon img,
+  .tv-split-link-website img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* =====================================
+   INSTAGRAM GRADIENT AVATAR BORDER
+===================================== */
+
+.tv-split-link-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    45deg,
+    #feda75 0%,
+    #fa7e1e 25%,
+    #d62976 55%,
+    #962fbf 80%,
+    #4f5bd5 100%
+  );
+}
+
+/* AVATAR IMAGE */
+
+.tv-split-link .tv-split-link-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  filter: saturate(0.8) brightness(0.96);
+
+  transition: filter 0.2s ease;
+}
+
+/* HOVER */
+
+.tv-split-link-instagram:hover .tv-split-link-avatar {
+  filter: none;
+}
+
+.tv-split-link-text {
+  padding: 2px;
+}
+
+.tv-split-link-group {
+  gap: 12px;
+}
+
+.tv-split-link-caption {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.tv-split-link-website img {
+  width: 22px;
+  height: 22px;
+
+  filter: brightness(0) saturate(100%)
+    invert(45%) sepia(35%)
+    saturate(900%) hue-rotate(158deg)
+    brightness(95%) contrast(90%);
+
+  opacity: 1;
+}
+
+
+/* =====================================
+   SPLIT LINK — CAPTION
+===================================== */
+
+.tv-split-link-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  font-family: var(--font-sans);
+  text-align: center;
+}
+
+.tv-split-link-caption-name {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tv-split-link-caption-links {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+
+/* =====================================
+   LOCAL OPERATORS
+===================================== */
+
+.tv-action-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.tv-action-title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tv-action-row .tv-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.tv-action-row .tv-split-link-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.tv-action-row .tv-split-link-caption {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .tv-action-row {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .tv-action-row .tv-social-links {
+    gap: 12px;
+  }
+}
