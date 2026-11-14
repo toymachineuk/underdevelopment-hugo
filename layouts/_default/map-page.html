@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 
-<section class="tv-editorial-hero page-layout tv-editorial-hero--default">
+<section class="tv-editorial-hero width-1600">
 
   <!-- LEFT: IMAGE -->
   <div class="tv-editorial-hero-media">
@@ -71,64 +71,86 @@
 
 
 
+<!-- =========================================
+     GEORGIA — INTERACTIVE MAP SECTION
+========================================= -->
 
 <section class="tv-feature-section map-section width-1600 section-0-lg">
+
   <div class="tv-feature-layout tv-feature-layout--header-right">
 
-    <!-- CONTENT LEFT -->
+
+    <!-- =====================================
+         01. INTERACTIVE MAP
+    ====================================== -->
+
     <div class="tv-feature-content">
 
-        
-    {{ partial "maps/georgia-map.html" . }}
+      {{ partial "maps/georgia-map.html" . }}
+
     </div>
 
-    <!-- HEADER RIGHT -->
+
+    <!-- =====================================
+         02. SECTION HEADER
+    ====================================== -->
+
     <header class="tv-feature-header">
 
-<div class="section-header-description-row"> 
+      <div class="section-header-description-row">
 
-  <div class="section-header-main">
+        <div class="section-header-main">
 
-    <div class="section-header-label-row">
+          <div class="section-header-label-row">
 
-      <div class="section-header-number" aria-hidden="true">
-        03
+            <div
+              class="section-header-number"
+              aria-hidden="true"
+            >
+              03
+            </div>
+
+            <span class="text-label">
+              NAVIGATE
+            </span>
+
+          </div>
+
+          <h2 class="title-md">
+            Maps &amp; Districts
+          </h2>
+
+        </div>
+
       </div>
 
+      <p class="text-md section-header-description">
+        Explore Georgia region by region.
+        Select a region to discover its landscapes,
+        towns and places worth visiting.
+      </p>
 
-
-   
-      <span class="text-label">NAVIGATE</span>
-
-      </div>
-      <h2 class="title-md">Maps &amp; Districts</h2>
-</div>
-
-
-
-       </div>
-
-   <p class="text-md section-header-description">
-          Discover where to eat in Tbilisi, from traditional
-          Georgian cooking to contemporary restaurants,
-          specialty coffee and natural wine.
-        </p>
- 
-       </div>
-     
-
-
-    <section class="tv-filter-regions tv-editorial mt-sm">
-
-
-
-</section>
-      
     </header>
 
+
+    <!-- =====================================
+         03. REGION NAVIGATION & PANELS
+    ====================================== -->
+
+    <div class="tv-region-components">
+
+      {{ partial "carousels/nav-regions--ge.html" . }}
+
+    </div>
+
+
   </div>
+
 </section>
-{{ partial "carousels/nav-regions--ge.html" . }}
+
+
+
+
 
 
 
@@ -137,7 +159,7 @@
 ========================================= -->
 
 <section
-  class="tv-feature-section tv-filter-section section-md width-1400 tv-editorial--wide tv-georgia-explorer"
+  class="tv-feature-section tv-filter-section section-0-md width-1400  tv-georgia-explorer"
 >
 
   <!-- =====================================
@@ -424,6 +446,59 @@
 
 
   <div class="tv-social-links">
+
+
+<div class="tv-split-link">
+
+  <a
+    class="tv-split-link-instagram"
+    href="https://www.instagram.com/gudauri_resort/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Gudauri Resort on Instagram"
+  >
+    <span class="tv-split-link-icon">
+      <img src="/icons/insta.svg" width="18" height="18" alt="">
+    </span>
+
+    <span class="tv-split-link-text">
+      Gudauri Resort
+    </span>
+  </a>
+
+  <a
+    class="tv-split-link-website"
+    href="https://example.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit Gudauri Resort website"
+  >
+    <img
+      src="/icons/link-arrow.svg"
+      width="18"
+      height="18"
+      alt=""
+    >
+  </a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     <a class="tv-social-link"
        href="https://www.instagram.com/gudauri_resort/"

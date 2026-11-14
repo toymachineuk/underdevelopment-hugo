@@ -1,25 +1,20 @@
+
 /* =========================================
    GEORGIA MAP
 ========================================= */
 
 .georgia-map {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
-  position: relative;
-}
-
-@media (min-width: 1400px) {
-  .georgia-map {
-    max-width: 1300px;
-  }
 }
 
 .georgia-map svg {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 0 auto;
   transform: translateX(-10%);
 }
@@ -29,53 +24,21 @@
    REGION COLOURS
 ========================================= */
 
-.georgia-map #GESZ {
-  fill: #a9c1b3;
-}
-
-.georgia-map #GESK {
-  fill: #d6b987;
-}
-
-.georgia-map #GERL {
-  fill: #aeb8c7;
-}
-
-.georgia-map #GEMM {
-  fill: #89221b;
-}
-
-.georgia-map #GEKA {
-  fill: #686F7C;
-}
-
-.georgia-map #GESJ {
-  fill: #16354B;
-}
-
-.georgia-map #GEAJ {
-  fill: #FBAF1F;
-}
-
-.georgia-map #GEKK {
-  fill: #d6a36e;
-}
-
-.georgia-map #GEGU {
-  fill: #a4c49b;
-}
-
-.georgia-map #GETB {
-  fill: #c18fa8;
-}
-
-.georgia-map #GEIM {
-  fill: #91afc1;
-}
+.georgia-map #GESZ { fill: #a9c1b3; }
+.georgia-map #GESK { fill: #d6b987; }
+.georgia-map #GERL { fill: #aeb8c7; }
+.georgia-map #GEMM { fill: #89221b; }
+.georgia-map #GEKA { fill: #686f7c; }
+.georgia-map #GESJ { fill: #16354b; }
+.georgia-map #GEAJ { fill: #fbaf1f; }
+.georgia-map #GEKK { fill: #d6a36e; }
+.georgia-map #GEGU { fill: #a4c49b; }
+.georgia-map #GETB { fill: #c18fa8; }
+.georgia-map #GEIM { fill: #91afc1; }
 
 
 /* =========================================
-   REGION BORDERS
+   REGION SHAPES & BORDERS
 ========================================= */
 
 .georgia-map #features path {
@@ -87,27 +50,40 @@
 
 
 /* =========================================
-   CLICKABLE REGIONS
+   REGION INTERACTIONS
 ========================================= */
 
-.georgia-map #features a {
+.georgia-map .tv-map-region {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
-.georgia-map #features a path {
+.georgia-map .tv-map-region path {
+  cursor: pointer;
+
   transition:
     opacity 0.25s ease,
-    filter 0.25s ease;
+    filter 0.25s ease,
+    fill 0.25s ease;
 }
 
-.georgia-map #features a:hover path {
+.georgia-map .tv-map-region:hover path {
   opacity: 0.78;
   filter: brightness(1.08);
 }
 
-.georgia-map #features a:active path {
+.georgia-map .tv-map-region:active path {
   opacity: 0.65;
+}
+
+
+/* =========================================
+   MAP LABELS — UNIVERSAL
+========================================= */
+
+.georgia-map #labels {
+  pointer-events: none;
+  user-select: none;
 }
 
 
@@ -116,24 +92,30 @@
 ========================================= */
 
 .georgia-map .region-name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
 
-  font-weight: 700;
- 
-  fill: black;
- 
+  text-transform: none;
+  text-anchor: middle;
+
+  fill: #25313a;
   stroke: none;
-
-
-
-  font-size: 10px;
-  line-height: 1.1;
- 
-  letter-spacing: .08em;
-  text-transform: uppercase;
 }
 
-.georgia-map .region-name tspan {
-  dominant-baseline: middle;
+
+/* =========================================
+   MULTILINE REGION NAMES
+========================================= */
+
+.georgia-map .region-name--multiline {
+  font-size: 11.5px;
+  letter-spacing: -0.02em;
+}
+
+.georgia-map .region-name--multiline tspan {
+  dominant-baseline: auto;
 }
 
 
@@ -142,14 +124,23 @@
 ========================================= */
 
 .georgia-map .city-name {
+  font-family: "DM Sans", sans-serif;
   font-size: 9px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  fill: var(--tv-black);
-  opacity: 0.5;
-  stroke: none;
+  font-weight: 400;
+  letter-spacing: 0;
+
   text-anchor: middle;
-  pointer-events: none;
+
+  fill: #36434d;
+  opacity: 0.75;
+  stroke: none;
+}
+
+/* MAJOR CITIES */
+
+.georgia-map .city-name.major-city {
+  font-weight: 500;
+  opacity: 0.85;
 }
 
 
@@ -158,30 +149,24 @@
 ========================================= */
 
 .georgia-map .city-dot {
-  fill: #151515;
+  fill: #25313a;
   stroke: #fff;
   stroke-width: 1.5px;
-  pointer-events: none;
+
+  vector-effect: non-scaling-stroke;
 }
 
 
 /* =========================================
-   MAP LABELS
+   LARGE SCREENS
 ========================================= */
 
-.georgia-map #labels {
-  pointer-events: none;
-}
+@media (min-width: 1400px) {
 
-.georgia-map .tv-map-region {
-  cursor: pointer;
-}
+  .georgia-map {
+    max-width: 1300px;
+  }
 
-.georgia-map .tv-map-region path {
-  cursor: pointer;
-  transition:
-    opacity 0.2s ease,
-    fill 0.2s ease;
 }
 
 
@@ -192,37 +177,46 @@
 @media (max-width: 700px) {
 
   .georgia-map {
-   width: 120vw;
+    width: 120vw;
     max-width: none;
-    position: relative;
+
     left: 60%;
     transform: translateX(-55%);
+
     margin: 0;
     padding: 0;
   }
 
   .georgia-map svg {
-    display: block;
-    width: 100% !important;
+    width: 100%;
     max-width: none;
-    height: auto !important;
+    height: auto;
     margin: 0;
   }
 
+  /* REGION NAMES */
+
   .georgia-map .region-name {
-    font-size: 16px;
-    letter-spacing: -0.015em;
+    font-size: 11px;
+    letter-spacing: -0.02em;
   }
+
+  .georgia-map .region-name--multiline {
+    font-size: 10.5px;
+  }
+
+  /* CITY NAMES */
 
   .georgia-map .city-name {
-    font-size: 8px;
-    letter-spacing: 0;
-    opacity: 0.5;
+    font-size: 8.5px;
   }
 
+  /* CITY DOTS */
+
   .georgia-map .city-dot {
-    r: 2.5;
+    r: 2.5px;
   }
+
 }
 
 
@@ -233,17 +227,34 @@
 @media (max-width: 450px) {
 
   .georgia-map .region-name {
-    font-size: 15px;
+    font-size: 10px;
+  }
+
+  .georgia-map .region-name--multiline {
+    font-size: 9.5px;
   }
 
   .georgia-map .city-name {
     font-size: 8px;
-    stroke-width: 1.5px;
   }
 
   .georgia-map .city-dot {
-    r: 2;
+    r: 2px;
   }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .georgia-map .tv-map-region path {
+    transition: none;
+  }
+
 }
 
 
@@ -252,17 +263,82 @@
 
 
 
+/* =========================================
+   GEORGIA MAP — DESKTOP
+========================================= */
+
+.georgia-map {
+  position: relative;
+
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  overflow: visible;
+}
+
+.georgia-map svg {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  transform: none;
+}
 
 
 
+/* =========================================
+   GEORGIA MAP — MOBILE
+   FULL WIDTH / NO SCROLLING
+========================================= */
 
+@media (max-width: 700px) {
 
+  .map-section .tv-feature-content {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow: visible;
+  }
 
+  .georgia-map {
+    position: relative;
 
+    width: calc(100vw - 8px);
+    max-width: none;
 
+    left: 50%;
+    transform: translateX(-50%);
 
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
 
+  .georgia-map svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
 
+    margin: 0;
+    transform: none;
+  }
 
+  .georgia-map .region-name {
+    font-size: 12px;
+  }
 
+  .georgia-map .region-name--multiline {
+    font-size: 11px;
+  }
 
+  .georgia-map .city-name {
+    font-size: 9px;
+  }
+
+}
