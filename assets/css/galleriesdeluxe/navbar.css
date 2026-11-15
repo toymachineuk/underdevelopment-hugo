@@ -144,9 +144,10 @@
   z-index: 110;
   top: calc(100% + 10px);
   right: 0;
-  box-sizing: border-box;
   width: 250px;
-  padding: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
   background: var(--tv-section-soft, #f5f2ea);
   border: 1px solid var(--tv-border, #e7e5df);
   border-radius: 12px;
@@ -171,9 +172,8 @@
   justify-content: space-between;
   gap: 10px;
   min-height: 43px;
-  padding: 10px 12px;
+  padding: 10px 22px;
   box-sizing: border-box;
-  border-radius: 7px;
   color: var(--tv-text, #171717);
   font-family: var(--font-sans, 'DM Sans', sans-serif);
   font-size: 14px;
@@ -191,28 +191,63 @@
   color: var(--tv-brand-accent, #c66b49);
 }
 
-/* Map is the featured first item. */
+/* Full-width map header; image source stays in HTML. */
 .nav-dropdown__menu a:first-child {
-  min-height: 48px;
-  margin-bottom: 9px;
-  padding: 12px;
-  background: #fff;
-  border: 1px solid var(--tv-border, #e7e5df);
-  border-radius: 8px;
+  position: relative;
+  isolation: isolate;
+  min-height: 76px;
+  margin-bottom: 10px;
+  padding: 16px 22px;
+  overflow: hidden;
+  background: var(--tv-section-soft, #f5f2ea);
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
   font-weight: 700;
 }
 
-.nav-dropdown__menu a:first-child svg {
-  display: block;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-  color: var(--tv-brand-accent, #c66b49);
+.nav-dropdown__featured-image,
+.nav-dropdown__featured-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.nav-dropdown__menu strong {
-  font-weight: inherit;
+.nav-dropdown__featured-image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
 }
+
+.nav-dropdown__featured-overlay {
+  z-index: -1;
+  background: linear-gradient(90deg,
+    rgb(245 242 234 / 96%) 0%,
+    rgb(245 242 234 / 75%) 55%,
+    rgb(245 242 234 / 25%) 100%);
+}
+
+.nav-dropdown__menu strong { font-weight: inherit; }
+
+.nav-dropdown__featured svg {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  padding: 9px;
+  box-sizing: content-box;
+  color: var(--tv-brand-accent, #c66b49);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.nav-dropdown__menu a:first-child:hover,
+.nav-dropdown__menu a:first-child:focus-visible {
+  background: var(--tv-section-soft, #f5f2ea);
+  color: var(--tv-text, #171717);
+}
+
+.nav-dropdown__menu a:last-child { margin-bottom: 12px; }
 
 .nav-dropdown__menu a:not(:first-child)::after {
   content: '↗';
@@ -222,9 +257,7 @@
   transition: opacity 160ms ease;
 }
 
-.nav-dropdown__menu a:not(:first-child):hover::after {
-  opacity: 1;
-}
+.nav-dropdown__menu a:not(:first-child):hover::after { opacity: 1; }
 
 /* 07. HAMBURGER */
 .nav > .menu {
@@ -294,10 +327,7 @@
   }
 
   /* Keep the dropdown anchored to its own button. */
-  .nav .nav-dropdown { position: relative; }
   .nav .nav-dropdown__menu {
-    top: calc(100% + 10px);
-    right: 0;
     width: min(250px, calc(100vw - 24px));
   }
 
@@ -453,41 +483,9 @@
   .mobile-menu__featured-map:hover .mobile-menu__featured-arrow {
     transform: translate(3px, -3px);
   }
-}
 
-/* 10. SMALL PHONES */
-@media (max-width: 480px) {
-  .nav { height: 72px; padding: 0 5vw; gap: 8px; }
-  .nav .logo { width: 48px; }
-  .nav .nav-button { min-height: 36px; padding: 0 8px; gap: 5px; font-size: 11px; }
-  .nav .nav-button__icon { width: 16px; height: 16px; }
-  .nav .chevron svg { width: 12px; height: 12px; }
-  .nav > .menu { padding: 6px; }
-  .mobile-menu { inset: 72px 0 0; padding: 52px 9vw 32px; }
-  .mobile-menu__nav { gap: 16px; }
-  .mobile-menu__nav a { font-size: 25px; }
-}
 
-/* 11. ACCESSIBILITY */
-.nav-button:focus-visible,
-.nav > .menu:focus-visible,
-.nav .nav-links a:focus-visible,
-.nav-dropdown__menu a:focus-visible,
-.mobile-menu__nav a:focus-visible,
-.mobile-menu__featured-map:focus-visible {
-  outline: 2px solid var(--tv-logo-blue, #3a98b9);
-  outline-offset: 4px;
-}
-@media (prefers-reduced-motion: reduce) {
-  .nav *, .mobile-menu, .mobile-menu * { transition: none !important; }
-}
-
-/* =========================================
-   MOBILE MENU — SECONDARY ACTIONS
-========================================= */
-
-@media (max-width: 900px) {
-
+  /* Mobile menu secondary actions */
   .mobile-menu__actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -563,11 +561,31 @@
     outline: 2px solid var(--tv-logo-blue, #3a98b9);
     outline-offset: 3px;
   }
-
 }
 
+/* 10. SMALL PHONES */
+@media (max-width: 480px) {
+  .nav { height: 72px; padding: 0 5vw; gap: 8px; }
+  .nav .logo { width: 48px; }
+  .nav .nav-button { min-height: 36px; padding: 0 8px; gap: 5px; font-size: 11px; }
+  .nav .nav-button__icon { width: 16px; height: 16px; }
+  .nav .chevron svg { width: 12px; height: 12px; }
+  .nav > .menu { padding: 6px; }
+  .mobile-menu { inset: 72px 0 0; padding: 52px 9vw 32px; }
+  .mobile-menu__nav { gap: 16px; }
+  .mobile-menu__nav a { font-size: 25px; }
+}
+
+/* 11. ACCESSIBILITY */
+.nav-button:focus-visible,
+.nav > .menu:focus-visible,
+.nav .nav-links a:focus-visible,
+.nav-dropdown__menu a:focus-visible,
+.mobile-menu__nav a:focus-visible,
+.mobile-menu__featured-map:focus-visible {
+  outline: 2px solid var(--tv-logo-blue, #3a98b9);
+  outline-offset: 4px;
+}
 @media (prefers-reduced-motion: reduce) {
-  .mobile-menu__action-button {
-    transition: none;
-  }
+  .nav *, .mobile-menu, .mobile-menu * { transition: none !important; }
 }
