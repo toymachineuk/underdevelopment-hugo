@@ -353,7 +353,7 @@
       minmax(0, 0.9fr)
       minmax(0, 1.1fr);
 
-    gap: var(--space-md);
+   
   }
 
   .tv-editorial-hero--featured .tv-editorial-hero-media {
@@ -423,7 +423,7 @@
 
   .tv-editorial-hero {
     grid-template-columns: minmax(0, 1fr);
-    padding: var(--space-sm);
+  
   }
 
   /* Image */
