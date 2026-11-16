@@ -599,43 +599,49 @@
 
 
 
-
-
-
 /* =========================================
-   SPLIT LINK — OPERATOR VARIANT
+   SPLIT LINK — UNIVERSAL MONOCHROME STYLE
 ========================================= */
 
-.tv-split-link--operator {
+.tv-split-link {
   --split-height: 48px;
   --split-icon-width: 48px;
   --split-avatar-size: 42px;
 
-  padding: 0 4px;
   gap: 0;
+  padding: 0 4px;
 
   background: #fff;
   border-radius: 12px;
   box-shadow: none;
 }
 
-/* SMALL GREY CIRCULAR AVATAR */
 
-.tv-split-link--operator .tv-split-link-text {
+/* =========================================
+   MIDDLE IMAGE — GREY CIRCLE
+========================================= */
+
+.tv-split-link .tv-split-link-text {
   flex: 0 0 var(--split-avatar-size);
 
   width: var(--split-avatar-size);
   height: var(--split-avatar-size);
 
   padding: 5px;
+  box-sizing: border-box;
+
+  overflow: hidden;
   border-radius: 50%;
 
   background: #eeeeee;
 }
 
-/* PHOTO INSIDE THE CIRCLE */
 
-.tv-split-link--operator .tv-split-link-avatar {
+/* IMAGE INSIDE CIRCLE */
+
+.tv-split-link .tv-split-link-avatar {
+  display: block;
+
   width: 100%;
   height: 100%;
 
@@ -643,28 +649,43 @@
   border-radius: 50%;
 }
 
-/* MONOCHROME ACTION ICONS */
 
-.tv-split-link--operator .tv-split-link-icon img {
+/* =========================================
+   ACTION ICONS — BLACK & WHITE
+========================================= */
+
+.tv-split-link .tv-split-link-action {
+  background: transparent;
+}
+
+.tv-split-link .tv-split-link-icon img,
+.tv-split-link .tv-split-link-icon svg {
   filter: grayscale(1) brightness(0);
   opacity: 0.75;
 }
 
-/* SUBTLE HOVER */
 
-.tv-split-link--operator .tv-split-link-action:hover {
+/* =========================================
+   HOVER
+========================================= */
+
+.tv-split-link .tv-split-link-action:hover {
   opacity: 1;
 }
 
-.tv-split-link--operator .tv-split-link-action:hover img {
+.tv-split-link .tv-split-link-action:hover
+.tv-split-link-icon img {
   opacity: 1;
 }
 
-/* MOBILE */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 700px) {
 
-  .tv-split-link--operator {
+  .tv-split-link {
     --split-height: 44px;
     --split-icon-width: 44px;
     --split-avatar-size: 38px;
