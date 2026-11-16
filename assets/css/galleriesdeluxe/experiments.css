@@ -580,3 +580,72 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Split link inside an editorial banner */
+
+.tv-banner .tv-split-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  height: 48px;
+  overflow: visible;
+}
+
+.tv-banner .tv-split-link-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.tv-banner .tv-split-link-text {
+  color: var(--tv-text, #171717);
+}
+
+.tv-banner .tv-split-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tv-banner .tv-split-link-instagram,
+.tv-banner .tv-split-link-website {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+

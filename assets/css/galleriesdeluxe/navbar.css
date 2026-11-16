@@ -21,22 +21,52 @@
   font-family: var(--font-sans, 'DM Sans', sans-serif);
 }
 
-/* 02. LOGO */
-.nav .logo {
+/* 02. BRAND — LOGO + NAME + TAGLINE */
+.nav-brand {
   order: 1;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 12px;
+  min-width: 0;
+}
+
+.nav .nav-brand .logo {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
   width: 75px;
   margin: 0;
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
-.nav .logo img {
+
+.nav .nav-brand .logo img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.nav-brand__text { display: none; }
+.nav-brand__name { display: block; }
+.nav-tagline { display: block; }
+
+/* Prevent theme-wide link underline rules on all navbar states. */
+.nav a,
+.nav a:link,
+.nav a:visited,
+.nav a:hover,
+.nav a:focus,
+.nav a:active,
+.mobile-menu a,
+.mobile-menu a:link,
+.mobile-menu a:visited,
+.mobile-menu a:hover,
+.mobile-menu a:focus,
+.mobile-menu a:active {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
 }
 
 /* 03. DESKTOP LINKS */
@@ -287,50 +317,89 @@
 /* 08. MOBILE MENU DEFAULT */
 .mobile-menu { display: none; }
 
+/* =========================================
+   09. DESKTOP BRAND — LOGO + TEXT
+========================================= */
+@media (min-width: 901px) {
+  .nav .nav-brand .logo { width: 62px; }
+  .nav-brand__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .nav-brand__name {
+    color: var(--tv-text, #171717);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: .025em;
+    white-space: nowrap;
+  }
+  .nav-tagline {
+    color: var(--tv-muted, #666);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+}
 
-/* 09. MOBILE HEADER AND MENU */
+/* =========================================
+   10. MOBILE NAVIGATION — ONE SOURCE OF TRUTH
+========================================= */
 @media (max-width: 900px) {
+  /* Header: brand left, hamburger right */
   .nav {
     height: 76px;
     padding: 0 5vw;
     gap: 12px;
     justify-content: space-between;
   }
-  .nav .logo {
-    position: relative;
-    z-index: 1;
+  .nav-brand {
     order: 1;
-    width: 58px;
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    gap: 10px;
     margin-right: auto;
   }
-  .nav .nav-links { display: none; }
+  .nav .nav-brand .logo { width: 52px; margin: 0; }
+  .nav-brand__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 0;
+  }
+  .nav-brand__name {
+    color: var(--tv-text, #171717);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: .01em;
+    white-space: nowrap;
+  }
+  .nav-tagline {
+    color: var(--tv-muted, #666);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+  .nav .nav-links,
   .nav .nav-actions,
-  .nav .hero-header-aside {
+  .nav .hero-header-aside { display: none; }
+  .nav > .menu {
     position: relative;
     z-index: 3;
     order: 2;
     display: flex;
-    margin: 0;
-  }
-  .nav > .menu {
-    position: relative;
-    z-index: 3;
-    order: 3;
-    display: flex;
-    margin: 0;
-  }
-  .nav .nav-button {
-    min-height: 38px;
-    padding: 0 12px;
-    gap: 7px;
-    font-size: 12px;
+    margin: 0 0 0 auto;
   }
 
-  /* Keep the dropdown anchored to its own button. */
-  .nav .nav-dropdown__menu {
-    width: min(250px, calc(100vw - 24px));
-  }
-
+  /* Full-height overlay */
   .mobile-menu {
     position: fixed;
     z-index: 90;
@@ -338,7 +407,7 @@
     display: block;
     box-sizing: border-box;
     width: 100%;
-    padding: 58px 9vw 36px;
+    padding: 42px 9vw 36px;
     overflow-y: auto;
     overscroll-behavior: contain;
     background: var(--tv-page, #fff);
@@ -354,34 +423,34 @@
     pointer-events: auto;
     transform: none;
   }
+
+  /* Main navigation */
   .mobile-menu__nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 12px;
     width: 100%;
   }
   .mobile-menu__nav a {
     position: relative;
     display: block;
     width: fit-content;
-    padding: 2px 0;
     margin: 0;
+    padding: 2px 0;
     border: 0;
     color: var(--tv-text, #171717);
     font-family: var(--font-sans, 'DM Sans', sans-serif);
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 1.25;
-    letter-spacing: -0.035em;
+    font-size: 21px;
+    font-weight: 450;
+    line-height: 1.3;
+    letter-spacing: -.025em;
     text-decoration: none;
     transition: color 180ms ease;
   }
   .mobile-menu__nav a:hover { color: var(--tv-brand-accent, #c66b49); }
   .mobile-menu__nav a.active,
-  .mobile-menu__nav a[aria-current='page'] {
-    font-weight: 600;
-  }
+  .mobile-menu__nav a[aria-current='page'] { font-weight: 650; }
   .mobile-menu__nav a.active::before,
   .mobile-menu__nav a[aria-current='page']::before {
     content: '';
@@ -395,18 +464,25 @@
     transform: translateY(-50%);
   }
 
-  /* Featured Georgia map */
+  /* Map card + accordion: single combined panel */
+  .mobile-menu__explore {
+    margin-top: 28px;
+    overflow: hidden;
+    border: 1px solid var(--tv-border, #e7e5df);
+    border-radius: 12px;
+    background: #fff;
+  }
   .mobile-menu__featured-map {
     position: relative;
     isolation: isolate;
     display: block;
+    box-sizing: border-box;
     width: 100%;
     min-height: 175px;
-    margin-top: 32px;
+    margin: 0;
     overflow: hidden;
-    box-sizing: border-box;
-    border: 1px solid var(--tv-border, #e7e5df);
-    border-radius: 10px;
+    border: 0;
+    border-radius: 0;
     background: var(--tv-section-soft, #f5f2ea);
     color: var(--tv-text, #171717);
     text-decoration: none;
@@ -418,7 +494,6 @@
     height: 100%;
     object-fit: cover;
     object-position: 65% center;
-    opacity: 1;
     transition: transform 300ms ease;
   }
   .mobile-menu__featured-overlay {
@@ -436,8 +511,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
-    padding: 26px 24px;
+    gap: 10px;
+    padding: 24px 22px;
   }
   .mobile-menu__featured-label {
     display: inline-flex;
@@ -448,8 +523,9 @@
     font-size: 10px;
     font-weight: 700;
     line-height: 1.4;
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
   }
+  .mobile-menu__featured-label svg { flex: 0 0 auto; }
   .mobile-menu__featured-heading {
     display: flex;
     align-items: center;
@@ -457,10 +533,10 @@
     gap: 12px;
     width: 100%;
     font-family: var(--font-sans, 'DM Sans', sans-serif);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.035em;
+    letter-spacing: -.035em;
   }
   .mobile-menu__featured-arrow {
     flex: 0 0 auto;
@@ -471,120 +547,136 @@
   }
   .mobile-menu__featured-description {
     max-width: 205px;
-    color: var(--tv-muted, #666666);
+    color: var(--tv-muted, #666);
     font-family: var(--font-sans, 'DM Sans', sans-serif);
     font-size: 12px;
     font-weight: 400;
     line-height: 1.55;
   }
-  .mobile-menu__featured-map:hover .mobile-menu__featured-image {
-    transform: scale(1.05);
-  }
-  .mobile-menu__featured-map:hover .mobile-menu__featured-arrow {
-    transform: translate(3px, -3px);
-  }
+  .mobile-menu__featured-map:hover .mobile-menu__featured-image { transform: scale(1.05); }
+  .mobile-menu__featured-map:hover .mobile-menu__featured-arrow { transform: translate(3px, -3px); }
 
-
-  /* Mobile menu secondary actions */
-  .mobile-menu__actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-
-    margin-top: 24px;
-    padding-top: 24px;
-
+  /* Beyond Tbilisi: rotate only the SVG, never the text */
+  .mobile-menu__beyond {
+    min-width: 0;
     border-top: 1px solid var(--tv-border, #e7e5df);
   }
+  .mobile-menu__beyond-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 20px;
+    border: 0;
+    background: #fff;
+    color: var(--tv-text, #171717);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+  .mobile-menu__beyond-toggle svg {
+    flex: 0 0 auto;
+    color: var(--tv-brand-accent, #c66b49);
+    transition: transform 180ms ease;
+  }
+  .mobile-menu__beyond-toggle[aria-expanded='true'] svg { transform: rotate(180deg); }
+  .mobile-menu__beyond-list[hidden] { display: none; }
+  .mobile-menu__beyond-list:not([hidden]) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 0 16px 16px;
+  }
+  .mobile-menu__beyond-list a {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 42px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    background: var(--tv-section-soft, #f5f2ea);
+    color: var(--tv-text, #171717);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .mobile-menu__beyond-list a:hover { color: var(--tv-brand-accent, #c66b49); }
 
+  /* About + Contact */
+  .mobile-menu__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--tv-border, #e7e5df);
+  }
   .mobile-menu__action-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-
+    box-sizing: border-box;
     min-height: 48px;
     padding: 0 15px;
-
-    box-sizing: border-box;
     border: 1px solid transparent;
     border-radius: 8px;
-
-    font-family: var(--font-sans);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
     font-size: 13px;
     font-weight: 700;
     line-height: 1.3;
     text-decoration: none;
-
-    transition:
-      background-color 180ms ease,
-      border-color 180ms ease,
-      transform 180ms ease;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
   }
-
-  /* ABOUT — IVORY */
-
   .mobile-menu__action-button--secondary {
     background: var(--tv-section-soft, #f5f2ea);
     border-color: var(--tv-border, #e7e5df);
     color: var(--tv-text, #171717);
   }
-
-  /* CONTACT — DARK */
-
   .mobile-menu__action-button--primary {
     background: var(--tv-text, #171717);
     color: #fff;
   }
-
-  /* ARROWS */
-
-  .mobile-menu__action-button span {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .mobile-menu__action-button:hover {
-    transform: translateY(-2px);
-  }
-
-  .mobile-menu__action-button--secondary:hover {
-    border-color: var(--tv-brand-accent, #c66b49);
-  }
-
-  .mobile-menu__action-button--primary:hover {
-    background: #303030;
-  }
-
-  .mobile-menu__action-button:focus-visible {
-    outline: 2px solid var(--tv-logo-blue, #3a98b9);
-    outline-offset: 3px;
-  }
+  .mobile-menu__action-button span { font-size: 18px; font-weight: 400; line-height: 1; }
+  .mobile-menu__action-button:hover { transform: translateY(-2px); }
+  .mobile-menu__action-button--secondary:hover { border-color: var(--tv-brand-accent, #c66b49); }
+  .mobile-menu__action-button--primary:hover { background: #303030; }
 }
 
-/* 10. SMALL PHONES */
+/* =========================================
+   11. SMALL PHONES
+========================================= */
 @media (max-width: 480px) {
-  .nav { height: 72px; padding: 0 5vw; gap: 8px; }
-  .nav .logo { width: 48px; }
-  .nav .nav-button { min-height: 36px; padding: 0 8px; gap: 5px; font-size: 11px; }
-  .nav .nav-button__icon { width: 16px; height: 16px; }
-  .nav .chevron svg { width: 12px; height: 12px; }
+  .nav { height: 72px; padding: 0 14px; gap: 8px; }
+  .nav-brand { gap: 9px; }
+  .nav .nav-brand .logo { width: 48px; }
+  .nav-brand__name { font-size: 12px; }
+  .nav-tagline { font-size: 11px; }
   .nav > .menu { padding: 6px; }
-  .mobile-menu { inset: 72px 0 0; padding: 52px 9vw 32px; }
-  .mobile-menu__nav { gap: 16px; }
-  .mobile-menu__nav a { font-size: 25px; }
+  .mobile-menu { inset: 72px 0 0; padding: 36px 9vw 32px; }
+  .mobile-menu__nav { gap: 11px; }
+  .mobile-menu__nav a { font-size: 20px; }
 }
 
-/* 11. ACCESSIBILITY */
+/* =========================================
+   12. ACCESSIBILITY
+========================================= */
 .nav-button:focus-visible,
+.nav .nav-brand .logo:focus-visible,
 .nav > .menu:focus-visible,
 .nav .nav-links a:focus-visible,
 .nav-dropdown__menu a:focus-visible,
 .mobile-menu__nav a:focus-visible,
-.mobile-menu__featured-map:focus-visible {
+.mobile-menu__featured-map:focus-visible,
+.mobile-menu__beyond-toggle:focus-visible,
+.mobile-menu__beyond-list a:focus-visible,
+.mobile-menu__action-button:focus-visible {
   outline: 2px solid var(--tv-logo-blue, #3a98b9);
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav *, .mobile-menu, .mobile-menu * { transition: none !important; }

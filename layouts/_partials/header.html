@@ -6,6 +6,7 @@
 <header class="nav">
 
   <!-- MOBILE MENU TOGGLE -->
+
   <button
     class="menu"
     type="button"
@@ -18,40 +19,83 @@
   </button>
 
 
-  <!-- LOGO -->
-  <a href="/" class="logo" aria-label="Tbilisi Visits home">
-    <img
-      src="/img/logo.png"
-      width="645"
-      height="80"
-      alt="Tbilisi Visits"
+  <!-- =====================================
+       BRAND — LOGO + NAME + TAGLINE
+  ===================================== -->
+
+  <div class="nav-brand">
+
+    <a
+      href="/"
+      class="logo"
+      aria-label="Tbilisi Visits home"
     >
-  </a>
+      <img
+        src="/img/logo.png"
+        width="645"
+        height="80"
+        alt="Tbilisi Visits"
+      >
+    </a>
+
+    <div class="nav-brand__text">
+
+      <span class="nav-brand__name">
+        TBILISI VISITS
+      </span>
+
+      <span class="nav-tagline">
+        Your guide to Georgia
+      </span>
+
+    </div>
+
+  </div>
 
 
-  <!-- DESKTOP NAVIGATION -->
+  <!-- =====================================
+       DESKTOP NAVIGATION
+  ===================================== -->
+
   <nav class="nav-links" aria-label="Main navigation">
 
     <a href="/iamintbilisi">Just Landed</a>
+
     <a href="/accommodation">Find Your Stay</a>
+
     <a href="/page-is-coming">What's On</a>
+
     <a href="/page-is-coming">Meet People</a>
 
-    <a href="/about/">
-      About
+    <a href="/about/">About</a>
 
-   
+    <a href="/ge-map/">
+
+      <svg
+        class="nav-button__icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="9"/>
+        <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/>
+      </svg>
+
+      Explore Georgia
+
     </a>
-
-     <a href="/ge-map"><svg class="nav-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="9"></circle>
-          <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"></path>
-        </svg>Explore Georgia</a>
 
   </nav>
 
 
-  <!-- BEYOND TBILISI -->
+  <!-- =====================================
+       BEYOND TBILISI — DESKTOP ONLY
+  ===================================== -->
+
   <div class="nav-actions hero-header-aside">
 
     <div class="nav-dropdown">
@@ -64,12 +108,10 @@
         aria-controls="beyond-tbilisi-menu"
       >
 
-
-
         <span>Beyond Tbilisi</span>
 
-        <!-- CHEVRON -->
         <span class="chevron" aria-hidden="true">
+
           <svg
             viewBox="0 0 24 24"
             width="14"
@@ -82,49 +124,59 @@
           >
             <path d="M6 9l6 6 6-6"/>
           </svg>
+
         </span>
 
       </button>
 
 
       <!-- DESTINATIONS DROPDOWN -->
+
       <div
         class="nav-dropdown__menu"
         id="beyond-tbilisi-menu"
       >
 
-<a href="/ge-map/" class="nav-dropdown__featured">
+        <!-- FEATURED MAP -->
 
-  <img
-    class="nav-dropdown__featured-image"
-    src="/img/maps/bg-map--georgia.jpg"
-    alt=""
-    loading="lazy"
-  >
+        <a
+          href="/ge-map/"
+          class="nav-dropdown__featured"
+        >
 
-  <span
-    class="nav-dropdown__featured-overlay"
-    aria-hidden="true"
-  ></span>
+          <img
+            class="nav-dropdown__featured-image"
+            src="/img/maps/bg-map--georgia.jpg"
+            alt=""
+            loading="lazy"
+          >
 
-  <strong>Explore Georgia</strong>
+          <span
+            class="nav-dropdown__featured-overlay"
+            aria-hidden="true"
+          ></span>
 
-  <svg
-    viewBox="0 0 24 24"
-    width="18"
-    height="18"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.8"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    aria-hidden="true"
-  >
-    <circle cx="12" cy="12" r="9"></circle>
-    <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"></path>
-  </svg>
+          <strong>Explore Georgia</strong>
 
-</a>
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="9"/>
+            <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/>
+          </svg>
+
+        </a>
+
+
+        <!-- DESTINATIONS -->
 
         <a href="/page-is-coming/">Batumi</a>
         <a href="/page-is-coming/">Kakheti</a>
@@ -146,51 +198,142 @@
      MOBILE NAVIGATION
 ========================================= -->
 
-<div class="mobile-menu" id="mobile-menu">
+<div
+  class="mobile-menu"
+  id="mobile-menu"
+>
 
-  <!-- MAIN LINKS -->
-  <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+  <!-- =====================================
+       MAIN LINKS
+  ===================================== -->
+
+  <nav
+    class="mobile-menu__nav"
+    aria-label="Mobile navigation"
+  >
 
     <a href="/">Home</a>
+
     <a href="/iamintbilisi">Just Landed</a>
+
     <a href="/accommodation">Find Your Stay</a>
+
     <a href="/page-is-coming">What's On</a>
+
     <a href="/page-is-coming">Meet People</a>
 
   </nav>
 
 
   <!-- =====================================
-       FEATURED MAP CARD
+       EXPLORE GEORGIA
+       MAP CARD + DESTINATIONS
   ===================================== -->
 
-  <a href="/ge-map/" class="mobile-menu__featured-map">
+  <div class="mobile-menu__explore">
 
-    <!-- BACKGROUND IMAGE -->
-    <img
-      class="mobile-menu__featured-image"
-      src="/img/maps/bg-map--georgia.jpg"
-      alt=""
-      loading="lazy"
+
+    <!-- =====================================
+         FEATURED MAP CARD
+    ===================================== -->
+
+    <a
+      href="/ge-map/"
+      class="mobile-menu__featured-map"
     >
 
-    <!-- IMAGE OVERLAY -->
-    <span
-      class="mobile-menu__featured-overlay"
-      aria-hidden="true"
-    ></span>
+      <!-- BACKGROUND IMAGE -->
+
+      <img
+        class="mobile-menu__featured-image"
+        src="/img/maps/bg-map--georgia.jpg"
+        alt=""
+        loading="lazy"
+      >
 
 
-    <!-- CARD CONTENT -->
-    <span class="mobile-menu__featured-content">
+      <!-- IMAGE OVERLAY -->
 
-      <!-- LABEL -->
-      <span class="mobile-menu__featured-label">
+      <span
+        class="mobile-menu__featured-overlay"
+        aria-hidden="true"
+      ></span>
+
+
+      <!-- CARD CONTENT -->
+
+      <span class="mobile-menu__featured-content">
+
+        <!-- LABEL -->
+
+        <span class="mobile-menu__featured-label">
+
+          <svg
+            viewBox="0 0 24 24"
+            width="17"
+            height="17"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="9"/>
+            <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/>
+          </svg>
+
+          THE BEST PLACE TO START
+
+        </span>
+
+
+        <!-- TITLE -->
+
+        <span class="mobile-menu__featured-heading">
+
+          <span>Explore the Map</span>
+
+          <span
+            class="mobile-menu__featured-arrow"
+            aria-hidden="true"
+          >
+            ↗
+          </span>
+
+        </span>
+
+
+        <!-- DESCRIPTION -->
+
+        <span class="mobile-menu__featured-description">
+          Discover Tbilisi and Georgia in a whole new way.
+        </span>
+
+      </span>
+
+    </a>
+
+
+    <!-- =====================================
+         BEYOND TBILISI — MOBILE ACCORDION
+    ===================================== -->
+
+    <div class="mobile-menu__beyond">
+
+      <button
+        class="mobile-menu__beyond-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-beyond-menu"
+      >
+
+        <span>Beyond Tbilisi</span>
 
         <svg
           viewBox="0 0 24 24"
-          width="17"
-          height="17"
+          width="18"
+          height="18"
           fill="none"
           stroke="currentColor"
           stroke-width="1.8"
@@ -198,65 +341,65 @@
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <circle cx="12" cy="12" r="9"/>
-          <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8 4.8-2.2Z"/>
+          <path d="m6 9 6 6 6-6"/>
         </svg>
 
-        THE BEST PLACE TO START
-
-      </span>
+      </button>
 
 
-      <!-- TITLE -->
-      <span class="mobile-menu__featured-heading">
+      <!-- EXPANDABLE DESTINATIONS -->
 
-        <span>Explore the Map</span>
+      <nav
+        class="mobile-menu__beyond-list"
+        id="mobile-beyond-menu"
+        aria-label="Beyond Tbilisi destinations"
+        hidden
+      >
 
-        <span
-          class="mobile-menu__featured-arrow"
-          aria-hidden="true"
-        >
-          ↗
-        </span>
+        <a href="/page-is-coming/">Batumi</a>
 
-      </span>
+        <a href="/page-is-coming/">Kakheti</a>
 
+        <a href="/page-is-coming/">Kazbegi</a>
 
-      <!-- DESCRIPTION -->
-      <span class="mobile-menu__featured-description">
-        Discover Tbilisi and Georgia in a whole new way.
-      </span>
+        <a href="/page-is-coming/">Kutaisi</a>
 
-    </span>
+        <a href="/page-is-coming/">Borjomi</a>
 
-  </a>
+      </nav>
+
+    </div>
+
+  </div>
 
 
+  <!-- =====================================
+       MOBILE MENU — SECONDARY ACTIONS
+  ===================================== -->
+
+  <div class="mobile-menu__actions">
+
+    <!-- ABOUT -->
+
+    <a
+      href="/about/"
+      class="mobile-menu__action-button mobile-menu__action-button--secondary"
+    >
+      About
+      <span aria-hidden="true">↗</span>
+    </a>
 
 
-<!-- =====================================
-     MOBILE MENU — SECONDARY ACTIONS
-===================================== -->
+    <!-- CONTACT -->
 
-<div class="mobile-menu__actions">
+    <a
+      href="/contact/"
+      class="mobile-menu__action-button mobile-menu__action-button--primary"
+    >
+      Contact Us
+      <span aria-hidden="true">↗</span>
+    </a>
 
-  <a
-    href="/about/"
-    class="mobile-menu__action-button mobile-menu__action-button--secondary"
-  >
-    About
-    <span aria-hidden="true">↗</span>
-  </a>
+  </div>
 
-  <a
-    href="/contact/"
-    class="mobile-menu__action-button mobile-menu__action-button--primary"
-  >
-    Contact Us
-    <span aria-hidden="true">↗</span>
-  </a>
-
-</div>
-
-  
 </div>

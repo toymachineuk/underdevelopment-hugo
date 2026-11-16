@@ -28,6 +28,7 @@
 
     const header = document.querySelector(".nav");
 
+    // Mobile hamburger
     const menuButton = document.querySelector(
       ".nav > .menu"
     );
@@ -36,6 +37,7 @@
       "mobile-menu"
     );
 
+    // Desktop Beyond Tbilisi dropdown
     const dropdown = document.querySelector(
       ".nav-dropdown"
     );
@@ -44,6 +46,16 @@
       ".nav-button"
     );
 
+    // Mobile Beyond Tbilisi accordion
+    const mobileBeyondToggle = document.querySelector(
+      ".mobile-menu__beyond-toggle"
+    );
+
+    const mobileBeyondMenu = document.getElementById(
+      "mobile-beyond-menu"
+    );
+
+    // Desktop breakpoint
     const desktopMedia = window.matchMedia(
       "(min-width: 901px)"
     );
@@ -68,6 +80,8 @@
     document.querySelectorAll(
       ".mobile-menu__nav a, " +
       ".mobile-menu__featured-map, " +
+      ".mobile-menu__beyond-list a, " +
+      ".mobile-menu__actions a, " +
       ".nav-links a, " +
       ".nav-dropdown__menu a"
     ).forEach((link) => {
@@ -76,7 +90,7 @@
         new URL(link.href, window.location.origin).pathname
       );
 
-      // Do not highlight shared placeholder pages.
+      // Shared placeholder pages should not be active.
       const isActive =
         linkPath === currentPath &&
         linkPath !== "/page-is-coming";
@@ -100,7 +114,7 @@
 
 
     /* -------------------------------------
-       BEYOND TBILISI DROPDOWN
+       DESKTOP — BEYOND TBILISI DROPDOWN
     ------------------------------------- */
 
     function setDropdown(isOpen) {
@@ -119,11 +133,9 @@
 
     }
 
-
     function closeDropdown() {
       setDropdown(false);
     }
-
 
     if (dropdown && dropdownButton) {
 
@@ -134,13 +146,13 @@
           event.preventDefault();
           event.stopPropagation();
 
+          // Desktop only
+          if (!desktopMedia.matches) return;
+
           const isOpen =
-            !dropdown.classList.contains("is-open");
+            dropdown.classList.contains("is-open");
 
-          setDropdown(isOpen);
-
-          // Do not close or reset the mobile menu.
-          // Its current state remains unchanged.
+          setDropdown(!isOpen);
 
         }
       );
@@ -149,7 +161,55 @@
 
 
     /* -------------------------------------
-       MOBILE MENU
+       MOBILE — BEYOND TBILISI ACCORDION
+    ------------------------------------- */
+
+    function setMobileBeyond(isOpen) {
+
+      if (!mobileBeyondToggle || !mobileBeyondMenu) {
+        return;
+      }
+
+      mobileBeyondToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      mobileBeyondMenu.hidden = !isOpen;
+
+    }
+
+    function closeMobileBeyond() {
+      setMobileBeyond(false);
+    }
+
+    if (mobileBeyondToggle && mobileBeyondMenu) {
+
+      mobileBeyondToggle.addEventListener(
+        "click",
+        function (event) {
+
+          event.preventDefault();
+          event.stopPropagation();
+
+          // Mobile only
+          if (desktopMedia.matches) return;
+
+          const isOpen =
+            mobileBeyondToggle.getAttribute(
+              "aria-expanded"
+            ) === "true";
+
+          setMobileBeyond(!isOpen);
+
+        }
+      );
+
+    }
+
+
+    /* -------------------------------------
+       MOBILE — MAIN HAMBURGER MENU
     ------------------------------------- */
 
     function setMobileMenu(isOpen) {
@@ -176,14 +236,13 @@
         isOpen ? "Close menu" : "Open menu"
       );
 
-      // Close destinations only when
-      // the main mobile menu is closed.
+      // Reset both dropdowns when mobile menu closes.
       if (!isOpen) {
         closeDropdown();
+        closeMobileBeyond();
       }
 
     }
-
 
     if (menuButton && mobileMenu) {
 
@@ -195,9 +254,9 @@
           event.stopPropagation();
 
           const isOpen =
-            !mobileMenu.classList.contains("is-open");
+            mobileMenu.classList.contains("is-open");
 
-          setMobileMenu(isOpen);
+          setMobileMenu(!isOpen);
 
         }
       );
@@ -215,8 +274,7 @@
 
         const target = event.target;
 
-        // Close dropdown when clicking
-        // outside Beyond Tbilisi.
+        // Close desktop dropdown when clicking outside.
         if (
           dropdown &&
           !dropdown.contains(target)
@@ -224,14 +282,16 @@
           closeDropdown();
         }
 
-        // Clicking the header must not
-        // close the mobile navigation.
+        // Check whether click occurred inside header
+        // or mobile navigation.
         const clickedHeader =
           header?.contains(target);
 
         const clickedMobileMenu =
           mobileMenu?.contains(target);
 
+        // Close mobile navigation only
+        // when clicking completely outside.
         if (
           mobileMenu?.classList.contains("is-open") &&
           !clickedHeader &&
@@ -254,7 +314,7 @@
 
         if (event.key !== "Escape") return;
 
-        // First Escape closes destinations.
+        // 1. Close desktop dropdown first.
         if (
           dropdown?.classList.contains("is-open")
         ) {
@@ -265,7 +325,20 @@
 
         }
 
-        // Second Escape closes mobile menu.
+        // 2. Close mobile destinations accordion.
+        if (
+          mobileBeyondToggle?.getAttribute(
+            "aria-expanded"
+          ) === "true"
+        ) {
+
+          closeMobileBeyond();
+          mobileBeyondToggle.focus();
+          return;
+
+        }
+
+        // 3. Close main mobile menu.
         if (
           mobileMenu?.classList.contains("is-open")
         ) {
@@ -285,8 +358,12 @@
 
     function handleDesktopChange(event) {
 
+      // Always reset both destination menus.
       closeDropdown();
+      closeMobileBeyond();
 
+      // Close mobile navigation
+      // when entering desktop layout.
       if (event.matches) {
         setMobileMenu(false);
       }
@@ -304,6 +381,7 @@
     ------------------------------------- */
 
     setDropdown(false);
+    setMobileBeyond(false);
     setMobileMenu(false);
 
   }
