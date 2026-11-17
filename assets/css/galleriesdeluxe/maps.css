@@ -342,3 +342,232 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   GEORGIA MAP — MOBILE SCROLL & HINTS
+========================================= */
+
+/* DESKTOP — HIDE MOBILE INSTRUCTIONS */
+
+.tv-map-scroll-hint,
+.tv-map-tap-hint {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* MAP WRAPPER */
+
+  .tv-map-container {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* TAP INSTRUCTION — OVER MAP */
+
+  .tv-map-tap-hint {
+    position: absolute;
+    z-index: 5;
+
+    top: 60px;
+    right: 8%;
+    left: auto;
+    transform: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    pointer-events: none;
+
+    color: var(--tv-muted, #666);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .tv-map-tap-hint svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+
+    color: var(--tv-brand-accent, #c66b49);
+  }
+
+
+  /* SCROLLABLE MAP */
+
+  .georgia-map {
+    position: relative;
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    left: auto;
+    transform: none;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .georgia-map::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* ENLARGED MAP TRACK */
+
+  .georgia-map__track {
+    position: relative;
+    display: block;
+
+    width: 180%;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* SVG — RESPONSIVE HEIGHT */
+
+  .georgia-map__track > svg {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 655 / 390;
+
+    margin: 0;
+    padding: 0;
+
+    transform: none;
+  }
+
+
+  /* SWIPE INSTRUCTION — BELOW MAP */
+
+  .tv-map-scroll-hint {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    width: 100%;
+    margin: 12px 0 20px;
+    padding: 0;
+
+    color: var(--tv-muted, #666);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+
+  .tv-map-scroll-hint svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+
+    color: var(--tv-brand-accent, #c66b49);
+  }
+
+
+  /* REMOVE OLD SCROLL START MARKER */
+
+  .georgia-map__start {
+    display: none;
+  }
+
+}
