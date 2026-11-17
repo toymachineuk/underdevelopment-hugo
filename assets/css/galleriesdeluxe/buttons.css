@@ -1,180 +1,29 @@
 
 /* =========================================
-   UNIVERSAL GREEN BUTTON
-========================================= */
-
-.tv-green-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 208px;
-  padding: 10px 12px 10px 10px;
-
-  color: #285c43;
-  background: #f0f4ed;
-  border: 1px solid #dce6d8;
-  border-radius: 16px;
-
-  text-decoration: none;
-  cursor: pointer;
-
-  transition:
-    background .25s ease,
-    border-color .25s ease,
-    transform .25s ease,
-    box-shadow .25s ease;
-}
-
-/* Icon container */
-
-.tv-green-icon {
-  display: grid;
-  place-items: center;
-
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-
-  border-radius: 11px;
-  color: #285c43;
-  background: #dde8d9;
-}
-
-.tv-green-icon svg {
-  display: block;
-  width: 25px;
-  height: 25px;
-}
-
-/* Text */
-
-.tv-green-label {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.tv-green-label strong {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.tv-green-label small {
-  font-size: 11px;
-  color: #617565;
-  line-height: 1.3;
-}
-
-/* Arrow */
-
-.tv-green-arrow {
-  display: grid;
-  place-items: center;
-
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
-
-  border-radius: 50%;
-  color: #285c43;
-  background: #fff;
-
-  font-size: 20px;
-  line-height: 1;
-
-  transition: transform .25s ease;
-}
-
-/* Hover */
-
-.tv-green-btn:hover {
-  color: #285c43;
-  background: #e6eee2;
-  border-color: #cbdac7;
-  box-shadow: 0 6px 18px rgb(40 92 67 / 8%);
-  transform: translateY(-2px);
-}
-
-.tv-green-btn:hover .tv-green-arrow {
-  transform: translate(2px, -2px);
-}
-
-/* Keyboard accessibility */
-
-.tv-green-btn:focus-visible {
-  outline: 2px solid #57816b;
-  outline-offset: 4px;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-  .tv-green-btn {
-    min-width: 0;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 12px;
-  }
-}
-
-/* Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-  .tv-green-btn,
-  .tv-green-arrow {
-    transition: none;
-
-  }}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
    SPLIT LINK — UNIVERSAL COMPONENT
 ========================================= */
 
 .tv-split-link {
   --split-height: 48px;
-  --split-icon-width: 52px;
-  --split-avatar-size: 48px;
+  --split-icon-width: 48px;
+  --split-avatar-size: 42px;
 
   display: inline-flex;
   align-items: center;
+  gap: 0;
 
   width: fit-content;
   max-width: 100%;
   height: var(--split-height);
-  padding: 0;
+  padding: 0 4px;
 
   box-sizing: border-box;
-  border-radius: 12px;
+  overflow: hidden;
 
   background: #fff;
   color: var(--tv-text, #171717);
-
-  box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+  border-radius: 12px;
+  box-shadow: none;
 }
 
 
@@ -219,16 +68,14 @@
 .tv-split-link-icon img,
 .tv-split-link-icon svg {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
 }
 
 
 /* =========================================
-   CIRCULAR AVATAR — DEFAULT
+   AVATAR — DEFAULT CIRCULAR
 ========================================= */
 
 .tv-split-link-text {
@@ -240,20 +87,12 @@
   width: var(--split-avatar-size);
   height: var(--split-avatar-size);
 
-  padding: 2px;
+  padding: 5px;
   box-sizing: border-box;
-
   overflow: hidden;
-  border-radius: 50%;
 
-  background: linear-gradient(
-    45deg,
-    #feda75,
-    #fa7e1e 25%,
-    #d62976 55%,
-    #962fbf 80%,
-    #4f5bd5
-  );
+  border-radius: 50%;
+  background: #eee;
 }
 
 .tv-split-link .tv-split-link-avatar {
@@ -308,63 +147,124 @@
 ========================================= */
 
 .tv-split-link--avatar-left {
+  --split-height: 48px;
+
+  display: inline-flex;
   align-items: stretch;
+  gap: 0;
 
   width: 180px;
+  height: var(--split-height);
+  padding: 0;
+
   overflow: hidden;
   border-radius: 10px;
+  background: #fff;
+  box-shadow: none;
 }
 
-/* Avatar fills the left segment */
+
+/* -----------------------------------------
+   AVATAR — FULL HEIGHT
+----------------------------------------- */
 
 .tv-split-link--avatar-left .tv-split-link-text {
-  flex: 0 0 var(--split-height);
+  display: block;
 
+  flex: 0 0 var(--split-height);
   width: var(--split-height);
-  height: var(--split-height);
+  height: 100%;
 
   padding: 0;
+  margin: 0;
+
+  overflow: hidden;
   border-radius: 0;
-  background: #fff;
+  background: transparent;
 }
 
 .tv-split-link--avatar-left .tv-split-link-avatar {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
   border-radius: 0;
 }
 
-/* Equal action segments */
+
+/* -----------------------------------------
+   TWO EQUAL ACTION SEGMENTS
+----------------------------------------- */
 
 .tv-split-link--avatar-left .tv-split-link-action {
+  display: flex;
   flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+
   width: auto;
   min-width: 0;
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
 }
 
-/* Action backgrounds */
+
+/* -----------------------------------------
+   INSTAGRAM — SOFT NEUTRAL
+----------------------------------------- */
 
 .tv-split-link--avatar-left .tv-split-link-action--start {
-  background: #fff1f5;
+  background: #f6f6f6;
 }
+
+
+/* -----------------------------------------
+   WEBSITE — SOFT BLUE
+----------------------------------------- */
 
 .tv-split-link--avatar-left .tv-split-link-action--end {
-  background: #eaf4fc;
+  background: #edf4f8;
 }
 
-/* Permanent arrows */
+
+/* -----------------------------------------
+   ICONS
+----------------------------------------- */
+
+.tv-split-link--avatar-left .tv-split-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+}
+
+.tv-split-link--avatar-left .tv-split-link-icon img,
+.tv-split-link--avatar-left .tv-split-link-icon svg {
+  display: block;
+
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+}
+
+
+/* -----------------------------------------
+   REMOVE ARROWS
+----------------------------------------- */
 
 .tv-split-link--avatar-left .tv-split-link-action::after {
-  content: "↗";
-
-  position: absolute;
-  top: 4px;
-  right: 6px;
-
-  font-size: 11px;
-  line-height: 1;
-  color: #64748b;
-
-  opacity: 0.65;
-  pointer-events: none;
+  content: none;
 }
 
 
@@ -389,7 +289,10 @@
   box-shadow: none;
 }
 
-/* Circular avatar without background */
+
+/* -----------------------------------------
+   CONTACT AVATAR
+----------------------------------------- */
 
 .tv-split-link--contact .tv-split-link-text {
   padding: 0;
@@ -403,13 +306,19 @@
   filter: none;
 }
 
-/* Neutral action backgrounds */
+
+/* -----------------------------------------
+   CONTACT ACTIONS
+----------------------------------------- */
 
 .tv-split-link--contact .tv-split-link-action {
   background: transparent;
 }
 
-/* Caption beside button */
+
+/* -----------------------------------------
+   CONTACT CAPTION
+----------------------------------------- */
 
 .tv-split-link-group--contact .tv-split-link-caption {
   align-items: flex-start;
@@ -429,12 +338,8 @@
 
 
 /* =========================================
-   INTERACTIONS
+   ACCESSIBILITY
 ========================================= */
-
-.tv-split-link-action:hover {
-  opacity: 0.8;
-}
 
 .tv-split-link-action:focus-visible {
   outline: 2px solid var(--tv-brand-accent, #c66b49);
@@ -452,7 +357,7 @@
   .tv-split-link {
     --split-height: 44px;
     --split-icon-width: 44px;
-    --split-avatar-size: 44px;
+    --split-avatar-size: 38px;
   }
 
   .tv-split-link-icon {
@@ -461,7 +366,15 @@
   }
 
   .tv-split-link--avatar-left {
+    --split-height: 44px;
     width: 168px;
+  }
+
+  .tv-split-link--avatar-left .tv-split-link-icon,
+  .tv-split-link--avatar-left .tv-split-link-icon img,
+  .tv-split-link--avatar-left .tv-split-link-icon svg {
+    width: 20px;
+    height: 20px;
   }
 
   .tv-split-link--contact {
@@ -483,212 +396,6 @@
 
   .tv-split-link-action {
     transition: none;
-  }
-
-}
-
-
-/* =========================================
-   TV BANNER — SPACING
-========================================= */
-
-.tv-banner {
-  gap: 0;
-}
-
-
-/* -----------------------------------------
-   TOP LABEL
------------------------------------------ */
-
-.tv-banner-top {
-  margin-bottom: 30px;
-}
-
-
-/* -----------------------------------------
-   MAIN CONTENT
------------------------------------------ */
-
-.tv-banner-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.tv-banner-title {
-  margin: 0;
-  line-height: 1.1;
-}
-
-.tv-banner-description {
-  margin: 0;
-  line-height: 1.55;
-}
-
-
-/* -----------------------------------------
-   BOTTOM AREA
------------------------------------------ */
-
-.tv-banner-bottom {
-  margin-top: 0;
-  align-items: flex-end;
-}
-
-
-/* -----------------------------------------
-   SOCIAL COMPONENT
------------------------------------------ */
-
-.tv-banner-social {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  gap: 10px;
-  margin-top: var(--space-md);
-}
-
-.tv-banner-social > .text-label {
-  margin: 0;
-  line-height: 1.3;
-}
-
-.tv-banner .tv-split-link-group--contact {
-  gap: 14px;
-}
-
-.tv-banner .tv-split-link-caption {
-  gap: 3px;
-}
-
-
-/* =========================================
-   MOBILE — BANNER
-========================================= */
-
-@media (max-width: 700px) {
-
-  .tv-banner-top {
-    margin-bottom: 24px;
-  }
-
-  .tv-banner-content {
-    gap: 12px;
-  }
-
-  .tv-banner-bottom {
-    margin-top: 0;
-    align-items: flex-start;
-  }
-
-  .tv-banner-social {
-    gap: 10px;
-    margin-top: var(--space-md);
-  }
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================================
-   SPLIT LINK — UNIVERSAL MONOCHROME STYLE
-========================================= */
-
-.tv-split-link {
-  --split-height: 48px;
-  --split-icon-width: 48px;
-  --split-avatar-size: 42px;
-
-  gap: 0;
-  padding: 0 4px;
-
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: none;
-}
-
-
-/* =========================================
-   MIDDLE IMAGE — GREY CIRCLE
-========================================= */
-
-.tv-split-link .tv-split-link-text {
-  flex: 0 0 var(--split-avatar-size);
-
-  width: var(--split-avatar-size);
-  height: var(--split-avatar-size);
-
-  padding: 5px;
-  box-sizing: border-box;
-
-  overflow: hidden;
-  border-radius: 50%;
-
-  background: #eeeeee;
-}
-
-
-/* IMAGE INSIDE CIRCLE */
-
-.tv-split-link .tv-split-link-avatar {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-
-/* =========================================
-   ACTION ICONS — BLACK & WHITE
-========================================= */
-
-.tv-split-link .tv-split-link-action {
-  background: transparent;
-}
-
-.tv-split-link .tv-split-link-icon img,
-.tv-split-link .tv-split-link-icon svg {
-  filter: grayscale(1) brightness(0);
-  opacity: 0.75;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.tv-split-link .tv-split-link-action:hover {
-  opacity: 1;
-}
-
-.tv-split-link .tv-split-link-action:hover
-.tv-split-link-icon img {
-  opacity: 1;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-  .tv-split-link {
-    --split-height: 44px;
-    --split-icon-width: 44px;
-    --split-avatar-size: 38px;
   }
 
 }

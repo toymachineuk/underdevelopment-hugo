@@ -1,3 +1,4 @@
+
 /* =========================================
    GEORGIA REGIONS — CONSOLIDATED CSS
    Compatible with regions-filters.js
@@ -55,25 +56,33 @@
 
 /* =========================================
    MAP SECTION — DESKTOP GRID
-   Map left, heading right, buttons below map
+   Map left, heading right, navigation below
 ========================================= */
 
-/* Flatten only the partial grouping wrapper. */
 .map-section .tv-region-components {
   display: contents;
 }
 
 .map-section .tv-feature-layout--header-right {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(280px, 0.6fr);
+
   grid-template-areas:
     "map header"
     "navigation header"
     "panels panels";
+
   grid-template-rows: auto auto auto;
+
   gap: 24px clamp(32px, 4vw, 72px);
   align-items: start;
 }
+
+
+/* MAP */
 
 .map-section .tv-feature-content {
   grid-area: map;
@@ -81,11 +90,18 @@
   width: 100%;
 }
 
+
+/* HEADER */
+
 .map-section .tv-feature-header {
   grid-area: header;
   min-width: 0;
   width: 100%;
+  align-self: end;
 }
+
+
+/* REGION NAVIGATION */
 
 .map-section .tv-region-navigation {
   grid-area: navigation;
@@ -93,10 +109,13 @@
   width: 100%;
 }
 
-/* Source panel wrapper: adjust selector if partial differs. */
+
+/* REGION PANELS */
+
 .map-section .tv-region-components > .tv-filter-regions {
   grid-area: panels;
   min-width: 0;
+  width: 100%;
 }
 
 
@@ -106,6 +125,7 @@
 
 .georgia-map .tv-map-region path {
   cursor: pointer;
+
   transition:
     opacity .25s ease,
     filter .25s ease;
@@ -224,16 +244,6 @@
   background: var(--tv-logo-blue, #287fa8);
 }
 
-
-
-
-
-
-.map-section .tv-feature-layout--header-right > .tv-feature-header {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: end;
-}
 
 /* =========================================
    REGION META
@@ -434,164 +444,50 @@
 }
 
 
-
 /* =========================================
-   GEORGIA MAP — MOBILE
-   Header → Buttons → Map → Panels
+   MOBILE — HEADER → MAP → PANELS
+   Hide region navigation on mobile
 ========================================= */
 
 @media (max-width: 800px) {
 
-  /* MAIN LAYOUT */
-
   .map-section .tv-feature-layout--header-right {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "map"
+      "panels";
+    grid-template-rows: auto;
     gap: 24px;
-
-    align-items: stretch;
+    width: 100%;
+    align-items: start;
   }
-
-  /* 01 — HEADER */
 
   .map-section .tv-feature-header {
-    order: 1;
-
-    display: flex;
-    flex-direction: column;
-
+    grid-area: header;
     width: 100%;
     min-width: 0;
-
     margin: 0;
+    align-self: auto;
   }
-
-  /* 02 — REGION BUTTONS */
-
-  .map-section .tv-region-navigation {
-    order: 2;
-
-    width: 100%;
-    min-width: 0;
-
-    margin: 0;
-  }
-
-  /* 03 — MAP */
 
   .map-section .tv-feature-content {
-    order: 3;
-
+    grid-area: map;
     width: 100%;
     min-width: 0;
-
     margin: 0;
   }
 
-  /* 04 — REGION PANELS */
-
   .map-section .tv-region-components > .tv-filter-regions {
-    order: 4;
-
+    grid-area: panels;
     width: 100%;
     min-width: 0;
+    margin: 0;
+  }
+
+  .map-section .tv-region-navigation {
+    display: none;
   }
 
 }
-
-
-/* =========================================
-   RESPONSIVE — REGION BUTTONS
-========================================= */
-
-@media (max-width: 600px) {
-
-  .map-section .tv-region-index {
-    gap: 7px;
-  }
-
-  .map-section .tv-region-index-item {
-    min-height: 36px;
-    padding: 9px 11px;
-
-    gap: 7px;
-    font-size: 11px;
-  }
-
-  .map-section .tv-region-dot {
-    flex-basis: 7px;
-    width: 7px;
-    height: 7px;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
