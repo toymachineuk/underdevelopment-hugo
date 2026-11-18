@@ -497,3 +497,22 @@
 .region-badge[data-region="shida-kartli"] {
   --region-color: #B59A83;
 }
+
+
+
+
+
+
+
+
+.tv-region-details[data-region="kakheti"] {
+  --region-color: #B08A38;
+}
+
+.tv-region-details[data-region="kvemo-kartli"] {
+  --region-color: #dfc59f;
+}
+
+.tv-region-details[data-region="mtskheta-mtianeti"] {
+  --region-color: #d5cddd;
+}
