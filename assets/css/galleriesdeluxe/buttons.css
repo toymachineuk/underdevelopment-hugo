@@ -399,3 +399,170 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   EDITORIAL ROW — PREVENT GRID OVERFLOW
+===================================== */
+
+.tv-editorial-row {
+  min-width: 0;
+}
+
+.tv-editorial-row > .tv-editorial-content {
+  min-width: 0;
+}
+
+/* Keep the photograph inside its column */
+
+.tv-editorial-row > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  object-fit: cover;
+}
+
+/* =====================================
+   LOCAL OPERATORS
+===================================== */
+
+.tv-editorial-content .tv-action-row--operators {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+.tv-action-row--operators > .tv-action-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.tv-action-row--operators > .tv-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+
+
+
+/* =====================================
+   SPLIT LINKS — COMPACT MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .tv-split-link--operator {
+    --split-height: 40px;
+    --split-icon-width: 38px;
+    --split-avatar-size: 34px;
+
+    padding: 0 2px;
+    border-radius: 10px;
+  }
+
+  /* AVATAR */
+
+  .tv-split-link--operator .tv-split-link-text {
+    padding: 3px;
+  }
+
+  /* ICONS */
+
+  .tv-split-link--operator .tv-split-link-icon,
+  .tv-split-link--operator .tv-split-link-icon img {
+    width: 19px;
+    height: 19px;
+  }
+
+  /* CAPTIONS */
+
+  .tv-split-link-group {
+    gap: 6px;
+  }
+
+  .tv-split-link-caption-name {
+    font-size: 11px;
+  }
+
+  .tv-split-link-caption-links {
+    font-size: 10px;
+  }
+
+  /* OPERATOR GROUP */
+
+  .tv-action-row--operators > .tv-social-links {
+    justify-content: center;
+    column-gap: 18px;
+    row-gap: 20px;
+  }
+
+}
+
+
+
+/* =====================================
+   LOCAL SKI OPERATORS — MOBILE ORDER
+========================================= */
+
+@media (max-width: 700px) {
+
+  .tv-editorial-row .tv-action-row--operators {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* TITLE FIRST */
+
+  .tv-action-row--operators > .tv-action-title {
+    order: -1;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* BUTTONS SECOND */
+
+  .tv-action-row--operators > .tv-social-links {
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+  }
+
+}

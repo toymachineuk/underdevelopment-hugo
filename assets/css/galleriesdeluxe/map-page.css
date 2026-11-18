@@ -264,56 +264,6 @@
   text-transform: none;
 }
 
-
-/* =========================================
-   REGION COLOR VARIABLES
-========================================= */
-
-.region-adjara {
-  --region-color: #a4dfdf;
-}
-
-.region-guria {
-  --region-color: #cdf5c2;
-}
-
-.region-imereti {
-  --region-color: #b5dbf1;
-}
-
-.region-kakheti {
-  --region-color: #fff39c;
-}
-
-.region-kvemo-kartli {
-  --region-color: #ffcc8a;
-}
-
-.region-mtskheta-mtianeti {
-  --region-color: #f4dfff;
-}
-
-.region-racha-lechkhumi-kvemo-svaneti {
-  --region-color: #dae6f9;
-}
-
-.region-samegrelo-zemo-svaneti {
-  --region-color: #d5e2dc;
-}
-
-.region-samtskhe-javakheti {
-  --region-color: #ffcbb3;
-}
-
-.region-shida-kartli {
-  --region-color: #ffe7a9;
-}
-
-.region-tbilisi {
-  --region-color: #f1b3d2;
-}
-
-
 /* =========================================
    DESTINATION CARD BADGES
 ========================================= */
@@ -488,6 +438,60 @@
 
   .map-section .tv-region-navigation {
     display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   SKI DESTINATIONS — MOBILE ALIGNMENT
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* EDITORIAL CONTENT */
+
+  .tv-editorial-row .tv-editorial-content {
+    text-align: left;
+  }
+
+  /* NUMBER + TITLE */
+
+  .tv-editorial-row .tv-editorial-content > .text-label,
+  .tv-editorial-row .tv-editorial-content > .title-xxs {
+    display: block;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* DESCRIPTION */
+
+  .tv-editorial-row .tv-editorial-content > .text-sm {
+    text-align: left;
+  }
+
+  /* OPERATOR SECTION */
+
+  .tv-editorial-row .tv-action-row--operators {
+    align-items: center;
+    text-align: center;
+  }
+
+  .tv-editorial-row .tv-action-row--operators > .tv-action-title {
+    text-align: center;
+  }
+
+  /* BUTTONS */
+
+  .tv-editorial-row .tv-action-row--operators > .tv-social-links {
+    justify-content: center;
   }
 
 }

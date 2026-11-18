@@ -408,3 +408,92 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   REGION BADGE — COLOR ACCENTS
+===================================== */
+
+.tv-carousel-meta-row--location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.region-badge {
+  display: inline-block;
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--region-color, #999);
+}
+
+/* REGION COLORS */
+
+.region-badge[data-region="kakheti"] {
+  --region-color: #B08A38;
+}
+
+.region-badge[data-region="imereti"] {
+  --region-color: #8BAFC5;
+}
+
+.region-badge[data-region="adjara"] {
+  --region-color: #76ADA9;
+}
+
+.region-badge[data-region="guria"] {
+  --region-color: #91B68B;
+}
+
+.region-badge[data-region="kvemo-kartli"] {
+  --region-color: #C49A65;
+}
+
+.region-badge[data-region="mtskheta-mtianeti"] {
+  --region-color: #A69AC2;
+}
+
+.region-badge[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #8DA8C9;
+}
+
+.region-badge[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #7EAD9E;
+}
+
+.region-badge[data-region="samtskhe-javakheti"] {
+  --region-color: #C58F80;
+}
+
+.region-badge[data-region="shida-kartli"] {
+  --region-color: #B59A83;
+}
