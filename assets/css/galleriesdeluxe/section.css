@@ -223,6 +223,25 @@ main > section.tv-filter-section > .section-header {
   width: 100%;
 }
 
+
+/* =========================================
+   SECTION HEADER — NUMBER INLINE
+========================================= */
+
+.section-header--number-inline .section-header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-header--number-inline .section-header-title-row h3 {
+  margin: 0;
+}
+
+.section-header--number-inline .section-number-sm {
+  flex-shrink: 0;
+}
+
 /* LEFT — MAIN CONTENT */
 
 .section-header--universal .section-header-main {

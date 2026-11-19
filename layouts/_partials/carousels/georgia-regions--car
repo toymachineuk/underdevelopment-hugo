@@ -11,55 +11,93 @@
     <!-- =====================================
          KAKHETI
     ====================================== -->
+<article
+  class="tv-rectangle-card"
+  data-region="kakheti">
 
-    <article
-      class="tv-rectangle-card"
-      data-region="kakheti">
+  <!-- IMAGE -->
+  <img
+    class="tv-rectangle-image"
+    src="/img/georgia-regions/kakheti/alaverdi-monastery.jpg"
+    alt="Alaverdi Monastery in Kakheti"
+    loading="lazy"
+  >
 
-      <img
-        class="tv-rectangle-image"
-        src="/img/georgia-regions/kakheti/alaverdi-monastery.jpg"
-        alt="Alaverdi Monastery in Kakheti"
-        loading="lazy">
-
-        <div class="vertical-badge no-icon tv-region-filter region-kakheti ">
+  <!-- REGION BADGE -->
+  <div class="vertical-badge no-icon tv-region-filter region-kakheti">
     <span>Kakheti</span>
   </div>
 
+  <!-- CARD CONTENT -->
+  <div class="tv-card-content">
 
-
-<div class="tv-rectangle-card-content">
     <h3>Alaverdi Monastery</h3>
 
     <div class="tv-info">
 
-   
-
+      <!-- DESCRIPTION -->
       <div class="tv-card-details">
-          <p>
- One of Kakheti's great landmarks. The enormous 11th-century cathedral stands in the Alazani Valley with the Caucasus mountains behind it. 
-</p>
-
-      
+        <p>
+          One of Kakheti's great landmarks. This enormous
+          11th-century cathedral stands in the Alazani Valley,
+          with the Caucasus Mountains rising behind it.
+        </p>
       </div>
 
+      <!-- LOCATION -->
       <div class="tv-info-row tv-info-row--location">
-        <img class="tv-location-icon" src="/icons/map-pin.svg" width="16" height="16" alt="" aria-hidden="true">
-      
 
+        <img
+          class="tv-location-icon"
+          src="/icons/map-pin.svg"
+          width="16"
+          height="16"
+          alt=""
+          aria-hidden="true"
+        >
 
-         <a class="tv-card-link tv-district-card-link"
-              href="https://maps.app.goo.gl/KxyAAZxfiXMumvTL7?g_st=ac"
-              target="_blank"
-              rel="noopener noreferrer">
-            Near Sighnaghi 
-                <span aria-hidden="true">↗</span>
-            </a>
+        <a
+          class="tv-card-link tv-district-card-link"
+          href="https://maps.app.goo.gl/KxyAAZxfiXMumvTL7?g_st=ac"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Alaverdi, Kakheti</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+      <!-- HOW TO GET THERE -->
+      <div class="tv-info-row tv-info-row--transport">
+
+        <img
+          src="/icons/car.svg"
+          width="18"
+          height="18"
+          alt=""
+          aria-hidden="true"
+        >
+
+        <div class="tv-transport-content">
+
+          <span class="tv-info-label">
+            How to get there
+          </span>
+
+          <p>
+            From Tbilisi · Approx. 2 hr drive · Best reached by car
+          </p>
+
+        </div>
+
       </div>
 
     </div>
+
   </div>
-    </article>
+
+</article>
 
 
     <!-- SIGHNAGHI -->
