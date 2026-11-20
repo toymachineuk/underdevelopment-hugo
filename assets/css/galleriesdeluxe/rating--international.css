@@ -1,0 +1,170 @@
+/* =========================================
+   INTERNATIONAL ATMOSPHERE RATING
+========================================= */
+
+/* -----------------------------------------
+   01. BASE
+----------------------------------------- */
+
+.tv-international-rating {
+  --rating-color: var(--color-primary, #3a98b9);
+  --rating-muted: #e4eaed;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* -----------------------------------------
+   02. LABEL
+----------------------------------------- */
+
+.tv-international-rating-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* -----------------------------------------
+   03. SCALE
+----------------------------------------- */
+
+.tv-international-rating-scale,
+.tv-international-rating-title {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+
+  width: 100%;
+}
+
+.tv-international-rating-segment {
+  height: 9px;
+  border-radius: 4px;
+  background: var(--rating-muted);
+}
+
+
+/* -----------------------------------------
+   04. ACTIVE SEGMENTS
+----------------------------------------- */
+
+.tv-international-rating--1
+.tv-international-rating-segment:nth-child(-n+1),
+
+.tv-international-rating--2
+.tv-international-rating-segment:nth-child(-n+2),
+
+.tv-international-rating--3
+.tv-international-rating-segment:nth-child(-n+3),
+
+.tv-international-rating--4
+.tv-international-rating-segment:nth-child(-n+4) {
+  background: var(--rating-color);
+}
+
+
+/* -----------------------------------------
+   05. TITLE
+----------------------------------------- */
+
+.tv-international-rating-title span {
+  text-align: center;
+
+  color: var(--rating-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* -----------------------------------------
+   06. TITLE POSITION
+----------------------------------------- */
+
+.tv-international-rating--1
+.tv-international-rating-title span {
+  grid-column: 1;
+}
+
+.tv-international-rating--2
+.tv-international-rating-title span {
+  grid-column: 2;
+}
+
+.tv-international-rating--3
+.tv-international-rating-title span {
+  grid-column: 3;
+}
+
+.tv-international-rating--4
+.tv-international-rating-title span {
+  grid-column: 4;
+}
+
+
+/* -----------------------------------------
+   07. DESCRIPTION
+----------------------------------------- */
+
+.tv-international-rating-description {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   WIDTH UTILITIES
+========================================= */
+
+.width-100 {
+  width: 100%;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-33 {
+  width: 33.333%;
+}
+
+
+/* =========================================
+   08. MOBILE
+========================================= */
+
+/* =========================================
+   08. MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .tv-international-rating-label {
+    font-size: 9px;
+    letter-spacing: 0.05em;
+  }
+
+  .tv-international-rating-title span {
+    font-size: 12px;
+  }
+
+  .tv-international-rating-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+}
