@@ -168,3 +168,9 @@
   }
 
 }
+
+@media (max-width: 700px) {
+  .tv-editorial-media:has(.tv-international-rating) .tv-international-rating {
+    margin-inline: 0;
+  }
+}
