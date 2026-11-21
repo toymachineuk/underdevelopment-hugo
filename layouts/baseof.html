@@ -1,160 +1,234 @@
+
 <!doctype html>
 <html lang="{{ site.Language.Locale }}">
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ .Title }}</title>
 
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<head>
 
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    {{ hugo.Generator }}
+  <!-- =====================================
+       META & SEO
+  ====================================== -->
 
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
+
+  <title>{{ .Title }}</title>
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="/favicon.svg?v=2">
+
+  {{ hugo.Generator }}
+
+  {{ if hugo.IsProduction }}
+    <meta name="robots" content="index, follow">
+  {{ else }}
+    <meta name="robots" content="noindex, nofollow">
+  {{ end }}
+
+  {{ range .AlternativeOutputFormats }}
+    <link
+      rel="{{ .Rel }}"
+      type="{{ .MediaType.Type }}"
+      href="{{ .Permalink | safeURL }}">
+  {{ end }}
+
+  {{ partial "common-partials/head-seo.html" . }}
+
+
+  <!-- =====================================
+       GALLERIES DELUXE — CSS
+  ====================================== -->
+
+  {{ $vars := site.Params.galleriesdeluxe.cssvars | default dict }}
+
+  {{ $target := slice
+    "chrome115"
+    "edge115"
+    "firefox116"
+    "ios16.4"
+    "opera101"
+    "safari16.4"
+  }}
+
+  {{ $cssOptions := dict
+    "vars" $vars
+    "target" $target
+    "minify" hugo.IsProduction
+  }}
+
+  {{ $styles := resources.Get "css/galleriesdeluxe/styles.css" | css.Build $cssOptions }}
+
+  {{ if hugo.IsProduction }}
+    {{ $styles = $styles | fingerprint }}
+  {{ end }}
+
+  <link
+    rel="stylesheet"
+    href="{{ $styles.RelPermalink }}">
+
+
+  <!-- =====================================
+       ANIME.JS — SHARED DEPENDENCY
+  ====================================== -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"
+    defer></script>
+
+
+  <!-- =====================================
+       GALLERIES DELUXE — JAVASCRIPT
+  ====================================== -->
+
+  {{ $galleryJS := resources.Get "js/galleriesdeluxe/index.js" }}
+
+  {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+
+  {{ $galleryOptions := dict
+    "sourceMap" $sourceMap
+    "minify" hugo.IsProduction
+    "target" "es2018"
+    "params" (dict)
+  }}
+
+  {{ $galleryJS = $galleryJS | js.Build $galleryOptions }}
+
+  {{ if hugo.IsProduction }}
+    {{ $galleryJS = $galleryJS | fingerprint }}
+  {{ end }}
+
+  <script
+    src="{{ $galleryJS.RelPermalink }}"
     {{ if hugo.IsProduction }}
-      <meta name="robots" content="index, follow" />
-    {{ else }}
-      <meta name="robots" content="noindex, nofollow" />
+      integrity="{{ $galleryJS.Data.Integrity }}"
     {{ end }}
+    defer></script>
 
-    {{ range .AlternativeOutputFormats -}}
-      <link
-        rel="{{ .Rel }}"
-        type="{{ .MediaType.Type }}"
-        href="{{ .Permalink | safeURL }}" />
-    {{ end -}}
 
-    {{/* SEO */}}
-    {{ partial "common-partials/head-seo.html" . }}
+  <!-- =====================================
+       GLOBAL JAVASCRIPT
+  ====================================== -->
 
-    {{/* Load styles */}}
-    {{ $vars := site.Params.galleriesdeluxe.cssvars | default dict }}
-    {{ $target := slice "chrome115" "edge115" "firefox116" "ios16.4" "opera101" "safari16.4" }}
-    {{ $options := dict "vars" $vars "target" $target "minify" (not hugo.IsDevelopment) }}
-    {{ $styles := resources.Get "css/galleriesdeluxe/styles.css" | css.Build $options }}
+  {{ $globalScripts := slice
+    "js/movingletters.js"
+    "js/georgia-regions.js"
+    "js/gallery-carousels.js"
+    "js/mobile-menu.js"
+  }}
 
-    {{ if hugo.IsProduction }}
-      {{ $styles = $styles | fingerprint }}
-    {{ end }}
+  {{ range $globalScripts }}
 
-    <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+    {{ with resources.Get . }}
 
-    {{/* Anime.js 2.0.2 */}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      {{ $script := . }}
 
-    {{/* Galleries Deluxe JavaScript */}}
-    {{ $js := resources.Get "js/galleriesdeluxe/index.js" }}
-    {{ $params := dict }}
-    {{ $sourceMap := cond hugo.IsProduction "" "inline" }}
-    {{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
-    {{ $js = $js | js.Build $opts }}
-
-    {{ if hugo.IsProduction }}
-      {{ $js = $js | fingerprint }}
-    {{ end }}
-
-    <script
-      src="{{ $js.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
-      defer></script>
-
-    {{/* Moving Letters */}}
-    {{ $movingLetters := resources.Get "js/movingletters.js" }}
-
-    {{ if hugo.IsProduction }}
-      {{ $movingLetters = $movingLetters | fingerprint }}
-    {{ end }}
-
-    <script
-      src="{{ $movingLetters.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $movingLetters.Data.Integrity }}"{{ end }}
-      defer></script>
-
-    {{/* Georgia region filters */}}
-    {{ $georgiaRegions := resources.Get "js/georgia-regions.js" }}
-
-    {{ if hugo.IsProduction }}
-      {{ $georgiaRegions = $georgiaRegions | fingerprint }}
-    {{ end }}
-
-    <script
-      src="{{ $georgiaRegions.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $georgiaRegions.Data.Integrity }}"{{ end }}
-      defer></script>
-
-    {{/* Gallery carousels */}}
-    {{ $galleryCarousels := resources.Get "js/gallery-carousels.js" }}
-
-    {{ if hugo.IsProduction }}
-      {{ $galleryCarousels = $galleryCarousels | fingerprint }}
-    {{ end }}
-
-    <script
-      src="{{ $galleryCarousels.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $galleryCarousels.Data.Integrity }}"{{ end }}
-      defer></script>
-
-    {{/* Mobile menu */}}
-    {{ $mobileMenu := resources.Get "js/mobile-menu.js" }}
-
-    {{ if hugo.IsProduction }}
-      {{ $mobileMenu = $mobileMenu | fingerprint }}
-    {{ end }}
-
-    <script
-      src="{{ $mobileMenu.RelPermalink }}"
       {{ if hugo.IsProduction }}
-        integrity="{{ $mobileMenu.Data.Integrity }}"
+        {{ $script = $script | minify | fingerprint }}
       {{ end }}
-      defer></script>
 
-
-
-    {{/* Homepage district map popup */}}
-    {{ if .IsHome }}
-      {{ $districtMap := resources.Get "js/tbilisi-districts.js" }}
-
-      {{ if $districtMap }}
+      <script
+        src="{{ $script.RelPermalink }}"
         {{ if hugo.IsProduction }}
-          {{ $districtMap = $districtMap | minify | fingerprint }}
+          integrity="{{ $script.Data.Integrity }}"
+        {{ end }}
+        defer></script>
+
+    {{ end }}
+
+  {{ end }}
+
+
+  <!-- =====================================
+       HOMEPAGE JAVASCRIPT
+  ====================================== -->
+
+  {{ if .IsHome }}
+
+    {{ $homeScripts := slice
+      "js/tbilisi-districts.js"
+      "js/animated-title.js"
+    }}
+
+    {{ range $homeScripts }}
+
+      {{ with resources.Get . }}
+
+        {{ $script := . }}
+
+        {{ if hugo.IsProduction }}
+          {{ $script = $script | minify | fingerprint }}
         {{ end }}
 
         <script
-          src="{{ $districtMap.RelPermalink }}"
+          src="{{ $script.RelPermalink }}"
           {{ if hugo.IsProduction }}
-            integrity="{{ $districtMap.Data.Integrity }}"
+            integrity="{{ $script.Data.Integrity }}"
           {{ end }}
           defer></script>
-      {{ end }}
-    {{ end }}
 
-
-    {{ block "head-custom" . }} 
-    
-    
-    
-    {{ end }}
-
-    {{ if .IsHome }}
-      {{ $migrationLink := "https://github.com/bep/galleriesdeluxe#sass-was-replaced-with-css-in-v060" }}
-
-      {{ if site.Params.galleriesdeluxe.sassvars }}
-        {{ errorf "galleriesdeluxe: params.galleriesdeluxe.sassvars is removed. See %s" $migrationLink }}
       {{ end }}
 
-      {{ if resources.Get "scss/galleriesdeluxe/vars-custom.scss" }}
-        {{ errorf "galleriesdeluxe: assets/scss/galleriesdeluxe/vars-custom.scss is no longer used. See %s" $migrationLink }}
-      {{ end }}
     {{ end }}
-  </head>
+
+  {{ end }}
+
+
+  <!-- =====================================
+       CUSTOM HEAD CONTENT
+  ====================================== -->
+
+  {{ block "head-custom" . }}
+  {{ end }}
+
+
+  <!-- =====================================
+       GALLERIES DELUXE — VALIDATION
+  ====================================== -->
+
+  {{ if .IsHome }}
+
+    {{ $migrationLink := "https://github.com/bep/galleriesdeluxe#sass-was-replaced-with-css-in-v060" }}
+
+    {{ if site.Params.galleriesdeluxe.sassvars }}
+      {{ errorf "galleriesdeluxe: params.galleriesdeluxe.sassvars is removed. See %s" $migrationLink }}
+    {{ end }}
+
+    {{ if resources.Get "scss/galleriesdeluxe/vars-custom.scss" }}
+      {{ errorf "galleriesdeluxe: assets/scss/galleriesdeluxe/vars-custom.scss is no longer used. See %s" $migrationLink }}
+    {{ end }}
+
+  {{ end }}
+
+</head>
+
+
+<!-- =====================================
+     PAGE BODY
+====================================== -->
+
 <body class="{{ if eq .Layout "map-page" }}map-page{{ end }}">
 
- {{ partial "header.html" . }}
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
+  <!-- NAVIGATION -->
 
-    
-      {{ partial "footer.html" . }}
-    
+  {{ partial "header.html" . }}
 
-  </body>
+
+  <!-- MAIN CONTENT -->
+
+  <main>
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+
+
+  <!-- FOOTER -->
+
+  {{ partial "footer.html" . }}
+
+</body>
+
 </html>
